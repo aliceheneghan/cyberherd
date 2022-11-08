@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Components
-import Banner from './components/Banner';
+import Banner from './components/Banner.jsx';
 
 // Styles
 import './App.css';
@@ -9,14 +9,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Banner />
+
+      <Banner />
       <Routes>
-        {/* <Route path="/" element={}/>  */}
-        <Route/>
-        <Route/>
+       {/* <Route path="/" element={}/>  */}
       </Routes>
-      </Router>
+
     </div>
   );
 }
