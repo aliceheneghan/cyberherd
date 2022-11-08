@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
-import Banner from './components/Banner';
+import Banner from './components/Banner.jsx';
 
 // Styles
 import './App.css';
