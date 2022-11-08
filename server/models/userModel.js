@@ -2,9 +2,6 @@ import mongoose from 'mongoose';
 
 const { Schema, model } = mongoose;
 
-/**
- * dateOfBirth is unrequired for testing reasons
- */
 
 const userSchema = new Schema({
   email: { type: String, required: true },
@@ -12,11 +9,11 @@ const userSchema = new Schema({
   dateOfBirth: { required: false, type: Date },
   password: { type: String, required: true },
   photoURL: { type: String },
-  events: { type: mongoose.Schema.Types.ObjectId, ref: 'events' },
-  venues: { type: mongoose.Schema.Types.ObjectId, ref: 'vanues' },
-  connections: { type: String },
+  events: { type: Schema.Types.ObjectId, ref: 'event' },
+  venues: { type: Schema.Types.ObjectId, ref: 'venue' },
+  connections: {type: Schema.Types.ObjectId, ref: 'user' },
 });
 
-const User = model('User', userSchema);
+const User = model('user', userSchema);
 
 export default User;
