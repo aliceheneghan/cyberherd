@@ -1,7 +1,11 @@
+// libraries
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import eventRoutes from './routes/eventRoutes.js'
+
+// routes
+import userRouter from './routes/userRoutes.js';
+import eventRoutes from './routes/eventRoutes.js';
 
 dotenv.config();
 
@@ -20,6 +24,7 @@ mongoose
     console.log(error.message);
   });
 
+app.use('/api/user', userRouter);
 app.use('/api/events', eventRoutes);
 
 const PORT = process.env.PORT;
