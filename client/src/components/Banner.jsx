@@ -1,12 +1,14 @@
 import React from 'react';
 
+import { GiBurningDot } from 'react-icons/gi';
+
 // Style
 import '../scss/layout/_banner.scss';
 
 function Banner() {
   return (
     <div className= 'banner-animated'>
-    Berlin Spaß Kalender
+      <div className='banner'>Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /></div>
     </div>
   )
 }

@@ -1,10 +1,13 @@
-@import "./scss/layout/_banner.scss";
+@import "./scss/layout/__layout-dir.scss";
+/* @import "./scss/abstract/__abstract-dir.scss";
+@import "./scss/media-query/__media-query-dir.scss"; */
 
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
-.App {
-  text-align: center;
+body{
+  margin: 0;
+  font-family: 'Sarpanch', 'Fjalla One', 'Kodchasan', sans-serif;
 }
