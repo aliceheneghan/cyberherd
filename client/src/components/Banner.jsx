@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Style
-import "../styles/banner.scss";
+import "../SCSS/layout/_banner.scss";
 
 function Banner() {
   return (
