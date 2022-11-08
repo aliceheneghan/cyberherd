@@ -3,6 +3,7 @@ import express from 'express';
 // controllers
 import {
   findAllUsers,
+  findUser,
   registerUser,
   updateUserData,
   deleteUser,
@@ -11,6 +12,8 @@ import {
 const router = express.Router();
 
 router.get('/', findAllUsers);
+
+router.get('/:id', findUser);
 
 router.post('/create', registerUser);
 
