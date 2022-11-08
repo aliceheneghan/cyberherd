@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import eventRoutes from './routes/eventRoutes.js'
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ mongoose
   .catch((error) => {
     console.log(error.message);
   });
+
+app.use('/api/events', eventRoutes);
 
 const PORT = process.env.PORT;
 
