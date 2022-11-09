@@ -1,6 +1,9 @@
-import User from '../models/userModel.js';
+// libraries
 import bcrypt from 'bcrypt';
 import generateToken from '../helpers/authenticationHelper.js';
+
+// userSchema
+import User from '../models/userModel.js';
 
 const findAllUsers = async (req, res) => {
   const users = await User.find();
