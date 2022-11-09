@@ -7,7 +7,7 @@ const generateToken = (user) => {
         jwt.sign(
             payload,
             process.env.SECRET,
-            {expiresIn: "15min"},
+            {expiresIn: "15m"},
             (err, token) => {
                 if(err){
                     reject(err);
