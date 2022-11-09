@@ -8,6 +8,17 @@
     .month-selector {
         display: grid;
         border: 1px red solid;
-        grid-template-columns: repeat(7, minmax(0, 1fr));    
+        grid-template-columns: repeat(7, minmax(0, 1fr));   
+        text-align: center;
+        
+        .span-2 {
+            grid-column: span 2; 
+            border: 1px red solid;
+        }   
+
+        .span-3 {
+            grid-column: span 3; 
+            border: 1px red solid;
+        }   
     }
 }
