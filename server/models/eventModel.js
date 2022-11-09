@@ -50,7 +50,7 @@ const eventSchema = new Schema({
     eventURL: { type: String },
     bandURL: { type: String },
   },
-  userAttending: {type: Schema.Types.ObjectId, ref: 'user'}
+  userAttending: { type: Schema.Types.ObjectId, ref: 'user' },
 });
 
 const Event = mongoose.model('event', eventSchema);

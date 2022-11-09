@@ -30,14 +30,19 @@ const venueSchema = new Schema({
         'Wedding',
         'Zehlendorf',
       ],
-      required: true,
-    }
+      required: false,
+    },
   },
   venueType: { type: String, enum: ['bar', 'café', 'club', 'concert hall'] },
-  event: {type: Schema.Types.ObjectId, ref: 'event'},
+  venueURL: { type: String },
+  event: { type: Schema.Types.ObjectId, ref: 'event' },
   rating: {
-    venueRating: {type: Number},
-    priceRating: {type: Number},
+    venueRating: { type: Number },
+    priceRating: { type: Number },
   },
-  userFollowing: {type: Schema.Types.ObjectId, ref: 'user'},
+  userFollowing: { type: Schema.Types.ObjectId, ref: 'user' },
 });
+
+const Venue = mongoose.model('venue', venueSchema);
+
+export default Venue;
