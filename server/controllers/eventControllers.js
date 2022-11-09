@@ -5,6 +5,18 @@ const findAllEvents = async (req, res) => {
   return res.status(200).json(events);
 };
 
+const findEvent = async (req, res) => {
+    try {
+        const event = await Event.findById(req.params.id);
+        if (!event) {
+            return res.status(400).json({message: 'Event not found'});
+        }
+        return res.status(200).json({event});
+    } catch (event) {
+        return res.status(400).json({ message: error.message });
+    }
+};
+
 const createEvent = async (req, res) => {
   try {
     const { name, date, time, location, tickets, genre, information } =
@@ -24,4 +36,6 @@ const createEvent = async (req, res) => {
   }
 };
 
-export { findAllEvents, createEvent };
+
+
+export { findAllEvents, findEvent, createEvent };
