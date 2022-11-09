@@ -126,6 +126,9 @@ const updateUserData = async (req, res) => {
       { email, userName, password: hashedPassword, photoURL },
       { new: true }
     );
+    if (!updatedUserData) {
+      return res.status(404).json('User not found');
+    }
     return res
       .status(200)
       .json({ message: 'User data successfully updated', updatedUserData });
