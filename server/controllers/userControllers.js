@@ -2,7 +2,7 @@
 import bcrypt from 'bcrypt';
 import generateToken from '../helpers/authenticationHelper.js';
 
-// userSchema
+// schema
 import User from '../models/userModel.js';
 
 const findAllUsers = async (req, res) => {
@@ -46,7 +46,7 @@ const registerUser = async (req, res) => {
     } else if (userUsernameExists) {
       return res.status(400).json({ message: "Username already exists" });
     }
-    
+
     const createdUser = await User.create({
       email,
       userName,

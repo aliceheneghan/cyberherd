@@ -1,4 +1,5 @@
 // libraries
+import cors from 'cors';
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
@@ -13,6 +14,9 @@ const app = express();
 
 app.use(express.json());
 
+app.use(cors())
+
+// database connection
 mongoose
   .connect(
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}`
@@ -24,6 +28,7 @@ mongoose
     console.log(error.message);
   });
 
+ // endpoints 
 app.use('/api/user', userRoutes);
 app.use('/api/events', eventRoutes);
 
