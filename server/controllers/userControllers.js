@@ -1,13 +1,13 @@
 import User from '../models/userModel.js';
 import bcrypt from 'bcrypt';
 
-export const findAllUsers = async (req, res) => {
+const findAllUsers = async (req, res) => {
   const users = await User.find();
 
   return res.status(200).json({ users });
 };
 
-export const findUser = async (req, res) => {
+const findUser = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
 
@@ -21,7 +21,7 @@ export const findUser = async (req, res) => {
   }
 };
 
-export const registerUser = async (req, res) => {
+const registerUser = async (req, res) => {
   try {
     const {
       email,
@@ -55,7 +55,7 @@ export const registerUser = async (req, res) => {
   }
 };
 
-export const updateUserData = async (req, res) => {
+const updateUserData = async (req, res) => {
   try {
     const { email, userName, password, photoURL } = req.body;
 
@@ -74,7 +74,7 @@ export const updateUserData = async (req, res) => {
   }
 };
 
-export const deleteUser = async (req, res) => {
+const deleteUser = async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id);
 
@@ -88,4 +88,4 @@ export const deleteUser = async (req, res) => {
   }
 };
 
-
+export { findAllUsers, findUser, registerUser, updateUserData, deleteUser };
