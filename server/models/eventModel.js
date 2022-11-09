@@ -1,3 +1,4 @@
+// libraries
 import mongoose from 'mongoose';
 
 const { Schema, model } = mongoose;
@@ -14,11 +15,11 @@ const eventSchema = new Schema({
   },
   location: { type: Schema.Types.ObjectId, ref: 'venue' },
   tickets: {
-    preSalePrice: { type: String },
-    doorPrice: { type: String },
+    preSalePrice: { type: Number },
+    doorPrice: { type: Number },
     ticketURL: { type: String },
   },
-  genre: {
+  genre: [{
     type: String,
     enum: [
       'Acoustic',
@@ -44,7 +45,7 @@ const eventSchema = new Schema({
       'Trap',
     ],
     required: true,
-  },
+  }],
   information: {
     description: { type: String, required: true },
     eventURL: { type: String },
