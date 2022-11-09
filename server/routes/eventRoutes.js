@@ -20,6 +20,6 @@ router.post('/create', createEvent);
 
 router.patch('/update/:id', updateEvent);
 
-router.delete('/delete/:id', deleteEvent)
+router.delete('/delete/:id', deleteEvent);
 
 export default router;
