@@ -5,7 +5,7 @@ export default function Calendar() {
     <div>
         <h2>Calendar</h2>
         <div class="calendar">
-            
+            <div class="month-toggle"></div>
         </div>
         
     </div>
