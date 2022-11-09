@@ -1,11 +1,15 @@
-// Libraries
-
+// libraries
 import express from 'express';
 import Event from '../models/eventModel.js';
 
-// Controllers
-
-import { findAllEvents, findEvent, createEvent } from '../controllers/eventControllers.js';
+// controllers
+import {
+  findAllEvents,
+  findEvent,
+  createEvent,
+  updateEvent,
+  deleteEvent,
+} from '../controllers/eventControllers.js';
 
 const router = express.Router();
 
@@ -15,6 +19,6 @@ router.get('/:id', findEvent);
 
 router.post('/create', createEvent);
 
-router.patch('/update/:id', )
+router.patch('/update/:id', updateEvent);
 
 export default router;
