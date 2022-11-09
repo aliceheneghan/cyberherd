@@ -12,10 +12,7 @@ const eventSchema = new Schema({
     startTime: { type: Date, required: false },
     doorsOpen: { type: Date },
   },
-  location: {
-    venue: { type: Schema.Types.ObjectId, ref: 'venue' },
-    venueURL: { type: String },
-  },
+  location: { type: Schema.Types.ObjectId, ref: 'venue' },
   tickets: {
     preSalePrice: { type: String },
     doorPrice: { type: String },
@@ -53,6 +50,7 @@ const eventSchema = new Schema({
     eventURL: { type: String },
     bandURL: { type: String },
   },
+  userAttending: {type: Schema.Types.ObjectId, ref: 'user'}
 });
 
 const Event = mongoose.model('event', eventSchema);
