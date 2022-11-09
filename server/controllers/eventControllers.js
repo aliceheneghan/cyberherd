@@ -1,5 +1,4 @@
 import Event from '../models/eventModel.js';
-import User from '../models/userModel.js';
 
 const findAllEvents = async (req, res) => {
   const events = await Event.find();

@@ -1,6 +1,5 @@
 // libraries
 import express from 'express';
-import Event from '../models/eventModel.js';
 
 // controllers
 import {
@@ -20,5 +19,7 @@ router.get('/:id', findEvent);
 router.post('/create', createEvent);
 
 router.patch('/update/:id', updateEvent);
+
+router.delete('/delete/:id', deleteEvent)
 
 export default router;
