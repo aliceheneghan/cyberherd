@@ -1,29 +1,25 @@
+// libraries
 import express from 'express';
-import Event from '../models/eventModel.js';
+
+// controllers
+import {
+  findAllEvents,
+  findEvent,
+  createEvent,
+  updateEvent,
+  deleteEvent,
+} from '../controllers/eventControllers.js';
 
 const router = express.Router();
 
-router.get('/', async(req, res) => {
-    const events = await Event.find();
-    return res.status(200).json(events);
-});
+router.get('/', findAllEvents);
 
-router.post('/create', async(req, res) => {
-    try {
-        const {name, date, time, location, tickets, genre, information} = req.body;
-        const createdEvent = await Event.create({
-            name,
-            date,
-            time,
-            location,
-            tickets,
-            genre,
-            information
-        });
-        return res.status(200).json({message: 'Event created', createdEvent})
-    } catch (error) {
-        return res.status(500).json({message: error.message})
-    }  
-});
+router.get('/:id', findEvent);
+
+router.post('/create', createEvent);
+
+router.patch('/update/:id', updateEvent);
+
+router.delete('/delete/:id', deleteEvent);
 
 export default router;
