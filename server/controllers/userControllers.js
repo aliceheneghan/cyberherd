@@ -38,7 +38,15 @@ const registerUser = async (req, res) => {
       connections,
     } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
+    const userUsernameExists = await User.findOne({ userName });
+    const userEmailExists = await User.findOne({ email });
 
+    if (userEmailExists) {
+      return res.status(400).json({ message: "Email already registered " });
+    } else if (userUsernameExists) {
+      return res.status(400).json({ message: "Username already exists" });
+    }
+    
     const createdUser = await User.create({
       email,
       userName,
