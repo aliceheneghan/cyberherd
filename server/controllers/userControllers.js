@@ -1,5 +1,8 @@
-import User from '../models/userModel.js';
+// libraries
 import bcrypt from 'bcrypt';
+
+// schema
+import User from '../models/userModel.js';
 
 export const findAllUsers = async (req, res) => {
   const users = await User.find();

@@ -1,4 +1,8 @@
+// libraries
 import express from 'express';
+
+// middlewares
+import validateUser from '../middlewares/userValidation.js';
 
 // controllers
 import {
@@ -15,7 +19,7 @@ router.get('/', findAllUsers);
 
 router.get('/:id', findUser);
 
-router.post('/create', registerUser);
+router.post('/create', validateUser, registerUser);
 
 router.patch('/update/:id', updateUserData);
 
