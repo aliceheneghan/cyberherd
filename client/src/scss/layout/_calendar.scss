@@ -2,10 +2,12 @@
     border: 1px red solid;
 }
 
-.calendar{
-    margin-top: 4rem;
-    month-toggle: {
-        grid-template-columns: repeat(7, minmax(0, 1fr));
-        
+.calendar {
+    margin-top: 6rem;
+
+    .month-selector {
+        display: grid;
+        border: 1px red solid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));    
     }
 }
