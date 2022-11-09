@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
 // routes
-import userRouter from './routes/userRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 import eventRoutes from './routes/eventRoutes.js';
 
 dotenv.config();
@@ -24,7 +24,7 @@ mongoose
     console.log(error.message);
   });
 
-app.use('/api/user', userRouter);
+app.use('/api/user', userRoutes);
 app.use('/api/events', eventRoutes);
 
 const PORT = process.env.PORT;
