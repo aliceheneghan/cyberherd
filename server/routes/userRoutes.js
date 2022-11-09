@@ -9,6 +9,8 @@ import {
   findAllUsers,
   findUser,
   registerUser,
+  loginUser,
+  logoutUser,
   updateUserData,
   deleteUser,
 } from '../controllers/userControllers.js';
@@ -20,6 +22,10 @@ router.get('/', findAllUsers);
 router.get('/:id', findUser);
 
 router.post('/create', validateUser, registerUser);
+
+router.post('/login', loginUser);
+
+router.get('/logout', logoutUser);
 
 router.patch('/update/:id', updateUserData);
 
