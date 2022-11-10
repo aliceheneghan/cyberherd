@@ -2,7 +2,7 @@
 import bcrypt from 'bcrypt';
 import generateToken from '../helpers/authenticationHelper.js';
 
-// userSchema
+// schema
 import User from '../models/userModel.js';
 
 const findAllUsers = async (req, res) => {
@@ -38,6 +38,14 @@ const registerUser = async (req, res) => {
       connections,
     } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
+    const userUsernameExists = await User.findOne({ userName });
+    const userEmailExists = await User.findOne({ email });
+
+    if (userEmailExists) {
+      return res.status(400).json({ message: "Email already registered " });
+    } else if (userUsernameExists) {
+      return res.status(400).json({ message: "Username already exists" });
+    }
 
     const createdUser = await User.create({
       email,
@@ -118,6 +126,9 @@ const updateUserData = async (req, res) => {
       { email, userName, password: hashedPassword, photoURL },
       { new: true }
     );
+    if (!updatedUserData) {
+      return res.status(404).json('User not found');
+    }
     return res
       .status(200)
       .json({ message: 'User data successfully updated', updatedUserData });
