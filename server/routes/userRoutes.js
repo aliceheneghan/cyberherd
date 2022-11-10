@@ -2,7 +2,7 @@
 import express from 'express';
 
 // middlewares
-import validateUser from '../middlewares/userValidation.js';
+import validateUser from '../middleware/userValidation.js';
 
 // controllers
 import {
