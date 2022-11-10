@@ -1,5 +1,5 @@
 /* Flex */
-@mixin basic-flex ($jc, $ai, $dir) {
+@mixin flex-jc-ai-dir ($jc, $ai, $dir) {
     display: flex;
     justify-content: $jc;
     align-items: $ai;
