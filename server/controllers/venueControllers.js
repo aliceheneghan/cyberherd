@@ -8,7 +8,7 @@ const findAllVenues = async (req, res) => {
 
 const findVenue = async (req, res) => {
   try {
-    const venue = await Venues.findById(req.params.id);
+    const venue = await Venue.findById(req.params.id);
     if (!venue) {
       return res.status(400).json({ message: 'Venue not found' });
     }
