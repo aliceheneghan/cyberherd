@@ -1,7 +1,8 @@
+// Packages
 import React from 'react';
 
-export default function Cell({ children }) {
+export default function Cell({ className, children }) {
   return (
-    <div className="MonthSelector">{children}</div>
+    <div className={className}>{children}</div>
   )
 }
