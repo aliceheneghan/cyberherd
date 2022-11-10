@@ -1,3 +1,5 @@
+
+// model
 import Event from '../models/eventModel.js';
 
 const findAllEvents = async (req, res) => {

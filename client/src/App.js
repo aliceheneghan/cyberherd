@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 // Components
 import Banner from './components/Banner.jsx';
-import Navbar from './components/Navbar.jsx';
+import Calendar from "./components/Calendar.jsx";
 
 // Styles
 import './App.css';
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
 
       <Banner />
-      <Navbar />
+      <Calendar />
       <Routes>
        {/* <Route path="/" element={}/>  */}
       </Routes>
