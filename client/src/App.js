@@ -5,7 +5,7 @@ import Banner from './components/Banner.jsx';
 import Calendar from "./components/Calendar.jsx";
 
 // Styles
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
