@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   overflow: hidden;
-  height: 4rem;
+  height: 4.3rem;
   background-color: yellow;
   padding-left: 100%;
   box-sizing: content-box;
@@ -20,7 +20,7 @@
   padding-right: 100%;
   box-sizing: content-box;
   will-change: transform;
-  animation: banner 40s linear infinite;
+  animation: banner 80s linear infinite;
 
   @keyframes banner {
     0% {

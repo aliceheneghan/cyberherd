@@ -44,6 +44,6 @@ const venueSchema = new Schema({
   userFollowing: { type: Schema.Types.ObjectId, ref: 'user' },
 });
 
-const Venue = mongoose.model('venue', venueSchema);
+const Venue = model('venue', venueSchema);
 
 export default Venue;
