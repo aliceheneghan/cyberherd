@@ -8,9 +8,9 @@ export default function Calendar() {
   return (
     <div class="calendar">
         <div class="month-selector">
-          <Cell> {"<"} </Cell>
-          <Cell>Month</Cell>
-          <Cell>{">"}</Cell>
+          <Cell className="span-2"> {"<"} </Cell>
+          <Cell className="span-3">Month</Cell>
+          <Cell className="span-2">{">"}</Cell>
         </div>
     </div>
   )
