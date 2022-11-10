@@ -4,10 +4,15 @@
 
 .calendar {
     margin-top: 6rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    border: 1px red solid;
+
 
     .month-selector {
+        width: 60%;
         display: grid;
-        border: 1px red solid;
         grid-template-columns: repeat(7, minmax(0, 1fr));   
         text-align: center;
         
