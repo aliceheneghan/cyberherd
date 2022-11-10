@@ -6,6 +6,7 @@ import mongoose from 'mongoose';
 // routes
 import userRoutes from './routes/userRoutes.js';
 import eventRoutes from './routes/eventRoutes.js';
+import venueRoutes from './routes/venueRoutes.js';
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ mongoose
 
 app.use('/api/user', userRoutes);
 app.use('/api/events', eventRoutes);
+app.use('api/venues', venueRoutes);
 
 const PORT = process.env.PORT;
 
