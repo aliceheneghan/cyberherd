@@ -10,7 +10,7 @@ import '../scss/layout/_banner.scss';
 function Banner() {
   return (
     <div className= 'banner-animated'>
-      <span>Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /></span>
+      <span>Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /> Berlin Spaß Kalender <GiBurningDot /></span>
     </div>
   )
 }

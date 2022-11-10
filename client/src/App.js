@@ -14,6 +14,7 @@ function App() {
       
       <Navbar />
       <Banner />
+      <Navbar />
       <Calendar />
       <Routes>
        {/* <Route path="/" element={}/>  */}
