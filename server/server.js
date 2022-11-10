@@ -1,11 +1,13 @@
 // libraries
+import cors from 'cors';
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
 // routes
-import userRouter from './routes/userRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 import eventRoutes from './routes/eventRoutes.js';
+import venueRoutes from './routes/venueRoutes.js';
 
 dotenv.config();
 
@@ -13,6 +15,9 @@ const app = express();
 
 app.use(express.json());
 
+app.use(cors())
+
+// database connection
 mongoose
   .connect(
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}`
@@ -24,8 +29,10 @@ mongoose
     console.log(error.message);
   });
 
-app.use('/api/user', userRouter);
+ // endpoints 
+app.use('/api/user', userRoutes);
 app.use('/api/events', eventRoutes);
+app.use('api/venues', venueRoutes);
 
 const PORT = process.env.PORT;
 
