@@ -6,7 +6,7 @@ import Calendar from "./components/Calendar.jsx";
 import Navbar from "./components/Navbar.jsx";
 
 // Styles
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

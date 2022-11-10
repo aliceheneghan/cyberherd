@@ -1,17 +1,14 @@
-.tst-bdr-red {
-    border: 1px red solid;
-}
+@import "../abstract/_mixins.scss";
 
 .calendar {
-    margin: 15rem 0 10rem 0;
+    @include flex-jc-ai-dir (flex-start, center, column);
+    margin: 4rem 0 10rem 0;
     width: 70%;
     min-height: 60rem;
-    display: flex;
-    justify-content: center;
     border: 1px red solid;
 
-
     .month-selector {
+        margin-top: 1rem;
         width: 60%;
         height: 10%;
         display: grid;

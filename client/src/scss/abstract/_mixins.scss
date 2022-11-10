@@ -1,6 +1,7 @@
 /* Flex */
-@mixin flex-center {
+@mixin flex-jc-ai-dir ($jc, $ai, $dir) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $dir;
   }

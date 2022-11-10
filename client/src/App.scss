@@ -15,9 +15,6 @@ body{
   font-family: 'Sarpanch', 'Fjalla One', 'Kodchasan', sans-serif;
 }
 .App {
+  @include flex-jc-ai-dir (center, center, column);
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
