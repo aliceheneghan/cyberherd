@@ -5,10 +5,10 @@
     margin: 4rem 0 10rem 0;
     width: 70%;
     min-height: 60rem;
+    border: 1px red solid;
 
     .CalendarMonth {
         @include flex-jc-ai-dir (space-evenly, center, row);
-        margin-top: 1rem;
         width: 60%;
         // text-align: center;  
         border: 1px red solid;
