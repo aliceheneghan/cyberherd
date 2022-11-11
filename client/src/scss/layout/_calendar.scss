@@ -5,14 +5,10 @@
     margin: 4em 0 10em 0;
     width: 50em;
     height: 50em;
-    border: 1px red solid;
 
     .CalendarMonth {
-        @include flex-jc-ai-dir (space-evenly, center, row);
-        width: 30%;
-        // text-align: center;  
-        border: 1px red solid;
-
+        @include flex-jc-ai-dir (space-between, center, row);
+        width: 18em;
     }
 
     .SevenDayGrid {
