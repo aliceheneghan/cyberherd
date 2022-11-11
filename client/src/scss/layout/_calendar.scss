@@ -5,6 +5,7 @@
     margin: 4em 0 10em 0;
     width: 50em;
     height: 50em;
+    border: 1px red solid;
 
     .CalendarMonth {
         @include flex-jc-ai-dir (space-between, center, row);
@@ -13,11 +14,12 @@
 
     .CalendarDays {
         margin: 1em 0 1em 0;
+        width: 50em;
+        height: 3em;
         border: 1px red solid;
     }
 
     .SevenDayGrid {
-        height: 3em;
         display: grid;
         grid-template-columns: repeat(7, minmax(0, 1fr));  
     }
