@@ -2,14 +2,14 @@
 
 .Calendar {
     @include flex-jc-ai-dir (flex-start, center, column);
-    margin: 4rem 0 10rem 0;
+    margin: 4em 0 10em 0;
     width: 70%;
     min-height: 60rem;
     border: 1px red solid;
 
     .CalendarMonth {
         @include flex-jc-ai-dir (space-evenly, center, row);
-        width: 60%;
+        width: 30%;
         // text-align: center;  
         border: 1px red solid;
 
