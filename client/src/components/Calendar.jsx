@@ -2,17 +2,17 @@ import React from 'react';
 // Style
 import "../scss/layout/_calendar.scss"
 // Components
-import Cell from './Cell';
+import Cell from '../features/calendar/components/Cell';
 
 export default function Calendar() {
   return (
-    <div class="calendar">
-        <div class="month-selector">
+    <div className="Calendar">
+        <div class="month-grid month-selector">
           <Cell className="span-2"> {"<"} </Cell>
           <Cell className="span-3">Month</Cell>
           <Cell className="span-2">{">"}</Cell>
         </div>
-        <div class="weekdays">
+        <div class="weekdays ">
           <Cell>Mon</Cell>
           <Cell>Tue</Cell>
           <Cell>Wed</Cell>
