@@ -12,7 +12,7 @@
         display: grid;
         grid-template-columns: repeat(7, minmax(0, 1fr));  
     }
-    .month-selector {
+    .CalendarMonth {
         align-content: center;
         margin-top: 1rem;
         width: 60%;
@@ -28,9 +28,5 @@
             grid-column: span 3; 
             border: 1px red solid;
         }   
-    }
-    .weekdays {
-        
-
     }
 }

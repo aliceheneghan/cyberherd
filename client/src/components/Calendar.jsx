@@ -7,7 +7,7 @@ import Cell from '../features/calendar/components/Cell';
 export default function Calendar() {
   return (
     <div className="Calendar">
-        <div class="month-grid month-selector">
+        <div class="CalendarMonth">
           <Cell className="span-2"> {"<"} </Cell>
           <Cell className="span-3">Month</Cell>
           <Cell className="span-2">{">"}</Cell>
