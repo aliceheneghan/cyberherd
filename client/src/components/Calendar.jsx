@@ -12,7 +12,7 @@ export default function Calendar() {
           <Cell className="span-3">Month</Cell>
           <Cell className="span-2">{">"}</Cell>
         </div>
-        <div class="weekdays ">
+        <div class="CalendarDays SevenDayGrid">
           <Cell>Mon</Cell>
           <Cell>Tue</Cell>
           <Cell>Wed</Cell>
