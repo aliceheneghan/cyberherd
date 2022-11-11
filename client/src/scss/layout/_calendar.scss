@@ -7,26 +7,17 @@
     min-height: 60rem;
     border: 1px red solid;
 
+    .CalendarMonth {
+        align-content: center;
+        margin-top: 1rem;
+        width: 60%;
+        text-align: center;  
+    }
+
     .SevenDayGrid {
         height: 3rem;
         display: grid;
         grid-template-columns: repeat(7, minmax(0, 1fr));  
     }
-    .CalendarMonth {
-        align-content: center;
-        margin-top: 1rem;
-        width: 60%;
-         
-        text-align: center;
-        border: 1px red solid;
-
-        .span-2 {
-            grid-column: span 2; 
-        }   
-
-        .span-3 {
-            grid-column: span 3; 
-            border: 1px red solid;
-        }   
-    }
+    
 }

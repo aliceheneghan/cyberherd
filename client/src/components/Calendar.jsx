@@ -8,9 +8,9 @@ export default function Calendar() {
   return (
     <div className="Calendar">
         <div class="CalendarMonth">
-          <Cell className="span-2"> {"<"} </Cell>
-          <Cell className="span-3">Month</Cell>
-          <Cell className="span-2">{">"}</Cell>
+          <Cell className=""> {"<"} </Cell>
+          <Cell className="">Month</Cell>
+          <Cell className="">{">"}</Cell>
         </div>
         <div class="CalendarDays SevenDayGrid">
           <Cell>Mon</Cell>
