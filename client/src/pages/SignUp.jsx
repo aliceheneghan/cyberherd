@@ -1,10 +1,11 @@
 // libraries
 import React, { useState } from "react";
 import axios from 'axios';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // style
-import '../../scss/layout/_sign-up.scss';
+// import '../../scss/layout/_sign-up.scss';
+import '../features/sign-up-form/components/_sign-up.scss';
 
 function SignUp() {
  const [userName, setUserName] = useState("");
@@ -18,6 +19,7 @@ function SignUp() {
 
  const handleSubmit = async (e) => {
   e.preventDefault();
+
   console.log("testing123");
   const formData = new FormData(e.target);
 
@@ -46,6 +48,7 @@ function SignUp() {
     type='text' 
     value={userName}
     placeholder='userName' 
+    name="userName"
     />
     </label>
 
@@ -55,6 +58,7 @@ function SignUp() {
     type='email' 
     value={email}
     placeholder='email' 
+    name="email"
     />
     </label>
     
@@ -64,6 +68,7 @@ function SignUp() {
     type='password' 
     value={password}
     placeholder='password' 
+    name="password"
     />
     </label>
     
@@ -73,6 +78,7 @@ function SignUp() {
     type='date' 
     value={dateOfBirth}
     placeholder='dateOfBirth' 
+    name="dateOfBirth"
     />
     </label>
 

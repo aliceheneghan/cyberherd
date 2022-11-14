@@ -7,7 +7,7 @@ import { Navbar } from "./features/navbar/index.jsx";
 
 // Pages
 import Login from "./pages/Login.jsx";
-import SignUp from "./pages/Sign-up/index.jsx";
+import SignUp from "./pages/SignUp.jsx";
 
 // Styles
 import './App.scss';

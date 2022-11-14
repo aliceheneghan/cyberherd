@@ -1,7 +1,7 @@
 // libraries
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // Style
 import './_login.scss';
@@ -10,6 +10,7 @@ function Login() {
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [error, setError] = useState("");
+const [loggedIn, setLoggedIn] = useState();
 
 const navigate = useNavigate();
 
@@ -20,7 +21,7 @@ const navigate = useNavigate();
   const formData = new FormData(e.target);
 
   try {
-    await axios.post(`http://localhost:4000/api/user/create`, {
+    await axios.post(`http://localhost:4000/api/user/login`, {
       email: formData.get("email"),
       password: formData.get("password"),
     });
@@ -41,6 +42,7 @@ const navigate = useNavigate();
     onChange={(e) => setEmail(e.target.value)}
     type='email' 
     value={email}
+    name="email"
     placeholder='email' 
     />
     </label>
@@ -50,6 +52,7 @@ const navigate = useNavigate();
     onChange={(e) => setPassword(e.target.value)}
     type='password' 
     value={password}
+    name="password"
     placeholder='password' 
     />
     </label>
