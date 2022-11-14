@@ -1,4 +1,4 @@
-// Packages
+// packages
 import React from 'react';
 
 export default function Cell({ className, children }) {

@@ -1,23 +1,23 @@
-@import "../abstract/_mixins.scss";
+@import "../../../scss/abstract/_mixins.scss";
 
-.Calendar {
+.calendar {
     @include flex-jc-ai-dir (flex-start, center, column);
     margin: 4em 0 10em 0;
     width: 50em;
     height: 50em;
 
-    .CalendarMonth {
+    .calendar-month {
         @include flex-jc-ai-dir (space-between, center, row);
         width: 18em;
     }
 
-    .CalendarDays {
+    .calendar-days {
         margin: 2em 0 1em 0;
         width: 50em;
         height: 3em;
     }
 
-    .SevenDayGrid {
+    .seven-day-grid {
         display: grid;
         grid-template-columns: repeat(7, minmax(0, 1fr)); 
         align-content: center; 
