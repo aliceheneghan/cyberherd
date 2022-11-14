@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 // icons 
 import { SlMagnifier } from 'react-icons/sl';
 
-// style
-import '../scss/layout/_navbar.scss';
+// Style
+import './_navbar.scss';
 
 function Navbar() {
   return (

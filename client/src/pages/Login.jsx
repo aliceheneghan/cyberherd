@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Navigate, useNavigate } from 'react-router-dom';
 
-// style
-import '../../scss/layout/_login.scss';
+// Style
+import './_login.scss';
 
 function Login() {
 const [email, setEmail] = useState("");

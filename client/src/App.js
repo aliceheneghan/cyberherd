@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 
-// components
-import Banner from './components/Banner.jsx';
-import Calendar from "./components/Calendar.jsx";
-import Navbar from "./components/Navbar.jsx";
+// Components
+import { Banner } from './features/banner/index.jsx';
+import { Calendar } from "./features/calendar/index.jsx";
+import { Navbar } from "./features/navbar/index.jsx";
 
-// pages
-import Login from "./pages/Login/index.jsx";
+// Pages
+import Login from "./pages/Login.jsx";
 import SignUp from "./pages/Sign-up/index.jsx";
 
 // Styles
