@@ -36,19 +36,23 @@ const navigate = useNavigate();
     <div className='login-page'>
       <form onSubmit={handleSubmit}>
   
-    <label for='email'>email</label>
+    <label for='email'>email
     <input id='email'
     onChange={(e) => setEmail(e.target.value)}
     type='email' 
+    value={email}
     placeholder='email' 
     />
+    </label>
     
-    <label for='password'>password</label>
+    <label for='password'>password
     <input id='password'
     onChange={(e) => setPassword(e.target.value)}
     type='password' 
+    value={password}
     placeholder='password' 
     />
+    </label>
       
       <br/>
       <button>Login</button>

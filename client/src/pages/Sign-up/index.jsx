@@ -18,7 +18,7 @@ function SignUp() {
 
  const handleSubmit = async (e) => {
   e.preventDefault();
-
+  console.log("testing123");
   const formData = new FormData(e.target);
 
   try {
@@ -77,9 +77,10 @@ function SignUp() {
     </label>
 
     <br/>
-    <button>Sing Up</button>
-    <button>Sign In</button>
+    <button type='submit'>Sign Up</button>
     </form>
+
+    <button type='submit'>Sign In</button>
 
     <div>
       {error ? <p>{error}</p> : null}
