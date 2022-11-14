@@ -1,18 +1,21 @@
+// libraries
 import React from 'react';
-// Style
-import "../scss/layout/_calendar.scss"
-// Components
+
+// style
+import "./scss/layout/_calendar.scss"
+
+// components
 import Cell from './Cell';
 
 export default function Calendar() {
   return (
-    <div className="Calendar">
-        <div className="CalendarMonth">
+    <div className="calendar">
+        <div className="calendar-month">
           <Cell> {"<"} </Cell>
           <Cell>Month</Cell>
           <Cell>{">"}</Cell>
         </div>
-        <div className="CalendarDays SevenDayGrid">
+        <div className="calendar-days seven-day-grid">
           <Cell>Mon</Cell>
           <Cell>Tue</Cell>
           <Cell>Wed</Cell>
