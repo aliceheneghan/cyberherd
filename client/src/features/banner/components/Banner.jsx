@@ -1,6 +1,7 @@
+// libraries
 import React from 'react';
 
-// Icons
+// icons
 import { GiBurningDot } from 'react-icons/gi';
 
 // Style

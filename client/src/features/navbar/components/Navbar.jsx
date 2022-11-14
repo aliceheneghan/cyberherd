@@ -1,7 +1,8 @@
+// libraries
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Icons 
+// icons 
 import { SlMagnifier } from 'react-icons/sl';
 
 // Style
