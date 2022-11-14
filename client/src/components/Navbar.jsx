@@ -1,10 +1,11 @@
+// libraries
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Icons 
+// icons 
 import { SlMagnifier } from 'react-icons/sl';
 
-// Style
+// style
 import '../scss/layout/_navbar.scss';
 
 function Navbar() {

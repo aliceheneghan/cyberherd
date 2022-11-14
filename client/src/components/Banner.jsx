@@ -1,9 +1,10 @@
+// libraries
 import React from 'react';
 
-// Icons
+// icons
 import { GiBurningDot } from 'react-icons/gi';
 
-// Style
+// style
 import '../scss/layout/_banner.scss';
 
 

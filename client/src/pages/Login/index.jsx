@@ -1,52 +1,62 @@
-import React from 'react';
-import { useState } from 'react';
+// libraries
+import React, { useState } from 'react';
+import axios from 'axios';
+import { Navigate, useNavigate } from 'react-router-dom';
 
-// Style
+// style
 import '../../scss/layout/_login.scss';
 
 function Login() {
- const [user, setUser] = useState({ email: "", password: ""});
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const [error, setError] = useState("");
 
- const handleChange = (e) => {
-  console.log(e.target);
-  setUser((prev) => ({ ...prev, [e.target.placeholder]: e.target.value}));
- };
+const navigate = useNavigate();
 
- const handleSubmit = (e) => {
+
+ const handleSubmit = async (e) => {
   e.preventDefault();
  
-  fetch("http://localhost:3000/login", {
-    method: 'POST',
-    body: JSON.stringify(user),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  }).then((res) => res.json()).then((data) => console.log(data));
+  const formData = new FormData(e.target);
+
+  try {
+    await axios.post(`http://localhost:4000/api/user/create`, {
+      email: formData.get("email"),
+      password: formData.get("password"),
+    });
+    setError("");
+    navigate("/dashboard");
+  } catch (error) {
+    setError(error)
+    console.log(error)
+  }
  };
 
   return (
     <div className='login-page'>
       <form onSubmit={handleSubmit}>
-
-      <div>email</div>
-      <input 
-      onChange={handleChange}
-      type='email' 
-      placeholder='email' 
-      required 
-      />
-      
-      <div>password</div>
-      <input 
-      onChange={handleChange}
-      type='password' 
-      placeholder='password' 
-      required 
-      />
+  
+    <label for='email'>email</label>
+    <input id='email'
+    onChange={(e) => setEmail(e.target.value)}
+    type='email' 
+    placeholder='email' 
+    />
+    
+    <label for='password'>password</label>
+    <input id='password'
+    onChange={(e) => setPassword(e.target.value)}
+    type='password' 
+    placeholder='password' 
+    />
       
       <br/>
       <button>Login</button>
       </form>
+
+      <div>
+      {error ? <p>{error}</p> : null}
+    </div>
     </div>
   )
 }

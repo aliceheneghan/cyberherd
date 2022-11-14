@@ -1,14 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 
-// Components
+// components
 import Banner from './components/Banner.jsx';
 import Calendar from "./components/Calendar.jsx";
 import Navbar from "./components/Navbar.jsx";
 
-// Pages
+// pages
 import Login from "./pages/Login/index.jsx";
+import SignUp from "./pages/Sign-up/index.jsx";
 
-// Styles
+// styles
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Routes>
        <Route path="/" element={<Calendar />}/>
        <Route path="/login" element={<Login />}/>
+       <Route path="/sign-up" element={<SignUp />}/>
       </Routes>
     
     </div>
