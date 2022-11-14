@@ -1,11 +1,14 @@
 // libraries
 import React from 'react';
+import { startOfMonth } from 'date-fns'; 
 
 // style
 import "./scss/layout/_calendar.scss"
 
 // components
 import Cell from './Cell';
+
+
 
 export default function Calendar() {
   return (
