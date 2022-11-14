@@ -3,12 +3,13 @@ import React from 'react';
 import { startOfMonth } from 'date-fns'; 
 
 // style
-import "./scss/layout/_calendar.scss"
+import "./_calendar.scss";
 
 // components
 import Cell from './Cell';
 
-
+// data
+const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 export default function Calendar() {
   return (
@@ -19,13 +20,11 @@ export default function Calendar() {
           <Cell>{">"}</Cell>
         </div>
         <div className="calendar-days seven-day-grid">
-          <Cell>Mon</Cell>
-          <Cell>Tue</Cell>
-          <Cell>Wed</Cell>
-          <Cell>Thu</Cell>
-          <Cell>Fri</Cell>
-          <Cell>Sat</Cell>
-          <Cell>Sun</Cell>
+          {daysOfWeek.map((day) => (
+            <Cell key={day}>
+              {day}
+            </Cell>
+          ))}
         </div>
     </div>
   )

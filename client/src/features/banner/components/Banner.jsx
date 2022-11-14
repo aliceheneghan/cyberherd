@@ -4,7 +4,7 @@ import React from 'react';
 import { GiBurningDot } from 'react-icons/gi';
 
 // Style
-import '../scss/layout/_banner.scss';
+import './_banner.scss';
 
 
 function Banner() {
