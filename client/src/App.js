@@ -9,8 +9,8 @@ import Navbar from "./components/Navbar.jsx";
 import Login from "./pages/Login/index.jsx";
 import SignUp from "./pages/Sign-up/index.jsx";
 
-// styles
-import './App.css';
+// Styles
+import './App.scss';
 
 function App() {
   return (

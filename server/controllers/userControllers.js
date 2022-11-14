@@ -1,6 +1,7 @@
 // libraries
 import bcrypt from 'bcrypt';
 import generateToken from '../helpers/authenticationHelper.js';
+import mongoose from 'mongoose';
 
 // schema
 import User from '../models/userModel.js';
@@ -42,9 +43,9 @@ const registerUser = async (req, res) => {
     const userEmailExists = await User.findOne({ email });
 
     if (userEmailExists) {
-      return res.status(400).json({ message: "Email already registered " });
+      return res.status(400).json({ message: 'Email already registered ' });
     } else if (userUsernameExists) {
-      return res.status(400).json({ message: "Username already exists" });
+      return res.status(400).json({ message: 'Username already exists' });
     }
 
     const createdUser = await User.create({
@@ -63,7 +64,17 @@ const registerUser = async (req, res) => {
       .status(200)
       .json({ message: 'User successfully created', createdUser });
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    /**
+     * Advanced errorMessaging:
+     * In case we have a ValidationError - statuscode(400)
+     * In case we have a CastError - statuscode(500)
+     * This errorMesssaging only appears inside userController.
+     */
+    if (error instanceof mongoose.Error.ValidationError) {
+      return res.status(400).json({ message: error.message });
+    } else if (error instanceof mongoose.Error.CastError) {
+      return res.status(500).json({ message: error.message });
+    }
   }
 };
 
@@ -101,7 +112,11 @@ const loginUser = async (req, res) => {
       return res.status(400).json({ message: 'No access granted!' });
     }
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    if (error instanceof mongoose.Error.ValidationError) {
+      return res.status(400).json({ message: error.message });
+    } else if (error instanceof mongoose.Error.CastError) {
+      return res.status(500).json({ message: error.message });
+    }
   }
 };
 
@@ -133,7 +148,11 @@ const updateUserData = async (req, res) => {
       .status(200)
       .json({ message: 'User data successfully updated', updatedUserData });
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    if (error instanceof mongoose.Error.ValidationError) {
+      return res.status(400).json({ message: error.message });
+    } else if (error instanceof mongoose.Error.CastError) {
+      return res.status(500).json({ message: error.message });
+    }
   }
 };
 
