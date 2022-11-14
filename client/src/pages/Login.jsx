@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 // Style
-import '../../scss/layout/_login.scss';
+import './_login.scss';
 
 function Login() {
  const [user, setUser] = useState({ email: "", password: ""});
