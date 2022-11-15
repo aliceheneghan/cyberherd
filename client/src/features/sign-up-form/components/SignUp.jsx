@@ -15,7 +15,6 @@ function SignUp() {
  
  const navigate = useNavigate();
 
-
  const handleSubmit = async (e) => {
   e.preventDefault();
   console.log("testing123");
@@ -88,6 +87,5 @@ function SignUp() {
   </div>
 )
 }
-
 
 export default SignUp;

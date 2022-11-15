@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 
-// Components
+// components
 import { Banner } from './features/banner/index.jsx';
 import { Calendar } from "./features/calendar/index.jsx";
 import { Navbar } from "./features/navbar/index.jsx";
 
-// Pages
+// pages
 import Login from "./pages/Login.jsx";
 import SignUp from "./pages/Sign-up/index.jsx";
 
-// Styles
+// styles
 import './App.scss';
 
 function App() {
