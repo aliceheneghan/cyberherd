@@ -21,13 +21,20 @@ function SignUp() {
   console.log("testing123");
   const formData = new FormData(e.target);
 
+// const user =  {
+//   userName: formData.get("userName"),
+//   email: formData.get("email"),
+//   password: formData.get("password"),
+//   dateOfBirth: formData.get("dateOfBirth"),
+//   // image: formData.get("image")
+// }
+// console.log(user)
   try {
-    await axios.post(`http://localhost:4000/api/user/create`, {
-      userName: formData.get("userName"),
-      email: formData.get("email"),
-      password: formData.get("password"),
-      dateOfBirth: formData.get("dateOfBirth"),
-    });
+    await axios.post(`http://localhost:4000/api/user/create`, formData,
+      {
+        headers: { "Content-Type": "multipart/form-data" },
+      }
+    );
     setError("");
     navigate("/login");
   } catch (error) {
@@ -79,6 +86,11 @@ function SignUp() {
     name="dateOfBirth"
     />
     </label>
+
+<label>
+  Select image for upload
+  <input type="file" accept="image/jpg" name="image" />
+</label>
 
     <br/>
     <button className="button-sign" type='submit'>Sign Up</button>
