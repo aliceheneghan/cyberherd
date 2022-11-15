@@ -6,3 +6,6 @@ node_modules
 
 # Only Mac
 .DS_Store
+
+# uploaded imgs
+uploads

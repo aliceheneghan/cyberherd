@@ -45,6 +45,9 @@ function SignUp() {
 
  return (
   <div className='connect-page'>
+
+{/* <img src="http://localhost:4000/images/32ab7a21e3b9bbbe00fc333276a68951"/> */}
+
     <form onSubmit={handleSubmit}>
 
     <label for='user-name'>
