@@ -3,7 +3,7 @@ import express from 'express';
 
 // middlewares
 import validateUser from '../middleware/userValidation.js';
-
+import upload from '../config/multer.js';
 // controllers
 import {
   findAllUsers,
@@ -21,7 +21,7 @@ router.get('/', findAllUsers);
 
 router.get('/:id', findUser);
 
-router.post('/create', validateUser, registerUser);
+router.post('/create', upload.single("image"), validateUser, registerUser);
 
 router.post('/login', loginUser);
 
