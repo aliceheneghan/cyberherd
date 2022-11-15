@@ -5,9 +5,9 @@ import { Banner } from './features/banner/index.jsx';
 import { Calendar } from "./features/calendar/index.jsx";
 import { Navbar } from "./features/navbar/index.jsx";
 
-// pages
-import Login from "./pages/Login.jsx";
-import SignUp from "./pages/Sign-up/index.jsx";
+// features
+import { Login } from "./features/login-form/index.jsx";
+import{ SignUp } from "./features/sign-up-form/index.jsx";
 
 // styles
 import './App.scss';

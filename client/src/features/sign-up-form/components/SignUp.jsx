@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Navigate, useNavigate } from 'react-router-dom';
 
 // style
-import '../../scss/layout/_sign-up.scss';
+import "./_sign-up.scss";
 
 function SignUp() {
  const [userName, setUserName] = useState("");
