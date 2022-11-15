@@ -1,7 +1,7 @@
 // libraries
 import React, { useState } from "react";
 import axios from 'axios';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // style
 import "./_sign-up.scss";
@@ -17,6 +17,7 @@ function SignUp() {
 
  const handleSubmit = async (e) => {
   e.preventDefault();
+
   console.log("testing123");
   const formData = new FormData(e.target);
 
@@ -39,47 +40,49 @@ function SignUp() {
   <div className='connect-page'>
     <form onSubmit={handleSubmit}>
 
-    <label for='user-name'>user name
+    <label for='user-name'>
     <input id='user-name'
     onChange={(e) => setUserName(e.target.value)}
     type='text' 
     value={userName}
     placeholder='userName' 
+    name="userName"
     />
     </label>
 
-    <label for='email'>email
-    <input id='email'
+    <label for='email'>
+    <input id='email-sign'
     onChange={(e) => setEmail(e.target.value)}
     type='email' 
     value={email}
     placeholder='email' 
+    name="email"
     />
     </label>
     
-    <label for='password'>password
-    <input id='password'
+    <label for='password'>
+    <input id='password-sign'
     onChange={(e) => setPassword(e.target.value)}
     type='password' 
     value={password}
     placeholder='password' 
+    name="password"
     />
     </label>
     
-    <label for='dob'>date of birth
+    <label for='dob'>
     <input id='dob'
     onChange={(e) => setDateOfBirth(e.target.value)}
     type='date' 
     value={dateOfBirth}
     placeholder='dateOfBirth' 
+    name="dateOfBirth"
     />
     </label>
 
     <br/>
-    <button type='submit'>Sign Up</button>
+    <button className="button-sign" type='submit'>Sign Up</button>
     </form>
-
-    <button type='submit'>Sign In</button>
 
     <div>
       {error ? <p>{error}</p> : null}
