@@ -27,6 +27,7 @@ const findUser = async (req, res) => {
 };
 
 const registerUser = async (req, res) => {
+  console.log(req.body);
   try {
     const {
       email,
@@ -47,6 +48,9 @@ const registerUser = async (req, res) => {
     } else if (userUsernameExists) {
       return res.status(400).json({ message: 'Username already exists' });
     }
+    console.log('req.file = ', req.file); // file property is being added by multer
+    console.log('req.body.userName = ', req.body.userName);
+    console.log('req.body.dateOfBirth = ', req.body.dateOfBirth);
 
     const createdUser = await User.create({
       email,
