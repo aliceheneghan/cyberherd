@@ -10,7 +10,7 @@ function Login() {
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [error, setError] = useState("");
-const [loggedIn, setLoggedIn] = useState();
+const [loggedIn, setLoggedIn] = useState(true);
 
 const navigate = useNavigate();
 
@@ -26,6 +26,7 @@ const navigate = useNavigate();
       password: formData.get("password"),
     });
     setError("");
+    setLoggedIn(true)
     navigate("/dashboard");
   } catch (error) {
     setError(error)

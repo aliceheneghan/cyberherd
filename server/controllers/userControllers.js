@@ -79,7 +79,7 @@ const registerUser = async (req, res) => {
 };
 
 const loginUser = async (req, res) => {
-  const { userName, password } = req.body;
+  const { email, password } = req.body;
 
   try {
     // error message if no password entered
@@ -87,10 +87,10 @@ const loginUser = async (req, res) => {
       return res.status(400).json({ message: 'Please enter valid password.' });
     }
 
-    const user = await User.findOne({ userName });
+    const user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(400).json({ message: 'Please enter your user name.' });
+      return res.status(400).json({ message: 'Please enter your email.' });
     }
 
     const checkPassword = await bcrypt.compare(password, user.password);
