@@ -1,12 +1,30 @@
 .navbar {
   margin-bottom: 100px;
 }
- 
 .connect-page form {
   width: 100%;
   height: 2vh;
   display: flex;
   align-items: center;
-  flex-direction: row;
-}
- 
+  flex-direction: column;
+  font-size: 16px;
+  #user-name, #email-sign, #password-sign, #dob {
+   font-family: 'Sarpanch';
+   margin: 0.5rem;
+   padding: 0.5em;
+   border-radius: 2px;
+  }
+  #dob {
+    // size of the date of birth placeholder - this size just applies for desktop version for now
+    width: 13vw;
+    color: black;
+    height: 4vh;
+  }
+  .button-sign {
+   margin-top: 0.2rem;
+   padding: 0.3em;
+   font-family: 'Sarpanch';
+   background-color: yellow;
+   border-radius: 2px;
+  }
+ }
