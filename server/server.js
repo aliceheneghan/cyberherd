@@ -32,7 +32,7 @@ mongoose
  // endpoints 
 app.use('/api/user', userRoutes);
 app.use('/api/events', eventRoutes);
-app.use('api/venues', venueRoutes);
+app.use('/api/venues', venueRoutes);
 
 // serve frontEnd with uploadedImage
 app.use("/images", express.static("./uploads/images"));

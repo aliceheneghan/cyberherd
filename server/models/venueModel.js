@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
 const venueSchema = new Schema({
-  name: { type: String, required: true },
+  name: { type: String, required: false },
   location: {
     address: { type: String },
     neighborhood: {
