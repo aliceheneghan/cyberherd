@@ -5,9 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 //style
 import './_create-venue.scss';
-import { CreateVenue } from '..';
 
-function CreateEvent() {
+function CreateVenue() {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [neighborhood, setNeighborhood] = useState('');
