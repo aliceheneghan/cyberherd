@@ -5,7 +5,7 @@ const { Schema, model } = mongoose;
 
 const eventSchema = new Schema({
   name: {
-    bandName: { type: String, required: true },
+    bandName: { type: String, required: false },
     eventName: { type: String },
   },
   date: { type: Date, required: false },
@@ -44,10 +44,10 @@ const eventSchema = new Schema({
       'Stoner',
       'Trap',
     ],
-    required: true,
+    required: false,
   }],
   information: {
-    description: { type: String, required: true },
+    description: { type: String, required: false },
     eventURL: { type: String },
     bandURL: { type: String },
   },
