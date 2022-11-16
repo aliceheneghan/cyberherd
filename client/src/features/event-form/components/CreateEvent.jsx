@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 //style
-import './_event.scss';
+import './_create-event.scss';
 
 function CreateEvent() {
     const [bandName, setBandName] = useState("");
@@ -108,7 +108,7 @@ function CreateEvent() {
             onChange={(e) => setPreSalePrice(e.target.value)}
             type='number'
             value={preSalePrice}
-            placeholder='pre sale price'
+            placeholder='pre-sale price'
             name='preSalePrice'
             />
             </label>
