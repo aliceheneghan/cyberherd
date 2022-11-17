@@ -1,5 +1,6 @@
 // libraries
 import { useState } from 'react';
+import { format } from 'date-fns';
 
 // style
 import './_calendar.scss';
@@ -13,12 +14,13 @@ const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 export default function Calendar() {
   // state
   const [currentDate, setCurrentDate] = useState(new Date());
-  
+
   return (
     <div className="calendar">
       <div className="calendar-month">
         <Cell>{'<'}</Cell>
-        <Cell>Month</Cell>
+        {/* formats JS date into month and year */}
+        <Cell>{format(currentDate, 'LLLL yy')}</Cell>
         <Cell>{'>'}</Cell>
       </div>
       <div className="calendar-days seven-day-grid">
