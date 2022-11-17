@@ -19,6 +19,7 @@ export default function Calendar() {
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
   const monthDays = eachDayOfInterval({ start: monthStart, end: monthEnd });
+  const prefixWeekdays = monthStart.getDay() - 1; // getDay calculates days of week before the start of the month based on Sunday as the first weekday, so -1 needed to align with Monday week start
 
   return (
     <div className="calendar">
@@ -36,6 +37,10 @@ export default function Calendar() {
       </div>
 
       <div className="seven-day-grid">
+        {Array.from({ length: prefixWeekdays }).map((_, index) => (
+          <Cell key={index} className="date-cell"></Cell>
+        ))}
+
         {monthDays.map((date, index) => (
           <Cell key={index} className="date-cell">
             {/* formats JS date into day */}
