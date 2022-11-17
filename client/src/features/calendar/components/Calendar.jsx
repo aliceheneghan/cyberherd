@@ -37,7 +37,7 @@ export default function Calendar() {
 
       <div className="seven-day-grid">
         {monthDays.map((date, index) => (
-          <Cell key={index}>
+          <Cell key={index} className="date-cell">
             {/* formats JS date into day */}
             {format(date, 'd')}
           </Cell>

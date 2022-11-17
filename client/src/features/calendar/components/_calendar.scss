@@ -2,7 +2,7 @@
 
 .calendar {
     @include flex-jc-ai-dir (flex-start, center, column);
-    margin: 4em 0 10em 0;
+    margin: 2em 0 10em 0;
     width: 50em;
     height: 50em;
 
@@ -12,9 +12,8 @@
     }
 
     .calendar-days {
-        margin: 2em 0 1em 0;
-        width: 50em;
-        height: 3em;
+        margin: 3em 0 1.5em 0;
+        width: 49em;
     }
 
     .seven-day-grid {
@@ -26,4 +25,9 @@
     
 }
 
-//         border: 1px red solid;
+.date-cell {
+    @include flex-jc-ai-dir (center, center, row);
+    width: 7em;
+    height: 6em;
+}
+        
