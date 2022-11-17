@@ -7,20 +7,21 @@ import './_calendar.scss';
 // components
 import Cell from './Cell';
 
+// data
+const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 export default function Calendar() {
-  
-
   return (
     <div className="calendar">
       <div className="calendar-month">
-        <Cell>
-          {'<'}
-        </Cell>
+        <Cell>{'<'}</Cell>
         <Cell>Month</Cell>
-        <Cell>
-          {'>'}
-        </Cell>
+        <Cell>{'>'}</Cell>
+      </div>
+      <div className="calendar-days seven-day-grid">
+        {daysOfWeek.map((day) => (
+          <Cell key={day}>{day}</Cell>
+        ))}
       </div>
     </div>
   );
