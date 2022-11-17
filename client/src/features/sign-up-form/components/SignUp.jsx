@@ -11,6 +11,7 @@ export default function SignUp() {
  const [email, setEmail] = useState("");
  const [password, setPassword] = useState("");
  const [dateOfBirth, setDateOfBirth] = useState("");
+ const [image, setImage] = useState("");
  const [error, setError] = useState("");
  
  const navigate = useNavigate();
@@ -92,11 +93,12 @@ export default function SignUp() {
 
     <label>
     Select image for upload
-    <input type="file" accept="image/jpg" name="image" />
+    <br/>
+    <input className='imageUpload' type='file' accept='image/jpg' name="image" />
     </label>
 
     <br/>
-    <button className="button-sign" type='submit'>Sign Up</button>
+    <button className='button-sign' type='submit'>Sign Up</button>
     </form>
 
     <div>

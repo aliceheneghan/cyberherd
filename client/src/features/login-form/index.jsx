@@ -1,3 +1,4 @@
+// features
 import Login from './components/Login.jsx';
 
-export { Login };
+export default Login;
