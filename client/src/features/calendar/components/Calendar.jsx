@@ -1,6 +1,6 @@
 // libraries
 import { useState } from 'react';
-import { format, startOfMonth, endOfMonth, eachDayOfInterval } from 'date-fns';
+import { format, startOfMonth, endOfMonth, eachDayOfInterval, sub, add } from 'date-fns';
 
 // style
 import './_calendar.scss';
@@ -15,6 +15,13 @@ export default function Calendar() {
   // state
   const [currentDate, setCurrentDate] = useState(new Date());
 
+  // handlers
+  const onClick = (cb) => setCurrentDate(cb);
+
+  // callbacks
+  const prevMonth = () => sub(currentDate, { months: 1 });
+  const nextMonth = () => add(currentDate, { months: 1 });
+
   // date variables (extracted from currentDate)
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
@@ -24,10 +31,14 @@ export default function Calendar() {
   return (
     <div className="calendar">
       <div className="calendar-month">
-        <Cell>{'<'}</Cell>
+        <Cell handler={onClick} cb={prevMonth}>
+          {'<'}
+        </Cell>
         {/* formats JS date into month and year */}
         <Cell>{format(currentDate, 'LLLL yy')}</Cell>
-        <Cell>{'>'}</Cell>
+        <Cell handler={onClick} cb={nextMonth}>
+          {'>'}
+        </Cell>
       </div>
 
       <div className="calendar-days seven-day-grid">
