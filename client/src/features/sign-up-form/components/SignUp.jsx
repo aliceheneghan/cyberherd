@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 // style
 import "./_sign-up.scss";
 
-function SignUp() {
+export default function SignUp() {
  const [userName, setUserName] = useState("");
  const [email, setEmail] = useState("");
  const [password, setPassword] = useState("");
@@ -90,10 +90,10 @@ function SignUp() {
     />
     </label>
 
-<label>
-  Select image for upload
-  <input type="file" accept="image/jpg" name="image" />
-</label>
+    <label>
+    Select image for upload
+    <input type="file" accept="image/jpg" name="image" />
+    </label>
 
     <br/>
     <button className="button-sign" type='submit'>Sign Up</button>
@@ -105,5 +105,3 @@ function SignUp() {
   </div>
 )
 }
-
-export default SignUp;
