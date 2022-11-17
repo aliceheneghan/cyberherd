@@ -12,7 +12,7 @@ import{ SignUp } from "./features/sign-up-form/index.jsx";
 // styles
 import './App.scss';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       
@@ -27,5 +27,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

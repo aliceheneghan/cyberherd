@@ -6,7 +6,7 @@ import { useNavigate, Link } from 'react-router-dom';
 // style
 import './_login.scss';
 
-function Login() {
+export default function Login() {
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [error, setError] = useState("");
@@ -72,5 +72,3 @@ const navigate = useNavigate();
     </div>
   )
 }
-
-export default Login;
