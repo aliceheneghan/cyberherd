@@ -11,6 +11,9 @@ import Cell from './Cell';
 const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 export default function Calendar() {
+  // state
+  const [currentDate, setCurrentDate] = useState(new Date());
+  
   return (
     <div className="calendar">
       <div className="calendar-month">
