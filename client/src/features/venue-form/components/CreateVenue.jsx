@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-//style
+// style
 import './_create-venue.scss';
 
 function CreateVenue() {
@@ -14,6 +14,7 @@ function CreateVenue() {
   const [venueURL, setVenueUrl] = useState('');
   const [venueRating, setVenueRating] = useState('');
   const [priceRating, setPriceRating] = useState('');
+  const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
@@ -22,16 +23,22 @@ function CreateVenue() {
 
     const formData = new FormData(e.target);
 
-    await axios.post(`http://localhost:4000/api/venues/create`, formData);
-
-    //     try {
-    //       await axios.post(`http://localhost:4000/api/events/create`, formData);
-    //       setError('');
-    //       navigate('/');
-    //     } catch (error) {
-    //       setError(error);
-    //       console.log(error);
-    //     }
+    try {
+      await axios.post(`http://localhost:4000/api/venues/create`,
+        {name: formData.get('name'),
+        address: formData.get('address'),
+        neighborhood: formData.get('neighborhood'),
+        venueType: formData.get('venueType'),
+        venueURL: formData.get('venueUrl'),
+        venueRating: formData.get('venueRating'),
+        priceRating: formData.get('priceRating'),
+    });
+      setError('');
+      navigate('/');
+    } catch (error) {
+      setError(error);
+      console.log(error);
+    }
   };
 
   return (
