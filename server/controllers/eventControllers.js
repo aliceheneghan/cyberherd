@@ -20,17 +20,18 @@ const findEvent = async (req, res) => {
 };
 
 const createEvent = async (req, res) => {
+  console.log(req.body)
   try {
-    const { name, date, time, location, tickets, genre, information } =
+    const { bandName, eventName, date, startTime, doorsOpen, location, preSalePrice, doorPrice, ticketURL, genre, description, eventURL, bandURL } =
       req.body;
     const createdEvent = await Event.create({
-      name,
+      name:{bandName, eventName},
       date,
-      time,
+      time:{startTime, doorsOpen},
       location,
-      tickets,
+      tickets:{preSalePrice:Number(preSalePrice), doorPrice:Number(doorPrice), ticketURL},
       genre,
-      information,
+      information:{description, eventURL, bandURL}
     });
     return res.status(200).json({ message: 'Event created', createdEvent });
   } catch (error) {

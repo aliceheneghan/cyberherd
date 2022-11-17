@@ -20,6 +20,7 @@ function CreateEvent() {
   const [description, setDescription] = useState('');
   const [eventURL, setEventUrl] = useState('');
   const [bandURL, setBandUrl] = useState('');
+  const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
@@ -28,16 +29,28 @@ function CreateEvent() {
 
     const formData = new FormData(e.target);
 
-    await axios.post(`http://localhost:4000/api/events/create`, formData);
-
-//     try {
-//       await axios.post(`http://localhost:4000/api/events/create`, formData);
-//       setError('');
-//       navigate('/');
-//     } catch (error) {
-//       setError(error);
-//       console.log(error);
-//     }
+    try {
+      await axios.post(`http://localhost:4000/api/events/create`,
+        {bandName: formData.get('bandName'),
+        eventName: formData.get('eventName'),
+        date: formData.get('date'),
+        startTime: formData.get('startTime'),
+        doorsOpen: formData.get('doorsOpen'),
+        location: formData.get('location'),
+        preSalePrice: formData.get('preSalePrice'),
+        doorPrice: formData.get('doorPrice'),
+        ticketURL: formData.get('ticketUrl'),
+        genre: formData.get('genre'),
+        description: formData.get('description'),
+        eventURL: formData.get('eventUrl'),
+        bandURL: formData.get('bandUrl')
+    });
+      setError('');
+      navigate('/');
+    } catch (error) {
+      setError(error);
+      console.log(error);
+    }
   };
 
   return (

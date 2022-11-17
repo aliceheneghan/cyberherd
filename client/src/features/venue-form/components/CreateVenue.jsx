@@ -24,14 +24,14 @@ function CreateVenue() {
 
     await axios.post(`http://localhost:4000/api/venues/create`, formData);
 
-//     try {
-//       await axios.post(`http://localhost:4000/api/events/create`, formData);
-//       setError('');
-//       navigate('/');
-//     } catch (error) {
-//       setError(error);
-//       console.log(error);
-//     }
+    //     try {
+    //       await axios.post(`http://localhost:4000/api/events/create`, formData);
+    //       setError('');
+    //       navigate('/');
+    //     } catch (error) {
+    //       setError(error);
+    //       console.log(error);
+    //     }
   };
 
   return (

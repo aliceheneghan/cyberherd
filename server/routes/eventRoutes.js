@@ -19,7 +19,7 @@ router.get('/', findAllEvents);
 
 router.get('/:id', findEvent);
 
-router.post('/create', validateEvent, createEvent);
+router.post('/create', createEvent);
 
 router.patch('/update/:id', updateEvent);
 
