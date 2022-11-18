@@ -10,10 +10,10 @@ import Dashboard from './pages/Dashboard.jsx';
 import LoginPage from "./pages/LoginPage.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
 
-// features
+// // features
 
-import { Login } from './features/login-form/index.jsx';
-import { SignUp } from './features/sign-up-form/index.jsx';
+// import { Login } from './features/login-form/index.jsx';
+// import { SignUp } from './features/sign-up-form/index.jsx';
 
 
 // styles
@@ -28,8 +28,8 @@ export default function App() {
 
         <Route path="/" element={<Calendar />} />
         <Route path="/dashboard/:id" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/sign-up" element={<SignUpPage />} />
 
       </Routes>
     </div>
