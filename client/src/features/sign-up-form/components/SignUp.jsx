@@ -1,10 +1,10 @@
 // libraries
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 // style
-import "./_sign-up.scss";
+import './_sign-up.scss';
 
 export default function SignUp() {
  const [userName, setUserName] = useState("");
@@ -103,6 +103,5 @@ export default function SignUp() {
     <div>
       {error ? <p>{error}</p> : null}
     </div>
-  </div>
-)
+  );
 }
