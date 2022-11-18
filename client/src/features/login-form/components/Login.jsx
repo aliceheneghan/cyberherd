@@ -21,16 +21,24 @@ const navigate = useNavigate();
   const formData = new FormData(e.target);
 
   try {
-    await axios.post(`http://localhost:4000/api/user/login`, {
+   const response = await axios.post(`http://localhost:4000/api/user/login`, {
       email: formData.get("email"),
       password: formData.get("password"),
     });
-    setError("");
+    if (response.data.success){
+      setError("");
     setLoggedIn(true)
-    navigate("/dashboard");
+    navigate(`/dashboard/${response.data.id}`);
+    } else {
+      setError(response.data.message)
+
+    }
+    console.log(response)
+
+    
   } catch (error) {
-    setError(error)
-    console.log(error)
+    setError(error.message)
+    console.log(error.message)
   }
  };
 

@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { Banner } from './features/banner/index.jsx';
 import { Calendar } from "./features/calendar/index.jsx";
 import { Navbar } from "./features/navbar/index.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 // features
 import { Login } from "./features/login-form/index.jsx";
@@ -20,6 +21,7 @@ export default function App() {
       <Navbar />
       <Routes>
        <Route path="/" element={<Calendar />}/>
+       <Route path="/dashboard/:id" element={<Dashboard />}/>
        <Route path="/login" element={<Login />}/>
        <Route path="/sign-up" element={<SignUp />}/>
       </Routes>

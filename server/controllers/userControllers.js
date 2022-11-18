@@ -20,7 +20,8 @@ const findUser = async (req, res) => {
       return res.status(404).json({ message: 'User not found' });
     }
 
-    return res.status(200).json({ user });
+    return res.send({ user });
+    // return res.status(200).json({ user });
   } catch (error) {
     return res.status(400).json({ message: error.message });
   }
@@ -56,7 +57,7 @@ const registerUser = async (req, res) => {
       userName,
       dateOfBirth,
       password: hashedPassword,
-      photoURL: req.file?.filename,
+      photoURL: `http://localhost:4000/images/${req.file?.filename}`,
       events,
       venues,
       connections,
@@ -87,13 +88,15 @@ const loginUser = async (req, res) => {
   try {
     // error message if no password entered
     if (!password) {
-      return res.status(400).json({ message: 'Please enter valid password.' });
+      return res
+        .send({ success: false, message: 'Please enter valid password.' });
     }
 
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(400).json({ message: 'Please enter your email.' });
+      return res
+        .send({ success: false, message: 'Please enter your email.' });
     }
 
     const checkPassword = await bcrypt.compare(password, user.password);
@@ -110,7 +113,11 @@ const loginUser = async (req, res) => {
           secure: false, // since we not using http(s)
           sameSite: false,
         })
-        .json({ message: "You're logged in. Welcome!" });
+        .json({
+          success: true,
+          message: "You're logged in. Welcome!",
+          id: user._id,
+        });
     } else {
       return res.status(400).json({ message: 'No access granted!' });
     }
