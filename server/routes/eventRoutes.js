@@ -1,6 +1,10 @@
 // libraries
 import express from 'express';
 
+//middleware
+
+import upload from '../config/multer.js';
+
 // controllers
 import {
   findAllEvents,
@@ -19,7 +23,7 @@ router.get('/', findAllEvents);
 
 router.get('/:id', findEvent);
 
-router.post('/create', createEvent);
+router.post('/create', upload.single('image'), createEvent);
 
 router.patch('/update/:id', updateEvent);
 

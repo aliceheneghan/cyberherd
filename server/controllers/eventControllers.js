@@ -35,6 +35,7 @@ const createEvent = async (req, res) => {
       description,
       eventURL,
       bandURL,
+      photoURL
     } = req.body;
     const createdEvent = await Event.create({
       name: { bandName, eventName },
@@ -48,6 +49,7 @@ const createEvent = async (req, res) => {
       },
       genre,
       information: { description, eventURL, bandURL },
+      photoURL: req.file?.filename
     });
     return res.status(200).json({ message: 'Event created', createdEvent });
   } catch (error) {

@@ -20,6 +20,7 @@ function CreateEvent() {
   const [description, setDescription] = useState('');
   const [eventURL, setEventUrl] = useState('');
   const [bandURL, setBandUrl] = useState('');
+  // const [photoURL, setPhotoUrl] = useState('');
   const [error, setError] = useState('');
 
   const navigate = useNavigate();
@@ -30,23 +31,11 @@ function CreateEvent() {
     const formData = new FormData(e.target);
 
     try {
-      await axios.post(`http://localhost:4000/api/events/create`,
-        {bandName: formData.get('bandName'),
-        eventName: formData.get('eventName'),
-        date: formData.get('date'),
-        startTime: formData.get('startTime'),
-        doorsOpen: formData.get('doorsOpen'),
-        location: formData.get('location'),
-        preSalePrice: formData.get('preSalePrice'),
-        doorPrice: formData.get('doorPrice'),
-        ticketURL: formData.get('ticketUrl'),
-        genre: formData.get('genre'),
-        description: formData.get('description'),
-        eventURL: formData.get('eventUrl'),
-        bandURL: formData.get('bandUrl')
+      await axios.post(`http://localhost:4000/api/events/create`, formData,
+        { headers: {"Content-Type": "multipart/form-data"}
     });
       setError('');
-      navigate('/');
+      navigate('/create-event');
     } catch (error) {
       setError(error);
       console.log(error);
@@ -197,6 +186,10 @@ function CreateEvent() {
             placeholder="band url"
             name="bandUrl"
           />
+        </label>
+
+        <label for="image">
+          <input type="file" accept="image/jpg" name="image" />
         </label>
 
         <br />
