@@ -7,11 +7,13 @@ import { useNavigate } from 'react-router-dom';
 import './_sign-up.scss';
 
 export default function SignUp() {
+
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
   const [error, setError] = useState('');
+
 
   const navigate = useNavigate();
 
@@ -79,6 +81,7 @@ export default function SignUp() {
           />
         </label>
 
+
         <label for="dob">
           <input
             id="dob"
@@ -94,6 +97,7 @@ export default function SignUp() {
           Select image for upload
           <input type="file" accept="image/jpg" name="image" />
         </label>
+
 
         <br />
         <button className="button-sign" type="submit">
