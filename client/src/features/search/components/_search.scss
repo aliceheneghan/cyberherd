@@ -2,16 +2,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  .search-input {
+  #search-input {
     width: 30vw;
     height: 3.3vh;
     padding-left: 2rem;
     font-family: 'Sarpanch';
     display: block;
     border: 1px fuchsia solid;
-  }
-  .search-input:focus {
-    border: 1px blue solid;
   }
   .button-search {
     width: 3vw;

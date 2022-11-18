@@ -22,9 +22,9 @@ export default function Search() {
   return (
     <div className='search-bar'>
       <input
+        id='search-input'
         type='text'
         placeholder='search here'
-        className='search-input'
         onChange={(e) => setSearchInput(e.target.value)}
       />
       <button className='button-search' onClick={fetchData}>

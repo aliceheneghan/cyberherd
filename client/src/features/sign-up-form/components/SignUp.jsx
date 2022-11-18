@@ -90,12 +90,11 @@ export default function SignUp() {
     name="dateOfBirth"
     />
     </label>
-
-    <label>
-    Select image for upload
-    <br/>
-    <input className='imageUpload' type='file' accept='image/jpg' name="image" />
-    </label>
+    
+    <div className="file-upload">
+    <label>Select image for upload </label>
+    <input id='image-upload' type='file' accept='image/jpg' name="image" />
+    </div>
 
     <br/>
     <button className='button-sign' type='submit'>Sign Up</button>
