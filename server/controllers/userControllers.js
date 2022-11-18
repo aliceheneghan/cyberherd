@@ -43,10 +43,10 @@ const registerUser = async (req, res) => {
     const userUsernameExists = await User.findOne({ userName });
     const userEmailExists = await User.findOne({ email });
 
-    if (userEmailExists) {
-      return res.status(400).json({ message: 'Email already registered ' });
-    } else if (userUsernameExists) {
-      return res.status(400).json({ message: 'Username already exists' });
+    if (userUsernameExists) {
+      return res.status(400).json({ message: 'Username already exist ' });
+    } else if (userEmailExists) {
+      return res.status(400).json({ message: 'Email already exists' });
     }
     console.log('req.file = ', req.file); // file property is being added by multer
     console.log('req.body.userName = ', req.body.userName);
