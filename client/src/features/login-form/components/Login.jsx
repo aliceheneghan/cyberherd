@@ -27,15 +27,18 @@ export default function Login() {
           password: formData.get('password'),
         }
       );
-      console.log("login response:", response)
+      console.log("login response:",response)
+      if (response.data.success) {
         setError('');
         setLoggedIn(true);
         navigate(`/dashboard/${response.data.id}`);
-      
+      } else {
+        setError(response.data.message);
+      }
       console.log(response);
     } catch (error) {
-      setError(error?.response?.data?.message);
-      console.log(error?.response?.data?.message);
+      setError(error.message);
+      console.log(error.message);
     }
   };
 
