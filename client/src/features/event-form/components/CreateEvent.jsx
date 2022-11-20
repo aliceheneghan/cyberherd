@@ -139,7 +139,7 @@ function CreateEvent() {
             type="url"
             value={ticketURL}
             placeholder="ticket url"
-            name="ticketUrl"
+            name="ticketURL"
           />
         </label>
 
@@ -172,7 +172,7 @@ function CreateEvent() {
             type="url"
             value={eventURL}
             placeholder="event url"
-            name="eventUrl"
+            name="eventURL"
           />
         </label>
 
@@ -183,7 +183,7 @@ function CreateEvent() {
             type="url"
             value={bandURL}
             placeholder="band url"
-            name="bandUrl"
+            name="bandURL"
           />
         </label>
 

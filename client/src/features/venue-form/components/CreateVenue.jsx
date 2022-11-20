@@ -45,7 +45,7 @@ function CreateVenue() {
             type="text"
             value={name}
             placeholder="venue name"
-            name="venueName"
+            name="name"
           />
         </label>
 
@@ -89,7 +89,7 @@ function CreateVenue() {
             type="url"
             value={venueURL}
             placeholder="venue url"
-            name="venueUrl"
+            name="venueURL"
           />
         </label>
 
