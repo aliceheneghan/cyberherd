@@ -3,15 +3,15 @@ import express from 'express';
 
 //middleware
 
-import upload from '../config/multer.js';
+import { uploadVenueImage } from '../config/multer.js';
 
 // controllers
 import {
-    findAllVenues,
-    findVenue,
-    createVenue,
-    updateVenue,
-    deleteVenue,
+  findAllVenues,
+  findVenue,
+  createVenue,
+  updateVenue,
+  deleteVenue,
 } from '../controllers/venueControllers.js';
 
 const router = express.Router();
@@ -20,7 +20,7 @@ router.get('/', findAllVenues);
 
 router.get('/:id', findVenue);
 
-router.post('/create', upload.single('image'), createVenue);
+router.post('/create', uploadVenueImage.single('image'), createVenue);
 
 router.patch('/update/:id', updateVenue);
 
