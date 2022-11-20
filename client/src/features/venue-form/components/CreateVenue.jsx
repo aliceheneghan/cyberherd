@@ -24,17 +24,11 @@ function CreateVenue() {
     const formData = new FormData(e.target);
 
     try {
-      await axios.post(`http://localhost:4000/api/venues/create`,
-        {name: formData.get('name'),
-        address: formData.get('address'),
-        neighborhood: formData.get('neighborhood'),
-        venueType: formData.get('venueType'),
-        venueURL: formData.get('venueUrl'),
-        venueRating: formData.get('venueRating'),
-        priceRating: formData.get('priceRating'),
+      await axios.post(`http://localhost:4000/api/venues/create`, formData,
+        { headers: {"Content-Type": "multipart/form-data"}
     });
       setError('');
-      navigate('/');
+      navigate('/create-venue');
     } catch (error) {
       setError(error);
       console.log(error);
@@ -119,6 +113,10 @@ function CreateVenue() {
             placeholder="price rating"
             name="priceRating"
           />
+        </label>
+
+        <label for="image">
+          <input type="file" accept="image/jpg" name="image" />
         </label>
 
         <br />

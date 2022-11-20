@@ -34,8 +34,7 @@ const createEvent = async (req, res) => {
       genre,
       description,
       eventURL,
-      bandURL,
-      photoURL
+      bandURL
     } = req.body;
     const createdEvent = await Event.create({
       name: { bandName, eventName },

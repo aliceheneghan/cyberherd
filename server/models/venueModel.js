@@ -36,6 +36,7 @@ const venueSchema = new Schema({
   },
   venueType: { type: String, enum: ['bar', 'café', 'club', 'concert hall'] },
   venueURL: { type: String },
+  photoURL: { type: String },
   event: { type: Schema.Types.ObjectId, ref: 'event' },
   rating: {
     venueRating: { type: Number },

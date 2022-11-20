@@ -20,7 +20,6 @@ function CreateEvent() {
   const [description, setDescription] = useState('');
   const [eventURL, setEventUrl] = useState('');
   const [bandURL, setBandUrl] = useState('');
-  // const [photoURL, setPhotoUrl] = useState('');
   const [error, setError] = useState('');
 
   const navigate = useNavigate();

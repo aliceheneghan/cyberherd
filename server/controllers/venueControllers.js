@@ -36,6 +36,7 @@ const createVenue = async (req, res) => {
       location: {address, neighborhood},
       venueType,
       venueURL,
+      photoURL: req.file?.filename,
       event,
       rating: { venueRating, priceRating },
       userFollowing,

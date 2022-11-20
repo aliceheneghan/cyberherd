@@ -55,7 +55,7 @@ const eventSchema = new Schema({
     bandURL: { type: String },
   },
   photoURL: { type: String },
-  // userAttending: { type: Schema.Types.ObjectId, ref: 'user' },
+  userAttending: { type: Schema.Types.ObjectId, ref: 'user' },
 });
 
 const Event = model('event', eventSchema);
