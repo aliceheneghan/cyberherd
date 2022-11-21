@@ -2,6 +2,7 @@
 
 .calendar {
   @include flex-jc-ai-dir(center, center, column);
+margin-top: -0.8em;
   box-shadow: 0 0 0.5em red, 0 0 1.2em yellow, 0.01em 0.01em 1em fuchsia;
   font-size: 2.5rem;
   color: white;
@@ -25,7 +26,7 @@
   .calendar-days {
     width: inherit;
     height: inherit;
-    padding: 0 0.8em;
+    padding: 0 1em;
 
     .weekdays {
       text-shadow: 0 0 0.2rem black, 0 0 0.35rem red, 0 0 0.3rem fuchsia, 0 0 0.6rem yellow;
@@ -33,7 +34,7 @@
   }
 
   @media screen and (min-width: 992px) {
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     width: 26em;
     height: fit-content;
   }
