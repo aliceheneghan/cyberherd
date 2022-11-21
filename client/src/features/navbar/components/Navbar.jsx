@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 // components
 import Search from '../../search/components/Search';
 
-import { Context } from '../../../context/GlobalContext.jsx';
+// context
+import { Context } from '../../../context/LoggedInContext.jsx';
 
 // style
 import './_navbar.scss';
