@@ -36,8 +36,8 @@ function CreateEvent() {
       setError('');
       navigate(`/eventpage/${response.data.id}`);
     } catch (error) {
-      setError(error);
-      console.log(error);
+      setError(error?.response?.data?.message);
+      console.log(error?.response?.data?.message);
     }
   };
 
