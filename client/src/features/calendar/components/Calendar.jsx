@@ -42,9 +42,9 @@ export default function Calendar() {
         </Cell>
       </div>
 
-      <div className='seven-day-grid'>
+      <div className='seven-day-grid calendar-days'>
         {daysOfWeek.map((day) => (
-          <Cell key={day}>{day}</Cell>
+          <Cell key={day} className="weekdays">{day}</Cell>
         ))}
       
         {Array.from({ length: prefixWeekdays }).map((_, index) => (
