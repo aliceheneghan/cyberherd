@@ -10,12 +10,6 @@ import Dashboard from './pages/Dashboard.jsx';
 import LoginPage from "./pages/LoginPage.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
 
-// // features
-
-// import { Login } from './features/login-form/index.jsx';
-// import { SignUp } from './features/sign-up-form/index.jsx';
-
-
 // styles
 import './App.scss';
 
@@ -25,13 +19,16 @@ export default function App() {
       <Banner />
       <Navbar />
       <Routes>
-
         <Route path="/" element={<Calendar />} />
         <Route path="/dashboard/:id" element={<Dashboard />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
-
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/create-event" element={<CreateEvent />} />
+        <Route path="/create-venue" element={<CreateVenue />} />
       </Routes>
     </div>
   );
 }
+
+export default App;
+

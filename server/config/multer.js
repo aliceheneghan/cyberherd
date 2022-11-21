@@ -1,9 +1,19 @@
 // libraries
-import multer from "multer";
+import multer from 'multer';
 
-const upload = multer({
-  dest: "./uploads/images",
+const uploadUserImage = multer({
+  dest: './uploads/user-images',
   limits: { fileSize: 5000000 },
 });
 
-export default upload;
+const uploadEventImage = multer({
+  dest: './uploads/event-images',
+  limits: { fileSize: 5000000 },
+});
+
+const uploadVenueImage = multer({
+  dest: './uploads/venue-images',
+  limits: { fileSize: 5000000 },
+});
+
+export { uploadUserImage, uploadEventImage, uploadVenueImage };

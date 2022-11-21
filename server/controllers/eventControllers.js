@@ -1,4 +1,3 @@
-
 // model
 import Event from '../models/eventModel.js';
 
@@ -20,17 +19,36 @@ const findEvent = async (req, res) => {
 };
 
 const createEvent = async (req, res) => {
+  console.log(req.body);
   try {
-    const { name, date, time, location, tickets, genre, information } =
-      req.body;
-    const createdEvent = await Event.create({
-      name,
+    const {
+      bandName,
+      eventName,
       date,
-      time,
+      startTime,
+      doorsOpen,
       location,
-      tickets,
+      preSalePrice,
+      doorPrice,
+      ticketURL,
       genre,
-      information,
+      description,
+      eventURL,
+      bandURL
+    } = req.body;
+    const createdEvent = await Event.create({
+      name: { bandName, eventName },
+      date,
+      time: { startTime, doorsOpen },
+      location,
+      tickets: {
+        preSalePrice: Number(preSalePrice),
+        doorPrice: Number(doorPrice),
+        ticketURL,
+      },
+      genre,
+      information: { description, eventURL, bandURL },
+      photoURL: req.file?.filename
     });
     return res.status(200).json({ message: 'Event created', createdEvent });
   } catch (error) {
@@ -40,11 +58,36 @@ const createEvent = async (req, res) => {
 
 const updateEvent = async (req, res) => {
   try {
-    const { name, date, time, location, tickets, genre, information } =
-      req.body;
+    const {
+      bandName,
+      eventName,
+      date,
+      startTime,
+      doorsOpen,
+      location,
+      preSalePrice,
+      doorPrice,
+      ticketURL,
+      genre,
+      description,
+      eventURL,
+      bandURL,
+    } = req.body;
     const updatedEvent = await Event.findByIdAndUpdate(
       req.params.id,
-      { name, date, time, location, tickets, genre, information },
+      {
+        name: { bandName, eventName },
+        date,
+        time: { startTime, doorsOpen },
+        location,
+        tickets: {
+          preSalePrice: Number(preSalePrice),
+          doorPrice: Number(doorPrice),
+          ticketURL,
+        },
+        genre,
+        information: { description, eventURL, bandURL },
+      },
       { new: true }
     );
     if (!updatedEvent) {

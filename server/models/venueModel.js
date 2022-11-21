@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
 const venueSchema = new Schema({
-  name: { type: String, required: true },
+  name: { type: String, required: false },
   location: {
     address: { type: String },
     neighborhood: {
@@ -34,8 +34,9 @@ const venueSchema = new Schema({
       required: false,
     },
   },
-  venueType: { type: String, enum: ['bar', 'café', 'club', 'concert hall'] },
+  venueType: { type: String, enum: ['bar', 'café', 'club', 'concert hall', 'cultural center'] },
   venueURL: { type: String },
+  photoURL: { type: String },
   event: { type: Schema.Types.ObjectId, ref: 'event' },
   rating: {
     venueRating: { type: Number },
