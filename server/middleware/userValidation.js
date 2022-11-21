@@ -9,7 +9,7 @@ const validateUser = [
     .trim()
     .isLength({ min: 4, max: 20 })
     .withMessage(
-      'Username should be between 4 and 20 characters.'
+      'Please choose a valid username.'
     ),
   (req, res, next) => {
     console.log(req.body)
@@ -17,7 +17,7 @@ const validateUser = [
     if (!errors.isEmpty()) {
       return res
         .status(400)
-        .json({ message: 'Please choose username.', error: errors });
+        .json({ message: 'Username should be between 4 and 20 characters.', error: errors });
     }
 
     next();
@@ -32,7 +32,7 @@ const validateUser = [
     if (!errors.isEmpty()) {
       return res
         .status(400)
-        .json({ message: 'Validation errors email', error: errors.msg });
+        .json({ message: 'Please choose email', error: errors.msg });
     }
 
     next();

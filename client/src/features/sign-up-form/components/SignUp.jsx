@@ -1,16 +1,17 @@
 // libraries
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 // style
-import "./_sign-up.scss";
+import './_sign-up.scss';
 
-function SignUp() {
+export default function SignUp() {
  const [userName, setUserName] = useState("");
  const [email, setEmail] = useState("");
  const [password, setPassword] = useState("");
  const [dateOfBirth, setDateOfBirth] = useState("");
+ const [image, setImage] = useState("");
  const [error, setError] = useState("");
  
  const navigate = useNavigate();
@@ -89,21 +90,18 @@ function SignUp() {
     name="dateOfBirth"
     />
     </label>
-
-<label>
-  Select image for upload
-  <input type="file" accept="image/jpg" name="image" />
-</label>
+    
+    <div className="file-upload">
+    <label>Select image for upload </label>
+    <input id='image-upload' type='file' accept='image/jpg' name="image" />
+    </div>
 
     <br/>
-    <button className="button-sign" type='submit'>Sign Up</button>
+    <button className='button-sign' type='submit'>Sign Up</button>
     </form>
 
     <div>
       {error ? <p>{error}</p> : null}
     </div>
-  </div>
-)
+  );
 }
-
-export default SignUp;

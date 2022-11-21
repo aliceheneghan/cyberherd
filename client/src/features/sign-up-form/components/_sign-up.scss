@@ -16,15 +16,27 @@
   }
   #dob {
     // size of the date of birth placeholder - this size just applies for desktop version for now
-    width: 13vw;
+    width: 15rem;
     color: black;
-    height: 4vh;
+    height: 2.3rem;
+  }
+  .file-upload {
+    width: 15rem;
+    height: 3rem;
+  }
+  input#image-upload {
+    font-family: 'Sarpanch';
+  }
+  input#image-upload::file-selector-button {
+    text-align: right;
+    font-family: 'Sarpanch';
+    background-color: #cef6ae;
   }
   .button-sign {
    margin-top: 0.2rem;
    padding: 0.3em;
    font-family: 'Sarpanch';
-   background-color: yellow;
+   background-color: #cef6ae;
    border-radius: 2px;
   }
  }

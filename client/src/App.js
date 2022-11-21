@@ -1,24 +1,26 @@
 import { Routes, Route } from 'react-router-dom';
 
-// features
+// components
 import { Banner } from './features/banner/index.jsx';
 import { Calendar } from './features/calendar/index.jsx';
 import { Navbar } from './features/navbar/index.jsx';
-import { Login } from './features/login-form/index.jsx';
-import { SignUp } from './features/sign-up-form/index.jsx';
-import { CreateEvent } from './features/event-form/index.jsx';
-import { CreateVenue } from './features/venue-form/index.jsx';
+import Dashboard from './pages/Dashboard.jsx';
+
+// pages
+import LoginPage from "./pages/LoginPage.jsx";
+import SignUpPage from "./pages/SignUpPage.jsx";
 
 // styles
 import './App.scss';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Banner />
       <Navbar />
       <Routes>
         <Route path="/" element={<Calendar />} />
+        <Route path="/dashboard/:id" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/create-event" element={<CreateEvent />} />
@@ -29,3 +31,4 @@ function App() {
 }
 
 export default App;
+

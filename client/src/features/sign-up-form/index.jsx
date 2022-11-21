@@ -1,3 +1,4 @@
+// features
 import SignUp from './components/SignUp.jsx';
 
-export { SignUp };
+export default SignUp;
