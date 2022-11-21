@@ -1,7 +1,8 @@
 // libraries
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
+import { Context } from '../../../context/GlobalContext.jsx';
 
 // style
 import './_login.scss';
@@ -10,16 +11,15 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [loggedIn, setLoggedIn] = useState(true);
+  // const [loggedIn, setLoggedIn] = useState(true);
+  const { loggedIn, setLoggedIn } = useContext(Context);
 
   const navigate = useNavigate();
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-
 
     try {
       const response = await axios.post(
@@ -29,7 +29,7 @@ export default function Login() {
           password: formData.get('password'),
         }
       );
-      console.log("login response:",response)
+      console.log('login response:', response);
       if (response.data.success) {
         setError('');
         setLoggedIn(true);

@@ -10,12 +10,6 @@ import Dashboard from './pages/Dashboard.jsx';
 import LoginPage from "./pages/LoginPage.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
 
-// // features
-
-// import { Login } from './features/login-form/index.jsx';
-// import { SignUp } from './features/sign-up-form/index.jsx';
-
-
 // styles
 import './App.scss';
 

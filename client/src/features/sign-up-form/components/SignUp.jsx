@@ -22,14 +22,6 @@ export default function SignUp() {
   console.log("testing123");
   const formData = new FormData(e.target);
 
-// const user =  {
-//   userName: formData.get("userName"),
-//   email: formData.get("email"),
-//   password: formData.get("password"),
-//   dateOfBirth: formData.get("dateOfBirth"),
-//   // image: formData.get("image")
-// }
-// console.log(user)
   try {
     await axios.post(`http://localhost:4000/api/user/create`, formData,
       {
@@ -100,7 +92,6 @@ export default function SignUp() {
     <button className='button-sign' type='submit'>Sign Up</button>
     </form>
 
-    <div>
       {error ? <p>{error}</p> : null}
     </div>
   );
