@@ -19,7 +19,7 @@ export default function Dashboard() {
       setUserData(data);
     };
     getUser();
-  }, []);
+  }, [id]);
 
   return (
     <div>
