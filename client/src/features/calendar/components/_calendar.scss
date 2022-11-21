@@ -2,26 +2,44 @@
 
 .calendar {
   @include flex-jc-ai-dir(center, center, column);
-  box-shadow: 0.01em 0.01em 1em yellow;
-  background-image: url('../images/IMG_7101.jpg');
+  box-shadow: 0 0 0.5em red, 0 0 1.2em yellow, 0.01em 0.01em 1em fuchsia;
   font-size: 2.5rem;
   color: white;
-  text-shadow: 0px 0px 3px black, 0px 0px 3px darkorange, 0px 0px 4px darkorange,
+  text-shadow: 0px 0px 4px red, 0px 0px 4px fuchsia,
     0px 0px 10px yellow;
 
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
+    margin: 1em 0;
+    width: 15em;
   }
 
   .seven-day-grid {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-rows: auto;
     align-content: center;
     text-align: center;
-    border: 1px solid red;
+  }
+
+  .calendar-days {
+    width: inherit;
+    height: inherit;
+    padding: 0 0.8em;
+
+    .weekdays {
+      text-shadow: 0 0 0.2rem black, 0 0 0.35rem red, 0 0 0.3rem fuchsia, 0 0 0.6rem yellow;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 5em;
+    width: 26em;
+    height: fit-content;
   }
 }
 
 .date-cell {
   @include flex-jc-ai-dir(center, center, row);
+  height: 3.5em;
 }
