@@ -48,7 +48,7 @@ const createEvent = async (req, res) => {
       },
       genre,
       information: { description, eventURL, bandURL },
-      photoURL: req.file?.filename
+      photoURL: `http://localhost:4000/images/${req.file?.filename}`
     });
     return res.status(200).json({ message: 'Event created', createdEvent });
   } catch (error) {

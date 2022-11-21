@@ -7,7 +7,7 @@ import { Context } from '../../../context/GlobalContext.jsx';
 // style
 import './_login-form.scss';
 
-export default function Login() {
+export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');

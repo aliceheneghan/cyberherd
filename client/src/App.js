@@ -12,6 +12,7 @@ import CreateVenue from './features/venue-form/components/CreateVenue.jsx';
 // pages
 import LoginPage from './pages/LoginPage.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
+import EventPage from "./pages/EventPage.jsx";
 
 // styles
 import './App.scss';
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/dashboard/:id" element={<Dashboard />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/eventpage/:id" element={<EventPage />} />
         <Route path="/create-event" element={<CreateEvent />} />
         <Route path="/create-venue" element={<CreateVenue />} />
       </Routes>

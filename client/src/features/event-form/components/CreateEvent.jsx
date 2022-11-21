@@ -188,7 +188,7 @@ function CreateEvent() {
         </label>
 
         <label for="image">
-          <input type="file" accept="image/jpg" name="image" />
+          <input type="file" accept=".jpg,.png,.jpeg" name="image" />
         </label>
 
         <br />
