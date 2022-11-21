@@ -3,13 +3,11 @@
 .calendar {
   @include flex-jc-ai-dir(center, center, column);
   box-shadow: 0.01em 0.01em 1em yellow;
-  // background: #A7AEB4;
+  background-image: url('../images/IMG_7101.jpg');
   font-size: 2.5rem;
   color: white;
   text-shadow: 0px 0px 3px black, 0px 0px 3px darkorange, 0px 0px 4px darkorange,
     0px 0px 10px yellow;
-  // background: repeating-radial-gradient(#948e96af 8%, #bfc0bb2d 20%);;
-  // backdrop-filter: blur(80px);
 
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
@@ -20,11 +18,10 @@
     grid-template-columns: repeat(7, minmax(0, 1fr));
     align-content: center;
     text-align: center;
+    border: 1px solid red;
   }
 }
 
 .date-cell {
   @include flex-jc-ai-dir(center, center, row);
-  width: 4em;
-  height: 4em;
 }
