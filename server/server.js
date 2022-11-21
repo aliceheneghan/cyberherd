@@ -35,7 +35,7 @@ app.use('/api/events', eventRoutes);
 app.use('/api/venues', venueRoutes);
 
 // serve frontEnd with uploadedImage
-app.use("/images", express.static("./uploads/images"));
+app.use("/user-images", express.static("./uploads/user-images"));
 
 const PORT = process.env.PORT;
 
