@@ -2,10 +2,10 @@
 import React from 'react';
 
 // features
-import Login from '../features/login-form';
+import LoginForm from '../features/login-form';
 
 export default function LoginPage() {
   return (
-    <div><Login /></div>
+    <div><LoginForm /></div>
   )
 }
