@@ -4,9 +4,9 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 // style
-import './_sign-up.scss';
+// import './_sign-up.scss';
 
-export default function SignUp() {
+export default function SignUpForm() {
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -96,7 +96,7 @@ export default function SignUp() {
           <input
             id="image-upload"
             type="file"
-            accept="image/jpg"
+            accept=".jpg,.png,.jpeg"
             name="image"
           />
         </div>
