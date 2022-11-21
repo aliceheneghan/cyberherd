@@ -1,14 +1,14 @@
 import React, { createContext, useState } from 'react';
 
-const Context = createContext();
+const Context = createContext(false);
 
 const ContextProvider = (props) => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
-    <ContextProvider value={{ loggedIn, setLoggedIn}} >
+    <Context.Provider value={{ loggedIn, setLoggedIn}} >
       {props.children}
-    </ContextProvider>
+    </Context.Provider>
   )
 };
 

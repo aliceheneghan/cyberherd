@@ -5,7 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { Context } from '../../../context/GlobalContext.jsx';
 
 // style
-import './_login.scss';
+import './_login-form.scss';
 
 export default function Login() {
   const [email, setEmail] = useState('');

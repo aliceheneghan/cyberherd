@@ -22,20 +22,23 @@ const createVenue = async (req, res) => {
   try {
     const {
       name,
-      location,
+      address,
+      neighborhood,
       venueType,
       venueURL,
       event,
-      rating,
-      userFollowing,
+      venueRating,
+      priceRating,
+      userFollowing
     } = req.body;
     const createdVenue = await Venue.create({
       name,
-      location,
+      location: {address, neighborhood},
       venueType,
       venueURL,
+      photoURL: req.file?.filename,
       event,
-      rating,
+      rating: { venueRating, priceRating },
       userFollowing,
     });
     return res.status(200).json({ message: 'Venue created', createdVenue });
@@ -48,23 +51,25 @@ const updateVenue = async (req, res) => {
   try {
     const {
       name,
-      location,
+      address,
+      neighborhood,
       venueType,
       venueURL,
       event,
-      rating,
-      userFollowing,
+      venueRating,
+      priceRating,
+      userFollowing
     } = req.body;
     const updatedVenue = await Venue.findByIdAndUpdate(
       req.params.id,
       {
-        name,
-        location,
-        venueType,
-        venueURL,
-        event,
-        rating,
-        userFollowing,
+      name,
+      location: {address, neighborhood},
+      venueType,
+      venueURL,
+      event,
+      rating: { venueRating, priceRating },
+      userFollowing,
       },
       { new: true }
     );

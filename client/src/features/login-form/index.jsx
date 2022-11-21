@@ -1,4 +1,3 @@
-// features
-import Login from './components/Login.jsx';
+import LoginForm from './components/LoginForm.jsx';
 
-export default Login;
+export default LoginForm;
