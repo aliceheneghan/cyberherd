@@ -2,17 +2,17 @@
 import { Routes, Route } from "react-router-dom";
 
 // features
-import { Banner } from './features/banner/index.jsx';
+import Banner from './features/banner/index.jsx';
 import Calendar from "./features/calendar/index.jsx";
-import { Navbar } from "./features/navbar/index.jsx";
+import Navbar from "./features/navbar/index.jsx";
+import SignUp from "./features/sign-up-form/index.jsx";
 
 // pages
-import Login from "./pages/Login.jsx";
 
 // styles
 import './App.scss';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       
@@ -20,11 +20,10 @@ function App() {
       <Navbar />
       <Routes>
        <Route path="/" element={<Calendar />}/>
-       <Route path="/login" element={<Login />}/>
+       {/* <Route path="/login" element={<Login />}/> ???? */}
+       <Route path="/sign-up" element={<SignUp />}/>
       </Routes>
     
     </div>
   );
 }
-
-export default App;

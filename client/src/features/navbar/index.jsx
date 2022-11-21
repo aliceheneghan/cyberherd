@@ -1,3 +1,3 @@
 import Navbar from './components/Navbar.jsx';
 
-export { Navbar };
+export default Navbar ;

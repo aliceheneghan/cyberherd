@@ -1,13 +1,14 @@
+// libraries
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Icons 
+// icons 
 import { SlMagnifier } from 'react-icons/sl';
 
 // Style
 import './_navbar.scss';
 
-function Navbar() {
+export default function Navbar() {
   return (
   <div className='navbar'>
   <Link className='get-yourself' to='/get-yourself'>Get yourself a date</Link>
@@ -17,5 +18,3 @@ function Navbar() {
   </div>
   )
 }
-
-export default Navbar;

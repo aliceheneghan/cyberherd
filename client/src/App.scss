@@ -13,8 +13,12 @@ body{
   padding: 0;
   font-size: 1.5rem;
   font-family: 'Sarpanch', 'Fjalla One', 'Kodchasan', sans-serif;
+  background-color: white;
 }
 .App {
-  @include flex-jc-ai-dir (center, center, column);
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
