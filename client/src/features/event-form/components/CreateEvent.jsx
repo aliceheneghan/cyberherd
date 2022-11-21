@@ -30,11 +30,11 @@ function CreateEvent() {
     const formData = new FormData(e.target);
 
     try {
-      await axios.post(`http://localhost:4000/api/events/create`, formData,
+     const response = await axios.post(`http://localhost:4000/api/events/create`, formData,
         { headers: {"Content-Type": "multipart/form-data"}
     });
       setError('');
-      navigate('/create-event');
+      navigate(`/eventpage/${response.data.id}`);
     } catch (error) {
       setError(error);
       console.log(error);
