@@ -22,16 +22,18 @@ function CreateVenue() {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-
     try {
-      await axios.post(`http://localhost:4000/api/venues/create`, formData,
-        { headers: {"Content-Type": "multipart/form-data"}
-    });
+      const response = await axios.post(
+        `http://localhost:4000/api/venues/create`,
+        formData,
+        { headers: { 'Content-Type': 'multipart/form-data' } }
+      );
+
       setError('');
-      navigate('/create-venue');
+      navigate(`/venuepage/${response.data.id}`);
     } catch (error) {
-      setError(error);
-      console.log(error);
+      setError(error?.response?.data?.message);
+      console.log(error?.response?.data?.message);
     }
   };
 
@@ -116,7 +118,7 @@ function CreateVenue() {
         </label>
 
         <label for="image">
-          <input type="file" accept="image/jpg" name="image" />
+          <input type="file" accept=".jpg,.png,.jpeg" name="image" />
         </label>
 
         <br />
