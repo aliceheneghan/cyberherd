@@ -52,7 +52,7 @@ export default function Calendar() {
         ))}
 
         {monthDays.map((date, index) => (
-          <Cell key={index} className="date-cell">
+          <Cell key={index} className="date-cell" dateObject={date}>
             {/* formats JS date into day */}
             {format(date, 'd')}
           </Cell>
