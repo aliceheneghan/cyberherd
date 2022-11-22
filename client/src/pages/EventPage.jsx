@@ -11,18 +11,18 @@ export default function EventPage() {
     useEffect(() => {
       const getUser = async (e) => {
         const { data } = await axios.get(
-          `http://localhost:4000/api/event/${id}`
+          `http://localhost:4000/api/events/${id}`
         );
         console.log(`dashboard testing to see:`);
         console.log(`EventPage data:`, data);
         setEventData(data);
       };
       getUser();
-    }, []);
+    }, [id]);
 
   return (
     <div>EventPage
-      {/* <img src={eventData?.user?.photoURL} alt="" /> */}
+      <img src={eventData?.event?.photoURL} alt="" />
 
     </div>
   )
