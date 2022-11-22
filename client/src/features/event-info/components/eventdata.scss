@@ -31,11 +31,18 @@
       height: 100%;
       padding-right: 1em;
       background-color: chocolate;
-      .event-name {
+      .band-event-name-container {
         width: 100%;
         background-color: cornflowerblue;
-        font-size: 2rem;
         padding: 0.5em 0;
+        .band-name {
+            font-size: 2rem;
+
+        }
+        .event-name {
+            font-size: 1.5rem;
+
+        }
       }
       .event-description-container {
         border: 5px rgb(65, 87, 20) solid;
@@ -43,6 +50,7 @@
           background-color: cornsilk;
           height: 2em;
           width: 80%;
+          font-size: .8em;
           @include flex-jc-ai-dir(center, center, row);
           .event-location {
             border: 2px solid blue;
@@ -63,7 +71,7 @@
           height: 8rem;
           p {
             font-family: 'Roboto';
-            font-size: .95rem;
+            font-size: 0.95rem;
           }
         }
         .saveDate-buyTicket-container {
@@ -83,9 +91,14 @@
       }
     }
     .event-img-container {
+      border: black 4px solid;
       width: 55%;
       height: 100%;
       background-color: rgb(97, 30, 18);
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
     }
   }
 }
