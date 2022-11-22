@@ -1,0 +1,91 @@
+.event-data-container {
+  background-color: rgb(127, 175, 218);
+  margin: 0 auto;
+  max-width: 90%;
+  height: 30rem;
+  .event-date-price-container {
+    width: 45%;
+    height: 5rem;
+    background-color: cadetblue;
+    @include flex-jc-ai-dir(space-around, center, row);
+    .event-date {
+      width: 9em;
+      height: 3em;
+      border: 3px dashed blue;
+      @include flex-jc-ai-dir(center, center, row);
+    }
+    .event-price {
+      width: 5em;
+      height: 3em;
+      border: 3px dashed blue;
+      @include flex-jc-ai-dir(center, center, row);
+    }
+  }
+  .event-info-img-container {
+    @include flex-jc-ai-dir(center, center, row);
+    height: 25rem;
+    border: 3px dotted black;
+
+    .event-info-container {
+      width: 45%;
+      height: 100%;
+      padding-right: 1em;
+      background-color: chocolate;
+      .event-name {
+        width: 100%;
+        background-color: cornflowerblue;
+        font-size: 2rem;
+        padding: 0.5em 0;
+      }
+      .event-description-container {
+        border: 5px rgb(65, 87, 20) solid;
+        .event-location-time-container {
+          background-color: cornsilk;
+          height: 2em;
+          width: 80%;
+          @include flex-jc-ai-dir(center, center, row);
+          .event-location {
+            border: 2px solid blue;
+            width: 9em;
+            @include flex-jc-ai-dir(center, center, row);
+            height: 100%;
+          }
+          .event-time {
+            border: 2px solid blue;
+            width: 9em;
+            height: 100%;
+            @include flex-jc-ai-dir(center, center, row);
+          }
+        }
+        .event-description {
+          width: 100%;
+          background-color: cornflowerblue;
+          height: 8rem;
+          p {
+            font-family: 'Roboto';
+            font-size: .95rem;
+          }
+        }
+        .saveDate-buyTicket-container {
+          width: 60%;
+          height: 2em;
+          background-color: magenta;
+          @include flex-jc-ai-dir(space-between, center, row);
+          .save-date-btn {
+            width: 8rem;
+            padding: 0.5em 0;
+          }
+          .buy-ticket-btn {
+            width: 8rem;
+            padding: 0.5em 0;
+          }
+        }
+      }
+    }
+    .event-img-container {
+      width: 55%;
+      height: 100%;
+      background-color: rgb(97, 30, 18);
+    }
+  }
+}

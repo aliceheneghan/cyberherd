@@ -3,6 +3,11 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
+// components
+// import "../features/event-page/index";
+import { EventData } from '../features/event-info';
+
+
 export default function EventPage() {
     const [eventData, setEventData] = useState({});
 
@@ -21,8 +26,10 @@ export default function EventPage() {
     }, [id]);
 
   return (
-    <div>EventPage
-      <img src={eventData?.event?.photoURL} alt="" />
+    <div className='event-page-container'>
+      <EventData/>
+      EventPage
+      {/* <img className='event-image' src={eventData?.event?.photoURL} alt="" /> */}
 
     </div>
   )
