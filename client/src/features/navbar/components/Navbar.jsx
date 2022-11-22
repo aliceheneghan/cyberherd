@@ -13,7 +13,6 @@ import './_navbar.scss';
 
 
 export default function Navbar() {
-  // const [navbarUserIsLogged, setnavbarUserIsLogged] = useState(false);
   const { loggedIn, setLoggedIn } = useContext(Context);
 
   return (

@@ -13,7 +13,7 @@ export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   // const { loggedIn, setLoggedIn } = useContext(Context);
 
   const navigate = useNavigate();
