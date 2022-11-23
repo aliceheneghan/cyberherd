@@ -8,11 +8,6 @@
   border-bottom: 2px solid black;
   border-top: 2px solid black;
 
-  .get-yourself {
-    text-decoration: none;
-    color: black;
-    font-size: 22px;
-  }
   .search {
     text-decoration: none;
     color: black;
@@ -20,18 +15,9 @@
     margin-top: 10px;
     margin-left: 500px;
   }
-  .sign-up {
+  .get-yourself, .sign-up, .login, .back-to, .log-out {
     text-decoration: none;
     color: black;
     font-size: 18px;
   }
-  .login {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-  }
-}
-
-.display-none {
-  display: none;
 }
