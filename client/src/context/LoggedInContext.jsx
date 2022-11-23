@@ -1,11 +1,19 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 // creates a context instance.
 const Context = createContext(false);
 
 const ContextProvider = (props) => {
   // we saved the state on our application.
-  const [loggedIn, setLoggedIn] = useState(false);
+  const loginSession = JSON.parse(localStorage.getItem("login")) || {
+    loggedIn:false
+};
+const [loggedIn, setLoggedIn] = useState(loginSession["loggedIn"]);
+
+useEffect(() => {
+  localStorage.setItem("login", JSON.stringify({loggedIn:loggedIn}))
+  }, [loggedIn])
+
 
   return (
     // Context.Provider component is used to provide the context to it's child components, no matter how deep they are.

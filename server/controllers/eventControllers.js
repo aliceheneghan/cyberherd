@@ -74,6 +74,7 @@ const updateEvent = async (req, res) => {
       description,
       eventURL,
       bandURL,
+      userAttending,
     } = req.body;
     const updatedEvent = await Event.findByIdAndUpdate(
       req.params.id,
@@ -89,6 +90,7 @@ const updateEvent = async (req, res) => {
         },
         genre,
         information: { description, eventURL, bandURL },
+        $push: {userAttending: req.user._id}
       },
       { new: true }
     );
