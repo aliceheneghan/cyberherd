@@ -2,7 +2,7 @@
 import React from 'react';
 
 // components
-import { EventData } from '../features/event-info';
+import { EventData, EventSuggestions } from '../features/event-info';
 
 export default function EventPage() {
   // try link below
@@ -11,7 +11,7 @@ export default function EventPage() {
   return (
     <div className="event-page-container">
       <EventData />
-      
+      <EventSuggestions />
     </div>
   );
 }
