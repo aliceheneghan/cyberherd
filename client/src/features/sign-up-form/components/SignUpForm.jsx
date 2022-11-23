@@ -39,7 +39,7 @@ export default function SignUpForm() {
       {/* <img src="http://localhost:4000/images/32ab7a21e3b9bbbe00fc333276a68951"/> */}
 
       <form onSubmit={handleSubmit}>
-        <label for="user-name">
+        <label>
           <input
             id="user-name"
             onChange={(e) => setUserName(e.target.value)}
@@ -50,7 +50,7 @@ export default function SignUpForm() {
           />
         </label>
 
-        <label for="email">
+        <label>
           <input
             id="email-sign"
             onChange={(e) => setEmail(e.target.value)}
@@ -61,7 +61,7 @@ export default function SignUpForm() {
           />
         </label>
 
-        <label for="password">
+        <label>
           <input
             id="password-sign"
             onChange={(e) => setPassword(e.target.value)}
@@ -72,7 +72,7 @@ export default function SignUpForm() {
           />
         </label>
 
-        <label for="dob">
+        <label>
           <input
             id="dob"
             onChange={(e) => setDateOfBirth(e.target.value)}

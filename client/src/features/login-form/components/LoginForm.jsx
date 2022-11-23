@@ -13,7 +13,7 @@ export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
   // const { loggedIn, setLoggedIn } = useContext(Context);
 
   const navigate = useNavigate();
@@ -27,8 +27,8 @@ export default function LoginForm() {
       const response = await axios.post(
         `http://localhost:4000/api/user/login`,
         {
-          email: formData.get('email'),
-          password: formData.get('password'),
+          email: formData.get(email),
+          password: formData.get(password),
         }
       );
       console.log('login response:', response);
@@ -49,7 +49,7 @@ export default function LoginForm() {
   return (
     <div className="login-page">
       <form onSubmit={handleSubmit}>
-        <label for="email">
+        <label>
           <input
             id="email-log"
             onChange={(e) => setEmail(e.target.value)}
@@ -60,7 +60,7 @@ export default function LoginForm() {
           />
         </label>
 
-        <label for="password">
+        <label>
           <input
             id="password-log"
             onChange={(e) => setPassword(e.target.value)}
@@ -78,7 +78,7 @@ export default function LoginForm() {
           </Link>
         </div>
 
-        <button className="button-log">Login</button>
+        <button className="button-log" type="submit">Login</button>
       </form>
 
       <div>{error ? <p>{error}</p> : null}</div>
