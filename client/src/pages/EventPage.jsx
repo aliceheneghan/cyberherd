@@ -11,6 +11,7 @@ export default function EventPage() {
   return (
     <div className="event-page-container">
       <EventData />
+      
     </div>
   );
 }
