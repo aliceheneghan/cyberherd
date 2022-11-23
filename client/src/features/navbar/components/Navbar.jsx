@@ -21,10 +21,11 @@ export default function Navbar() {
     e.preventDefault();
     console.log(logOut);
 
-    // clear data from storage
+  // clear data from storage
     localStorage.clear();
     sessionStorage.clear();
 
+    setLoggedIn(false);
     navigate('/login');
   };
 
