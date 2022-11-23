@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 // style
-// import './_sign-up.scss';
+import './_sign-up.scss';
 
 export default function SignUpForm() {
   const [userName, setUserName] = useState('');
@@ -22,14 +22,6 @@ export default function SignUpForm() {
     console.log('testing123');
     const formData = new FormData(e.target);
 
-    // const user =  {
-    //   userName: formData.get("userName"),
-    //   email: formData.get("email"),
-    //   password: formData.get("password"),
-    //   dateOfBirth: formData.get("dateOfBirth"),
-    //   // image: formData.get("image")
-    // }
-    // console.log(user)
     try {
       await axios.post(`http://localhost:4000/api/user/create`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
@@ -47,7 +39,7 @@ export default function SignUpForm() {
       {/* <img src="http://localhost:4000/images/32ab7a21e3b9bbbe00fc333276a68951"/> */}
 
       <form onSubmit={handleSubmit}>
-        <label for="user-name">
+        <label>
           <input
             id="user-name"
             onChange={(e) => setUserName(e.target.value)}
@@ -58,7 +50,7 @@ export default function SignUpForm() {
           />
         </label>
 
-        <label for="email">
+        <label>
           <input
             id="email-sign"
             onChange={(e) => setEmail(e.target.value)}
@@ -69,7 +61,7 @@ export default function SignUpForm() {
           />
         </label>
 
-        <label for="password">
+        <label>
           <input
             id="password-sign"
             onChange={(e) => setPassword(e.target.value)}
@@ -80,7 +72,7 @@ export default function SignUpForm() {
           />
         </label>
 
-        <label for="dob">
+        <label>
           <input
             id="dob"
             onChange={(e) => setDateOfBirth(e.target.value)}
