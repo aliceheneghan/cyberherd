@@ -1,16 +1,11 @@
-// libraries
-import { useState} from 'react';
-
 // components
 import UnstyledLink from './UnstyledLink';
 
-export default function Cell({ className, children, handler, cb, dateObject }) {
- 
-
-  // handler
-  const dateOnClick = (e) => {
-    console.log(dateObject);
-  };
+export default function Cell({ className, children, handler, cb, date }) {
+  // handlers
+  const dateOnClick = () => {
+    console.log(date);
+  }
 
   if (className === "date-cell") {
     return (
