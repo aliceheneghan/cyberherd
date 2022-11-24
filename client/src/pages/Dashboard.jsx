@@ -1,7 +1,7 @@
 // libraries
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 // http://localhost:4000/image
 export default function Dashboard() {
