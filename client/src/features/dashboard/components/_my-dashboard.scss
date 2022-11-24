@@ -1,0 +1,8 @@
+@import '../../../scss/abstract/mixins';
+
+.my-dashboard {
+ margin: 0;
+ width: 100%;
+ height: 30rem;
+ @include flex-jc-ai-dir(center, center, column);
+}

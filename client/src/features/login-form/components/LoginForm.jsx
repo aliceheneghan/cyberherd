@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
 // context
-import { Context } from '../../../context/LoggedInContext.jsx';
+import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_login-form.scss';
