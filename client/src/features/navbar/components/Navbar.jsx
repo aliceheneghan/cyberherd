@@ -1,19 +1,20 @@
 // libraries
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 // components
 import Search from '../../search/components/Search';
 
 // context
-import { Context } from '../../../context/LoggedInContext.jsx';
+import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_navbar.scss';
 
 export default function Navbar() {
   const { loggedIn, setLoggedIn } = useContext(Context);
-
+  const { userData, setUserData } = useContext(Context);
+  console.log('user data is here', userData);
   const navigate = useNavigate();
 
   // handle logout event
@@ -21,7 +22,7 @@ export default function Navbar() {
     e.preventDefault();
     console.log(logOut);
 
-  // clear data from storage
+    // clear data from storage
     localStorage.clear();
     sessionStorage.clear();
 
@@ -39,6 +40,9 @@ export default function Navbar() {
           <Link className="log-out" to="/login" onClick={logOut}>
             Log out
           </Link>
+          <div className="upload-photo">
+            <img src={userData?.user?.photoURL} alt="" />
+          </div>
         </>
       ) : (
         <>
