@@ -30,11 +30,6 @@ const findEventByDate = async (req, res) => {
   }
 };
 
-// const findEventByDate = async (req, res) => {
-//   const events = await Event.find({date:req.params.date});
-//   return res.status(200).json(events);
-// };
-
 const createEvent = async (req, res) => {
   console.log(req.body);
   try {
