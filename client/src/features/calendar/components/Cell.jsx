@@ -13,6 +13,7 @@ export default function Cell({ className, children, handler, cb, date }) {
         <UnstyledLink to={`/results/${date}`}>{children}</UnstyledLink>
       </div>
     );
+
   } else {
     return (
       <div onClick={() => handler(cb)}>

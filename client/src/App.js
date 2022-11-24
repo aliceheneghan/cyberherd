@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Banner from './features/banner/index.jsx';
 import Calendar from './features/calendar/index.jsx';
 import Navbar from './features/navbar/index.jsx';
-import Dashboard from './pages/Dashboard.jsx';
+import Dashboard from './features/dashboard/components/MyDashboard.jsx';
 import CreateEvent from './features/event-form/components/CreateEvent.jsx';
 import CreateVenue from './features/venue-form/components/CreateVenue.jsx';
 

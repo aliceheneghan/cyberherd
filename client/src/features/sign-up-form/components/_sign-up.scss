@@ -30,13 +30,13 @@
   input#image-upload::file-selector-button {
     text-align: right;
     font-family: 'Sarpanch';
-    background-color: #cef6ae;
+    background:  linear-gradient(0deg, rgba(247,0,0,1) 0%, rgba(247,93,0,1) 30%, rgba(245,237,23,1) 100%);
   }
   .button-sign {
    margin-top: 0.2rem;
    padding: 0.3em;
    font-family: 'Sarpanch';
-   background-color: #cef6ae;
+   background:  linear-gradient(0deg, rgba(247,0,0,1) 0%, rgba(247,93,0,1) 30%, rgba(245,237,23,1) 100%);
    border-radius: 2px;
   }
  }

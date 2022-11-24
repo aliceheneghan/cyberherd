@@ -1,29 +1,17 @@
 // libraries
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import React from 'react';
+
+// components
+import { EventData, EventSuggestions } from '../features/event-info';
 
 export default function EventPage() {
-    const [eventData, setEventData] = useState({});
-
-    const { id } = useParams();
-  
-    useEffect(() => {
-      const getUser = async (e) => {
-        const { data } = await axios.get(
-          `http://localhost:4000/api/events/${id}`
-        );
-        console.log(`dashboard testing to see:`);
-        console.log(`EventPage data:`, data);
-        setEventData(data);
-      };
-      getUser();
-    }, [id]);
+  // try link below
+  //http://localhost:3000/eventpage/637cb59282b0c6610a755792
 
   return (
-    <div>EventPage
-      <img src={eventData?.event?.photoURL} alt="" />
-
+    <div className="event-page-container">
+      <EventData />
+      <EventSuggestions />
     </div>
-  )
+  );
 }

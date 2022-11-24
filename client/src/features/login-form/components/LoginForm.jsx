@@ -1,7 +1,10 @@
 // libraries
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
+
+// context
+import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_login-form.scss';
@@ -10,20 +13,19 @@ export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [loggedIn, setLoggedIn] = useState(true);
+  // const [loggedIn, setLoggedIn] = useState(true);
+  const { loggedIn, setLoggedIn } = useContext(Context);
 
   const navigate = useNavigate();
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
 
-
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/user/login`,
+        `/api/user/login`,
         {
           email: formData.get('email'),
           password: formData.get('password'),
