@@ -61,14 +61,28 @@ function CreateVenue() {
         </label>
 
         <label for="neighborhood">
-          <input
-            id="neighborhood"
-            onChange={(e) => setNeighborhood(e.target.value)}
-            type="text"
-            value={neighborhood}
-            placeholder="neighborhood"
-            name="neighborhood"
-          />
+        <select onChange={(e) => setNeighborhood(e.target.value)}>
+        <option value="Charlottenburg">Charlottenburg</option>
+        <option value="Friedrichshain">Friedrichshain</option>
+        <option value="Hellersdorf">Hellersdorf</option>
+        <option value="Köpenick">Köpenick</option>
+        <option value="Kreuzberg">Kreuzberg</option>
+        <option value="Lichtenberg">Lichtenberg</option>
+        <option value="Marzahn">Marzahn</option>
+        <option value="Mitte">Mitte</option>
+        <option value="Neukölln">Neukölln</option>
+        <option value="Pankow">Pankow</option>
+        <option value="Prenzlauer Berg">Prenzlauer Berg</option>
+        <option value="Reinickendorf">Reinickendorf</option>
+        <option value="Schöneberg">Schöneberg</option>
+        <option value="Schöneweide">Schöneweide</option>
+        <option value="Spandau">Spandau</option>
+        <option value="Steglitz">Steglitz</option>
+        <option value="Tempelhof">Tempelhof</option>
+        <option value="Treptow">Treptow</option>
+        <option value="Wedding">Wedding</option>
+        <option value="Zehlendorf">Zehlendorf</option>
+        </select>
         </label>
 
         <label for="venue-type">
