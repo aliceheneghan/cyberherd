@@ -37,12 +37,12 @@ export default function Navbar() {
           <Link className="back-to" to="/">
             Back to Calendar
           </Link>
-          <Link className="log-out" to="/login" onClick={logOut}>
-            Log out
+   
+            <img className="upload-photo" src={userData?.user?.photoURL} alt="" />
+        
+          <Link className="log-out" to="/login" onClick={logOut} >
+            Log out 
           </Link>
-          <div className="upload-photo">
-            <img src={userData?.user?.photoURL} alt="" />
-          </div>
         </>
       ) : (
         <>
