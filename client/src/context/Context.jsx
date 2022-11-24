@@ -11,13 +11,25 @@ const ContextProvider = (props) => {
   const [loggedIn, setLoggedIn] = useState(loginSession['loggedIn']);
   const [userData, setUserData] = useState({});
 
+  // save the user ID
+  const [userID, setUserID] = useState('');
+
   useEffect(() => {
     localStorage.setItem('login', JSON.stringify({ loggedIn: loggedIn }));
   }, [loggedIn]);
 
   return (
     // Context.Provider component is used to provide the context to it's child components, no matter how deep they are.
-    <Context.Provider value={{ loggedIn, setLoggedIn, userData, setUserData }}>
+    <Context.Provider
+      value={{
+        loggedIn,
+        setLoggedIn,
+        userData,
+        setUserData,
+        userID,
+        setUserID,
+      }}
+    >
       {props.children}
     </Context.Provider>
   );

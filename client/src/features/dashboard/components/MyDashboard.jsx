@@ -11,7 +11,10 @@ import './_my-dashboard.scss';
 
 // http://localhost:4000/image
 export default function Dashboard() {
-  const { userData, setUserData } = useContext(Context);
+  const [userData, setUserData] = useState({});
+
+  const {setUserID, userID } = useContext(Context);
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -19,10 +22,13 @@ export default function Dashboard() {
       const { data } = await axios.get(`http://localhost:4000/api/user/${id}`);
       console.log(`dashboard testing to see:`);
       console.log(`dashboard data:`, data);
+      console.log("usersID", data?.user?._id)
       setUserData(data);
       
     };
     getUser();
+
+
   }, [id]);
   
   return (
