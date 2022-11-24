@@ -1,10 +1,15 @@
 // libraries
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
+// context
+import { Context } from '../../../context/LoggedInContext';
+
 export default function EventData() {
   const [eventData, setEventData] = useState({});
+
+  const { userID } = useContext(Context);
 
   const { id } = useParams();
 
@@ -22,14 +27,14 @@ export default function EventData() {
 
   const handleSaveDate = async (id) => {
     try {
+      console.log(userID, "test of userID")
       const response =
-        await axios.patch(`http://localhost:4000/api/events/${id}
+        await axios.patch(`http://localhost:4000/api/events/637cb59282b0c6610a755792
       `);
       console.log(response.data);
     } catch (error) {}
   };
-handleSaveDate(eventData?.event?.id)
-
+  // handleSaveDate(eventData?.event?.id)
 
   return (
     <section className="event-data-container">

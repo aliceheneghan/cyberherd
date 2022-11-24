@@ -14,6 +14,7 @@ const findAllUsers = async (req, res) => {
 
 const findUser = async (req, res) => {
   try {
+    console.log("req_id", req.user._id)
     const user = await User.findById(req.params.id);
 
     if (!user) {
