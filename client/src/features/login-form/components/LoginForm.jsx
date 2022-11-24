@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
 // context
-import { Context } from '../../../context/LoggedInContext.jsx';
+import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_login-form.scss';
@@ -25,7 +25,7 @@ export default function LoginForm() {
 
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/user/login`,
+        `/api/user/login`,
         {
           email: formData.get('email'),
           password: formData.get('password'),

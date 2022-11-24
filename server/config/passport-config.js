@@ -2,7 +2,7 @@
 import passportJWT from 'passport-jwt';
 
 // models
-import User from '../models/userModel';
+import User from '../models/userModel.js';
 
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
@@ -33,3 +33,5 @@ const configureJwtStrategy = (passport) => {
     )
   );
 };
+
+export default configureJwtStrategy;

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 // context
-import { Context } from '../../../context/LoggedInContext';
+import { Context } from '../../../context/Context';
 
 export default function EventData() {
   const [eventData, setEventData] = useState({});
@@ -16,7 +16,7 @@ export default function EventData() {
   useEffect(() => {
     const getUser = async (e) => {
       const { data } = await axios.get(
-        `http://localhost:4000/api/events/${id}`
+        `/api/events/${id}`
       );
       console.log(`dashboard testing to see:`);
       console.log(`EventPage data:`, data);
@@ -29,7 +29,7 @@ export default function EventData() {
     try {
       console.log(userID, "test of userID")
       const response =
-        await axios.patch(`http://localhost:4000/api/events/637cb59282b0c6610a755792
+        await axios.patch(`/api/events/637cb59282b0c6610a755792
       `);
       console.log(response.data);
     } catch (error) {}

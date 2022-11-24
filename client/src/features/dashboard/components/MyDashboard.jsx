@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 
 // context
-import { Context } from '../../../context/LoggedInContext';
+import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_my-dashboard.scss';
@@ -24,19 +24,22 @@ export default function Dashboard() {
       console.log(`dashboard data:`, data);
       console.log("usersID", data?.user?._id)
       setUserData(data);
-    //   setUserID(data?.user?._id)
-    // console.log("userID-statee", userID)
-
+      
     };
     getUser();
 
 
   }, [id]);
-
+  
   return (
-    <div className="my-dashboard">
+    <section className="my-dashboard">
       My Dashboard
-      <img src={userData?.user?.photoURL} alt="" />
-    </div>
+      <div>Saved Events</div>
+      <div>Map</div>
+      <div>Past Events</div>
+      <div>Upload Events</div>
+      <div>My Artists</div>
+      <div>My Venues</div>
+    </section>
   );
 }
