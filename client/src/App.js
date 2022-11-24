@@ -14,6 +14,7 @@ import LoginPage from './pages/LoginPage.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
 import EventPage from './pages/EventPage.jsx';
 import VenuePage from './pages/VenuePage.jsx';
+import ResultPage from './pages/ResultPage.jsx';
 
 // styles
 import './App.scss';
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/dashboard/:id" element={<Dashboard />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/results" element={<ResultPage/>} />
         <Route path="/eventpage/:id" element={<EventPage />} />
         <Route path="/venuepage/:id" element={<VenuePage />} />
         <Route path="/create-event" element={<CreateEvent />} />
