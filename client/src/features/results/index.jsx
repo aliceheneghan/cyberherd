@@ -1,3 +1,3 @@
-import ResultData from './components/ResultData';
+import EventList from './components/EventList';
 
-export { ResultData };
+export { EventList };
