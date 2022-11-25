@@ -21,19 +21,19 @@ import './App.scss';
 
 export default function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Banner />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Calendar />} />
-        <Route path="/dashboard/:id" element={<Dashboard />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
-        <Route path="/results/:date" element={<ResultPage/>} />
-        <Route path="/eventpage/:id" element={<EventPage />} />
-        <Route path="/venuepage/:id" element={<VenuePage />} />
-        <Route path="/create-event" element={<CreateEvent />} />
-        <Route path="/create-venue" element={<CreateVenue />} />
+        <Route path='/' element={<Calendar />} />
+        <Route path='/dashboard/:id' element={<Dashboard />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/sign-up' element={<SignUpPage />} />
+        <Route path='/results' element={<ResultPage/>} />
+        <Route path='/eventpage/:id' element={<EventPage />} />
+        <Route path='/venuepage/:id' element={<VenuePage />} />
+        <Route path='/create-event' element={<CreateEvent />} />
+        <Route path='/create-venue' element={<CreateVenue />} />
       </Routes>
     </div>
   );

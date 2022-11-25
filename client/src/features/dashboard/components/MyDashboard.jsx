@@ -11,9 +11,8 @@ import './_my-dashboard.scss';
 
 // http://localhost:4000/image
 export default function Dashboard() {
-  const [userData, setUserData] = useState({});
-
-  const {setUserID, userID } = useContext(Context);
+  // const [userData, setUserData] = useState({});
+  const { userID, setUserID, userData, setUserData } = useContext(Context);
 
   const { id } = useParams();
 
@@ -22,17 +21,16 @@ export default function Dashboard() {
       const { data } = await axios.get(`http://localhost:4000/api/user/${id}`);
       console.log(`dashboard testing to see:`);
       console.log(`dashboard data:`, data);
-      console.log("usersID", data?.user?._id)
+      console.log('usersID', data?.user?._id)
       setUserData(data);
       
     };
     getUser();
 
-
   }, [id]);
   
   return (
-    <section className="my-dashboard">
+    <section className='my-dashboard'>
       My Dashboard
       <div>Saved Events</div>
       <div>Map</div>
