@@ -7,7 +7,6 @@
   background:  linear-gradient(0deg, rgba(247,0,0,1) 0%, rgba(247,93,0,1) 30%, rgba(245,237,23,1) 100%);
   padding-left: 100%;
   box-sizing: content-box;
-
   span {
   display: inline-block;
   padding: 0 0.2rem;
@@ -21,7 +20,6 @@
   box-sizing: content-box;
   will-change: transform;
   animation: banner 80s linear infinite;
-
   @keyframes banner {
     0% {
       transform: translate(-50%, 0);

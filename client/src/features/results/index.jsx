@@ -1,3 +1,3 @@
-import ResultData from './components/ResultData';
+// import ResultData from './components/ResultData.jsx';
 
-export { ResultData };
+// export { ResultData };
