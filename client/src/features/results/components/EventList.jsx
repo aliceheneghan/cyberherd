@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 export default function EventList() {
-  const [resultData, setResultData] = useState({});
+  const [resultData, setResultData] = useState([]);
 
   const { date } = useParams();
 
@@ -13,12 +13,14 @@ export default function EventList() {
       const { data } = await axios.get(
         `http://localhost:4000/api/events/date/${date}`
       );
-      console.log(date)
-      setResultData(data);
+     
+      setResultData(data.event);
+      console.log(data.event[0].name.bandName);
+      console.log(data.event[0]);
     };
     getEvent();
   }, [date]);
 
-  return <div>Results{resultData?.event?.date}</div>;
-  
+  return <div>Results{resultData.map((event) => <div>{event.name.bandName}</div>)}</div>;
+
 }
