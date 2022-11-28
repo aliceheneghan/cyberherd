@@ -57,12 +57,13 @@ export default function Calendar() {
             <Cell key={index} className="date-cell"></Cell>
           ))}
 
-        {monthDays.map((date, i) => (
-          <Cell key={i} handler={navigateToDateResults} handlerParam={date} className="date-cell">
+        {monthDays.map((date, i) => {
+          const formattedDate = `${format(date, 'yyyy')}-${format(date, 'LL')}-${format(date, 'dd')}`;
+          return <Cell key={i} handler={navigateToDateResults} handlerParam={formattedDate} className="date-cell">
             {/* formats JS date into day */}
             {format(date, 'd')}
           </Cell>
-        ))}
+})}
       </div>
     </div>
   );
