@@ -35,70 +35,68 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className="connect-page">
+    <div className='connect-page'>
       {/* <img src="http://localhost:4000/images/32ab7a21e3b9bbbe00fc333276a68951"/> */}
 
       <form onSubmit={handleSubmit}>
         <label>
           <input
-            id="user-name"
+            id='user-name'
             onChange={(e) => setUserName(e.target.value)}
-            type="text"
+            type='text'
             value={userName}
-            placeholder="userName"
-            name="userName"
+            placeholder='userName'
+            name='userName'
           />
         </label>
 
-        <label>
+        <label htmlFor='email'>
           <input
-            id="email-sign"
+            id='email-sign'
             onChange={(e) => setEmail(e.target.value)}
-            type="email"
+            type='email'
             value={email}
-            placeholder="email"
-            name="email"
+            placeholder='email'
+            name='email'
           />
         </label>
 
-        <label>
+        <label htmlFor='password'>
           <input
-            id="password-sign"
+            id='password-sign'
             onChange={(e) => setPassword(e.target.value)}
-            type="password"
+            type='password'
             value={password}
-            placeholder="password"
-            name="password"
+            placeholder='password'
+            name='password'
           />
         </label>
 
-        <label>
+        <label htmlFor='dob'>
           <input
-            id="dob"
+            id='dob'
             onChange={(e) => setDateOfBirth(e.target.value)}
-            type="date"
+            type='dat'
             value={dateOfBirth}
-            placeholder="dateOfBirth"
-            name="dateOfBirth"
+            placeholder='dateOfBirth'
+            name='dateOfBirth'
           />
         </label>
 
-        <div className="file-upload">
-          <label>Select image for upload </label>
+        <div className='file-upload'>
+          <label htmlFor='image'>Select image for upload </label>
           <input
-            id="image-upload"
-            type="file"
-            accept=".jpg,.png,.jpeg"
-            name="image"
+            id='image-upload'
+            type='file'
+            accept='.jpg,.png,.jpeg'
+            name='image'
           />
         </div>
-
         <br />
-        <button className="button-sign" type="submit">
+        <button className='button-sign' type='submit'>
           Sign Up
         </button>
       </form>
-
       <div>{error ? <p>{error}</p> : null}</div>
     </div>
   );

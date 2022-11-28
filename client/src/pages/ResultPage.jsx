@@ -2,12 +2,12 @@
 import React from 'react';
 
 // components
-import { ResultData } from '../features/results'
+import { EventList } from '../features/results'
 
 export default function Results() {
   return (
     <div className="event-page-container">
-      <ResultData />
+      <EventList />
     </div>
   );
 }

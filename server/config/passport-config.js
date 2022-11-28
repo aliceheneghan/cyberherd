@@ -19,6 +19,7 @@ const configureJwtStrategy = (passport) => {
         secretOrKey: process.env.SECRET,
       },
       (jwtPayload, done) => {
+        console.log('JWT STRATEGY payload is:', jwtPayload);
         return User.findById(jwtPayload.sub)
           .select('_id email userName')
           .then((user) => {
