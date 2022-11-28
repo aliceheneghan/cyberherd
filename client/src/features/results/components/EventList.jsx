@@ -13,7 +13,7 @@ export default function EventList() {
       const { data } = await axios.get(
         `http://localhost:4000/api/events/date/${date}`
       );
-     
+
       setResultData(data.event);
       console.log(data.event[0].name.bandName);
       console.log(data.event[0]);
@@ -21,6 +21,12 @@ export default function EventList() {
     getEvent();
   }, [date]);
 
-  return <div>Results{resultData.map((event) => <div>{event.name.bandName}</div>)}</div>;
-
+  return (
+    <div>
+      Results
+      {resultData.map((event) => (
+        <div>{event.name.bandName}</div>
+      ))}
+    </div>
+  );
 }
