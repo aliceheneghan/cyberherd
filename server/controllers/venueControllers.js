@@ -36,12 +36,12 @@ const createVenue = async (req, res) => {
       location: {address, neighborhood},
       venueType,
       venueURL,
-      photoURL: req.file?.filename,
+      photoURL: `http://localhost:4000/images/${req.file?.filename}`,
       event,
       rating: { venueRating, priceRating },
       userFollowing,
     });
-    return res.status(200).json({ message: 'Venue created', createdVenue });
+    return res.status(200).json({ message: 'Venue created', createdVenue, id: createdVenue._id });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }

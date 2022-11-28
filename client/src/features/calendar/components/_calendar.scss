@@ -31,8 +31,15 @@ margin-top: -0.8em;
     padding: 0 1.2em;
 
     .weekdays {
-      text-shadow: 0 0 0.2rem black, 0 0 0.35rem red, 0 0 0.3rem fuchsia, 0 0 0.6rem yellow;
+      text-shadow: 0 0 0.2rem black, 0 0 0.35rem red, 0 0 0.3rem fuchsia,
+        0 0 0.6rem yellow;
     }
+
+    .date-cell {
+      @include flex-jc-ai-dir(center, center, row);
+      height: 3.5em;
+    }
+    
   }
 
   @media screen and (min-width: 992px) {
@@ -42,7 +49,5 @@ margin-top: -0.8em;
   }
 }
 
-.date-cell {
-  @include flex-jc-ai-dir(center, center, row);
-  height: 3.5em;
-}
+
+

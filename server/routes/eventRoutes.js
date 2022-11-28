@@ -2,13 +2,14 @@
 import express from 'express';
 
 //middleware
-
+import passport from 'passport';
 import { uploadEventImage } from '../config/multer.js';
 
 // controllers
 import {
   findAllEvents,
-  findEvent,
+  findEventById,
+  findEventByDate,
   createEvent,
   updateEvent,
   deleteEvent,
@@ -21,11 +22,13 @@ const router = express.Router();
 
 router.get('/', findAllEvents);
 
-router.get('/:id', findEvent);
+router.get('/:id', findEventById);
+
+router.get('/date/:date', findEventByDate);
 
 router.post('/create', uploadEventImage.single('image'), createEvent);
 
-router.patch('/update/:id', updateEvent);
+router.patch('/update', passport.authenticate('jwt', { session: false }),updateEvent);
 
 router.delete('/delete/:id', deleteEvent);
 

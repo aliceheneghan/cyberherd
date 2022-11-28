@@ -14,6 +14,7 @@ const findAllUsers = async (req, res) => {
 
 const findUser = async (req, res) => {
   try {
+    console.log("req_id", req.user._id)
     const user = await User.findById(req.params.id);
 
     if (!user) {
@@ -122,6 +123,7 @@ const loginUser = async (req, res) => {
       return res.status(400).json({ message: 'No access granted!' });
     }
   } catch (error) {
+    console.log("login error catch:", error.message)
     if (error instanceof mongoose.Error.ValidationError) {
       return res.status(400).json({ message: error.message });
     } else if (error instanceof mongoose.Error.CastError) {

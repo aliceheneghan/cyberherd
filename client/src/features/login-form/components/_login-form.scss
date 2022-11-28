@@ -18,14 +18,15 @@
   color: black;
   text-decoration: none;
   &:hover {
-    color:fuchsia;
+    color:yellow;
   }
 }
  .button-log {
   margin-top: 0.5rem;
   padding: 0.3em;
   font-family: 'Sarpanch';
-  background-color: #cef6ae;
+  background-color: transparent;
+  box-shadow: 0.01em 0.01em 1em yellow;
   border-radius: 2px;
  }
 }

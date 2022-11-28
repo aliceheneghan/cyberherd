@@ -8,7 +8,7 @@ const eventSchema = new Schema({
     bandName: { type: String, required: false },
     eventName: { type: String },
   },
-  date: { type: String, required: false },
+  date: { type: Date, required: false },
   time: {
     startTime: { type: String, required: false },
     doorsOpen: { type: String },
@@ -16,8 +16,8 @@ const eventSchema = new Schema({
   // location: { type: Schema.Types.ObjectId, ref: 'venue' },
   location: { type: String },
   tickets: {
-    preSalePrice: { type: Number },
-    doorPrice: { type: Number },
+    // preSalePrice: { type: Number },
+    // doorPrice: { type: Number },
     ticketURL: { type: String },
   },
   genre: [
@@ -55,7 +55,7 @@ const eventSchema = new Schema({
     bandURL: { type: String },
   },
   photoURL: { type: String },
-  userAttending: { type: Schema.Types.ObjectId, ref: 'user' },
+  userAttending: [{ type: Schema.Types.ObjectId, ref: 'user' }],
 });
 
 const Event = model('event', eventSchema);
