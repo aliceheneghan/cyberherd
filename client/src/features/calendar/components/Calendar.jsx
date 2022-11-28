@@ -58,8 +58,9 @@ export default function Calendar() {
           ))}
 
         {monthDays.map((date, i) => {
-          const formattedDate = `${format(date, 'yyyy')}-${format(date, 'LL')}-${format(date, 'dd')}`;
-          return <Cell key={i} handler={navigateToDateResults} handlerParam={formattedDate} className="date-cell">
+          // const formattedDate = `${format(date, 'yyyy')}-${format(date, 'LL')}-${format(date, 'dd')}`;
+          
+          return <Cell key={i} handler={navigateToDateResults} handlerParam={date} className="date-cell">
             {/* formats JS date into day */}
             {format(date, 'd')}
           </Cell>
