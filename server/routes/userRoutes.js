@@ -1,5 +1,6 @@
 // libraries
 import express from 'express';
+import passport from 'passport';
 
 // middlewares
 import validateUser from '../middleware/userValidation.js';
@@ -20,7 +21,7 @@ const router = express.Router();
 
 router.get('/', findAllUsers);
 
-router.get('/:id', findUser);
+router.get('/:id', passport.authenticate('jwt', { session: false }), findUser);
 
 router.post(
   '/create',

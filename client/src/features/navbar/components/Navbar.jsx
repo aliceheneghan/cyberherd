@@ -1,6 +1,7 @@
 // libraries
-import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import React, { useContext, useEffect } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 // components
 import Search from '../../search/components/Search';
@@ -17,6 +18,22 @@ export default function Navbar() {
   console.log('user data is here', userData);
   const navigate = useNavigate();
 
+  // const { id } = useParams();
+
+  // useEffect(() => {
+  //   const getUser = async (e) => {
+  //     const { data } = await axios.get(`http://localhost:4000/api/user/${id}`);
+  //     console.log(`dashboard testing to see:`);
+  //     console.log(`dashboard data:`, data);
+  //     console.log("usersID", data?.user?._id)
+  //     setUserData(data);
+      
+  //   };
+  //   getUser();
+
+
+  // }, [id]);
+
   // handle logout event
   const logOut = (e) => {
     e.preventDefault();
@@ -29,7 +46,7 @@ export default function Navbar() {
     setLoggedIn(false);
     navigate('/login');
   };
-
+console.log("userData navBar", userData)
   return (
     <div className="navbar">
       {loggedIn ? (

@@ -25,7 +25,7 @@ router.get('/:id', findEvent);
 
 router.post('/create', uploadEventImage.single('image'), createEvent);
 
-router.patch('/update/:id', updateEvent);
+router.patch('/update', updateEvent);
 
 router.delete('/delete/:id', deleteEvent);
 

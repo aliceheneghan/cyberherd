@@ -76,8 +76,10 @@ const updateEvent = async (req, res) => {
       bandURL,
       userAttending,
     } = req.body;
+    console.log('req.Body of patch', req.body);
+
     const updatedEvent = await Event.findByIdAndUpdate(
-      req.params.id,
+      req.body.id,
       {
         name: { bandName, eventName },
         date,
@@ -90,7 +92,7 @@ const updateEvent = async (req, res) => {
         },
         genre,
         information: { description, eventURL, bandURL },
-        $push: {userAttending: req.user._id}
+        $push: { userAttending: req.body.userAttending },
       },
       { new: true }
     );
@@ -99,6 +101,7 @@ const updateEvent = async (req, res) => {
     }
     return res.status(200).json({ message: 'Event updated', updatedEvent });
   } catch (error) {
+    console.log('Eventupdate patch', error.message);
     return res.status(500).json({ message: error.message });
   }
 };
