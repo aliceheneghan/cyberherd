@@ -13,21 +13,19 @@ import Cell from './Cell';
 const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 export default function Calendar() {
+  // navigate
+  const navigate = useNavigate();
+
   // state
   const [currentDate, setCurrentDate] = useState(new Date());
 
   // handlers
   const onClick = (cb) => setCurrentDate(cb);
+  const navigateToDateResults = (date) => navigate(`/results/${date}`);
 
   // callbacks
   const prevMonth = () => sub(currentDate, { months: 1 });
-  const nextMonth = () => add(currentDate, { months: 1 });
-
-  // navigate to date results
-  const navigate = useNavigate();
-  const dateResults = () => navigate(`/results/2022-12-01`);
-
-  // const dateResults = () => navigate(`/results/${currentDate}`);
+  const nextMonth = () => add(currentDate, { months: 1 });  
 
   // date variables (extracted from currentDate)
   const monthStart = startOfMonth(currentDate);
@@ -59,8 +57,8 @@ export default function Calendar() {
             <Cell key={index} className="date-cell"></Cell>
           ))}
 
-        {monthDays.map((date, index) => (
-          <Cell handler={onClick} cb={dateResults} key={index} className="date-cell">
+        {monthDays.map((date, i) => (
+          <Cell key={i} onClick={navigateToDateResults} className="date-cell">
             {/* formats JS date into day */}
             {format(date, 'd')}
           </Cell>
