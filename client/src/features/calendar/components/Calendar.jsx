@@ -20,7 +20,7 @@ export default function Calendar() {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   // handlers
-  const onClick = (cb) => setCurrentDate(cb);
+  const changeMonth = (cb) => setCurrentDate(cb);
   const navigateToDateResults = (date) => navigate(`/results/${date}`);
 
   // callbacks
@@ -36,12 +36,12 @@ export default function Calendar() {
   return (
       <div className="calendar">
         <div className="calendar-month">
-          <Cell handler={onClick} cb={prevMonth}>
+          <Cell handler={changeMonth} handlerParam={prevMonth}>
             {'<'}
           </Cell>
           {/* formats JS date into month and year */}
           <Cell>{format(currentDate, 'LLLL yy')}</Cell>
-          <Cell handler={onClick} cb={nextMonth}>
+          <Cell handler={changeMonth} handlerParam={nextMonth}>
             {'>'}
           </Cell>
         </div>
@@ -58,7 +58,7 @@ export default function Calendar() {
           ))}
 
         {monthDays.map((date, i) => (
-          <Cell key={i} onClick={navigateToDateResults} className="date-cell">
+          <Cell key={i} handler={navigateToDateResults} handlerParam={date} className="date-cell">
             {/* formats JS date into day */}
             {format(date, 'd')}
           </Cell>

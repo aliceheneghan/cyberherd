@@ -1,3 +1,3 @@
-export default function Cell({ children, handler, cb }) {
-  return <div onClick={() => handler(cb)}>{children}</div>;
+export default function Cell({ handler, handlerParam, className, children }) {
+  return <div onClick={() => handler(handlerParam)} className={className}>{children}</div>;
 }
