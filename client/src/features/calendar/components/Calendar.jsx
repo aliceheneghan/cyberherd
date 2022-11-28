@@ -1,13 +1,7 @@
 // libraries
 import { useState } from 'react';
-import {
-  format,
-  startOfMonth,
-  endOfMonth,
-  eachDayOfInterval,
-  sub,
-  add,
-} from 'date-fns';
+import { format, startOfMonth, endOfMonth, eachDayOfInterval, sub, add } from 'date-fns';
+import { useNavigate } from 'react-router-dom';
 
 // style
 import './_calendar.scss';
@@ -29,6 +23,12 @@ export default function Calendar() {
   const prevMonth = () => sub(currentDate, { months: 1 });
   const nextMonth = () => add(currentDate, { months: 1 });
 
+  // navigate to date results
+  const navigate = useNavigate();
+  const dateResults = () => navigate(`/results/2022-12-01`);
+
+  // const dateResults = () => navigate(`/results/${currentDate}`);
+
   // date variables (extracted from currentDate)
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
@@ -36,7 +36,6 @@ export default function Calendar() {
   const prefixWeekdays = monthStart.getDay() - 1; // getDay calculates days of week before the start of the month based on Sunday as the first weekday, so -1 needed to align with Monday week start
 
   return (
-    <div className="calendar-wrapper">
       <div className="calendar">
         <div className="calendar-month">
           <Cell handler={onClick} cb={prevMonth}>
@@ -60,14 +59,12 @@ export default function Calendar() {
             <Cell key={index} className="date-cell"></Cell>
           ))}
 
-          {monthDays.map((date, i) => (
-            <Cell key={i} className="date-cell" date={date}>
-              {/* formats JS date into day */}
-
-              {format(date, 'd')}
-            </Cell>
-          ))}
-        </div>
+        {monthDays.map((date, index) => (
+          <Cell handler={onClick} cb={dateResults} key={index} className="date-cell">
+            {/* formats JS date into day */}
+            {format(date, 'd')}
+          </Cell>
+        ))}
       </div>
     </div>
   );
