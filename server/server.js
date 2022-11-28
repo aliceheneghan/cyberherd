@@ -1,5 +1,6 @@
 // libraries
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
@@ -18,6 +19,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors());
+app.use(cookieParser())
 
 app.use(passport.initialize());
 // to register the passport-jwt-strategy

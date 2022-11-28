@@ -14,7 +14,7 @@ export default function LoginForm() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   // const [loggedIn, setLoggedIn] = useState(true);
-  const { loggedIn, setLoggedIn } = useContext(Context);
+  const { loggedIn, setLoggedIn, setUserID } = useContext(Context);
 
   const navigate = useNavigate();
 
@@ -24,17 +24,16 @@ export default function LoginForm() {
     const formData = new FormData(e.target);
 
     try {
-      const response = await axios.post(
-        `/api/user/login`,
-        {
-          email: formData.get('email'),
-          password: formData.get('password'),
-        }
-      );
-      console.log("login response:",response)
+      const response = await axios.post(`/api/user/login`, {
+        email: formData.get('email'),
+        password: formData.get('password'),
+      });
+      console.log('login response:', response);
       if (response.data.success) {
         setError('');
         setLoggedIn(true);
+        setUserID(response.data.id);
+        console.log('response data id: ', response.data.id);
         navigate(`/dashboard/${response.data.id}`);
       } else {
         setError(response.data.message);

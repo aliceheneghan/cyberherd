@@ -12,26 +12,37 @@ import './_my-dashboard.scss';
 // http://localhost:4000/image
 export default function Dashboard() {
   // const [userData, setUserData] = useState({});
-  const { userID, setUserID, userData, setUserData } = useContext(Context);
+
+
+  const { setUserID, userID, setUserData, userData } = useContext(Context);
+
 
   const { id } = useParams();
 
   useEffect(() => {
+    console.log('clg in MYDashboard useEffect', id);
     const getUser = async (e) => {
-      const { data } = await axios.get(`http://localhost:4000/api/user/${id}`);
+      const { data } = await axios.get(`/api/user/${id}`);
+      console.log('this is userID:', userID);
       console.log(`dashboard testing to see:`);
       console.log(`dashboard data:`, data);
-      console.log('usersID', data?.user?._id)
+
+      console.log('users_ID', data?.user?._id);
+
       setUserData(data);
-      
     };
     getUser();
 
   }, [id]);
-  
+  console.log('Dashboard + userID', userID);
   return (
     <section className='my-dashboard'>
       My Dashboard
+      <img
+        className="upload-profile-photo"
+        src={userData?.user?.photoURL}
+        alt=""
+      />
       <div>Saved Events</div>
       <div>Map</div>
       <div>Past Events</div>
