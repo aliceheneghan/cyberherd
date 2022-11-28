@@ -1,6 +1,7 @@
 // libraries
 import { useState } from 'react';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, sub, add } from 'date-fns';
+import { useNavigate } from 'react-router-dom';
 
 // style
 import './_calendar.scss';
@@ -21,6 +22,13 @@ export default function Calendar() {
   // callbacks
   const prevMonth = () => sub(currentDate, { months: 1 });
   const nextMonth = () => add(currentDate, { months: 1 });
+
+  // navigate to date results
+  const navigate = useNavigate()
+
+  const dateResults = () => navigate(`/results/2022-12-01`);
+
+  // const dateResults = () => navigate(`/results/${currentDate}`);
 
   // date variables (extracted from currentDate)
   const monthStart = startOfMonth(currentDate);
@@ -54,7 +62,7 @@ export default function Calendar() {
         ))}
 
         {monthDays.map((date, index) => (
-          <Cell key={index} className="date-cell">
+          <Cell handler={onClick} cb={dateResults} key={index} className="date-cell">
             {/* formats JS date into day */}
             {format(date, 'd')}
           </Cell>
