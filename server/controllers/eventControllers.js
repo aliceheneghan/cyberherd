@@ -77,6 +77,8 @@ const updateEvent = async (req, res) => {
       userAttending,
     } = req.body;
     console.log('req.Body of patch', req.body);
+    console.log("updateEvent!!!!", req.user._id)
+
 
     const updatedEvent = await Event.findByIdAndUpdate(
       req.body.id,
@@ -92,7 +94,8 @@ const updateEvent = async (req, res) => {
         },
         genre,
         information: { description, eventURL, bandURL },
-        $push: { userAttending: req.body.userAttending },
+        $push: { userAttending: req.user._id },
+        // $push: { userAttending: req.body.userAttending },
       },
       { new: true }
     );

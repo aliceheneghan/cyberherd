@@ -29,7 +29,7 @@ export default function EventData() {
       const response = await axios.patch(
         `/api/events/update
       `,
-        { userAttending: userID, eventid }
+        { userAttending: userID, id: eventid }
       );
       console.log(response.data);
     } catch (error) {

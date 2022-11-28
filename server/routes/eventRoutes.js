@@ -2,7 +2,7 @@
 import express from 'express';
 
 //middleware
-
+import passport from 'passport';
 import { uploadEventImage } from '../config/multer.js';
 
 // controllers
@@ -25,7 +25,7 @@ router.get('/:id', findEvent);
 
 router.post('/create', uploadEventImage.single('image'), createEvent);
 
-router.patch('/update', updateEvent);
+router.patch('/update', passport.authenticate('jwt', { session: false }),updateEvent);
 
 router.delete('/delete/:id', deleteEvent);
 
