@@ -8,7 +8,7 @@ const eventSchema = new Schema({
     bandName: { type: String, required: false },
     eventName: { type: String },
   },
-  date: { type: String, required: false },
+  date: { type: Date, required: false },
   time: {
     startTime: { type: String, required: false },
     doorsOpen: { type: String },
