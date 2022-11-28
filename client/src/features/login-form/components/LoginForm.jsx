@@ -46,40 +46,37 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="login-page">
+    <div className='login-page'>
       <form onSubmit={handleSubmit}>
-        <label for="email">
+        <label htmlFor='email'>
           <input
-            id="email-log"
+            id='email-log'
             onChange={(e) => setEmail(e.target.value)}
-            type="email"
+            type='email'
             value={email}
-            name="email"
-            placeholder="email"
+            name='email'
+            placeholder='email'
           />
         </label>
 
-        <label for="password">
+        <label htmlFor='password'>
           <input
-            id="password-log"
+            id='password-log'
             onChange={(e) => setPassword(e.target.value)}
-            type="password"
+            type='password'
             value={password}
-            name="password"
-            placeholder="password"
+            name='password'
+            placeholder='password'
           />
         </label>
-
         <div>
           {/* <Link to="/sign-up">forgot password?</Link> */}
-          <Link className="not-registered" to="/sign-up">
+          <Link className='not-registered' to='/sign-up'>
             not registered yet?
           </Link>
         </div>
-
-        <button className="button-log">Login</button>
+        <button className='button-log'>Login</button>
       </form>
-
       <div>{error ? <p>{error}</p> : null}</div>
     </div>
   );

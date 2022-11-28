@@ -6,14 +6,26 @@ const findAllEvents = async (req, res) => {
   return res.status(200).json(events);
 };
 
-const findEvent = async (req, res) => {
+const findEventById = async (req, res) => {
   try {
     const event = await Event.findById(req.params.id);
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
     }
     return res.status(200).json({ event });
-  } catch (event) {
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const findEventByDate = async (req, res) => {
+  try {
+    const event = await Event.find({date:req.params.date});
+    if (!event) {
+      return res.status(404).json({ message: 'No events found' });
+    }
+    return res.status(200).json({ event });
+  } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
@@ -95,7 +107,9 @@ const updateEvent = async (req, res) => {
         genre,
         information: { description, eventURL, bandURL },
         $push: { userAttending: req.user._id },
+
         // $push: { userAttending: req.body.userAttending },
+
       },
       { new: true }
     );
@@ -121,4 +135,5 @@ const deleteEvent = async (req, res) => {
   }
 };
 
-export { findAllEvents, findEvent, createEvent, updateEvent, deleteEvent };
+export { findAllEvents, findEventById, findEventByDate, createEvent, updateEvent, deleteEvent };
+

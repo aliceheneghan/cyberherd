@@ -14,16 +14,18 @@ import LoginPage from './pages/LoginPage.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
 import EventPage from './pages/EventPage.jsx';
 import VenuePage from './pages/VenuePage.jsx';
+import ResultPage from './pages/ResultPage.jsx';
 
 // styles
 import './App.scss';
 
 export default function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Banner />
       <Navbar />
       <Routes>
+
         <Route path="/" element={<Calendar />} />
         <Route path="/dashboard/:id" element={<Dashboard />} />
         <Route path="/login" element={<LoginPage />} />
@@ -32,6 +34,7 @@ export default function App() {
         <Route path="/venuepage/:venueid" element={<VenuePage />} />
         <Route path="/create-event" element={<CreateEvent />} />
         <Route path="/create-venue" element={<CreateVenue />} />
+
       </Routes>
     </div>
   );

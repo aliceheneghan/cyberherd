@@ -13,7 +13,9 @@ import './_my-dashboard.scss';
 export default function Dashboard() {
   // const [userData, setUserData] = useState({});
 
+
   const { setUserID, userID, setUserData, userData } = useContext(Context);
+
 
   const { id } = useParams();
 
@@ -24,14 +26,17 @@ export default function Dashboard() {
       console.log('this is userID:', userID);
       console.log(`dashboard testing to see:`);
       console.log(`dashboard data:`, data);
+
       console.log('users_ID', data?.user?._id);
+
       setUserData(data);
     };
     getUser();
+
   }, [id]);
   console.log('Dashboard + userID', userID);
   return (
-    <section className="my-dashboard">
+    <section className='my-dashboard'>
       My Dashboard
       <img
         className="upload-profile-photo"
