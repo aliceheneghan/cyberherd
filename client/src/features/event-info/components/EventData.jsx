@@ -11,31 +11,33 @@ export default function EventData() {
 
   const { userID } = useContext(Context);
 
-  const { id } = useParams();
+  const { eventid } = useParams();
 
   useEffect(() => {
     const getUser = async (e) => {
-      const { data } = await axios.get(
-        `/api/events/${id}`
-      );
+      const { data } = await axios.get(`/api/events/${eventid}`);
       console.log(`dashboard testing to see:`);
       console.log(`EventPage data:`, data);
       setEventData(data);
     };
     getUser();
-  }, [id]);
+  }, [eventid]);
 
-  const handleSaveDate = async (id) => {
+  const handleSaveDate = async () => {
     try {
-      console.log(userID, "test of userID")
-      const response =
-        await axios.patch(`/api/events/637cb59282b0c6610a755792
-      `);
+      console.log(userID, 'test of userID');
+      const response = await axios.patch(
+        `/api/events/update
+      `,
+        { userAttending: userID, id: eventid }
+      );
       console.log(response.data);
-    } catch (error) {}
+    } catch (error) {
+      console.log('handleSaveData error', error.message);
+    }
   };
   // handleSaveDate(eventData?.event?.id)
-
+  console.log(' eventData userID before return', userID);
   return (
     <section className="event-data-container">
       <div className="event-date-price-container">

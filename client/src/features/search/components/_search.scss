@@ -9,12 +9,18 @@
     font-family: 'Sarpanch';
     display: block;
     border: transparent;
+    background-color: rgba(128, 128, 128, 0.517);
+  }
+  #search-input::placeholder {
+    color: black;
   }
   .button-search {
     width: 3vw;
     height: 3.3vh;
     display: block;
     border: transparent;
-    background-color: white;
+    background-color: transparent;
+    background-color: rgba(128, 128, 128, 0.517);
+    color: black;
   }
 }
