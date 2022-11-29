@@ -13,9 +13,7 @@ import './_my-dashboard.scss';
 export default function Dashboard() {
   // const [userData, setUserData] = useState({});
 
-
   const { setUserID, userID, setUserData, userData } = useContext(Context);
-
 
   const { id } = useParams();
 
@@ -38,12 +36,14 @@ export default function Dashboard() {
   return (
     <section className='my-dashboard'>
       My Dashboard
+
        <div>Saved Events</div>
+
       <div>Map</div>
       <div>Past Events</div>
-      <div>Upload Events</div>
+      {/* <div>Upload Events</div>
       <div>My Artists</div>
-      <div>My Venues</div>
+      <div>My Venues</div> */}
     </section>
   );
 }
