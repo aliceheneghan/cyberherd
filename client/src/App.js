@@ -30,11 +30,12 @@ export default function App() {
         <Route path="/dashboard/:id" element={<Dashboard />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/results/:date" element={<ResultPage/>} /> 
         <Route path="/eventpage/:eventid" element={<EventPage />} />
         <Route path="/venuepage/:venueid" element={<VenuePage />} />
         <Route path="/create-event" element={<CreateEvent />} />
         <Route path="/create-venue" element={<CreateVenue />} />
-
+  
       </Routes>
     </div>
   );
