@@ -4,15 +4,31 @@
   @include flex-jc-ai-dir(space-around, center, row);
   
   #search-input {
-    width: 30em;
-    height: 2.3em;
-    padding-left: 2rem;
+    width: 16em;
+    height: 4em;
+    border: none;
+    background: none;
     font-family: 'Sarpanch';
+    font-size: 1em;
+    color: white;
+  }
+
+  #search-input:focus {
+    outline: none;
+  }
+
+  #search-input::placeholder {
+    padding: 1rem;
+    text-shadow: 0 0 0.2em black, 0 0 1em black;
+    color: white;
   }
   .button-search {
     width: 3em;
     height: 2.1em;
+    margin-top: 0.1em;
     border: none;
-    background-color: white;
+    background: none;
+    font-size: 1.3em;
+    color: white;
   }
 }
