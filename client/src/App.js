@@ -25,17 +25,18 @@ export default function App() {
       <Banner />
       <Navbar />
       <Routes>
-
         <Route path="/" element={<Calendar />} />
-        <Route path="/dashboard/:id" element={<Dashboard />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login?date" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/dashboard/:id" element={<Dashboard />} />
+        <Route path="/results" element={<ResultPage/>} />
+        <Route path="/eventpage/:id" element={<EventPage />} />
+        <Route path="/venuepage/:id" element={<VenuePage />} />
         <Route path="/results/:date" element={<ResultPage />} />
         <Route path="/eventpage/:eventid" element={<EventPage />} />
         <Route path="/venuepage/:venueid" element={<VenuePage />} />
         <Route path="/create-event" element={<CreateEvent />} />
         <Route path="/create-venue" element={<CreateVenue />} />
-
       </Routes>
     </div>
   );

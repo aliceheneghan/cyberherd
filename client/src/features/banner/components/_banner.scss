@@ -1,32 +1,34 @@
+@import '../../../scss/abstract/mixins';
+
 .banner-animated {
+  @include flex-jc-ai-dir(flex-start, center, row);
   position: fixed;
   top: 0;
   width: 100%;
-  overflow: hidden;
   height: 4.4rem;
-  background-color: rgba(255, 255, 0, 0.798);
+  // background-color: rgba(0, 0, 0, 0.356);
+  // background-color: rgba(255, 79, 0, 0.4);
+  background-color: rgba(255, 255, 0, 0.789);
   padding-left: 100%;
-  box-sizing: content-box;
+
   span {
-  display: inline-block;
-  padding: 0 0.2rem;
-  font-size: 2rem;
-  color: black;
-  font-family: 'Sarpanch';
-  height: 3rem;
-  line-height: 3.8rem;
-  white-space: nowrap;
-  padding-right: 100%;
-  box-sizing: content-box;
-  will-change: transform;
-  animation: banner 80s linear infinite;
-  @keyframes banner {
-    0% {
-      transform: translate(-50%, 0);
-    }
-    100% {
-      transform: translate(-70%, 0);
+    font-size: 2rem;
+    // color: rgba(245, 245, 245, 0.859);
+    color: rgba(0, 0, 0, 0.578);
+    font-family: 'Sarpanch';
+    height: fit-content;
+    white-space: nowrap;
+    padding-right: 100%;
+    will-change: transform;
+    animation: banner 80s linear infinite;
+
+    @keyframes banner {
+      0% {
+        transform: translate(-50%, 0);
+      }
+      100% {
+        transform: translate(-70%, 0);
+      }
     }
   }
- }
 }
