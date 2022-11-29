@@ -1,7 +1,7 @@
 // libraries
-import axios from 'axios';
 import React, { useContext, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
 
 // components
 import Search from '../../search/components/Search';
