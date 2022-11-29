@@ -38,12 +38,7 @@ export default function Dashboard() {
   return (
     <section className='my-dashboard'>
       My Dashboard
-      <img
-        className="upload-profile-photo"
-        src={userData?.user?.photoURL}
-        alt=""
-      />
-      <div>Saved Events</div>
+       <div>Saved Events</div>
       <div>Map</div>
       <div>Past Events</div>
       <div>Upload Events</div>

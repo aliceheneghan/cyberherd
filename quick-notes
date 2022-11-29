@@ -11,3 +11,21 @@ can work analyse independently (
 	- translated typescript to vanilla in calendar tutorial
 	- found better functions in library used 
 minute details (positioning, margins,
+
+
+
+
+const userAlreadyAdded = await Event.findOne()
+
+    const removeExistingUser = await Event.findByIdAndUpdate({
+      $pull: { userAttending: req.user._id },
+    });
+
+    // const removeExistingUser = await Event.findOneAndDelete({
+    //   userAttending: userAlreadyAdded,
+    // })
+
+
+	 const userAlreadyAdded = await Event.findOne({
+      userAttending: req.user._id,
+    });
