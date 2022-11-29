@@ -24,7 +24,7 @@ export default function Search() {
       <input
         id='search-input'
         type='text'
-        placeholder='search here'
+        placeholder='Search here'
         onChange={(e) => setSearchInput(e.target.value)}
       />
       <button className='button-search' onClick={fetchData}>

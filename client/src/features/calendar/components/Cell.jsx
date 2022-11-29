@@ -1,8 +1,3 @@
-// packages
-import React from 'react';
-
-export default function Cell({ className, children, handler, cb}) {
-  return (
-    <div className={className} onClick={() => handler(cb)}>{children}</div>
-  )
+export default function Cell({ handler, handlerParam, className, children }) {
+  return <div onClick={() => handler(handlerParam)} className={className}>{children}</div>;
 }
