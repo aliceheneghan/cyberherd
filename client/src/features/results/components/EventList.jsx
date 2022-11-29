@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-
 export default function EventList() {
   const [resultData, setResultData] = useState([]);
 
@@ -24,15 +23,15 @@ export default function EventList() {
 
   return (
     <div>
-     <div>
+      <div>
         Results
         {resultData.map((event) => (
           <div>{event.name.bandName}</div>
         ))}
       </div>
 
-      <div className='results-wrapper'>
-          
+      <div className="results-wrapper">
+        
       </div>
     </div>
   );
