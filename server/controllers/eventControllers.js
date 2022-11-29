@@ -20,7 +20,7 @@ const findEventById = async (req, res) => {
 
 const findEventByDate = async (req, res) => {
   try {
-    const event = await Event.find({date:req.params.date});
+    const event = await Event.find({ date: req.params.date });
     if (!event) {
       return res.status(404).json({ message: 'No events found' });
     }
@@ -89,8 +89,20 @@ const updateEvent = async (req, res) => {
       userAttending,
     } = req.body;
     console.log('req.Body of patch', req.body);
-    console.log("updateEvent!!!!", req.user._id)
+    console.log('Add this userID to updateEvent!!!!', req.user._id);
 
+    // tell me if userID has been already added
+    const userAlreadyAdded = await Event.findOne({
+      userAttending: req.user._id,
+    });
+
+    // const removeExistingUser = await Event.findByIdAndUpdate({
+    //   $pull: { userAttending: req.user._id },
+    // });
+
+    // const removeExistingUser = await Event.findOneAndDelete({
+    //   userAttending: userAlreadyAdded,
+    // })
 
     const updatedEvent = await Event.findByIdAndUpdate(
       req.body.id,
@@ -109,13 +121,24 @@ const updateEvent = async (req, res) => {
         $push: { userAttending: req.user._id },
 
         // $push: { userAttending: req.body.userAttending },
-
       },
       { new: true }
     );
     if (!updatedEvent) {
       return res.status(404).json('Event not found');
     }
+
+    // if (removeExistingUser) {
+    //   return res
+    //     .status(200)
+    //     .json('User is removed from this event');
+    // }
+
+    if (userAlreadyAdded) {
+      // removeExistingUser
+      return res.status(200).json('UserID is added to userAttending');
+    }
+
     return res.status(200).json({ message: 'Event updated', updatedEvent });
   } catch (error) {
     console.log('Eventupdate patch', error.message);
@@ -135,5 +158,11 @@ const deleteEvent = async (req, res) => {
   }
 };
 
-export { findAllEvents, findEventById, findEventByDate, createEvent, updateEvent, deleteEvent };
-
+export {
+  findAllEvents,
+  findEventById,
+  findEventByDate,
+  createEvent,
+  updateEvent,
+  deleteEvent,
+};
