@@ -31,7 +31,13 @@ export default function EventList() {
       </div>
 
       <div className="results-wrapper">
-        
+      <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
       </div>
     </div>
   );
