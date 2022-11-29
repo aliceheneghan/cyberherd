@@ -44,7 +44,7 @@ function CreateEvent() {
   return (
     <div className="create-event">
       <form onSubmit={handleSubmit}>
-        <label for="band-name">
+        <label htmlFor="band-name">
           <input
             id="band-name"
             onChange={(e) => setBandName(e.target.value)}
@@ -55,7 +55,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="event-name">
+        <label htmlFor="event-name">
           <input
             id="event-name"
             onChange={(e) => setEventName(e.target.value)}
@@ -66,7 +66,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="date">
+        <label htmlFor="date">
           <input
             id="date"
             onChange={(e) => setDate(e.target.value)}

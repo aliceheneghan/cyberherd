@@ -6,6 +6,6 @@ import LoginForm from '../features/login-form';
 
 export default function LoginPage() {
   return (
-    <div><LoginForm /></div>
+    <div className='login-form-page'><LoginForm /></div>
   )
 }

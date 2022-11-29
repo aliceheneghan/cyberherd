@@ -47,7 +47,6 @@ margin-top: -0.8em;
       @include flex-jc-ai-dir(center, center, row);
       height: 3.5em;
     }
-    
   }
 
   @media screen and (min-width: 992px) {
@@ -56,6 +55,3 @@ margin-top: -0.8em;
     height: fit-content;
   }
 }
-
-
-
