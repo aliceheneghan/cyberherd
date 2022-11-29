@@ -1,3 +1,4 @@
+import Filter from './components/Filter';
 import EventList from './components/EventList';
 
-export { EventList };
+export { Filter, EventList };
