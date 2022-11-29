@@ -24,10 +24,16 @@ export default function EventList() {
 
   return (
     <div>
-      Results
-      {resultData.map((event) => (
-        <div>{event.name.bandName}</div>
-      ))}
+     <div>
+        Results
+        {resultData.map((event) => (
+          <div>{event.name.bandName}</div>
+        ))}
+      </div>
+
+      <div className='results-wrapper'>
+          
+      </div>
     </div>
   );
 }
