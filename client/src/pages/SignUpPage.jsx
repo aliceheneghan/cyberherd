@@ -6,6 +6,6 @@ import SignUpForm from '../features/sign-up-form';
 
 export default function SignUpPage() {
   return (
-    <div><SignUpForm /></div>
+    <div className='sign-form-page'><SignUpForm /></div>
   )
 }

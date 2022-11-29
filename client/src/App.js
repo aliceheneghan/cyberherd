@@ -26,7 +26,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Calendar />} />
-        <Route path="/login?date" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/dashboard/:id" element={<Dashboard />} />
         <Route path="/results" element={<ResultPage/>} />
