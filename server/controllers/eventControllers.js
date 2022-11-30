@@ -93,16 +93,31 @@ const updateEvent = async (req, res) => {
 
     // tell me if userID has been already added
     const userAlreadyAdded = await Event.findOne({
-      userAttending: req.user._id,
+      _id: req.body.id,
+      userAttending: { $in: req.user._id },
     });
 
-    // const removeExistingUser = await Event.findByIdAndUpdate({
+    // const removeExistingUser = await Event.findByIdAndUpdate(req.body.id, {
+
     //   $pull: { userAttending: req.user._id },
     // });
 
     // const removeExistingUser = await Event.findOneAndDelete({
     //   userAttending: userAlreadyAdded,
     // })
+
+    if (userAlreadyAdded) {
+      const eventToReturn = await Event.findByIdAndUpdate(
+        req.body.id,
+        {
+          $pull: { userAttending: req.user._id },
+        },
+        { new: true }
+      );
+      return res
+        .status(200)
+        .json({ message: 'UserID is removed', eventToReturn });
+    }
 
     const updatedEvent = await Event.findByIdAndUpdate(
       req.body.id,
@@ -118,14 +133,15 @@ const updateEvent = async (req, res) => {
         },
         genre,
         information: { description, eventURL, bandURL },
-        $push: { userAttending: req.user._id },
+        $addToSet: { userAttending: req.user._id },
 
         // $push: { userAttending: req.body.userAttending },
       },
       { new: true }
     );
+
     if (!updatedEvent) {
-      return res.status(404).json('Event not found');
+      return res.status(404).json({ eventToReturn: null });
     }
 
     // if (removeExistingUser) {
@@ -134,12 +150,9 @@ const updateEvent = async (req, res) => {
     //     .json('User is removed from this event');
     // }
 
-    if (userAlreadyAdded) {
-      // removeExistingUser
-      return res.status(200).json('UserID is added to userAttending');
-    }
-
-    return res.status(200).json({ message: 'Event updated', updatedEvent });
+    return res
+      .status(200)
+      .json({ message: 'Event updated', eventToReturn: updatedEvent });
   } catch (error) {
     console.log('Eventupdate patch', error.message);
     return res.status(500).json({ message: error.message });
