@@ -37,7 +37,16 @@ export default function EventList() {
       </div>
 
       <div className="event-list-wrapper">
-        {/* Test cards until we get map function for events*/}
+        {/* Test divs until we get map function for events*/}
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        {/* <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
@@ -73,13 +82,8 @@ export default function EventList() {
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-      </div>
+        <EventCard className="event-card"></EventCard>*/}
+      </div> 
     </div>
   );
 }
