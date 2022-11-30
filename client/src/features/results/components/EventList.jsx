@@ -6,6 +6,9 @@ import axios from 'axios';
 // style
 import './_event-list.scss';
 
+// components
+import EventCard from './EventCard.jsx';
+
 export default function EventList() {
   const [resultData, setResultData] = useState([]);
 
@@ -25,7 +28,7 @@ export default function EventList() {
   }, [date]);
 
   return (
-    <div className='results-wrapper'>
+    <div className="results-wrapper">
       <div>
         Results
         {resultData.map((event) => (
@@ -34,28 +37,48 @@ export default function EventList() {
       </div>
 
       <div className="event-list-wrapper">
-        {/* Test divs until we get map function for events*/}
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
-        <div className="event-card"></div>
+        {/* Test cards until we get map function for events*/}
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
       </div>
     </div>
   );

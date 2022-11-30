@@ -12,4 +12,10 @@
   width: 65em;
   height: auto;
   padding: 1em;
+
+  .event-card {
+    @include flex-jc-ai-dir(center, center, column);
+    border: 1px solid red;
+    height: 15em;
+  }
 }
