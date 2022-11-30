@@ -1,8 +1,8 @@
 // libraries
 import React from 'react';
 
-// components
-import { EventList } from '../features/results'
+// features
+import EventList from '../features/results/index';
 
 export default function Results() {
   return (
