@@ -30,20 +30,14 @@ export default function Dashboard() {
       setUserData(data);
     };
     getUser();
-
   }, [id]);
   console.log('Dashboard + userID', userID);
   return (
-    <section className='my-dashboard'>
+    <section className="my-dashboard">
       My Dashboard
-
-       <div>Saved Events</div>
-
+      <div>Saved Events</div>
       <div>Map</div>
       <div>Past Events</div>
-      {/* <div>Upload Events</div>
-      <div>My Artists</div>
-      <div>My Venues</div> */}
     </section>
   );
 }

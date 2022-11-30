@@ -1,7 +1,7 @@
 // libraries
 import React from 'react';
 
-// components
+// features
 import { EventData, EventSuggestions } from '../features/event-info';
 
 export default function EventPage() {
