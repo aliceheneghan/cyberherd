@@ -35,6 +35,6 @@ const ContextProvider = (props) => {
   );
 };
 
-// what's important here is that all the components that'd like later to consume the context have to be wrapped inside the provider component. If you want to change the context value, simply update the value prop.
+// all the components that'd like later to consume the context have to be wrapped inside the provider component. If you want to change the context value, simply update the value prop.
 
 export { Context, ContextProvider };

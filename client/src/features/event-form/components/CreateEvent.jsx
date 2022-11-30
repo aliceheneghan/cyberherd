@@ -77,7 +77,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="start-time">
+        <label htmlFor="start-time">
           <input
             id="start-time"
             onChange={(e) => setStartTime(e.target.value)}
@@ -88,7 +88,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="doors-open">
+        <label htmlFor="doors-open">
           <input
             id="doors-open"
             onChange={(e) => setDoorsOpen(e.target.value)}
@@ -99,7 +99,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="location">
+        <label htmlFor="location">
           <input
             id="location"
             onChange={(e) => setLocation(e.target.value)}
@@ -110,7 +110,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="pre-sale-price">
+        <label htmlFor="pre-sale-price">
           <input
             id="pre-sale-price"
             onChange={(e) => setPreSalePrice(e.target.value)}
@@ -121,7 +121,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="door-price">
+        <label htmlFor="door-price">
           <input
             id="door-price"
             onChange={(e) => setDoorPrice(e.target.value)}
@@ -132,7 +132,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="ticket-url">
+        <label htmlFor="ticket-url">
           <input
             id="ticket-url"
             onChange={(e) => setTicketUrl(e.target.value)}
@@ -143,7 +143,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="genre">
+        <label htmlFor="genre">
           <input
             id="genre"
             onChange={(e) => setGenre(e.target.value)}
@@ -154,7 +154,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="description">
+        <label htmlFor="description">
           <input
             id="description"
             onChange={(e) => setDescription(e.target.value)}
@@ -165,7 +165,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="event-url">
+        <label htmlFor="event-url">
           <input
             id="event-url"
             onChange={(e) => setEventUrl(e.target.value)}
@@ -176,7 +176,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="band-url">
+        <label htmlFor="band-url">
           <input
             id="band-url"
             onChange={(e) => setBandUrl(e.target.value)}
@@ -187,7 +187,7 @@ function CreateEvent() {
           />
         </label>
 
-        <label for="image">
+        <label htmlFor="image">
           <input type="file" accept=".jpg,.png,.jpeg" name="image" />
         </label>
 
