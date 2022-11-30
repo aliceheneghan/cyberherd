@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+// style
+import './_event-list.scss';
+
 export default function EventList() {
   const [resultData, setResultData] = useState([]);
 
@@ -31,7 +34,7 @@ export default function EventList() {
       </div>
 
       <div className="results-wrapper">
-      <div className="event-card"></div>
+        <div className="event-card"></div>
         <div className="event-card"></div>
         <div className="event-card"></div>
         <div className="event-card"></div>
