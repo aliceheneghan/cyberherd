@@ -1,9 +1,9 @@
 // mixins
 @import './../../../scss/abstract/mixins';
 
-.results-wrapper {
+.event-list-wrapper {
   @include flex-jc-ai-dir(center, center, column);
-  .event-list-wrapper {
+  .event-card-wrapper {
     border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

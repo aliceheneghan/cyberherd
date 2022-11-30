@@ -28,7 +28,7 @@ export default function EventList() {
   }, [date]);
 
   return (
-    <div className="results-wrapper">
+    <div className="event-list-wrapper">
       <div>
         Results
         {resultData.map((event) => (
@@ -36,7 +36,7 @@ export default function EventList() {
         ))}
       </div>
 
-      <div className="event-list-wrapper">
+      <div className="event-card-wrapper">
         {/* Test divs until we get map function for events*/}
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
