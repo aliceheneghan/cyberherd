@@ -1,5 +1,6 @@
-@import "../features/_features-dir"; 
+@import '../features/_features-dir.scss';
 
-.event-page-container {
-    width: 100%;
+.event-page-container,
+.dashboard-container {
+  width: 100%;
 }
