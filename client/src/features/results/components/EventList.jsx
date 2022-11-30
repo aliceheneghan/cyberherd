@@ -25,7 +25,7 @@ export default function EventList() {
   }, [date]);
 
   return (
-    <div>
+    <div className='results-wrapper'>
       <div>
         Results
         {resultData.map((event) => (
@@ -33,7 +33,22 @@ export default function EventList() {
         ))}
       </div>
 
-      <div className="results-wrapper">
+      <div className="event-list-wrapper">
+        {/* Test divs until we get map function for events*/}
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
+        <div className="event-card"></div>
         <div className="event-card"></div>
         <div className="event-card"></div>
         <div className="event-card"></div>

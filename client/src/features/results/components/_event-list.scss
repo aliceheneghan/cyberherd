@@ -1,0 +1,15 @@
+// mixins
+@import './../../../scss/abstract/mixins';
+
+.results-wrapper {
+  @include flex-jc-ai-dir(center, center, column);
+}
+.event-list-wrapper {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1em;
+  width: 65em;
+  height: auto;
+  padding: 1em;
+}
