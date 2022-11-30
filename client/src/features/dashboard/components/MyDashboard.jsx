@@ -7,7 +7,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Context } from '../../../context/Context.jsx';
 
 // style
-import './_my-dashboard.scss';
+// import './_my-dashboard.scss';
 
 // http://localhost:4000/image
 export default function Dashboard() {
@@ -32,12 +32,44 @@ export default function Dashboard() {
     getUser();
   }, [id]);
   console.log('Dashboard + userID', userID);
+  console.log('userData: ', userData);
   return (
     <section className="my-dashboard">
-      My Dashboard
-      <div>Saved Events</div>
-      <div>Map</div>
-      <div>Past Events</div>
+      <div className="my-dashboard-header">My Dashboard</div>
+      <div className="dates-header-and-saved-events-container">
+        <div className="my-dates-header">My Dates</div>
+        <div className="saved-events-container">
+          <div className="saved-event-eventcard">
+            <div className="event-thumbnail"></div>
+            <div className="saved-event-name-of-event">Reggae Ignition</div>
+            <div className="saved-event-name-of-band">Bob Marley</div>
+          </div>
+
+          <div className="saved-event-eventcard">
+            <div className="event-thumbnail"></div>
+            <div className="saved-event-name-of-event">Reggae Ignition</div>
+            <div className="saved-event-name-of-band">Bob Marley</div>
+          </div>
+
+          <div className="saved-event-eventcard">
+            <div className="event-thumbnail"></div>
+            <div className="saved-event-name-of-event">Reggae Ignition</div>
+            <div className="saved-event-name-of-band">Bob Marley</div>
+          </div>
+
+          <div className="saved-event-eventcard">
+            <div className="event-thumbnail"></div>
+            <div className="saved-event-name-of-event">Reggae Ignition</div>
+            <div className="saved-event-name-of-band">Bob Marley</div>
+          </div>
+
+          <div className="saved-event-eventcard">
+            <div className="event-thumbnail"></div>
+            <div className="saved-event-name-of-event">Reggae Ignition</div>
+            <div className="saved-event-name-of-band">Bob Marley</div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
