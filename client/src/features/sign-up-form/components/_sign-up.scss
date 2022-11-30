@@ -1,7 +1,7 @@
 @import '../../../scss/abstract/mixins';
 
 .navbar {
-  margin-bottom: 100px;
+  margin-bottom: 100px; // Spacing between the navbar and the other components on the different pages
 }
 .connect-page form {
   @include flex-jc-ai-dir(flex-start, center, column);
@@ -28,22 +28,21 @@
     width: 15rem;
     height: 3rem;
   }
-  input#image-upload {
-    font-family: 'Sarpanch';
-  }
-  input#image-upload::file-selector-button {
-    text-align: right;
-    font-family: 'Sarpanch';
-    background-color: transparent;
-    border: 1px solid black;
-  }
-  .button-sign {
-    margin-top: 0.2rem;
-    padding: 0.3em;
-    font-family: 'Sarpanch';
-    background-color: transparent;
-    box-shadow: 0.01em 0.01em 1em yellow;
-    border-radius: 2px;
-    border: 1px solid black;
-  }
+}
+input#image-upload {
+  font-family: 'Sarpanch';
+}
+input#image-upload::file-selector-button {
+  font-family: 'Sarpanch';
+  background-color: transparent;
+  border: 1px solid black;
+}
+.button-sign {
+  margin-top: 0.2rem;
+  padding: 0.3em;
+  font-family: 'Sarpanch';
+  background-color: transparent;
+  box-shadow: 0.01em 0.01em 1em yellow;
+  border-radius: 2px;
+  border: 1px solid black;
 }
