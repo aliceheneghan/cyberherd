@@ -1,8 +1,7 @@
 @import '../../../scss/abstract/_mixins.scss';
 
 .search-bar {
-  @include flex-jc-ai-dir(space-around, center, row);
-  
+  @include flex-jc-ai-dir(space-around, center, row); 
   #search-input {
     width: 16em;
     height: 4em;
@@ -12,11 +11,9 @@
     font-size: 1em;
     color: white;
   }
-
   #search-input:focus {
     outline: none;
   }
-
   #search-input::placeholder {
     padding: 1rem;
     text-shadow: 0 0 0.2em black, 0 0 1em black;

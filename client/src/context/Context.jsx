@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-// creates a context instance.
-const Context = createContext(false);
+const Context = createContext(false); // creates a context instance.
 
 const ContextProvider = (props) => {
   const loginSession = JSON.parse(localStorage.getItem('login')) || {
@@ -11,8 +10,7 @@ const ContextProvider = (props) => {
   const [loggedIn, setLoggedIn] = useState(loginSession['loggedIn']);
   const [userData, setUserData] = useState({});
 
-  // save the user ID
-  const [userID, setUserID] = useState('');
+  const [userID, setUserID] = useState(''); // save the user ID.
 
   useEffect(() => {
     localStorage.setItem('login', JSON.stringify({ loggedIn: loggedIn }));
@@ -34,7 +32,7 @@ const ContextProvider = (props) => {
     </Context.Provider>
   );
 };
-
-// all the components that'd like later to consume the context have to be wrapped inside the provider component. If you want to change the context value, simply update the value prop.
+// all the components that'd like later to consume the context have to be wrapped inside the provider component. 
+// if you want to change the context value, simply update the value prop.
 
 export { Context, ContextProvider };
