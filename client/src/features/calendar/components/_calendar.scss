@@ -27,7 +27,7 @@
       font-size: 3rem;
       filter: drop-shadow(6px 3px 5px rgba(255, 255, 0, 8));
       margin-top: 1.1rem;
-  
+      cursor: pointer;
     }
   }
 
@@ -52,6 +52,12 @@
     .date-cell {
       @include flex-jc-ai-dir(center, center, row);
       height: 3.5em;
+      cursor: pointer;
+      transition: ease-in-out 0.125s;
+      &:hover {
+        transition: ease-in-out 0.125s;
+        background-color: rgba(153, 205, 50, 0.448);
+      }
     }
   }
 

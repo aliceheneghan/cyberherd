@@ -188,14 +188,17 @@ function CreateEvent() {
             name="bandURL"
           />
         </label>
+        <div className="upload-file">
+          <label htmlFor="image">Select image for upload </label>
+            <input
+              id="upload-image"
+              type="file"
+              accept=".jpg,.png,.jpeg"
+              name="image"
+            />
+        </div>
 
-        <label htmlFor="image">
-          <input type="file" accept=".jpg,.png,.jpeg" name="image" />
-        </label>
-
-        <br />
-
-        <button className="button-create-event" type="submit">
+        <button className="button-create" type="submit">
           Create Event
         </button>
       </form>

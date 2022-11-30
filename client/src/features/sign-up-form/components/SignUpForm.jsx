@@ -92,6 +92,7 @@ export default function SignUpForm() {
             name='image'
           />
         </div>
+        
         <br />
         <button className='button-sign' type='submit'>
           Sign Up

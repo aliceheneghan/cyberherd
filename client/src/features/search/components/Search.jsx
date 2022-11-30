@@ -12,7 +12,8 @@ export default function Search() {
   const [searchInput, setSearchInput] = useState('');
   const [data, setData] = useState([]);
 
-  const fetchData = async () => {
+  const fetchData = async (e) => {
+    e.preventDefault()
     const res = await axios.get(
       `http://localhost:4000/api/user/search/${searchInput}`
     );
@@ -20,16 +21,18 @@ export default function Search() {
   };
 
   return (
-    <div className='search-bar'>
-      <input
-        id='search-input'
-        type='text'
-        placeholder='Search here'
-        onChange={(e) => setSearchInput(e.target.value)}
-      />
-      <button className='button-search' onClick={fetchData}>
-        <SlMagnifier />
-      </button>
+    <div className="search-bar">
+      <form onSubmit={fetchData}>
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search here"
+          onChange={(e) => setSearchInput(e.target.value)}
+        />
+        <button className="button-search">
+          <SlMagnifier className="search-icon" />
+        </button>
+      </form>
     </div>
   );
 }
