@@ -13,7 +13,7 @@ import LoginPage from './pages/LoginPage.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
 import EventPage from './pages/EventPage.jsx';
 import VenuePage from './pages/VenuePage.jsx';
-import ResultPage from './pages/ResultPage.jsx';
+import ResultsPage from './pages/ResultsPage.jsx';
 import DashboardPage from './pages/DashboardPage.jsx';
 
 // styles
@@ -28,9 +28,8 @@ export default function App() {
         <Route path="/" element={<Calendar />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/results/:date" element={<ResultsPage />} />
         <Route path="/dashboard/:id" element={<DashboardPage />} />
-        <Route path="/results" element={<ResultPage />} />
-        <Route path="/results/:date" element={<ResultPage />} />
         <Route path="/eventpage/:eventid" element={<EventPage />} />
         <Route path="/venuepage/:venueid" element={<VenuePage />} />
         <Route path="/create-event" element={<CreateEvent />} />
