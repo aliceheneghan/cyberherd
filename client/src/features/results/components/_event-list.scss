@@ -4,11 +4,10 @@
 .event-list-wrapper {
   @include flex-jc-ai-dir(center, center, column);
   .event-card-wrapper {
-    border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1em;
-    width: 65em;
+    gap: 1.5em;
+    width: 70em;
     height: 40em;
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -16,15 +15,17 @@
 
     .event-card {
       @include flex-jc-ai-dir(center, center, column);
-      border: 1px solid red;
       height: 15em;
+      box-shadow: 0.01em 0.01em 0.65em black;
+      background: url(./../../../assets/images/IMG_01.jpg) no-repeat center
+        center/cover;
     }
 
     @media screen and (min-width: 992px) {
     }
   }
 
-  .event-list-wrapper::-webkit-scrollbar {
+  .event-card-wrapper::-webkit-scrollbar {
     display: none;
   }
 }

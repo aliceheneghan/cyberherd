@@ -37,7 +37,7 @@ export default function EventList() {
       </div>
 
       <div className="event-card-wrapper">
-        {/* Test divs until we get map function for events*/}
+        {/* Test cards until we get map function for events*/}
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
