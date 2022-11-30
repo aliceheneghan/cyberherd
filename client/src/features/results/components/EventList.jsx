@@ -46,7 +46,6 @@ export default function EventList() {
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
-        {/* <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
@@ -82,7 +81,8 @@ export default function EventList() {
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>*/}
+        <EventCard className="event-card"></EventCard>
+        <EventCard className="event-card"></EventCard>
       </div> 
     </div>
   );

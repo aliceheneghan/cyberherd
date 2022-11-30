@@ -3,23 +3,28 @@
 
 .results-wrapper {
   @include flex-jc-ai-dir(center, center, column);
-}
-.event-list-wrapper {
-  border: 1px solid red;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1em;
-  width: 65em;
-  height: auto;
-  padding: 1em;
-
-  .event-card {
-    @include flex-jc-ai-dir(center, center, column);
+  .event-list-wrapper {
     border: 1px solid red;
-    height: 15em;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1em;
+    width: 65em;
+    height: 40em;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 1em;
+
+    .event-card {
+      @include flex-jc-ai-dir(center, center, column);
+      border: 1px solid red;
+      height: 15em;
+    }
+
+    @media screen and (min-width: 992px) {
+    }
   }
 
-  @media screen and (min-width: 992px) {
-    
+  .event-list-wrapper::-webkit-scrollbar {
+    display: none;
   }
 }
