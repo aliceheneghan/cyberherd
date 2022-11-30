@@ -32,12 +32,15 @@ export default function EventData() {
         { userAttending: userID, id: eventid }
       );
       console.log(response.data);
+      console.log('response.data.eventToReturn', response.data.eventToReturn);
+      setEventData({event: response.data.eventToReturn});
     } catch (error) {
       console.log('handleSaveData error', error.message);
     }
   };
   // handleSaveDate(eventData?.event?.id)
   console.log(' eventData userID before return', userID);
+  console.log(' only eventData ', eventData);
   return (
     <section className="event-data-container">
       <div className="event-date-price-container">
@@ -67,7 +70,9 @@ export default function EventData() {
             </div>
             <div className="saveDate-buyTicket-container">
               <button className="save-date-btn" onClick={handleSaveDate}>
-                Save the Date
+                {eventData?.event?.userAttending.includes(userID)
+                  ? 'Remove Date'
+                  : 'Save the Date'}
               </button>
               <button className="buy-ticket-btn">Buy Ticket</button>
             </div>
