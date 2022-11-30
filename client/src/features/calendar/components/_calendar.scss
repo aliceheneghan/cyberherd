@@ -2,19 +2,18 @@
 
 .calendar {
   @include flex-jc-ai-dir(center, center, column);
-margin-top: -0.8em;
+  margin-top: -0.8em;
   // box-shadow: 0 0 0.5em red, 0 0 1.2em yellow, 0.01em 0.01em 1em fuchsia;
-  box-shadow: 0 0 0.1em yellowgreen, 0 0 0.9em yellow, 0.01em 0.01em 1.2em yellow;
+  box-shadow: 0 0 0.1em yellowgreen, 0 0 0.9em yellow,
+    0.01em 0.01em 1.2em yellow;
   font-size: 2.5rem;
   color: white;
   // text-shadow: 0px 0px 4px red, 0px 0px 4px fuchsia,
   //   0px 0px 10px yellow;
-  text-shadow: 0 0 0.3rem yellowgreen, 0 0 0.35rem orange,
-    0 0 0.6em yellow;
-  background: url(../../../assets/images/IMG_01.jpg) no-repeat center
-  center/cover;
+  text-shadow: 0 0 0.3rem yellowgreen, 0 0 0.35rem orange, 0 0 0.6em yellow;
+  background: url('../../../assets/images/IMG_01.jpg') no-repeat center
+    center/cover;
   // background-size: cover;
-
 
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
@@ -22,7 +21,14 @@ margin-top: -0.8em;
     width: 15em;
     font-size: 2.45rem;
     text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
-        0 0 0.6rem yellow;
+      0 0 0.6rem yellow;
+    .arrows {
+      color: white;
+      font-size: 3rem;
+      filter: drop-shadow(6px 3px 5px rgba(255, 255, 0, 8));
+      margin-top: 1.1rem;
+      cursor: pointer;
+    }
   }
 
   .seven-day-grid {
@@ -46,6 +52,12 @@ margin-top: -0.8em;
     .date-cell {
       @include flex-jc-ai-dir(center, center, row);
       height: 3.5em;
+      cursor: pointer;
+      transition: ease-in-out 0.125s;
+      &:hover {
+        transition: ease-in-out 0.125s;
+        background-color: rgba(153, 205, 50, 0.448);
+      }
     }
   }
 

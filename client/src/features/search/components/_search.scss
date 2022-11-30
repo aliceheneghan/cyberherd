@@ -2,33 +2,42 @@
 
 .search-bar {
   @include flex-jc-ai-dir(space-around, center, row);
-  
-  #search-input {
-    width: 16em;
-    height: 4em;
-    border: none;
-    background: none;
-    font-family: 'Sarpanch';
-    font-size: 1em;
-    color: white;
-  }
+  form {
+    background: rgba(0, 0, 0, 0.315);
 
-  #search-input:focus {
-    outline: none;
-  }
+    @include flex-jc-ai-dir(space-around, center, row);
 
-  #search-input::placeholder {
-    padding: 1rem;
-    text-shadow: 0 0 0.2em black, 0 0 1em black;
-    color: white;
-  }
-  .button-search {
-    width: 3em;
-    height: 2.1em;
-    margin-top: 0.1em;
-    border: none;
-    background: none;
-    font-size: 1.3em;
-    color: white;
+    #search-input {
+      width: 16em;
+      border: none;
+      // background: rgba(0, 0, 0, 0.335);
+      background: none;
+      font-family: 'Sarpanch';
+      font-size: 1.5rem;
+      color: white;
+      padding: 0.2em 0.2em 0.2em 0.4em;
+    }
+    #search-input:focus {
+      outline: none;
+    }
+    #search-input::placeholder {
+      font-size: 1.5rem;
+      text-shadow: 0 0 0.2em black, 0 0 1em black;
+      color: white;
+    }
+    .button-search {
+      // width: 3em;
+      // height: 2.1em;
+      margin: 0 0.5em 0 0;
+      border: none;
+      background: none;
+      color: white;
+      // border: 2px blue solid;
+      .search-icon {
+        margin: 0.1em 0 -0.1em 0;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
   }
 }

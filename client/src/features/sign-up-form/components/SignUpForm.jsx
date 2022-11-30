@@ -76,7 +76,7 @@ export default function SignUpForm() {
           <input
             id='dob'
             onChange={(e) => setDateOfBirth(e.target.value)}
-            type='dat'
+            type='date'
             value={dateOfBirth}
             placeholder='dateOfBirth'
             name='dateOfBirth'

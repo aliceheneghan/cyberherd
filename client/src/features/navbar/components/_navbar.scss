@@ -7,7 +7,6 @@
   height: 3em;
   font-size: 1.5rem;
   text-shadow: 0 0 0.2em black, 0 0 1em black;
-
   .get-yourself {
     width: 17em;
     text-decoration: none;
@@ -21,12 +20,11 @@
     text-decoration: none;
     color: white;
   }
-  .login {
-    .upload-profile-photo {
-      max-width: 1.5rem;
-      height: 1.5rem;
-      border-radius: 50%;
-      margin-right: 1rem;
-    }
+  .login,
+  .upload-profile-photo {
+    max-width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
   }
 }
