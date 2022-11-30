@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-// creates a context instance.
-const Context = createContext(false);
+const Context = createContext(false); // creates a context instance.
 
 const ContextProvider = (props) => {
   const loginSession = JSON.parse(localStorage.getItem('login')) || {
@@ -35,7 +34,7 @@ const ContextProvider = (props) => {
     </Context.Provider>
   );
 };
-
-// what's important here is that all the components that'd like later to consume the context have to be wrapped inside the provider component. If you want to change the context value, simply update the value prop.
+// all the components that'd like later to consume the context have to be wrapped inside the provider component. 
+// if you want to change the context value, simply update the value prop.
 
 export { Context, ContextProvider };

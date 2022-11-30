@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
-// components
+// features
 import Search from '../../search/components/Search';
 
 // context
@@ -13,7 +13,7 @@ import { Context } from '../../../context/Context.jsx';
 import './_navbar.scss';
 
 export default function Navbar() {
-  const { loggedIn, setLoggedIn, userData, setUserData} = useContext(Context);
+  const { loggedIn, setLoggedIn, userData, setUserData } = useContext(Context);
 
   const navigate = useNavigate();
 
@@ -26,11 +26,8 @@ export default function Navbar() {
   //     console.log(`dashboard data:`, data);
   //     console.log("usersID", data?.user?._id)
   //     setUserData(data);
-      
   //   };
   //   getUser();
-
-
   // }, [id]);
 
   // handle logout event
@@ -45,15 +42,14 @@ export default function Navbar() {
     setLoggedIn(false);
     navigate('/login');
   };
-console.log("userData navBar", userData)
+  console.log('userData navBar', userData);
   return (
-    <div className='navbar'>
+    <div className="navbar">
       {loggedIn ? (
         <>
-          <Link className='back-to' to='/'>
+          <Link className="back-to" to="/">
             Back to Calendar
           </Link>
-          
             <div> 
             <img className='upload-profile-photo' src={userData?.user?.photoURL} alt='' />
           <Link className='log-out' to='/login' onClick={logOut} >
@@ -63,14 +59,14 @@ console.log("userData navBar", userData)
         </>
       ) : (
         <>
-          <Link className='get-yourself' to='/'>
+          <Link className="get-yourself" to="/">
             Get yourself a date
           </Link>
           <Search />
-          <Link className='sign-up' to='/sign-up'>
+          <Link className="sign-up" to="/sign-up">
             Sign up
           </Link>
-          <Link className='login' to='/login'>
+          <Link className="login" to="/login">
             Login
           </Link>
         </>

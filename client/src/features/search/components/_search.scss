@@ -17,11 +17,9 @@ form {
     color: white;
     padding: 0.2em 0.2em 0.2em 0.4em;
   }
-
   #search-input:focus {
     outline: none;
   }
-
   #search-input::placeholder {
     font-size: 1.5rem;
     text-shadow: 0 0 0.2em black, 0 0 1em black;
