@@ -50,15 +50,11 @@ export default function Navbar() {
           <Link className="back-to" to="/">
             Back to Calendar
           </Link>
-          <div>
-            <img
-              className="upload-profile-photo"
-              src={userData?.user?.photoURL}
-              alt=""
-            />
-            <Link className="log-out" to="/login" onClick={logOut}>
-              Log out
-            </Link>
+            <div> 
+            <img className='upload-profile-photo' src={userData?.user?.photoURL} alt='' />
+          <Link className='log-out' to='/login' onClick={logOut} >
+            Log out 
+          </Link>
           </div>
         </>
       ) : (
