@@ -1,5 +1,10 @@
 // libraries
 import React from 'react';
 
-// styles
-import './_map-dashboard.scss';
+export default function MapDashboard() {
+  return (
+    <section className="map-dashboard">
+      <div>Map</div>
+    </section>
+  );
+}
