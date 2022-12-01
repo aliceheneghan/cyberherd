@@ -1,4 +1,14 @@
-// libraries
+const logOut = (e) => {
+  e.preventDefault();
+  console.log(logOut);
+
+  // clear data from storage
+  localStorage.clear();
+  sessionStorage.clear();
+
+  setLoggedIn(false);
+  navigate('/login');
+};// libraries
 import express from 'express';
 
 //middleware

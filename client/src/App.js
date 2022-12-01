@@ -11,6 +11,7 @@ import CreateVenue from './features/venue-form/components/CreateVenue.jsx';
 // pages
 import LoginPage from './pages/LoginPage.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
+import Home from './pages/Home.jsx';
 import EventPage from './pages/EventPage.jsx';
 import VenuePage from './pages/VenuePage.jsx';
 import ResultsPage from './pages/ResultsPage.jsx';
@@ -23,9 +24,9 @@ export default function App() {
   return (
     <div className="App">
       <Banner />
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
-        <Route path="/" element={<Calendar />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/results/:date" element={<ResultsPage />} />
