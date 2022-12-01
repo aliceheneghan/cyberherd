@@ -1,0 +1,45 @@
+// mixins
+@import './../../../scss/abstract/mixins';
+
+.event-list-wrapper {
+  @include flex-jc-ai-dir(center, center, column);
+  .event-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5em;
+    width: 20em;
+    height: 17em;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 1em;
+
+    .event-card {
+      @include flex-jc-ai-dir(center, center, column);
+      height: 15em;
+      box-shadow: 0.01em 0.01em 0.65em black;
+      background: url(./../../../assets/images/IMG_01.jpg) no-repeat center
+        center/cover;
+    }
+
+    // @media screen and (min-width: 768px) {
+    //     grid-template-columns: repeat(2, minmax(0, 1fr));
+    //     width: 50em;
+    //     height: 40em;
+    //   }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: 33em;
+      height: 40em;
+    }
+
+    @media screen and (min-width: 1366px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 70em;
+    }
+  }
+}
+
+.event-card-wrapper::-webkit-scrollbar {
+  display: none;
+}

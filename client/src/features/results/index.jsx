@@ -1,3 +1,3 @@
 import EventList from './components/EventList';
 
-export { EventList };
+export default EventList;
