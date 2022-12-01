@@ -190,7 +190,7 @@ function CreateEvent() {
         </label>
 
         <div className="upload-file">
-          <label htmlFor="image">Select image for upload </label>
+          <label htmlFor="image"> Select image for upload </label>
             <input
               id="upload-image"
               type="file"
