@@ -7,12 +7,10 @@ import { useParams, Link } from 'react-router-dom';
 import { Context } from '../../../context/Context.jsx';
 
 // style
-// import './_my-dashboard.scss';
+import './_my-dashboard.scss';
 
 // http://localhost:4000/image
 export default function Dashboard() {
-  // const [userData, setUserData] = useState({});
-
   const { setUserID, userID, setUserData, userData } = useContext(Context);
 
   const { id } = useParams();
