@@ -1,8 +1,47 @@
 @import '../../../scss/abstract/mixins';
 
 .my-dashboard {
- margin: 0;
- width: 100%;
- height: 30rem;
- @include flex-jc-ai-dir(center, center, column);
+  margin: 0 auto;
+  max-width: 90%;
+//   height: 30rem;
+  @include flex-jc-ai-dir(flex-start, flex-start, column);
+  background-color: rgb(165, 150, 150);
+  .my-dashboard-header {
+    border: 2px red solid;
+    font-size: 4rem;
+  }
+  .dates-header-and-saved-events-container {
+    @include flex-jc-ai-dir(flex-start, flex-start, column);
+    width: 100%;
+    margin-top: 2em;
+    border: rgb(207, 71, 207) solid 3px;
+
+    .my-dates-header {
+      border: rgb(207, 71, 207) solid 3px;
+    }
+    .saved-events-container {
+      width: inherit;
+      border: rgb(153, 6, 153) solid 3px;
+    margin-top: .7em;
+    @include flex-jc-ai-dir(space-between, flex-start, row);
+
+      .saved-event-eventcard {
+        border: 3px dotted blue;
+        width: 20rem;
+        height: 15rem;
+        .event-thumbnail {
+            width: inherit;
+            height: 10rem;
+            background-color: rgb(149, 149, 149);
+        }
+        .saved-event-name-of-event {
+            border: black 2px dashed;
+        }
+        .saved-event-name-of-band {
+            border: rgb(117, 57, 57) 2px dashed;
+
+        }
+      }
+    }
+  }
 }
