@@ -42,7 +42,7 @@ export default function Navbar() {
     setLoggedIn(false);
     navigate('/login');
   };
-  console.log('userData navBar', userData);
+  console.log('userData in navBarComponent', userData);
   return (
     <div className="navbar">
       {loggedIn ? (
@@ -50,11 +50,20 @@ export default function Navbar() {
           <Link className="back-to" to="/">
             Back to Calendar
           </Link>
-            <div> 
-            <img className='upload-profile-photo' src={userData?.user?.photoURL} alt='' />
-          <Link className='log-out' to='/login' onClick={logOut} >
-            Log out 
-          </Link>
+          <Search />
+          <div className='profile-photo-and-logout-container'>
+            <div className="upload-profile-photo-containers-hover-container">
+            <div className="upload-profile-photo-container">
+              <img
+                className="upload-profile-photo"
+                src={userData?.user?.photoURL}
+                alt=""
+              />
+            </div>
+            </div>
+            <Link className="log-out" to="/login" onClick={logOut}>
+              Log out
+            </Link>
           </div>
         </>
       ) : (

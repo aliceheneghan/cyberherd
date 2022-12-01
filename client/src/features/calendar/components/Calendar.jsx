@@ -44,49 +44,50 @@ export default function Calendar() {
   const prefixWeekdays = monthStart.getDay() - 1; // getDay calculates days of week before the start of the month based on Sunday as the first weekday, so -1 needed to align with Monday week start
 
   return (
-    <div className="calendar">
-      <div className="calendar-month">
-        <Cell handler={changeMonth} handlerParam={prevMonth}>
-          <HiChevronLeft className='arrows arrow-left' />
-        </Cell>
-        {/* formats JS date into month and year */}
-        <Cell>{format(currentDate, 'LLLL yy')}</Cell>
-        <Cell handler={changeMonth} handlerParam={nextMonth}>
-        <HiChevronRight className='arrows arrow-left' />
-
-        </Cell>
-      </div>
-
-      <div className="seven-day-grid calendar-days">
-        {daysOfWeek.map((day) => (
-          <Cell key={day} className="weekdays">
-            {day}
+    <>
+      <div className="calendar">
+        <div className="calendar-month">
+          <Cell handler={changeMonth} handlerParam={prevMonth}>
+            <HiChevronLeft className="arrows arrow-left" />
           </Cell>
-        ))}
+          {/* formats JS date into month and year */}
+          <Cell>{format(currentDate, 'LLLL yy')}</Cell>
+          <Cell handler={changeMonth} handlerParam={nextMonth}>
+            <HiChevronRight className="arrows arrow-left" />
+          </Cell>
+        </div>
 
-        {Array.from({ length: prefixWeekdays }).map((_, index) => (
-          <Cell key={index} className="date-cell"></Cell>
-        ))}
-
-        {monthDays.map((date, i) => {
-          const formattedDate = `${format(date, 'yyyy')}-${format(
-            date,
-            'LL'
-          )}-${format(date, 'dd')}`;
-
-          return (
-            <Cell
-              key={i}
-              handler={navigateToDateResults}
-              handlerParam={formattedDate}
-              className="date-cell"
-            >
-              {/* formats JS date into day */}
-              {format(date, 'd')}
+        <div className="seven-day-grid calendar-days">
+          {daysOfWeek.map((day) => (
+            <Cell key={day} className="weekdays">
+              {day}
             </Cell>
-          );
-        })}
+          ))}
+
+          {Array.from({ length: prefixWeekdays }).map((_, index) => (
+            <Cell key={index} className="date-cell"></Cell>
+          ))}
+
+          {monthDays.map((date, i) => {
+            const formattedDate = `${format(date, 'yyyy')}-${format(
+              date,
+              'LL'
+            )}-${format(date, 'dd')}`;
+
+            return (
+              <Cell
+                key={i}
+                handler={navigateToDateResults}
+                handlerParam={formattedDate}
+                className="date-cell"
+              >
+                {/* formats JS date into day */}
+                {format(date, 'd')}
+              </Cell>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
