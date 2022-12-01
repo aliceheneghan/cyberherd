@@ -1,4 +1,4 @@
-@import '../../../scss/abstract/mixins';
+// @import '../../../scss/abstract/mixins';
 
 .my-dashboard {
   margin: 0 auto;
@@ -17,7 +17,8 @@
     border: rgb(207, 71, 207) solid 3px;
 
     .my-dates-header {
-      border: rgb(207, 71, 207) solid 3px;
+      border: rgb(49, 22, 49) solid 3px;
+
     }
     .saved-events-container {
       width: inherit;
@@ -29,7 +30,7 @@
         border: 3px dotted blue;
         width: 20rem;
         height: 15rem;
-        .event-thumbnail {
+        .saved-event-thumbnail {
             width: inherit;
             height: 10rem;
             background-color: rgb(149, 149, 149);

@@ -4,7 +4,7 @@ import React from 'react';
 export default function MapDashboard() {
   return (
     <section className="map-dashboard">
-      <div>Map</div>
+      <div className='map-container'>Map</div>
     </section>
   );
 }
