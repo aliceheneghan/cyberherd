@@ -1,5 +1,90 @@
 @import '../../../scss/abstract/mixins';
 
-.create-event form label {
-  @include flex-jc-ai-dir(flex-start, center, column);
+.create-event {
+  width: 45vw;
+  height: 70vh;
+  // background-image: url(../../../assets/images/IMG_05.JPG);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  form {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 100%;
+  }
+  form #band-name,
+  #event-name,
+  #date,
+  #start-time,
+  #doors-open,
+  #location,
+  #pre-sale-price,
+  #door-price,
+  #ticket-url,
+  #genre,
+  #description,
+  #event-url,
+  #band-url {
+    width: 12rem;
+    height: 1.8rem;
+    outline: none;
+    background: rgba(0, 0, 0, 0.315);
+    border: 1.8px gray solid;
+    padding: 12px 20px;
+    color: white;
+  }
+  #band-name::placeholder,
+  #event-name::placeholder,
+  #location::placeholder,
+  #door-price::placeholder,
+  #pre-sale-price::placeholder,
+  #ticket-url::placeholder,
+  #genre::placeholder,
+  #description::placeholder,
+  #event-url::placeholder,
+  #band-url::placeholder {
+    font-size: 14px;
+    font-family: 'Sarpanch';
+    text-shadow: 0 0 0.2em black, 0 0 1em black;
+    color: white;
+  }
+  #date,
+  #doors-open,
+  #start-time {
+    width: 12rem;
+    height: 1.8rem;
+  }
+}
+.upload-file label {
+  @include flex-jc-ai-dir(column, center, column);
+  font-size: 16px;
+  margin-top: 1rem;
+}
+input#upload-image {
+  margin-bottom: 0.5rem;
+  font-family: 'Sarpanch';
+  width: 12rem;
+  height: 1.8rem;
+}
+#upload-image::file-selector-button {
+  font-family: 'Sarpanch';
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+  &:hover {
+    color: rgba(255, 255, 0, 0.789);
+    border: 1px rgba(255, 255, 0, 0.789) solid;
+  }
+}
+.button-create {
+  margin-bottom: 3em;
+  padding: 0.3em;
+  font-family: 'Sarpanch';
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid black;
+  cursor: pointer; &:hover {
+    color: rgba(255, 255, 0, 0.789);
+    border: 1px rgba(255, 255, 0, 0.789) solid;
+  }
 }

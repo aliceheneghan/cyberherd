@@ -70,7 +70,7 @@ export default function LoginForm() {
           />
         </label>
         <div>
-          {/* <Link to="/sign-up">forgot password?</Link> */}
+          <Link className='forgot-password' to="/sign-up">forgot password?</Link>
           <Link className='not-registered' to='/sign-up'>
             not registered yet?
           </Link>

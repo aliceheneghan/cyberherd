@@ -1,49 +1,79 @@
+@import '../../../scss/abstract/mixins';
+
 .navbar {
-  margin-bottom: 100px;
+  margin-bottom: 80px; // Spacing between the navbar and the other components on the different pages
 }
-.connect-page form {
-  width: 100%;
-  height: 2vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-size: 16px;
+.connect-page {
+  width: 55vw;
+  height: 65vh;
+  //background: rgba(0, 0, 0, 0.315);
+  margin: 0;
+  text-align: center;
+  position: relative;
+  form {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 100%;
+  }
+  form #user-name, #email-sign,
+  #password-sign,
+  #dob  {
+    padding: 12px 20px;
+    color: white;
+  }
   #user-name,
   #email-sign,
   #password-sign,
   #dob {
+    width: 12rem;
+    height: 1.8rem;
+    outline: none;
+    background: rgba(0, 0, 0, 0.315);
+    border: 1.8px gray solid;
+  } 
+  #user-name::placeholder,
+  #email-sign::placeholder,
+  #password-sign::placeholder,
+  #dob::placeholder {
+    font-size: 14px;
     font-family: 'Sarpanch';
-    margin: 0.5rem;
-    padding: 0.5em;
-    border-radius: 2px;
-    border: 1px solid black;
+    text-shadow: 0 0 0.2em black, 0 0 1em black;
+    color: white;
   }
-  #dob {
-    // size of the date of birth placeholder - this size just applies for desktop version for now
-    width: 15rem;
-    color: black;
-    height: 2.3rem;
+    #dob {
+    width: 12rem;
+    height: 1.8rem;
   }
-  .file-upload {
-    width: 15rem;
-    height: 3rem;
+}
+.file-upload label {
+  @include flex-jc-ai-dir(column, center, column);
+  font-size: 16px;
+  margin-top: 1rem;
+}
+.file-upload input {
+  margin-bottom: 0.5rem;
+  font-family: 'Sarpanch';
+  width: 12rem;
+  height: 1.8rem;
+}
+input#image-upload::file-selector-button {
+  font-family: 'Sarpanch';
+  background-color: transparent;
+  border: 1px solid black;
+  &:hover {
+    color: rgba(255, 255, 0, 0.789);
+    border: 1px rgba(255, 255, 0, 0.789) solid;
   }
-  input#image-upload {
-    font-family: 'Sarpanch';
-  }
-  input#image-upload::file-selector-button {
-    text-align: right;
-    font-family: 'Sarpanch';
-    background-color: transparent;
-    border: 1px solid black;
-  }
-  .button-sign {
-    margin-top: 0.2rem;
-    padding: 0.3em;
-    font-family: 'Sarpanch';
-    background-color: transparent;
-    box-shadow: 0.01em 0.01em 1em yellow;
-    border-radius: 2px;
-    border: 1px solid black;
+}
+.button-sign {
+  margin-top: -1rem;
+  padding: 0.3em;
+  font-family: 'Sarpanch';
+  background-color: transparent;
+  // box-shadow: 0.01em 0.01em 1em yellow;
+  border-radius: 2px;
+  border: 1px solid black;
+  &:hover {
+    color: rgba(255, 255, 0, 0.789);
+    border: 1px rgba(255, 255, 0, 0.789) solid;
   }
 }
