@@ -60,7 +60,7 @@ export default function MapDashboard() {
       <h1>Map</h1>
       <div id="map">
         <MapContainer
-          style={{ height: 500, width: 1000, marginLeft: '25%' }}
+          style={{ height: 500, width: 1000, marginLeft: '20%', marginBottom: '7%' }}
           center={position}
           zoom={10}
           scrollWheelZoom={true}

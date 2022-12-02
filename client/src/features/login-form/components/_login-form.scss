@@ -1,5 +1,8 @@
 @import '../../../scss/abstract/mixins';
 
+.navbar {
+  margin-bottom: 80px; // Spacing between the navbar and the other components on the different pages
+}
 .login-page {
   width: 55vw;
   height: 65vh;
@@ -13,7 +16,7 @@
   }
   form #email-log,
   #password-log {
-    padding: 12px 20px;
+    padding: 12px 10px;
     color: white;
   }
   #email-log,

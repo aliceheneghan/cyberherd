@@ -1,10 +1,13 @@
 @import '../../../scss/abstract/mixins';
 
+.navbar {
+  margin-bottom: 80px; // Spacing between the navbar and the other components on the different pages
+}
 .create-event {
   width: 45vw;
   height: 70vh;
   background: transparent;
-  margin: 0;
+  margin: 0; 
   padding: 20px;
   text-align: center;
   position: relative;
@@ -30,7 +33,7 @@
     outline: none;
     background: rgba(0, 0, 0, 0.315);
     border: 1.8px gray solid;
-    padding: 12px 20px;
+    padding: 12px 10px;
     color: white;
   }
   #band-name::placeholder,
