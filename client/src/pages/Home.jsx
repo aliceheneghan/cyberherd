@@ -1,8 +1,20 @@
 // libraries
-import React from 'react'
+import React from 'react';
+
+// features
+import Calendar from '../features/calendar';
+import Navbar from '../features/navbar';
+
+// styled-components
+import { CalendarNavBar } from '../styled-components/navBar-styled-component';
 
 export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <>
+      <CalendarNavBar>
+        <Navbar />
+      </CalendarNavBar>
+      <Calendar />
+    </>
+  );
 }

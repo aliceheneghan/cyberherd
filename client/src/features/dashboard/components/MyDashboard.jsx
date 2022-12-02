@@ -38,7 +38,7 @@ export default function Dashboard() {
         <div className="my-dates-header">My Dates</div>
         <div className="saved-events-container">
           <div className="saved-event-eventcard">
-            <div className="event-thumbnail"></div>
+            <div className="saved-event-thumbnail"></div>
             <div className="saved-event-name-of-event">Reggae Ignition</div>
             <div className="saved-event-name-of-band">Bob Marley</div>
           </div>
