@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Filter({
   setActiveFilter,
@@ -18,18 +18,12 @@ export default function Filter({
   }, [activeFilter]);
 
   return (
-    <div className="filters">
-      <div className="buttons">
+    <div className="buttons">
         <button onClick={() => setActiveFilter('')}>All</button>
         <button onClick={() => setActiveFilter('Electronic')}>
           Electronic
         </button>
         <button onClick={() => setActiveFilter('Krautrock')}>Krautrock</button>
-      </div>
-
-      <div className="radio">
-        
-      </div>
     </div>
   );
 }

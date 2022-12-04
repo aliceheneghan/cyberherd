@@ -7,6 +7,7 @@ import axios from 'axios';
 import './_event-list.scss';
 
 // components
+import Radio from './Radio.jsx';
 import Filter from './Filter.jsx';
 import EventCard from './EventCard.jsx';
 
@@ -34,6 +35,7 @@ export default function EventList() {
 
   return (
     <div className="event-list-wrapper">
+      <Radio/>
       <Filter
         resultData={resultData}
         setFilteredData={setFilteredData}
