@@ -7,10 +7,13 @@ import axios from 'axios';
 import './_event-list.scss';
 
 // components
+import Filter from './Filter.jsx';
 import EventCard from './EventCard.jsx';
 
 export default function EventList() {
   const [resultData, setResultData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [activeFilter, setActiveFilter] = useState('');
 
   const { date } = useParams();
 
@@ -23,18 +26,37 @@ export default function EventList() {
       setResultData(data.event);
       console.log(data.event[0].name.bandName);
       console.log(data.event[0]);
+
+      setFilteredData(data.event);
     };
     getEvent();
   }, [date]);
 
   return (
     <div className="event-list-wrapper">
+      <Filter
+        resultData={resultData}
+        setFilteredData={setFilteredData}
+        activeFilter={activeFilter}
+        setActiveFilter={setActiveFilter}
+      />
       <div>
         Results
-        {resultData.map((event) => (
-          <div>{event.name.bandName}</div>
+        {filteredData.map((event) => (
+          <div>
+            <div>{event.name.bandName}</div>
+            <div>{event.location}</div>
+            <div>{event.genre}</div>
+          </div>
         ))}
       </div>
+
+      {/* <div>
+        Result Cards
+        {resultData.map((event) => {
+          return <EventCard key={event._id} event={event} />;
+        })}
+      </div> */}
 
       <div className="event-card-wrapper">
         {/* Test cards until we get map function for events*/}
@@ -83,7 +105,7 @@ export default function EventList() {
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
         <EventCard className="event-card"></EventCard>
-      </div> 
+      </div>
     </div>
   );
 }
