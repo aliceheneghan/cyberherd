@@ -30,7 +30,7 @@ export default function EventList() {
   return (
     <div className="event-list-wrapper">
       <div>
-        Results
+        
         {resultData.map((event) => (
           <div>{event.name.bandName}</div>
         ))}
