@@ -1,12 +1,12 @@
 @import '../../../scss/abstract/mixins';
+@import '../../../scss/abstract/variables';
 
 .navbar {
-  margin-bottom: 80px; // Spacing between the navbar and the other components on the different pages
+  margin-bottom: 100px; // Spacing between the navbar and the other components on the different pages
 }
 .login-page {
   width: 55vw;
   height: 65vh;
-  //background: rgba(0, 0, 0, 0.315);
   margin: 0;
   text-align: center;
   position: relative;
@@ -16,45 +16,49 @@
   }
   form #email-log,
   #password-log {
+    margin: 10px 0;
     padding: 12px 10px;
-    color: white;
+    color: $text-color;
   }
   #email-log,
   #password-log {
-    width: 12rem;
-    height: 1.8rem;
+    width: 14rem;
+    height: 2.5rem;
     outline: none;
-    background: rgba(0, 0, 0, 0.315);
+    background: $background-transparent;
     border: 1.8px gray solid;
   }
   #email-log::placeholder,
   #password-log::placeholder {
     font-size: 14px;
     font-family: 'Sarpanch';
-    text-shadow: 0 0 0.2em black, 0 0 1em black;
-    color: white;
+    text-shadow: $text-shadow-color;
+    color: $text-color;
   }
   .not-registered, .forgot-password {
     @include flex-jc-ai-dir(column, center, column);
     margin-top: 1rem;
+    margin-right: 0.8rem;
     font-size: 16px;
-    width: 10vw;
-    height: 2vh;
-    color: black;
+    width: 14rem;
+    height: 1rem;
+    color: $text-color;
+    text-shadow:$text-shadow-color;
     text-decoration: none;
   }
   .button-log {
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 0.3em;
     font-family: 'Sarpanch';
     background-color: transparent;
-    // box-shadow: 0.01em 0.01em 1em yellow;
     border-radius: 2px;
-    border: 1px solid black;
+    border: 1px solid $text-color;
+    color: $text-color;
+    text-shadow:$text-shadow-color;
     cursor: pointer;
     &:hover {
-      color: rgba(255, 255, 0, 0.789);
-      border: 1px rgba(255, 255, 0, 0.789) solid;
+    color: $yellow-color;
+    border: 1px $yellow-color solid;
     }
   }
 }
