@@ -7,7 +7,7 @@ import axios from 'axios';
 import './_event-list.scss';
 
 // components
-import Radio from './Radio.jsx';
+import Checkbox from './Checkbox.jsx';
 import Filter from './Filter.jsx';
 import EventCard from './EventCard.jsx';
 
@@ -15,6 +15,7 @@ export default function EventList() {
   const [resultData, setResultData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [activeFilter, setActiveFilter] = useState('');
+
 
   const { date } = useParams();
 
@@ -35,7 +36,7 @@ export default function EventList() {
 
   return (
     <div className="event-list-wrapper">
-      <Radio/>
+      {/* <Checkbox /> */}
       <Filter
         resultData={resultData}
         setFilteredData={setFilteredData}

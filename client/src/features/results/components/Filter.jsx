@@ -19,11 +19,13 @@ export default function Filter({
 
   return (
     <div className="buttons">
-        <button onClick={() => setActiveFilter('')}>All</button>
-        <button onClick={() => setActiveFilter('Electronic')}>
-          Electronic
-        </button>
-        <button onClick={() => setActiveFilter('Krautrock')}>Krautrock</button>
+      <button onClick={() => setActiveFilter('')}>All</button>
+      <button onClick={() => setActiveFilter('Electronic')}>Electronic</button>
+      <button onClick={() => setActiveFilter('Krautrock')}>Krautrock</button>
+      <label>
+          Hip-Hop
+         <input type='checkbox' onChange={() => setActiveFilter('Hip-Hop')}/>
+        </label>
     </div>
   );
 }
