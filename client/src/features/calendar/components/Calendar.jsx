@@ -1,5 +1,6 @@
 // libraries
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   format,
   startOfMonth,
@@ -8,7 +9,6 @@ import {
   sub,
   add,
 } from 'date-fns';
-import { useNavigate } from 'react-router-dom';
 
 // style
 import './_calendar.scss';
@@ -53,7 +53,6 @@ export default function Calendar() {
         <Cell>{format(currentDate, 'LLLL yy')}</Cell>
         <Cell handler={changeMonth} handlerParam={nextMonth}>
         <HiChevronRight className='arrows arrow-left' />
-
         </Cell>
       </div>
 
