@@ -43,6 +43,8 @@ export default function Navbar() {
     navigate('/login');
   };
   console.log('userData in navBarComponent', userData);
+  const imageNotAvailable = userData?.user?.photoURL.slice(-9) === 'undefined';
+  console.log('imageNotAvailable', imageNotAvailable);
   return (
     <div className="navbar">
       {loggedIn ? (
@@ -51,15 +53,21 @@ export default function Navbar() {
             Back to Calendar
           </Link>
           <Search />
-          <div className='profile-photo-and-logout-container'>
-            <div className="upload-profile-photo-containers-hover-container">
-            <div className="upload-profile-photo-container">
-              <img
-                className="upload-profile-photo"
-                src={userData?.user?.photoURL}
-                alt=""
-              />
-            </div>
+          <div className="profile-photo-and-logout-container">
+            <div
+              className={
+                imageNotAvailable
+                  ? 'display-none'
+                  : 'upload-profile-photo-containers-hover-container'
+              }
+            >
+              <div className="upload-profile-photo-container">
+                <img
+                  className="upload-profile-photo"
+                  src={userData?.user?.photoURL}
+                  alt=""
+                />
+              </div>
             </div>
             <Link className="log-out" to="/login" onClick={logOut}>
               Log out
@@ -73,12 +81,12 @@ export default function Navbar() {
           </Link>
           <Search />
           <div className="sign-up-login-container">
-          <Link className="sign-up" to="/sign-up">
-            Sign up
-          </Link>
-          <Link className="login" to="/login">
-            Login
-          </Link>
+            <Link className="sign-up" to="/sign-up">
+              Sign up
+            </Link>
+            <Link className="login" to="/login">
+              Login
+            </Link>
           </div>
         </>
       )}
