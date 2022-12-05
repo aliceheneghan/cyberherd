@@ -1,20 +1,26 @@
 @import '../../../scss/abstract/mixins';
 @import '../../../scss/abstract/variables';
 
-.navbar {
-  margin-bottom: 40px; // Space between the navbar and the other components on the different pages
-}
+
+// .navbar {
+//   margin-bottom: 100px; // Spacing between the navbar and the other components on the different pages
+// }
+
 .connect-page {
   width: 45rem;
   height: fit-content;
   text-align: center;
-  form {
+
+  position: relative;
+  .sign-up-form {
     @include flex-jc-ai-dir(column, center, column);
-    height: 100%;
+    // height: 100%;
+    // border: 2px red dotted;
   }
-  form #user-name, #email-sign,
+  .sign-up-form #user-name,
+  #email-sign,
   #password-sign,
-  #dob  {
+  #dob {
     margin: 10px 0;
     padding: 12px 10px;
     color: $text-color;
@@ -28,7 +34,7 @@
     outline: none;
     background: $background-transparent;
     border: 1.8px gray solid;
-  } 
+  }
   #user-name::placeholder,
   #email-sign::placeholder,
   #password-sign::placeholder,
@@ -38,9 +44,11 @@
     text-shadow: $text-shadow-color;
     color: $text-color;
   }
+
     #dob {
       width: 18rem;
       height: 2.5rem;
+
   }
 }
 .file-upload label {
@@ -56,7 +64,7 @@
   font-family: 'Sarpanch';
   width: 18rem;
   height: 2rem;
-  text-shadow:$text-shadow-color;
+  text-shadow: $text-shadow-color;
   color: $text-color;
 }
 input#image-upload::file-selector-button {
@@ -65,22 +73,23 @@ input#image-upload::file-selector-button {
   border: 1px solid $text-color;
   text-shadow: $text-shadow-color;
   color: $text-color;
+  cursor: pointer;
   &:hover {
     color: $yellow-color;
     border: 1px $yellow-color solid;
   }
 }
-.button-sign {
-  margin-top: -1rem;
-  padding: 0.3em;
-  font-family: 'Sarpanch';
-  background-color: transparent;
-  border-radius: 2px;
-  border: 1px solid $text-color;
-  text-shadow: $text-shadow-color;
-  color: $text-color;
-  &:hover {
-    color: $yellow-color;
-    border: 1px $yellow-color solid;
-  }
-}
+// .button-sign {
+//   margin-top: -1rem;
+//   padding: 0.3em;
+//   font-family: 'Sarpanch';
+//   background-color: transparent;
+//   border-radius: 2px;
+//   border: 1px solid $text-color;
+//   text-shadow: $text-shadow-color;
+//   color: $text-color;
+//   &:hover {
+//     color: $yellow-color;
+//     border: 1px $yellow-color solid;
+//   }
+// }

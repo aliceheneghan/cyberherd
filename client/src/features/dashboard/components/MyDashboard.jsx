@@ -43,11 +43,11 @@ export default function Dashboard() {
             <div className="saved-event-name-of-band">Bob Marley</div>
           </div>
 
-          <div className="saved-event-eventcard">
+          {/* <div className="saved-event-eventcard">
             <div className="event-thumbnail"></div>
             <div className="saved-event-name-of-event">Reggae Ignition</div>
             <div className="saved-event-name-of-band">Bob Marley</div>
-          </div>
+          </div> */}
 
           <div className="saved-event-eventcard">
             <div className="event-thumbnail"></div>

@@ -47,6 +47,9 @@ export const DefaultNavbar = styled.section`
       /* border: 2px red dotted; */
       /* width: 11rem;
       height: 5rem; */
+      .display-none {
+        display: none;
+      }
       .upload-profile-photo-containers-hover-container {
         /* border: 2px dotted black; */
         display: flex;
