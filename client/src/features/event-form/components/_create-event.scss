@@ -31,7 +31,7 @@
     padding: 12px 10px;
     outline: none;
     background: $background-transparent;
-    border: 1.8px gray solid;
+    border: 1.8px $border-gray solid;
     color: $text-color;
   }
   form #description {
@@ -42,7 +42,7 @@
     padding-left: 12px;
     outline: none;
     background: $background-transparent;
-    border: 1.8px gray solid;
+    border: 1.8px $border-gray solid;
     color: $text-color;
   }
   #band-name::placeholder,

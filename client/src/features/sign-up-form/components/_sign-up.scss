@@ -27,7 +27,7 @@
     height: 2.5rem;
     outline: none;
     background: $background-transparent;
-    border: 1.8px gray solid;
+    border: 1.8px $border-gray solid;
   } 
   #user-name::placeholder,
   #email-sign::placeholder,
