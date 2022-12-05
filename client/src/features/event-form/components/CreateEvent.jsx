@@ -85,7 +85,7 @@ function CreateEvent() {
             />
           </label>
 
-          <label htmlFor="start-time">
+          {/* <label htmlFor="start-time">
             <input
               id="start-time"
               onChange={(e) => setStartTime(e.target.value)}
@@ -94,9 +94,9 @@ function CreateEvent() {
               placeholder="start time"
               name="startTime"
             />
-          </label>
+          </label> */}
 
-          <label htmlFor="doors-open">
+          {/* <label htmlFor="doors-open">
             <input
               id="doors-open"
               onChange={(e) => setDoorsOpen(e.target.value)}
@@ -105,7 +105,7 @@ function CreateEvent() {
               placeholder="doors open"
               name="doorsOpen"
             />
-          </label>
+          </label> */}
 
           <label htmlFor="location">
             <input
@@ -162,17 +162,6 @@ function CreateEvent() {
             />
           </label>
 
-          <label htmlFor="description">
-            <input
-              id="description"
-              onChange={(e) => setDescription(e.target.value)}
-              type="text"
-              value={description}
-              placeholder="description"
-              name="description"
-            />
-          </label>
-
           <label htmlFor="event-url">
             <input
               id="event-url"
@@ -192,6 +181,17 @@ function CreateEvent() {
               value={bandURL}
               placeholder="band url"
               name="bandURL"
+            />
+          </label>
+          
+          <label htmlFor="description">
+            <textarea
+              id="description"
+              onChange={(e) => setDescription(e.target.value)}
+              type="text"
+              value={description}
+              placeholder="description"
+              name="description"
             />
           </label>
 

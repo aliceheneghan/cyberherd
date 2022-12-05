@@ -2,15 +2,16 @@
 @import '../../../scss/abstract/variables';
 
 .navbar {
-  margin-bottom: 100px; // Spacing between the navbar and the other components on the different pages
+  margin-bottom: 40px; // Space between the navbar and the other components on the different pages
 }
 .login-page {
-  width: 55vw;
-  height: 65vh;
-  margin: 0;
+  width: 45rem;
+  height: fit-content;
   text-align: center;
+
   position: relative;
   .login-form {
+
     @include flex-jc-ai-dir(column, center, column);
     // height: 100%;
     // border: 2px red dotted;
@@ -23,7 +24,7 @@
   }
   #email-log,
   #password-log {
-    width: 14rem;
+    width: 18rem;
     height: 2.5rem;
     outline: none;
     background: $background-transparent;
@@ -46,7 +47,7 @@
     margin-top: 1rem;
     margin-right: 0.8rem;
     font-size: 16px;
-    width: 14rem;
+    width: 18rem;
     height: 1rem;
     color: $text-color;
     text-shadow: $text-shadow-color;

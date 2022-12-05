@@ -2,17 +2,15 @@
 @import '../../../scss/abstract/variables';
 
 .navbar {
-  margin-bottom: 100px; // Spacing between the navbar and the other components on the different pages
+  margin-bottom: 40px; // Space between the navbar and the other components on the different pages
 }
 .create-event {
-  width: 45vw;
-  height: 70vh;
+  width: 45rem;
+  height: fit-content;
   background: transparent;
-  margin: 0; 
   text-align: center;
-  position: relative;
   form {
-    @include flex-jc-ai-dir(column, center, column);
+    @include flex-jc-ai-dir(center, center, column);
     height: 100%;
   }
   form #band-name,
@@ -25,13 +23,23 @@
   #door-price,
   #ticket-url,
   #genre,
-  #description,
   #event-url,
   #band-url {
-    width: 14rem;
+    width: 18rem;
     height: 2.5rem;
     margin: 10px 0;
     padding: 12px 10px;
+    outline: none;
+    background: $background-transparent;
+    border: 1.8px gray solid;
+    color: $text-color;
+  }
+  form #description {
+    width: 18rem;
+    height: 5rem;
+    margin: 10px 0;
+    padding-top: 10px;
+    padding-left: 12px;
     outline: none;
     background: $background-transparent;
     border: 1.8px gray solid;
@@ -55,7 +63,7 @@
   #date,
   #doors-open,
   #start-time {
-    width: 14rem;
+    width: 18rem;
     height: 2.5rem;
   }
 }
@@ -63,14 +71,14 @@
   @include flex-jc-ai-dir(column, center, column);
   font-size: 16px;
   margin-top: 1rem;
-  margin-right: 2rem;
+  margin-right: 6rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
 }
 input#upload-image {
   margin-bottom: 0.5rem;
   font-family: 'Sarpanch';
-  width: 14rem;
+  width: 18rem;
   height: 2.5rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
