@@ -72,12 +72,14 @@ export default function Navbar() {
             Get yourself a date
           </Link>
           <Search />
+          <div className="sign-up-login-container">
           <Link className="sign-up" to="/sign-up">
             Sign up
           </Link>
           <Link className="login" to="/login">
             Login
           </Link>
+          </div>
         </>
       )}
     </div>
