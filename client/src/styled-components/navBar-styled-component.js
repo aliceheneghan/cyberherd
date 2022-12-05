@@ -87,6 +87,12 @@ export const DefaultNavbar = styled.section`
         }
       }
     }
+    .sign-up-login-container {
+      /* border: 2px solid blue; */
+      .sign-up {
+        margin-right: 2em;
+      }
+    }
   }
 `;
 
