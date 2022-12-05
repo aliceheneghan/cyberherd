@@ -102,7 +102,7 @@ export default function EventData() {
           />
         </div>
       </div>
-      
+ 
     </section>
   );
 }
