@@ -2,14 +2,12 @@
 @import '../../../scss/abstract/variables';
 
 .navbar {
-  margin-bottom: 100px; // Spacing between the navbar and the other components on the different pages
+  margin-bottom: 40px; // Space between the navbar and the other components on the different pages
 }
 .connect-page {
-  width: 55vw;
-  height: 65vh;
-  margin: 0;
+  width: 45rem;
+  height: fit-content;
   text-align: center;
-  position: relative;
   form {
     @include flex-jc-ai-dir(column, center, column);
     height: 100%;
@@ -25,7 +23,7 @@
   #email-sign,
   #password-sign,
   #dob {
-    width: 14rem;
+    width: 18rem;
     height: 2.5rem;
     outline: none;
     background: $background-transparent;
@@ -41,22 +39,22 @@
     color: $text-color;
   }
     #dob {
-      width: 14rem;
+      width: 18rem;
       height: 2.5rem;
   }
 }
 .file-upload label {
   @include flex-jc-ai-dir(column, center, column);
   font-size: 16px;
-  margin-right: 2rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-right: 6rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
 }
 .file-upload input {
   margin-bottom: 0.5rem;
   font-family: 'Sarpanch';
-  width: 14rem;
+  width: 18rem;
   height: 2rem;
   text-shadow:$text-shadow-color;
   color: $text-color;
