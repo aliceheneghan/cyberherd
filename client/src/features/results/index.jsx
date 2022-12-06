@@ -1,3 +1,3 @@
-import EventList from './components/EventList';
+import DateResults from './components/DateResults';
 
-export default EventList;
+export default DateResults;
