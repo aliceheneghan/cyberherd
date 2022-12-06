@@ -6,6 +6,7 @@ export default function Filter({
   setFilteredData,
   resultData,
 }) {
+
   useEffect(() => {
     if (activeFilter === '') {
       setFilteredData(resultData);
