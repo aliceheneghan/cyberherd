@@ -14,7 +14,7 @@ export default function ResultsPage() {
       <DefaultNavbar>
         <Navbar />
       </DefaultNavbar>
-      <Calendar displayType='calendar-bar'/>
+      <Calendar displayType='calendar-bar' />
       <EventList />
     </div>
   );

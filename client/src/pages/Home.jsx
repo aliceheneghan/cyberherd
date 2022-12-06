@@ -14,7 +14,7 @@ export default function Home() {
       <CalendarNavBar>
         <Navbar />
       </CalendarNavBar>
-      <Calendar displayType='calendar-block' classNames='seven-day-grid calendar-days'/>
+      <Calendar displayType='calendar-block' sevenDayGrid='seven-day-grid'/>
     </>
   );
 }
