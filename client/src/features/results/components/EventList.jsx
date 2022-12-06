@@ -32,7 +32,11 @@ export default function EventList() {
       <div>
         
         {resultData.map((event) => (
+          <div>
           <div>{event.name.bandName}</div>
+          <div>{event.location}</div>
+          <div>{event.genre}</div>
+        </div>
         ))}
       </div>
 
