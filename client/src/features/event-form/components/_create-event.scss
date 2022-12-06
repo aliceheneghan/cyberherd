@@ -1,5 +1,112 @@
 @import '../../../scss/abstract/mixins';
+@import '../../../scss/abstract/variables';
 
-.create-event form label {
-  @include flex-jc-ai-dir(flex-start, center, column);
+.navbar {
+  margin-bottom: 40px; // Space between the navbar and the other components on the different pages
+}
+.create-event {
+  width: 45rem;
+  height: fit-content;
+  background: transparent;
+  text-align: center;
+  form {
+    @include flex-jc-ai-dir(center, center, column);
+    height: 100%;
+  }
+  form #band-name,
+  #event-name,
+  #date,
+  #start-time,
+  #doors-open,
+  #location,
+  #pre-sale-price,
+  #door-price,
+  #ticket-url,
+  #genre,
+  #event-url,
+  #band-url {
+    width: 18rem;
+    height: 2.5rem;
+    margin: 10px 0;
+    padding: 12px 10px;
+    outline: none;
+    background: $background-transparent;
+    border: 1.8px gray solid;
+    color: $text-color;
+  }
+  form #description {
+    width: 18rem;
+    height: 5rem;
+    margin: 10px 0;
+    padding-top: 10px;
+    padding-left: 12px;
+    outline: none;
+    background: $background-transparent;
+    border: 1.8px gray solid;
+    color: $text-color;
+  }
+  #band-name::placeholder,
+  #event-name::placeholder,
+  #location::placeholder,
+  #door-price::placeholder,
+  #pre-sale-price::placeholder,
+  #ticket-url::placeholder,
+  #genre::placeholder,
+  #description::placeholder,
+  #event-url::placeholder,
+  #band-url::placeholder {
+    font-size: 14px;
+    font-family: 'Sarpanch';
+    text-shadow: $text-shadow-color;
+    color: $text-color;
+  }
+  #date,
+  #doors-open,
+  #start-time {
+    width: 18rem;
+    height: 2.5rem;
+  }
+}
+.upload-file label {
+  @include flex-jc-ai-dir(column, center, column);
+  font-size: 16px;
+  margin-top: 1rem;
+  margin-right: 6rem;
+  text-shadow: $text-shadow-color;
+  color: $text-color;
+}
+input#upload-image {
+  margin-bottom: 0.5rem;
+  font-family: 'Sarpanch';
+  width: 18rem;
+  height: 2.5rem;
+  text-shadow: $text-shadow-color;
+  color: $text-color;
+}
+#upload-image::file-selector-button {
+  font-family: 'Sarpanch';
+  background-color: transparent;
+  border: 1px solid $text-color;
+  text-shadow: $text-shadow-color;
+  color: $text-color;
+  cursor: pointer;
+  &:hover {
+    color: $yellow-color;
+    border: 1px $yellow-color solid;
+  }
+}
+.button-create {
+  margin-bottom: 3em;
+  padding: 0.3em;
+  font-family: 'Sarpanch';
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid $text-color;
+  text-shadow: $text-shadow-color;
+  color: $text-color;
+  cursor: pointer; 
+  &:hover {
+    color: $yellow-color;
+    border: 1px $yellow-color solid;
+  }
 }

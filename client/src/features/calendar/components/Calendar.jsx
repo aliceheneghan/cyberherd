@@ -56,36 +56,36 @@ export default function Calendar() {
         </Cell>
       </div>
 
-      <div className="seven-day-grid calendar-days">
-        {daysOfWeek.map((day) => (
-          <Cell key={day} className="weekdays">
-            {day}
-          </Cell>
-        ))}
+    <div className="seven-day-grid calendar-days">
+      {daysOfWeek.map((day) => (
+        <Cell key={day} className="weekdays">
+          {day}
+        </Cell>
+      ))}
 
-        {Array.from({ length: prefixWeekdays }).map((_, index) => (
-          <Cell key={index} className="date-cell"></Cell>
-        ))}
+          {Array.from({ length: prefixWeekdays }).map((_, index) => (
+            <Cell key={index} className="date-cell"></Cell>
+          ))}
 
-        {monthDays.map((date, i) => {
-          const formattedDate = `${format(date, 'yyyy')}-${format(
-            date,
-            'LL'
-          )}-${format(date, 'dd')}`;
+          {monthDays.map((date, i) => {
+            const formattedDate = `${format(date, 'yyyy')}-${format(
+              date,
+              'LL'
+            )}-${format(date, 'dd')}`;
 
-          return (
-            <Cell
-              key={i}
-              handler={navigateToDateResults}
-              handlerParam={formattedDate}
-              className="date-cell"
-            >
-              {/* formats JS date into day */}
-              {format(date, 'd')}
-            </Cell>
-          );
-        })}
+            return (
+              <Cell
+                key={i}
+                handler={navigateToDateResults}
+                handlerParam={formattedDate}
+                className="date-cell"
+              >
+                {/* formats JS date into day */}
+                {format(date, 'd')}
+              </Cell>
+            );
+          })}
+        </div>
       </div>
-    </div>
   );
 }

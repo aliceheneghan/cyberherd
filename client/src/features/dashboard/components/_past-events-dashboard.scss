@@ -1,0 +1,36 @@
+.past-events-dashboard {
+  margin: 0 auto;
+  max-width: 90%;
+  border: 8px violet solid;
+  .past-events-header-and-events-container {
+    background-color: rgba(182, 180, 180, 0.725);
+    width: 100%;
+    // height: 10rem;
+    @include flex-jc-ai-dir(flex-start, flex-start, column);
+    .past-events-header {
+      border: rgb(49, 22, 49) solid 3px;
+    }
+    .past-events-container {
+      width: inherit;
+      border: rgb(153, 6, 153) dashed 3px;
+      @include flex-jc-ai-dir(space-between, flex-start, row);
+      margin-top: 0.7em;
+      .past-event-card {
+        border: 3px dotted rgb(24, 24, 61);
+        width: 20rem;
+        height: 15rem;
+        .past-event-thumbnail {
+          width: inherit;
+          height: 10rem;
+          background-color: rgb(149, 149, 149);
+        }
+        .past-event-name-of-event {
+          border: black 2px dashed;
+        }
+        .past-event-name-of-band {
+          border: rgb(117, 57, 57) 2px dashed;
+        }
+      }
+    }
+  }
+}

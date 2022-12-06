@@ -33,18 +33,34 @@ export default function EventData() {
       );
       console.log(response.data);
       console.log('response.data.eventToReturn', response.data.eventToReturn);
-      setEventData({event: response.data.eventToReturn});
+      setEventData({ event: response.data.eventToReturn });
     } catch (error) {
       console.log('handleSaveData error', error.message);
     }
   };
+  const eventSchemaDate = eventData?.event?.date;
+  // console.log('eventSchemaDate : ', eventSchemaDate);
+  const Day = new Date(eventSchemaDate);
+  // console.log('Day: ', Day.toUTCString().slice(0, -13));
+  const dayOfWeek = Day.toUTCString().slice(0, -26);
+  const eventDateFormatted =
+    Day.getDate() + '.' + (Day.getMonth() + 1) + '.' + Day.getFullYear();
+  console.log('eventDateFormatted', dayOfWeek, eventDateFormatted);
+
+  // const dateString = "2020-10-30T12:52:27+05:30"; // ISO8601 compliant dateString
+  // const D = new Date(dateString);
+  // const result = D.getDate()+"/"+(D.getMonth()+1)+"/"+D.getFullYear();
+
   // handleSaveDate(eventData?.event?.id)
   console.log(' eventData userID before return', userID);
   console.log(' only eventData ', eventData);
   return (
     <section className="event-data-container">
       <div className="event-date-price-container">
-        <div className="event-date">{eventData?.event?.date}</div>
+        {/* <div className="event-date">{format(eventData?.event?.date, 'LLLL yy')}</div> */}
+        <div className="event-date">
+          {dayOfWeek} {eventDateFormatted}
+        </div>
         <div className="event-price">
           {eventData?.event?.tickets?.preSalePrice} €
         </div>

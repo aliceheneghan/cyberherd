@@ -1,7 +1,6 @@
 // libraries
-import React, { useContext, useEffect } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 // features
 import Search from '../../search/components/Search';
@@ -13,22 +12,9 @@ import { Context } from '../../../context/Context.jsx';
 import './_navbar.scss';
 
 export default function Navbar() {
-  const { loggedIn, setLoggedIn, userData, setUserData } = useContext(Context);
+  const { loggedIn, setLoggedIn, userData, userID } = useContext(Context);
 
   const navigate = useNavigate();
-
-  // const { id } = useParams();
-
-  // useEffect(() => {
-  //   const getUser = async (e) => {
-  //     const { data } = await axios.get(`http://localhost:4000/api/user/${id}`);
-  //     console.log(`dashboard testing to see:`);
-  //     console.log(`dashboard data:`, data);
-  //     console.log("usersID", data?.user?._id)
-  //     setUserData(data);
-  //   };
-  //   getUser();
-  // }, [id]);
 
   // handle logout event
   const logOut = (e) => {
@@ -42,7 +28,9 @@ export default function Navbar() {
     setLoggedIn(false);
     navigate('/login');
   };
-  console.log('userData navBar', userData);
+  console.log('userData in navBarComponent', userData);
+  const imageNotAvailable = userData?.user?.photoURL.slice(-9) === 'undefined';
+  console.log('imageNotAvailable', imageNotAvailable);
   return (
     <div className="navbar">
       {loggedIn ? (
@@ -50,11 +38,29 @@ export default function Navbar() {
           <Link className="back-to" to="/">
             Back to Calendar
           </Link>
-            <div> 
-            <img className='upload-profile-photo' src={userData?.user?.photoURL} alt='' />
-          <Link className='log-out' to='/login' onClick={logOut} >
-            Log out 
-          </Link>
+          <Search />
+          <div className="profile-photo-and-logout-container">
+            <Link className="back-to" to={`/dashboard/${userID}`}>
+              <div
+                className={
+                  imageNotAvailable
+                    ? 'display-none'
+                    : 'upload-profile-photo-containers-hover-container'
+                }
+              >
+                <div className="upload-profile-photo-container">
+                  <img
+                    className="upload-profile-photo"
+                    src={userData?.user?.photoURL}
+                    alt=""
+                  />
+                </div>
+              </div>
+            </Link>
+
+            <Link className="log-out" to="/login" onClick={logOut}>
+              Log out
+            </Link>
           </div>
         </>
       ) : (
@@ -63,12 +69,14 @@ export default function Navbar() {
             Get yourself a date
           </Link>
           <Search />
-          <Link className="sign-up" to="/sign-up">
-            Sign up
-          </Link>
-          <Link className="login" to="/login">
-            Login
-          </Link>
+          <div className="sign-up-login-container">
+            <Link className="sign-up" to="/sign-up">
+              Sign up
+            </Link>
+            <Link className="login" to="/login">
+              Login
+            </Link>
+          </div>
         </>
       )}
     </div>

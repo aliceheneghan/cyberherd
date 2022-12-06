@@ -8,6 +8,7 @@ import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_login-form.scss';
+import { LoginBtn } from '../../../styled-components/buttons.js';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
@@ -46,36 +47,39 @@ export default function LoginForm() {
   };
 
   return (
-    <div className='login-page'>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='email'>
+    <div className="login-page">
+      <form onSubmit={handleSubmit} className="login-form">
+        <label htmlFor="email">
           <input
-            id='email-log'
+            id="email-log"
             onChange={(e) => setEmail(e.target.value)}
-            type='email'
+            type="email"
             value={email}
-            name='email'
-            placeholder='email'
+            name="email"
+            placeholder="email"
           />
         </label>
 
-        <label htmlFor='password'>
+        <label htmlFor="password">
           <input
-            id='password-log'
+            id="password-log"
             onChange={(e) => setPassword(e.target.value)}
-            type='password'
+            type="password"
             value={password}
-            name='password'
-            placeholder='password'
+            name="password"
+            placeholder="password"
           />
         </label>
         <div>
-          {/* <Link to="/sign-up">forgot password?</Link> */}
-          <Link className='not-registered' to='/sign-up'>
+          <Link className="forgot-password" to="/sign-up">
+            forgot password?
+          </Link>
+          <Link className="not-registered" to="/sign-up">
             not registered yet?
           </Link>
         </div>
-        <button className='button-log'>Login</button>
+        {/* <button className='button-log'>Login</button> */}
+        <LoginBtn type="submit">Login</LoginBtn>
       </form>
       <div>{error ? <p>{error}</p> : null}</div>
     </div>

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 // style
 import './_sign-up.scss';
+import { SignUpBtn } from '../../../styled-components/buttons';
 
 export default function SignUpForm() {
   const [userName, setUserName] = useState('');
@@ -35,67 +36,70 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className='connect-page'>
+    <div className="connect-page">
       {/* <img src="http://localhost:4000/images/32ab7a21e3b9bbbe00fc333276a68951"/> */}
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="sign-up-form">
         <label>
           <input
-            id='user-name'
+            id="user-name"
             onChange={(e) => setUserName(e.target.value)}
-            type='text'
+            type="text"
             value={userName}
-            placeholder='userName'
-            name='userName'
+            placeholder="userName"
+            name="userName"
           />
         </label>
 
-        <label htmlFor='email'>
+        <label htmlFor="email">
           <input
-            id='email-sign'
+            id="email-sign"
             onChange={(e) => setEmail(e.target.value)}
-            type='email'
+            type="email"
             value={email}
-            placeholder='email'
-            name='email'
+            placeholder="email"
+            name="email"
           />
         </label>
 
-        <label htmlFor='password'>
+        <label htmlFor="password">
           <input
-            id='password-sign'
+            id="password-sign"
             onChange={(e) => setPassword(e.target.value)}
-            type='password'
+            type="password"
             value={password}
-            placeholder='password'
-            name='password'
+            placeholder="password"
+            name="password"
           />
         </label>
 
-        <label htmlFor='dob'>
+        <label htmlFor="dob">
           <input
-            id='dob'
+            id="dob"
             onChange={(e) => setDateOfBirth(e.target.value)}
-            type='date'
+            type="date"
             value={dateOfBirth}
-            placeholder='dateOfBirth'
-            name='dateOfBirth'
+            placeholder="dateOfBirth"
+            name="dateOfBirth"
           />
         </label>
 
-        <div className='file-upload'>
-          <label htmlFor='image'>Select image for upload </label>
+        <div className="file-upload">
+          <label htmlFor="image">Select image for upload </label>
           <input
-            id='image-upload'
-            type='file'
-            accept='.jpg,.png,.jpeg'
-            name='image'
+            id="image-upload"
+            type="file"
+            accept=".jpg,.png,.jpeg"
+            name="image"
           />
         </div>
+
         <br />
-        <button className='button-sign' type='submit'>
+        <SignUpBtn type="submit">
+          {/* <button className="button-sign" type="submit"> */}
           Sign Up
-        </button>
+          {/* </button> */}
+        </SignUpBtn>
       </form>
       <div>{error ? <p>{error}</p> : null}</div>
     </div>

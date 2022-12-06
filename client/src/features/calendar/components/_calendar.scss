@@ -1,3 +1,4 @@
+// mixins
 @import '../../../scss/abstract/_mixins.scss';
 
 .calendar {
@@ -12,7 +13,6 @@
   text-shadow: 0 0 0.3rem yellowgreen, 0 0 0.35rem orange, 0 0 0.6em yellow;
   background: url('../../../assets/images/IMG_01.jpg') no-repeat center
     center/cover;
-  // background-size: cover;
 
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
@@ -52,10 +52,11 @@
       @include flex-jc-ai-dir(center, center, row);
       height: 3.5em;
       cursor: pointer;
-      transition: ease-in-out 0.125s;
+        // border-radius: 50%;
+        transition: ease-in-out 0.125s;
       &:hover {
         transition: ease-in-out 0.125s;
-        background-color: rgba(153, 205, 50, 0.448);
+        background-color: rgba(0, 0, 0, 0.315);
       }
     }
   }

@@ -7,12 +7,10 @@ import { useParams, Link } from 'react-router-dom';
 import { Context } from '../../../context/Context.jsx';
 
 // style
-// import './_my-dashboard.scss';
+import './_my-dashboard.scss';
 
 // http://localhost:4000/image
 export default function Dashboard() {
-  // const [userData, setUserData] = useState({});
-
   const { setUserID, userID, setUserData, userData } = useContext(Context);
 
   const { id } = useParams();
@@ -40,16 +38,16 @@ export default function Dashboard() {
         <div className="my-dates-header">My Dates</div>
         <div className="saved-events-container">
           <div className="saved-event-eventcard">
-            <div className="event-thumbnail"></div>
+            <div className="saved-event-thumbnail"></div>
             <div className="saved-event-name-of-event">Reggae Ignition</div>
             <div className="saved-event-name-of-band">Bob Marley</div>
           </div>
 
-          <div className="saved-event-eventcard">
+          {/* <div className="saved-event-eventcard">
             <div className="event-thumbnail"></div>
             <div className="saved-event-name-of-event">Reggae Ignition</div>
             <div className="saved-event-name-of-band">Bob Marley</div>
-          </div>
+          </div> */}
 
           <div className="saved-event-eventcard">
             <div className="event-thumbnail"></div>
