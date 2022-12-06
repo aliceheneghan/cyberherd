@@ -72,4 +72,13 @@
   width: inherit;
   height: 3.5em;
   background: rgba(0, 0, 0, 0.315);
+
+  .calendar-month {
+    @include flex-jc-ai-dir(center, center, row);
+    height: 2em;
+
+    .arrows {
+        color: yellow;
+    }
+}
 }
