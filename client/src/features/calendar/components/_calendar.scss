@@ -17,8 +17,7 @@
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
     margin: 1.2em 0;
-    width: inherit;
-    background: rgba(0, 0, 0, 0.315);
+    width: 15em;
     font-size: 2.45rem;
     text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
       0 0 0.6rem yellow;
