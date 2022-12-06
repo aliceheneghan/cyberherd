@@ -1,10 +1,10 @@
 // libraries
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
 
 import Leaflet from 'leaflet';
 
-import musicIcon from './../assests/musicIcon.svg';
+import musicIcon from './../assets/musicIcon.svg';
 
 // style
 import './_map-dashboard.scss';
