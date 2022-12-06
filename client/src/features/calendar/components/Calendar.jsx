@@ -22,7 +22,7 @@ import Cell from './Cell';
 // data
 const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-export default function Calendar({ displayType }) {
+export default function Calendar({ displayType, classNames }) {
   // navigate
   const navigate = useNavigate();
 
@@ -56,7 +56,7 @@ export default function Calendar({ displayType }) {
         </Cell>
       </div>
 
-    <div className="seven-day-grid calendar-days">
+    <div className={classNames}>
       {daysOfWeek.map((day) => (
         <Cell key={day} className="weekdays">
           {day}

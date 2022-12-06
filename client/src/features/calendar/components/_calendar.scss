@@ -78,7 +78,15 @@
     height: 2em;
 
     .arrows {
-        color: yellow;
+      color: yellow;
     }
+  }
+
+  .calendar-days {
+    @include flex-jc-ai-dir(space-evenly, center, row);
+    width: inherit;
+    height: 1em;
+    
+    
 }
 }
