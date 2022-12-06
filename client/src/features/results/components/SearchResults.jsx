@@ -4,11 +4,25 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 export default function SearchResults() {
+  const [resultData, setResultData] = useState([]);
 
-   const data = axios.get(`http://localhost:4000/api/events/`);
+  useEffect(() => {
+    axios.get(`http://localhost:4000/api/events`).then((response) => {
+      setResultData(response.data);
+    });
+  });
 
-   console.log(data)
-
-
-
+  return (
+    <div>
+      <div>
+        {resultData.map((event) => (
+          <div>
+            <div>{event.name.bandName}</div>
+            <div>{event.location}</div>
+            <div>{event.genre}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
