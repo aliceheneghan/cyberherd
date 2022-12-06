@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 // style
-import './_event-list.scss';
+import './_date-results.scss';
 
 // components
 import EventCard from './EventCard.jsx';
