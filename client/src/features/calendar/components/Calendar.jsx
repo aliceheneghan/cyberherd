@@ -22,7 +22,7 @@ import Cell from './Cell';
 // data
 const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-export default function Calendar() {
+export default function Calendar({ displayType }) {
   // navigate
   const navigate = useNavigate();
 
@@ -44,7 +44,7 @@ export default function Calendar() {
   const prefixWeekdays = monthStart.getDay() - 1; // getDay calculates days of week before the start of the month based on Sunday as the first weekday, so -1 needed to align with Monday week start
 
   return (
-    <div className="calendar">
+    <div className={displayType}>
       <div className="calendar-month">
         <Cell handler={changeMonth} handlerParam={prevMonth}>
           <HiChevronLeft className='arrows arrow-left' />

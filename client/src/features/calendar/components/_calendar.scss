@@ -1,7 +1,7 @@
 // mixins
 @import '../../../scss/abstract/_mixins.scss';
 
-.calendar {
+.calendar-block {
   @include flex-jc-ai-dir(center, center, column);
   // box-shadow: 0 0 0.5em red, 0 0 1.2em yellow, 0.01em 0.01em 1em fuchsia;
   box-shadow: 0 0 0.1em black, 0 0 0.9em yellow,
