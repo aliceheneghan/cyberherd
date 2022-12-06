@@ -90,4 +90,9 @@ export default function Calendar({ displayType, sevenDayGrid }) {
               {/* formats JS date into day */}
               {format(monthDay, 'd')}
             </Cell>
-            
+          );
+        })}
+      </div>
+    </div>
+  );
+}
