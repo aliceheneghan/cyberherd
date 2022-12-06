@@ -1,7 +1,9 @@
 // libraries
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
+
+// style
+import './_date-results.scss';
 
 export default function SearchResults() {
   const [resultData, setResultData] = useState([]);
@@ -13,7 +15,7 @@ export default function SearchResults() {
   });
 
   return (
-    <div>
+    <div className="event-list-wrapper">
       <div>
         {resultData.map((event) => (
           <div>
