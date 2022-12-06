@@ -4,7 +4,7 @@ import Navbar from '../features/navbar';
 
 // features
 import { DefaultNavbar } from '../styled-components/navBar-styled-component';
-import EventList from '../features/results/index';
+import DateResults from '../features/results/index';
 import Calendar from '../features/calendar';
 
 export default function ResultsPage() {
@@ -15,7 +15,7 @@ export default function ResultsPage() {
         <Navbar />
       </DefaultNavbar>
       <Calendar displayType='calendar-bar' />
-      <EventList />
+      <DateResults />
     </div>
   );
 }
