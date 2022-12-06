@@ -1,9 +1,6 @@
 @import '../../../scss/abstract/mixins';
 @import '../../../scss/abstract/variables';
 
-.navbar {
-  margin-bottom: 40px; // Space between the navbar and the other components on the different pages
-}
 .login-page {
   width: 45rem;
   height: fit-content;
@@ -20,7 +17,7 @@
   }
   #email-log,
   #password-log {
-    width: 18rem;
+    width: 20rem;
     height: 2.5rem;
     outline: none;
     background: $background-transparent;

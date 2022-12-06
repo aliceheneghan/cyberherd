@@ -51,7 +51,7 @@ function CreateEvent() {
         <Navbar />
       </DefaultNavbar>
       <div className="create-event">
-        <form onSubmit={handleSubmit}>
+        <form className="myForm" onSubmit={handleSubmit}>
           <label htmlFor="band-name">
             <input
               id="band-name"
@@ -85,7 +85,7 @@ function CreateEvent() {
             />
           </label>
 
-          {/* <label htmlFor="start-time">
+         {/* <label htmlFor="start-time">
             <input
               id="start-time"
               onChange={(e) => setStartTime(e.target.value)}
@@ -94,7 +94,7 @@ function CreateEvent() {
               placeholder="start time"
               name="startTime"
             />
-          </label> */}
+          </label>  */}
 
           {/* <label htmlFor="doors-open">
             <input

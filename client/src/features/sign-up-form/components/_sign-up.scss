@@ -1,9 +1,6 @@
 @import '../../../scss/abstract/mixins';
 @import '../../../scss/abstract/variables';
 
-.navbar {
-  margin-bottom: 40px; // Space between the navbar and the other components on the different pages
-}
 .connect-page {
   width: 45rem;
   height: fit-content;
@@ -23,7 +20,7 @@
   #email-sign,
   #password-sign,
   #dob {
-    width: 18rem;
+    width: 20rem;
     height: 2.5rem;
     outline: none;
     background: $background-transparent;
@@ -39,7 +36,7 @@
     color: $text-color;
   }
     #dob {
-      width: 18rem;
+      width: 20rem;
       height: 2.5rem;
   }
 }
@@ -47,14 +44,14 @@
   @include flex-jc-ai-dir(column, center, column);
   font-size: 16px;
   margin-top: 1.5rem;
-  margin-right: 6rem;
+  margin-right: 8rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
 }
 .file-upload input {
   margin-bottom: 0.5rem;
   font-family: 'Sarpanch';
-  width: 18rem;
+  width: 20rem;
   height: 2rem;
   text-shadow:$text-shadow-color;
   color: $text-color;

@@ -1,5 +1,9 @@
 // @import '../../../scss/abstract/mixins';
 
+.navbar {
+  margin-bottom: 100px; // Space between the navbar and the other components on the different pages
+}
+
 // .navbar {
 //   @include flex-jc-ai-dir(space-between, center, row);
 //   margin-top: 4em;
