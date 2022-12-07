@@ -15,6 +15,7 @@ import Home from './pages/Home.jsx';
 import EventPage from './pages/EventPage.jsx';
 import VenuePage from './pages/VenuePage.jsx';
 import ResultsPage from './pages/ResultsPage.jsx';
+import SearchResultsPage from './pages/SearchResultsPage.jsx'
 import DashboardPage from './pages/DashboardPage.jsx';
 
 // styles
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/results/:date" element={<ResultsPage />} />
+        <Route path="/search-results" element={<SearchResultsPage />} />
         <Route path="/dashboard/:id" element={<DashboardPage />} />
         <Route path="/eventpage/:eventid" element={<EventPage />} />
         <Route path="/venuepage/:venueid" element={<VenuePage />} />
