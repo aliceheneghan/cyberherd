@@ -86,10 +86,12 @@
     @include flex-jc-ai-dir(center, center, row);
     width: 15em;
     height: 1.4em;
-  
 
     .arrows {
-      color: yellow;
+      font-size: 1.7rem;
+      filter: drop-shadow(6px 3px 5px rgba(255, 255, 0, 8));
+      margin-top: 0.6rem;
+      cursor: pointer;
     }
   }
 
