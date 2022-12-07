@@ -79,7 +79,8 @@
   width: inherit;
   height: 4em;
   background: rgba(0, 0, 0, 0.315);
-
+  color: $text-color;
+  text-shadow: $text-shadow-color;
 
   .calendar-month {
     @include flex-jc-ai-dir(center, center, row);
