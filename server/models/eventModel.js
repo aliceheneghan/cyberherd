@@ -16,8 +16,8 @@ const eventSchema = new Schema({
   // location: { type: Schema.Types.ObjectId, ref: 'venue' },
   location: { type: String },
   tickets: {
-    // preSalePrice: { type: Number },
-    // doorPrice: { type: Number },
+    preSalePrice: { type: Number },
+    doorPrice: { type: Number },
     ticketURL: { type: String },
   },
   genre: [

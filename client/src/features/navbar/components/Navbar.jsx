@@ -40,7 +40,7 @@ export default function Navbar() {
           </Link>
           <Search />
           <div className="profile-photo-and-logout-container">
-            <Link className="back-to" to={`/dashboard/${userID}`}>
+            <Link className="profile-img-link" to={`/dashboard/${userID}`}>
               <div
                 className={
                   imageNotAvailable
