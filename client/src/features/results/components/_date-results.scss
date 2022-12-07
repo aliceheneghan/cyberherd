@@ -22,10 +22,17 @@
       background: rgba(0, 0, 0, 0.315);
 
       .info-wrapper {
+        h1 {
+          font-size: 4.7rem;
+          color: black;
+          text-shadow: 0.03em 0 0 yellow;
+          margin-bottom: 0.3em;
+        }
+
         .line-wrapper {
           @include flex-jc-ai-dir(space-between, center, row);
           width: 14.2em;
-          padding-left: 0.25em;
+          padding-left: 0.24em;
           line-height: 2.5rem;
           font-size: 1.5rem;
         }
