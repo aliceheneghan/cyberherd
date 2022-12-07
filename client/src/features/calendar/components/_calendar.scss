@@ -1,25 +1,28 @@
-// mixins
+// mixins & variables
 @import '../../../scss/abstract/_mixins.scss';
+@import '../../../scss/abstract/variables';
 
 .calendar-block {
   @include flex-jc-ai-dir(center, center, column);
-  // box-shadow: 0 0 0.5em red, 0 0 1.2em yellow, 0.01em 0.01em 1em fuchsia;
-  box-shadow: 0 0 0.1em black, 0 0 0.9em yellow, 0.01em 0.01em 1.2em yellow;
+  // box-shadow: 0 0 0.1em black, 0 0 0.9em yellow, 0.01em 0.01em 1.2em yellow;
+  padding-bottom: 1em;
   font-size: 2.5rem;
   color: white;
-  // text-shadow: 0px 0px 4px red, 0px 0px 4px fuchsia,
-  //   0px 0px 10px yellow;
   text-shadow: 0 0 0.3rem yellowgreen, 0 0 0.35rem orange, 0 0 0.6em yellow;
   background: url('../../../assets/images/IMG_01.jpg') no-repeat center
     center/cover;
+  border: 0.2em solid rgba(0, 0, 0, 0.315);
+  cursor: pointer;
 
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
-    margin: 1.2em 0;
+    margin: 0.6em 0;
     width: 15em;
     font-size: 2.45rem;
     text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
       0 0 0.6rem yellow;
+    // color: $text-color;
+    // text-shadow: $text-shadow-color;
     .arrows {
       color: white;
       font-size: 3rem;
@@ -33,6 +36,7 @@
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     grid-template-rows: auto;
+    gap: 1em;
     align-content: center;
     text-align: center;
   }
@@ -43,39 +47,45 @@
     padding: 0 1.2em;
 
     .weekdays {
+      margin-bottom: -0.5em;
       text-shadow: 0 0 0.3rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
         0 0 0.6rem yellow;
+      // color: $text-color;
+      // text-shadow: $text-shadow-color;
     }
 
     .date-cell {
       @include flex-jc-ai-dir(center, center, row);
-      height: 3.5em;
-      cursor: pointer;
-      // border-radius: 50%;
-      transition: ease-in-out 0.125s;
+      height: 2.4em;
+      // transition: ease-in-out 0.125s;
       &:hover {
         transition: ease-in-out 0.125s;
         background-color: rgba(0, 0, 0, 0.315);
+        // box-shadow: 0 0 0.1em black, 0 0 0.6em yellow;
       }
     }
   }
 
   @media screen and (min-width: 992px) {
     margin-bottom: 3em;
-    width: 27.5em;
+    width: 27.75em;
     height: fit-content;
   }
 }
 
 .calendar-bar {
+  @include flex-jc-ai-dir(center, center, column);
   margin-bottom: 1em;
   width: inherit;
-  height: 3.5em;
+  height: 4em;
   background: rgba(0, 0, 0, 0.315);
+
 
   .calendar-month {
     @include flex-jc-ai-dir(center, center, row);
-    height: 2em;
+    width: 15em;
+    height: 1.4em;
+  
 
     .arrows {
       color: yellow;
@@ -85,10 +95,11 @@
   .calendar-days {
     @include flex-jc-ai-dir(space-evenly, center, row);
     width: inherit;
-    height: 1em;
-    
+    height: 1.7em;
+    padding-top: 0.2em;
+
     .highlight-date-clicked {
       color: yellow;
+    }
   }
-}
 }
