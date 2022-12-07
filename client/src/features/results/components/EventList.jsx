@@ -14,8 +14,8 @@ import EventCard from './EventCard.jsx';
 export default function EventList() {
   const [resultData, setResultData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [activeFilter, setActiveFilter] = useState('');
-
+  const [activeFilterGenre, setActiveFilterGenre] = useState([]);
+  const [activeFilterNeighborhood, setActiveFilterNeighborhood] = useState([]);
 
   const { date } = useParams();
 
@@ -36,12 +36,13 @@ export default function EventList() {
 
   return (
     <div className="event-list-wrapper">
-      {/* <Checkbox /> */}
       <Filter
         resultData={resultData}
         setFilteredData={setFilteredData}
-        activeFilter={activeFilter}
-        setActiveFilter={setActiveFilter}
+        activeFilterGenre={activeFilterGenre}
+        setActiveFilterGenre={setActiveFilterGenre}
+        activeFilterNeighborhood={activeFilterNeighborhood}
+        setActiveFilterNeighborhood={setActiveFilterNeighborhood}
       />
       <div>
         Results
