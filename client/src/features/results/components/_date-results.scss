@@ -20,6 +20,8 @@
       padding: 0 2em;
       box-shadow: 0.01em 0.01em 0.65em black;
       background: rgba(0, 0, 0, 0.315);
+      text-shadow: $text-shadow-color;
+      color: $text-color;
 
       .info-wrapper {
         h1 {
