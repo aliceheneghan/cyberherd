@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export default function EventCard({ className }) {
+export default function EventCard({ className, children }) {
   return (
-    <div className={className}>Event Info goes here</div>
-  )
+    <div className={className}>
+     <div className='info-wrapper'>
+
+     </div>
+    </div>
+  );
 }
