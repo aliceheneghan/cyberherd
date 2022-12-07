@@ -3,10 +3,14 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-//style
+// style
 import './_create-event.scss';
 import { DefaultNavbar } from '../../../styled-components/navBar-styled-component';
 import Navbar from '../../navbar/components/Navbar';
+
+// array of locations
+
+const locations = ['', 'Ausland', 'Berghain', 'SO35', 'Schokoladen'];
 
 function CreateEvent() {
   const [bandName, setBandName] = useState('');
@@ -85,7 +89,7 @@ function CreateEvent() {
             />
           </label>
 
-         <label htmlFor="start-time">
+          <label htmlFor="start-time">
             <input
               id="start-time"
               onChange={(e) => setStartTime(e.target.value)}
@@ -96,7 +100,7 @@ function CreateEvent() {
             />
           </label>
 
-           <label htmlFor="doors-open">
+          <label htmlFor="doors-open">
             <input
               id="doors-open"
               onChange={(e) => setDoorsOpen(e.target.value)}
@@ -107,19 +111,27 @@ function CreateEvent() {
             />
           </label>
 
-          <label htmlFor="location">
-          <select
-            id="location"
-            onChange={(e) => setLocation(e.target.value)}
-            name="location"
-            value={location}
-            placeholder="location"
-          >
-            <option type="text" value={location}>Ausland</option>
-            <option type="text" value={location}>Berghain</option>
-            <option type="text" value={location}>SO36</option>
-            <option type="text" value={location}>Schokoladen</option>
-          </select>
+          {/* <label htmlFor="location">
+            <select
+              id="location"
+              onChange={(e) => setLocation(e.target.value)}
+              name="location"
+              value={location}
+              placeholder="location"
+            >
+              <option type="text" value={location}>
+                Lucia
+              </option>
+              <option type="text" value={location}>
+                John
+              </option>
+              <option type="text" value={location}>
+                Alice
+              </option>
+              <option type="text" value={location}>
+                Daan
+              </option>
+            </select>
             {/* <input
               id="location"
               onChange={(e) => setLocation(e.target.value)}
@@ -128,6 +140,20 @@ function CreateEvent() {
               placeholder="location"
               name="location"
             /> */}
+          {/* </label> */}
+
+          {/* TESTING TESTING TESTING */}
+
+          <label htmlFor="location">
+            <select id="location"
+              onChange={(e) => setLocation(e.target.value)}
+              type="text"
+              value={location}
+              name="location">
+              {locations.map((location) => (
+                <option>{location}</option>
+              ))}
+            </select>
           </label>
 
           <label htmlFor="pre-sale-price">
@@ -195,7 +221,7 @@ function CreateEvent() {
               name="bandURL"
             />
           </label>
-          
+
           <label htmlFor="description">
             <textarea
               id="description"
