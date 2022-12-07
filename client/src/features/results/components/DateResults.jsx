@@ -10,19 +10,18 @@ import './_date-results.scss';
 import EventCard from './EventCard.jsx';
 
 export default function EventList() {
-  const [resultData, setResultData] = useState([]);
-
+  // url parameter
   const { date } = useParams();
+
+  // state
+  const [resultData, setResultData] = useState([]);
 
   useEffect(() => {
     const getEvent = async (e) => {
       const { data } = await axios.get(
         `http://localhost:4000/api/events/date/${date}`
       );
-
       setResultData(data.event);
-      console.log(data.event[0].name.bandName);
-      console.log(data.event[0]);
     };
     getEvent();
   }, [date]);
@@ -30,64 +29,17 @@ export default function EventList() {
   return (
     <div className="event-list-wrapper">
       <div>
-        
-        {resultData.map((event) => (
-          <div>
-          <div>{event.name.bandName}</div>
-          <div>{event.location}</div>
-          <div>{event.genre}</div>
+        <div className="event-card-wrapper">
+          {resultData.map((event, i) => {
+            console.log(event);
+            return (
+              <EventCard key={i} className="event-card">
+                {event}
+              </EventCard>
+            );
+          })}
         </div>
-        ))}
       </div>
-
-      <div className="event-card-wrapper">
-        {/* Test cards until we get map function for events*/}
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-        <EventCard className="event-card"></EventCard>
-      </div> 
     </div>
   );
 }
