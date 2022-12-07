@@ -20,6 +20,16 @@
       padding: 0 2em;
       box-shadow: 0.01em 0.01em 0.65em black;
       background: rgba(0, 0, 0, 0.315);
+
+      .info-wrapper {
+        .line-wrapper {
+          @include flex-jc-ai-dir(space-between, center, row);
+          width: 14.2em;
+          padding-left: 0.25em;
+          line-height: 2.5rem;
+          font-size: 1.5rem;
+        }
+      }
     }
 
     @media screen and (min-width: 768px) {
@@ -29,8 +39,8 @@
     }
 
     @media screen and (min-width: 1366px) {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        width: 60em;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: 60em;
     }
   }
 }
