@@ -9,6 +9,7 @@
   height: 4.4rem;
   background-color: $yellow-color;
   padding-left: 100%;
+  z-index: 999999; // necessary to not interfere with the elements at the bottom of the page
   span {
     font-size: 2rem;
     color: $banner-text-color;
@@ -26,5 +27,23 @@
         transform: translate(-70%, 0);
       }
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner-animated { 
+  width: 100rem;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner-animated { 
+    width: 100rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner-animated { 
+    width: 100rem;
   }
 }

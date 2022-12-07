@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const DefaultNavbar = styled.section`
   .navbar {
+    /* border: red 2px solid; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,9 +14,12 @@ export const DefaultNavbar = styled.section`
     text-shadow: 0 0 0.2em black, 0 0 1em black;
     /* border: 3px purple solid; */
     .get-yourself {
-      width: 17em;
+      width: 11em;
       text-decoration: none;
-      color: white;
+    }
+    .back-to {
+      /* border: 3px violet dotted; */
+      width: 11em;
     }
     .get-yourself,
     .sign-up,
@@ -24,6 +28,7 @@ export const DefaultNavbar = styled.section`
     .log-out {
       text-decoration: none;
       color: white;
+      /* border: blue 2px solid; */
     }
     ${({ noSearchBar }) => {
       return noSearchBar
@@ -44,9 +49,13 @@ export const DefaultNavbar = styled.section`
       justify-content: space-around;
       align-items: center;
       flex-direction: row;
-      /* border: 2px red dotted; */
-      /* width: 11rem;
-      height: 5rem; */
+      /* border: 5px red dotted; */
+      width: 11em;
+      padding-left: 1em;
+      /* height: 5rem; */
+      .display-none {
+        display: none;
+      }
       .upload-profile-photo-containers-hover-container {
         /* border: 2px dotted black; */
         display: flex;
@@ -55,7 +64,7 @@ export const DefaultNavbar = styled.section`
         /* border: 2px black solid; */
         width: 3.5rem;
         height: 3.5rem;
-        margin-right: 1rem;
+        /* margin-left: 3em; */
         border-radius: 50%;
         cursor: pointer;
         &:hover {
@@ -86,11 +95,19 @@ export const DefaultNavbar = styled.section`
           }
         }
       }
+      .log-out {
+        /* border: 3px blue dotted; */
+        margin-left: -1.5em;
+      }
     }
     .sign-up-login-container {
-      /* border: 2px solid blue; */
+      /* border: 2px solid green; */
+      width: 11em;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       .sign-up {
-        margin-right: 2em;
+        /* margin-right: 2em; */
       }
     }
   }
@@ -98,3 +115,9 @@ export const DefaultNavbar = styled.section`
 
 export const CalendarNavBar = styled(DefaultNavbar)``;
 export const EventPageNavBar = styled(DefaultNavbar)``;
+export const ResultPageNavBar = styled(DefaultNavbar)`
+  /* border: magenta 8px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

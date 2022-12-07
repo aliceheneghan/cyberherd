@@ -5,7 +5,7 @@
   max-width: 90%;
 //   height: 30rem;
   @include flex-jc-ai-dir(flex-start, flex-start, column);
-  background-color: rgb(165, 150, 150);
+
   .my-dashboard-header {
     border: 2px red solid;
     font-size: 4rem;

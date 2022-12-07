@@ -26,6 +26,9 @@ function CreateEvent() {
 
   const navigate = useNavigate();
 
+  // array of locations
+  const locations = ['please select your location', 'Ausland', 'Berghain', 'SO35', 'Schokoladen'];
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -85,49 +88,16 @@ function CreateEvent() {
             />
           </label>
 
-         <label htmlFor="start-time">
-            <input
-              id="start-time"
-              onChange={(e) => setStartTime(e.target.value)}
-              type="time"
-              value={startTime}
-              placeholder="start time"
-              name="startTime"
-            />
-          </label>
-
-           <label htmlFor="doors-open">
-            <input
-              id="doors-open"
-              onChange={(e) => setDoorsOpen(e.target.value)}
-              type="time"
-              value={doorsOpen}
-              placeholder="doors open"
-              name="doorsOpen"
-            />
-          </label>
-
           <label htmlFor="location">
-          <select
-            id="location"
-            onChange={(e) => setLocation(e.target.value)}
-            name="location"
-            value={location}
-            placeholder="location"
-          >
-            <option type="text" value={location}>Ausland</option>
-            <option type="text" value={location}>Berghain</option>
-            <option type="text" value={location}>SO36</option>
-            <option type="text" value={location}>Schokoladen</option>
-          </select>
-            {/* <input
-              id="location"
+            <select id="location"
               onChange={(e) => setLocation(e.target.value)}
               type="text"
               value={location}
-              placeholder="location"
-              name="location"
-            /> */}
+              name="location">
+              {locations.map((location) => (
+                <option>{location}</option>
+              ))}
+            </select>
           </label>
 
           <label htmlFor="pre-sale-price">
@@ -195,17 +165,42 @@ function CreateEvent() {
               name="bandURL"
             />
           </label>
+
+          <label htmlFor="start-time">
+            <input
+              id="start-time"
+              onChange={(e) => setStartTime(e.target.value)}
+              type="time"
+              value={startTime}
+              placeholder="start time"
+              name="startTime"
+            />
+          </label>
+
+           <label htmlFor="doors-open">
+            <input
+              id="doors-open"
+              onChange={(e) => setDoorsOpen(e.target.value)}
+              type="time"
+              value={doorsOpen}
+              placeholder="doors open"
+              name="doorsOpen"
+            />
+          </label> 
           
           <label htmlFor="description">
             <textarea
               id="description"
               onChange={(e) => setDescription(e.target.value)}
               type="text"
+              maxlength="500"
               value={description}
               placeholder="description"
               name="description"
             />
           </label>
+
+          {/* <br/> */}
 
           <div className="upload-file">
             <label htmlFor="image"> Select image for upload </label>

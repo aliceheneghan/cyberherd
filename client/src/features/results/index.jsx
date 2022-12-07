@@ -1,3 +1,4 @@
-import EventList from './components/EventList';
+import DateResults from './components/DateResults.jsx';
+import SearchResults from './components/SearchResults.jsx';
 
-export default EventList;
+export default DateResults;

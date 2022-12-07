@@ -3,16 +3,20 @@ import React from 'react';
 import Navbar from '../features/navbar';
 
 // features
-import EventList from '../features/results/index';
-import { DefaultNavbar } from '../styled-components/navBar-styled-component';
+import { ResultPageNavBar } from '../styled-components/navBar-styled-component';
+import DateResults from '../features/results/index';
+import Calendar from '../features/calendar';
 
 export default function ResultsPage() {
   return (
-    <>
-      <DefaultNavbar>
+    <div className='results-page-container'>
+      {/* <> */}
+      <ResultPageNavBar>
         <Navbar />
-      </DefaultNavbar>
-      <EventList />
-    </>
+      </ResultPageNavBar>
+      <Calendar displayType='calendar-bar' />
+      <DateResults />
+      {/* </> */}
+    </div>
   );
 }

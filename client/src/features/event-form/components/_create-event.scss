@@ -2,6 +2,8 @@
 @import '../../../scss/abstract/variables';
 
 .myForm {
+  width: 45rem;
+  height: fit-content;
   display: grid;
   grid-template-areas:
     'band-name event-name'
@@ -10,11 +12,11 @@
     'pre-sale-price door-price'
     'ticket-url genre'
     'event-url band-url'
-    'description upload-image'
-    'button-create';
+    'description'
+    'upload-image button-create';
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto;
-  grid-gap: 0.5rem 0.5rem;
+  grid-gap: 0.5rem 1.5rem;
   padding: 1.5rem;
 }
 form #band-name,
@@ -22,7 +24,6 @@ form #band-name,
 #date,
 #start-time,
 #doors-open,
-#location,
 #pre-sale-price,
 #door-price,
 #ticket-url,
@@ -48,10 +49,10 @@ form #description {
   background: $background-transparent;
   border: 1.8px $border-gray solid;
   color: $text-color;
+  grid-area: description;
 }
 #band-name::placeholder,
 #event-name::placeholder,
-#location::placeholder,
 #door-price::placeholder,
 #pre-sale-price::placeholder,
 #ticket-url::placeholder,
@@ -70,10 +71,25 @@ form #description {
   width: 20rem;
   height: 2.5rem;
 }
+#location {
+  width: 20rem;
+  height: 2.5rem;
+  margin: 10px 0;
+  padding: 8px 10px;
+  outline: none;
+  border: 1.8px $border-gray solid;
+  font-size: 14px;
+  font-family: 'Sarpanch';
+  text-shadow: $text-shadow-color;
+  color: $text-color;
+  background: $background-transparent;
+  grid-area: location;
+}
+
 .upload-file label {
   @include flex-jc-ai-dir(column, center, column);
   font-size: 16px;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-right: 8rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
@@ -89,7 +105,7 @@ input#upload-image {
 #upload-image::file-selector-button {
   font-family: 'Sarpanch';
   background-color: transparent;
-  border: 1px solid $text-color;
+  border: 1px $text-color solid;
   text-shadow: $text-shadow-color;
   color: $text-color;
   cursor: pointer;
@@ -99,13 +115,13 @@ input#upload-image {
   }
 }
 .button-create {
-  justify-self: right;
+  justify-self: flex-end;
   margin-bottom: 3em;
   padding: 0.3em;
   font-family: 'Sarpanch';
   background-color: transparent;
   border-radius: 2px;
-  border: 1px solid $text-color;
+  border: 1px $text-color solid;
   text-shadow: $text-shadow-color;
   color: $text-color;
   cursor: pointer;
@@ -114,3 +130,30 @@ input#upload-image {
     border: 1px $yellow-color solid;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .myForm { 
+  @include flex-jc-ai-dir(column, center, column);
+  height: 70rem;
+ }
+}
+
+// @media screen and (min-width: 768px) {
+//   .myForm { 
+//   @include flex-jc-ai-dir(column, center, column);
+//   height: 90rem;
+//  }
+// }
+
+// @media screen and (min-width: 768px) {
+//   .myForm { 
+//   @include flex-jc-ai-dir(column, center, column);
+//   height: 70rem;
+//  }
+// }
+
+// @media screen and (min-width: 1024px) {
+//   .myForm { 
+//   @include flex-jc-ai-dir(column, center, column);
+//  }
+// }
