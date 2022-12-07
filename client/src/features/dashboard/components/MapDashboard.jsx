@@ -24,7 +24,11 @@ export default function MapDashboard() {
 
   const position3 = [52.497249, 13.411503];
 
-  const newIcon = new Leaflet.Icon({
+  const position4 = [52.510459, 13.354771];
+
+  const position5 = [52.510459, 13.448217];
+
+  const getIcon = new Leaflet.Icon({
     iconUrl: musicIcon,
     iconSize: [38, 95], // size of the icon
     iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
@@ -70,38 +74,62 @@ export default function MapDashboard() {
             url="https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"
           />
           <Marker
-            icon={newIcon}
+            icon={getIcon}
             position={position}
             draggable={true}
             eventHandlers={eventHandlers}
             ref={markerRef}
           >
             <Popup>
-              Mark your favourite events <br />
+            Mark your favorite venues <br />
             </Popup>
           </Marker>
 
           <Marker
-            icon={newIcon}
+            icon={getIcon}
             position={position2}
             draggable={true}
             eventHandlers={eventHandlers}
             ref={markerRef}
           >
             <Popup>
-              Mark your favourite events <br />
+            Mark your favorite venues<br />
             </Popup>
           </Marker>
 
           <Marker
-            icon={newIcon}
+            icon={getIcon}
             position={position3}
             draggable={true}
             eventHandlers={eventHandlers}
             ref={markerRef}
           >
             <Popup>
-              Mark your favourite events <br />
+            Mark your favorite venues <br />
+            </Popup>
+          </Marker>
+
+          <Marker
+            icon={getIcon}
+            position={position4}
+            draggable={true}
+            eventHandlers={eventHandlers}
+            ref={markerRef}
+          >
+            <Popup>
+            Mark your favorite venues <br />
+            </Popup>
+          </Marker>
+
+          <Marker
+            icon={getIcon}
+            position={position5}
+            draggable={true}
+            eventHandlers={eventHandlers}
+            ref={markerRef}
+          >
+            <Popup>
+            Mark your favorite venues <br />
             </Popup>
           </Marker>
 

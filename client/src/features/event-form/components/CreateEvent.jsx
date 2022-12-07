@@ -51,7 +51,7 @@ function CreateEvent() {
         <Navbar />
       </DefaultNavbar>
       <div className="create-event">
-        <form onSubmit={handleSubmit}>
+        <form className="myForm" onSubmit={handleSubmit}>
           <label htmlFor="band-name">
             <input
               id="band-name"
@@ -85,7 +85,7 @@ function CreateEvent() {
             />
           </label>
 
-          {/* <label htmlFor="start-time">
+         <label htmlFor="start-time">
             <input
               id="start-time"
               onChange={(e) => setStartTime(e.target.value)}
@@ -94,9 +94,9 @@ function CreateEvent() {
               placeholder="start time"
               name="startTime"
             />
-          </label> */}
+          </label>
 
-          {/* <label htmlFor="doors-open">
+           <label htmlFor="doors-open">
             <input
               id="doors-open"
               onChange={(e) => setDoorsOpen(e.target.value)}
@@ -105,17 +105,29 @@ function CreateEvent() {
               placeholder="doors open"
               name="doorsOpen"
             />
-          </label> */}
+          </label>
 
           <label htmlFor="location">
-            <input
+          <select
+            id="location"
+            onChange={(e) => setLocation(e.target.value)}
+            name="location"
+            value={location}
+            placeholder="location"
+          >
+            <option type="text" value={location}>Ausland</option>
+            <option type="text" value={location}>Berghain</option>
+            <option type="text" value={location}>SO36</option>
+            <option type="text" value={location}>Schokoladen</option>
+          </select>
+            {/* <input
               id="location"
               onChange={(e) => setLocation(e.target.value)}
               type="text"
               value={location}
               placeholder="location"
               name="location"
-            />
+            /> */}
           </label>
 
           <label htmlFor="pre-sale-price">
