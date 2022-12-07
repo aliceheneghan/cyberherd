@@ -12,6 +12,7 @@ export default function EventCard({ className, children }) {
           <div>Genre:</div>
           <div>{children.genre}</div>
         </div>
+        <div className='more'>...more</div>
       </div>
     </div>
   );

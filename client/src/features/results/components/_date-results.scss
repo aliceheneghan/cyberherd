@@ -9,14 +9,14 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1.5em;
     width: 20em;
-    height: 17em;
+    height: 1em;
     overflow-y: scroll;
     scroll-behavior: smooth;
     padding: 1em;
 
     .event-card {
       @include flex-jc-ai-dir(flex-start, flex-start, column);
-      height: 15em;
+      height: 14em;
       padding: 0 2em;
       box-shadow: 0.01em 0.01em 0.65em black;
       background: rgba(0, 0, 0, 0.315);
@@ -24,19 +24,28 @@
       color: $text-color;
 
       .info-wrapper {
+        width: 14.2em;
+
         h1 {
           font-size: 4.7rem;
           color: black;
           text-shadow: 0.03em 0 0 yellow;
-          margin-bottom: 0.3em;
+          margin: 0.3em 0;
         }
 
         .line-wrapper {
           @include flex-jc-ai-dir(space-between, center, row);
-          width: 14.2em;
           padding-left: 0.24em;
           line-height: 2.5rem;
           font-size: 1.5rem;
+        }
+
+        .more {
+          margin-top: 1.3em;
+          text-align: right;
+          width: 14.3em;
+          color: yellow;
+          
         }
       }
     }
