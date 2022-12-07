@@ -1,7 +1,9 @@
 // libraries
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+
+// context
+import { Context } from '../../../context/Context.jsx';
 
 // icons
 import { SlMagnifier } from 'react-icons/sl';
@@ -10,8 +12,8 @@ import { SlMagnifier } from 'react-icons/sl';
 import './_search.scss';
 
 export default function Search() {
-  const [search, setSearch] = useState('');
-  
+  const { setSearch } = useContext(Context);
+
   // navigate
 
   const navigate = useNavigate();

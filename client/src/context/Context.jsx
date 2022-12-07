@@ -13,6 +13,9 @@ const ContextProvider = (props) => {
   // useLocalStorage libraries to make sure the state of userData is being kept
   const [userData, setUserData] = useLocalStorage({});
 
+  // searchbar context api
+  const [search, setSearch] = useState('');
+
   // save the user ID
   const [userID, setUserID] = useState(loginSession['userID']);
 
@@ -33,6 +36,8 @@ const ContextProvider = (props) => {
         setUserData,
         userID,
         setUserID,
+        search,
+        setSearch
       }}
     >
       {props.children}

@@ -1,13 +1,16 @@
 // libraries
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
+
+// context
+import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_date-results.scss';
 
 export default function SearchResults() {
   const [resultData, setResultData] = useState([]);
-  const [search, setSearch] = useState("");
+  const { search } = useContext(Context);
 
   useEffect(() => {
     axios.get(`http://localhost:4000/api/events`).then((response) => {
@@ -17,13 +20,6 @@ export default function SearchResults() {
 
   return (
     <div className="event-list-wrapper">
-      <div className="search">
-        <input
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search"
-          type="text"
-        />
-      </div>
       <div>
         {resultData
           .filter((event) => {
