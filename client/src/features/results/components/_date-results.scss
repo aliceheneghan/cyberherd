@@ -17,8 +17,10 @@
       @include flex-jc-ai-dir(center, center, column);
       height: 15em;
       box-shadow: 0.01em 0.01em 0.65em black;
-      background: url(./../../../assets/images/IMG_01.jpg) no-repeat center
-        center/cover;
+      // background: url(./../../../assets/images/IMG_01.jpg) no-repeat center
+      //   center/cover;
+      background: rgba(0, 0, 0, 0.315);
+
     }
 
     // @media screen and (min-width: 768px) {
@@ -35,7 +37,7 @@
 
     @media screen and (min-width: 1366px) {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        width: 70em;
+        width: 64em;
     }
   }
 }

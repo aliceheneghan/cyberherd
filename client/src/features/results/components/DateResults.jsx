@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 // style
-import './_event-list.scss';
+import './_date-results.scss';
 
 // components
 import EventCard from './EventCard.jsx';
@@ -30,9 +30,13 @@ export default function EventList() {
   return (
     <div className="event-list-wrapper">
       <div>
-        Results
+        
         {resultData.map((event) => (
+          <div>
           <div>{event.name.bandName}</div>
+          <div>{event.location}</div>
+          <div>{event.genre}</div>
+        </div>
         ))}
       </div>
 
