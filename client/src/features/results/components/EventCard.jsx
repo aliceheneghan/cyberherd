@@ -1,16 +1,23 @@
+// libraries
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function EventCard({ className, children }) {
-  const title = children.name.bandName;
+  // navigate
+  const navigate = useNavigate();
+
+  // handlers
+  const navigateToEvent = () => navigate(`/eventpage/${children._id}`);
 
   // title length/size logic
+  const title = children.name.bandName;
   let titleFontSize = 'title-big';
   if (title.length > 11) {
-    titleFontSize ='title-small';
+    titleFontSize = 'title-small';
   }
-  
+
   return (
-    <div className={className}>
+    <div onClick={navigateToEvent} className={className}>
       <div className="event-wrapper">
         <div className={`title ${titleFontSize}`}>{title}</div>
         <div className="line-wrapper">
