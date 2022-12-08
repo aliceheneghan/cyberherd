@@ -101,9 +101,12 @@
     height: 1.7em;
     padding-top: 0.2em;
 
-    &:hover {
-      font-size: 2rem;
+    .date-cell {
+      &:hover {
+        font-size: 3rem;
+      }
     }
+
 
     .highlight-date-clicked {
       text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
