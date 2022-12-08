@@ -7,6 +7,8 @@ const venueSchema = new Schema({
   name: { type: String, required: false },
   location: {
     address: { type: String },
+    longitude: { type: Number },
+    latitude: { type: Number },
     neighborhood: {
       type: String,
       enum: [
@@ -34,7 +36,10 @@ const venueSchema = new Schema({
       required: false,
     },
   },
-  venueType: { type: String, enum: ['bar', 'café', 'club', 'concert hall', 'cultural center'] },
+  venueType: {
+    type: String,
+    enum: ['bar', 'café', 'club', 'concert hall', 'cultural center'],
+  },
   venueURL: { type: String },
   photoURL: { type: String },
   event: { type: Schema.Types.ObjectId, ref: 'event' },
