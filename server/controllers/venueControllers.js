@@ -13,7 +13,7 @@ const findVenue = async (req, res) => {
       return res.status(404).json({ message: 'Venue not found' });
     }
     return res.status(200).json({ venue });
-  } catch (venue) {
+  } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
