@@ -9,6 +9,8 @@ import './_create-venue.scss';
 function CreateVenue() {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
+  const [longitude, setLongitude] = useState('');
+  const [latitude, setLatitude] = useState('');
   const [neighborhood, setNeighborhood] = useState('');
   const [venueType, setVenueType] = useState('');
   const [venueURL, setVenueUrl] = useState('');
@@ -59,6 +61,28 @@ function CreateVenue() {
             value={address}
             placeholder="address"
             name="address"
+          />
+        </label>
+
+        <label for="longitude">
+          <input
+            id="longitude"
+            onChange={(e) => setLongitude(e.target.value)}
+            type="number"
+            value={longitude}
+            placeholder="longitude"
+            name="longitude"
+          />
+        </label>
+
+        <label for="latitude">
+          <input
+            id="latitude"
+            onChange={(e) => setLatitude(e.target.value)}
+            type="number"
+            value={latitude}
+            placeholder="latitude"
+            name="latitude"
           />
         </label>
 
