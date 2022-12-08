@@ -33,5 +33,6 @@ export const LoginBtn = styled(DefaultButton)`
 export const CreateEventBtn = styled(DefaultButton)`
 width: 8rem;
 height: 2.5rem;
+margin-top: 1rem;
 margin-left: 2rem;
 `

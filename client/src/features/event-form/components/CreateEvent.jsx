@@ -214,6 +214,7 @@ function CreateEvent() {
             </label>
           </div>
           
+          <label htmlFor="date">
             <input
               id="date"
               onChange={(e) => setDate(e.target.value)}

@@ -6,6 +6,9 @@ import { useParams, Link } from 'react-router-dom';
 // context
 import { Context } from '../../../context/Context.jsx';
 
+// components
+import EventCard from '../../results/components/EventCard.jsx';
+
 // style
 import './_my-dashboard.scss';
 
@@ -29,11 +32,15 @@ export default function Dashboard() {
     };
     getUser();
   }, [id]);
+
   console.log('Dashboard + userID', userID);
   console.log('userData: ', userData);
+
   return (
     <section className="my-dashboard">
       <div className="my-dashboard-header">My Dashboard</div>
+      <EventCard> </EventCard>
+
       <div className="dates-header-and-saved-events-container">
         <div className="my-dates-header">My Dates</div>
         <div className="saved-events-container">
@@ -42,13 +49,8 @@ export default function Dashboard() {
             <div className="saved-event-name-of-event">Reggae Ignition</div>
             <div className="saved-event-name-of-band">Bob Marley</div>
           </div>
-
-          {/* <div className="saved-event-eventcard">
-            <div className="event-thumbnail"></div>
-            <div className="saved-event-name-of-event">Reggae Ignition</div>
-            <div className="saved-event-name-of-band">Bob Marley</div>
-          </div> */}
-
+          
+    
           <div className="saved-event-eventcard">
             <div className="event-thumbnail"></div>
             <div className="saved-event-name-of-event">Reggae Ignition</div>
