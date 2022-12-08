@@ -9,8 +9,8 @@ import './_create-venue.scss';
 function CreateVenue() {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
-  const [longitude, setLongitude] = useState('');
   const [latitude, setLatitude] = useState('');
+  const [longitude, setLongitude] = useState('');
   const [neighborhood, setNeighborhood] = useState('');
   const [venueType, setVenueType] = useState('');
   const [venueURL, setVenueUrl] = useState('');
@@ -89,17 +89,6 @@ function CreateVenue() {
           />
         </label>
 
-        <label for="longitude">
-          <input
-            id="longitude"
-            onChange={(e) => setLongitude(e.target.value)}
-            type="number"
-            value={longitude}
-            placeholder="longitude"
-            name="longitude"
-          />
-        </label>
-
         <label for="latitude">
           <input
             id="latitude"
@@ -111,33 +100,44 @@ function CreateVenue() {
           />
         </label>
 
-        <label for="neighborhood">
-              <select
-                id="neighborhood"
-                onChange={(e) => setNeighborhood(e.target.value)}
-                type="text"
-                value={neighborhood}
-                name="neighborhood"
-              >
-                {neighborhoods.map((neighborhood) => (
-                  <option>{neighborhood}</option>
-                ))}
-              </select>
-            </label>
+        <label for="longitude">
+          <input
+            id="longitude"
+            onChange={(e) => setLongitude(e.target.value)}
+            type="number"
+            value={longitude}
+            placeholder="longitude"
+            name="longitude"
+          />
+        </label>
 
-            <label for="venue-type">
-              <select
-                id="venue-type"
-                onChange={(e) => setVenueType(e.target.value)}
-                type="text"
-                value={venueType}
-                name="venueType"
-              >
-                {venueTypes.map((type) => (
-                  <option>{type}</option>
-                ))}
-              </select>
-            </label>
+        <label for="neighborhood">
+          <select
+            id="neighborhood"
+            onChange={(e) => setNeighborhood(e.target.value)}
+            type="text"
+            value={neighborhood}
+            name="neighborhood"
+          >
+            {neighborhoods.map((neighborhood) => (
+              <option>{neighborhood}</option>
+            ))}
+          </select>
+        </label>
+
+        <label for="venue-type">
+          <select
+            id="venue-type"
+            onChange={(e) => setVenueType(e.target.value)}
+            type="text"
+            value={venueType}
+            name="venueType"
+          >
+            {venueTypes.map((type) => (
+              <option>{type}</option>
+            ))}
+          </select>
+        </label>
 
         <label for="venue-url">
           <input

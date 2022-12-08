@@ -7,8 +7,8 @@ const venueSchema = new Schema({
   name: { type: String, required: false },
   location: {
     address: { type: String },
-    longitude: { type: Number },
     latitude: { type: Number },
+    longitude: { type: Number },
     neighborhood: {
       type: String,
       enum: [
