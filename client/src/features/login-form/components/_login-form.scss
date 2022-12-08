@@ -4,13 +4,8 @@
 .login-page {
   width: 45rem;
   height: fit-content;
-  text-align: center;
-  position: relative;
   .login-form {
-
     @include flex-jc-ai-dir(column, center, column);
-    // height: 100%;
-    // border: 2px red dotted;
   }
   form #email-log,
   #password-log {
@@ -20,15 +15,15 @@
   }
   #email-log,
   #password-log {
-    width: 20rem;
-    height: 2.5rem;
+    width: 22rem;
+    height: 2.8rem;
     outline: none;
     background: $background-transparent;
     border: 1.8px $border-gray solid;
   }
   #email-log::placeholder,
   #password-log::placeholder {
-    font-size: 14px;
+    font-size: 1rem;
     font-family: 'Sarpanch';
     text-shadow: $text-shadow-color;
     color: $text-color;
@@ -38,27 +33,12 @@
     @include flex-jc-ai-dir(column, center, column);
     margin-top: 1rem;
     margin-right: 0.8rem;
-    font-size: 16px;
+    font-size: 1.2rem;
     width: 18rem;
     height: 1rem;
     color: $text-color;
     text-shadow: $text-shadow-color;
     text-decoration: none;
-  }
-  .button-log {
-    margin-top: 2rem;
-    padding: 0.3em;
-    font-family: 'Sarpanch';
-    background-color: transparent;
-    border-radius: 2px;
-    border: 1px $text-color solid;
-    color: $text-color;
-    text-shadow: $text-shadow-color;
-    cursor: pointer;
-    &:hover {
-      color: $yellow-color;
-      border: 1px $yellow-color solid;
-    }
   }
 }
 

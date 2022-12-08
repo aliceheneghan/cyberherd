@@ -1,24 +1,15 @@
 @import '../../../scss/abstract/mixins';
 @import '../../../scss/abstract/variables';
 
-.myForm {
-  width: 45rem;
-  height: fit-content;
-  display: grid;
-  grid-template-areas:
-    'band-name event-name'
-    'date location'
-    'start-time doors-open'
-    'pre-sale-price door-price'
-    'ticket-url genre'
-    'event-url band-url'
-    'description'
-    'upload-image button-create';
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
-  grid-gap: 0.5rem 1.5rem;
-  padding: 1.5rem;
+
+.create-event {
+  width: 50rem;
+  height: 50rem;
 }
+.myForm {
+  @include flex-jc-ai-dir(center, center, column);
+}
+
 form #band-name,
 #event-name,
 #date,
@@ -30,9 +21,9 @@ form #band-name,
 #genre,
 #event-url,
 #band-url {
-  width: 20rem;
-  height: 2.5rem;
-  margin: 10px 0;
+  width: 24rem;
+  height: 2.8rem;
+  margin: 10px 4px;
   padding: 12px 10px;
   outline: none;
   background: $background-transparent;
@@ -40,16 +31,16 @@ form #band-name,
   color: $text-color;
 }
 form #description {
-  width: 20rem;
+  width: 48.5rem;
   height: 5rem;
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-left: 6px;
   padding-top: 10px;
   padding-left: 12px;
   outline: none;
   background: $background-transparent;
   border: 1.8px $border-gray solid;
   color: $text-color;
-  grid-area: description;
 }
 #band-name::placeholder,
 #event-name::placeholder,
@@ -60,7 +51,7 @@ form #description {
 #description::placeholder,
 #event-url::placeholder,
 #band-url::placeholder {
-  font-size: 14px;
+  font-size: 1rem;
   font-family: 'Sarpanch';
   text-shadow: $text-shadow-color;
   color: $text-color;
@@ -68,41 +59,43 @@ form #description {
 #date,
 #doors-open,
 #start-time {
-  width: 20rem;
-  height: 2.5rem;
+  width: 24rem;
+  height: 2.8rem;
 }
 #location {
-  width: 20rem;
-  height: 2.5rem;
-  margin: 10px 0;
+  width: 24rem;
+  height: 2.8rem;
+  margin: 10px 4px;
   padding: 8px 10px;
   outline: none;
   border: 1.8px $border-gray solid;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: 'Sarpanch';
   text-shadow: $text-shadow-color;
   color: $text-color;
   background: $background-transparent;
-  grid-area: location;
 }
-
 .upload-file label {
-  @include flex-jc-ai-dir(column, center, column);
-  font-size: 16px;
-  margin-top: 2rem;
-  margin-right: 8rem;
+  @include flex-jc-ai-dir(center, center, column);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-right: 7rem;
+  margin-bottom: 1rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
 }
 input#upload-image {
   margin-bottom: 0.5rem;
   font-family: 'Sarpanch';
-  width: 20rem;
-  height: 2.5rem;
+  font-size: 1rem;
+  width: 22rem;
+  height: 2.8rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
 }
 #upload-image::file-selector-button {
+  width: 8rem;
+  height: 2.5rem;
   font-family: 'Sarpanch';
   background-color: transparent;
   border: 1px $text-color solid;
@@ -114,46 +107,16 @@ input#upload-image {
     border: 1px $yellow-color solid;
   }
 }
-.button-create {
-  justify-self: flex-end;
-  margin-bottom: 3em;
-  padding: 0.3em;
-  font-family: 'Sarpanch';
-  background-color: transparent;
-  border-radius: 2px;
-  border: 1px $text-color solid;
-  text-shadow: $text-shadow-color;
-  color: $text-color;
-  cursor: pointer;
-  &:hover {
-    color: $yellow-color;
-    border: 1px $yellow-color solid;
-  }
-}
 
-@media screen and (max-width: 992px) {
-  .myForm { 
-  @include flex-jc-ai-dir(column, center, column);
-  height: 70rem;
- }
-}
-
-// @media screen and (min-width: 768px) {
-//   .myForm { 
+// @media screen and (min-width: 992px) {
+//   .create-event {
+//     height: 100rem;
+//   }
+//   .myForm {
 //   @include flex-jc-ai-dir(column, center, column);
-//   height: 90rem;
 //  }
-// }
-
-// @media screen and (min-width: 768px) {
-//   .myForm { 
-//   @include flex-jc-ai-dir(column, center, column);
-//   height: 70rem;
-//  }
-// }
-
-// @media screen and (min-width: 1024px) {
-//   .myForm { 
-//   @include flex-jc-ai-dir(column, center, column);
+//  form #description {
+//   width: 24rem;
+//   height: 5rem;
 //  }
 // }

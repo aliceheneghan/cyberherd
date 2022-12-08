@@ -78,7 +78,7 @@ export default function LoginForm() {
             not registered yet?
           </Link>
         </div>
-        {/* <button className='button-log'>Login</button> */}
+        
         <LoginBtn type="submit">Login</LoginBtn>
       </form>
       <div>{error ? <p>{error}</p> : null}</div>
