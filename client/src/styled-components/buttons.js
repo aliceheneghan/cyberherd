@@ -4,6 +4,7 @@ export const DefaultButton = styled.button.attrs((props) => {
   return { type: props.type || 'button' };
 })`
   padding: 0.3em;
+  font-size: 1rem;
   font-family: 'Sarpanch';
   background: transparent;
   border-radius: 2px;
@@ -17,11 +18,20 @@ export const DefaultButton = styled.button.attrs((props) => {
   }
 `;
 
-
 export const SignUpBtn = styled(DefaultButton)`
   margin-top: -1rem;
+  width: 6rem;
+  height: 2.5rem;
 `
 
 export const LoginBtn = styled(DefaultButton)`
   margin-top: 2rem;
+  width: 5rem;
+  height: 2.5rem;
+`
+
+export const CreateEventBtn = styled(DefaultButton)`
+width: 8rem;
+height: 2.5rem;
+margin-left: 2rem;
 `
