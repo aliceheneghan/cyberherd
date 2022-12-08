@@ -77,20 +77,18 @@ form #description {
   background: $background-transparent;
 }
 #location {
-  width: 20rem;
-  height: 2.5rem;
-  margin: 10px 0;
+  width: 24rem;
+  height: 2.8rem;
+  margin: 10px 4px;
   padding: 8px 10px;
   outline: none;
   border: 1.8px $border-gray solid;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: 'Sarpanch';
   text-shadow: $text-shadow-color;
   color: $text-color;
   background: $background-transparent;
-  grid-area: location;
 }
-
 .upload-file label {
   @include flex-jc-ai-dir(center, center, column);
   font-size: 1.2rem;
@@ -124,12 +122,12 @@ input#upload-image {
   }
 }
 
-@media screen and (max-width: 992px) {
-  .myForm { 
-  @include flex-jc-ai-dir(column, center, column);
-  height: 70rem;
- }
-}
+// @media screen and (max-width: 992px) {
+//   .myForm { 
+//   @include flex-jc-ai-dir(column, center, column);
+//   height: 70rem;
+//  }
+// }
 
 // @media screen and (min-width: 768px) {
 //   .myForm { 
