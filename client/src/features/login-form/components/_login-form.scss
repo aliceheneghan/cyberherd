@@ -5,7 +5,6 @@
   width: 45rem;
   height: fit-content;
   text-align: center;
-
   position: relative;
   .login-form {
 
@@ -52,7 +51,7 @@
     font-family: 'Sarpanch';
     background-color: transparent;
     border-radius: 2px;
-    border: 1px solid $text-color;
+    border: 1px $text-color solid;
     color: $text-color;
     text-shadow: $text-shadow-color;
     cursor: pointer;
@@ -60,5 +59,19 @@
       color: $yellow-color;
       border: 1px $yellow-color solid;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .login-page { 
+  @include flex-jc-ai-dir(column, center, column);
+  height: 70rem;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+  .login-page { 
+   @include flex-jc-ai-dir(column, center, column);
+   height: 70rem;
   }
 }

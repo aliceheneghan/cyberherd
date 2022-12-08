@@ -1,5 +1,5 @@
 // libraries
-import { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
 
 import Leaflet from 'leaflet';
@@ -64,13 +64,13 @@ export default function MapDashboard() {
       <h1>Map</h1>
       <div id="map">
         <MapContainer
-          style={{ height: 500, width: 1000, marginLeft: '20%', marginBottom: '7%' }}
+          style={{ height: 500, width: 1000, marginLeft: '20%', marginBottom: '7%', }}
           center={position}
           zoom={10}
           scrollWheelZoom={true}
         >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          <TileLayer 
+            // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"
           />
           <Marker

@@ -5,7 +5,6 @@
   width: 45rem;
   height: fit-content;
   text-align: center;
-
   position: relative;
   .sign-up-form {
     @include flex-jc-ai-dir(column, center, column);
@@ -74,17 +73,30 @@ input#image-upload::file-selector-button {
     border: 1px $yellow-color solid;
   }
 }
-// .button-sign {
-//   margin-top: -1rem;
-//   padding: 0.3em;
-//   font-family: 'Sarpanch';
-//   background-color: transparent;
-//   border-radius: 2px;
-//   border: 1px solid $text-color;
-//   text-shadow: $text-shadow-color;
-//   color: $text-color;
-//   &:hover {
-//     color: $yellow-color;
-//     border: 1px $yellow-color solid;
-//   }
-// }
+.button-sign {
+  margin-top: -1rem;
+  padding: 0.3em;
+  font-family: 'Sarpanch';
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid $text-color;
+  text-shadow: $text-shadow-color;
+  color: $text-color;
+  &:hover {
+    color: $yellow-color;
+    border: 1px $yellow-color solid;
+  }
+}
+@media screen and (min-width: 768px) {
+  .connect-page { 
+  @include flex-jc-ai-dir(column, center, column);
+  height: 70rem;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+  .connect-page { 
+   @include flex-jc-ai-dir(column, center, column);
+   height: 70rem;
+  }
+}
