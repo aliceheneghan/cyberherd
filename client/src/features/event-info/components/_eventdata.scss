@@ -1,21 +1,27 @@
+// mixins & variables
+@import './../../../scss/abstract/mixins';
+@import '../../../scss/abstract/variables';
+
 .event-data-container {
   @include flex-jc-ai-dir(space-between, center, row);
-  background-color: $background-transparent;
   margin: 0 auto;
   width: 80%;
   height: 30rem;
+  background-color: $background-transparent;
   padding: 2em;
-  border: 1px red solid;
+  color: $text-color;
+  text-shadow: $text-shadow-color;
 
   .event-info-wrapper {
+    overflow: visible;
     width: 50%;
     height: 100%;
-    border: 1px red solid;
+    padding-left: 0.24em;
 
     .event-date-price-wrapper {
       @include flex-jc-ai-dir(space-between, center, row);
       width: 45%;
-      border: 1px red solid;
+      
 
       .event-date {
         width: 10em;
@@ -28,15 +34,19 @@
     }
 
     .band-event-name-wrapper {
-      width: 100%;
-      padding: 0.5em 0;
-
+      margin-left: -0.24em;
+      
       .band-name {
-        font-size: 2rem;
+        font-size: 3.5rem;
+        color: $title-color;
+        text-shadow: $title-text-shadow;
       }
 
       .event-name {
+        padding-left: $title-padding;
         font-size: 1.5rem;
+        color: $basic-yellow;
+        text-shadow: none;        
       }
     }
 
@@ -61,7 +71,6 @@
 
     .event-description {
       width: 100%;
-      border: 1px red solid;
 
       p {
         font-family: 'Roboto';
