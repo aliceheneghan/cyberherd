@@ -9,7 +9,6 @@ import { DefaultNavbar } from '../../../styled-components/navBar-styled-componen
 import Navbar from '../../navbar/components/Navbar';
 import { CreateEventBtn } from '../../../styled-components/buttons.js';
 
-
 function CreateEvent() {
   const [bandName, setBandName] = useState('');
   const [eventName, setEventName] = useState('');
@@ -28,13 +27,39 @@ function CreateEvent() {
 
   const navigate = useNavigate();
 
-  // array of locations
+  // variable arrays for mapping
   const locations = [
-    'please select your location',
-    'Ausland',
-    'Berghain',
-    'SO35',
-    'Schokoladen',
+    { name: 'Astra', _id: '639212e2dbe3d61449203b1a' },
+    { name: 'Hole44', _id: '639213e77a0af7516f1781a4' },
+    { name: 'KØPI', _id: '639214b0e5d487b63ccd0090' },
+    { name: 'Schokoladen', _id: '639215d19adf831e2fa8f7b2' },
+    { name: 'Supamolly', _id: '6392167b9adf831e2fa8f7b4' },
+    { name: 'Urban Spree', _id: '639217189adf831e2fa8f7b6' },
+    { name: '8MM', _id: '639217bc9adf831e2fa8f7b8' },
+  ];
+
+  const genres = [
+    'Acoustic',
+    'Afrobeat',
+    'Alternative',
+    'Electronic',
+    'Experimental',
+    'Folk',
+    'Hardcore',
+    'Hip-Hop',
+    'Indie',
+    'Krautrock',
+    'Metal',
+    'Rock',
+    'Pop',
+    'Post-Punk',
+    'Psychedelic',
+    'Punk',
+    'Rap',
+    'Shoegaze',
+    'Singer Songwriter',
+    'Stoner',
+    'Trap',
   ];
 
   const handleSubmit = async (e) => {
@@ -142,19 +167,22 @@ function CreateEvent() {
             </label>
 
             <label htmlFor="genre">
-              <input
+              <select
                 id="genre"
                 onChange={(e) => setGenre(e.target.value)}
                 type="text"
                 value={genre}
-                placeholder="genre"
                 name="genre"
-              />
+              >
+                {genres.map((genre) => (
+                  <option>{genre}</option>
+                ))}
+              </select>
             </label>
           </div>
 
           <div className="container-two">
-          <label htmlFor="date">
+            <label htmlFor="date">
               <input
                 id="date"
                 onChange={(e) => setDate(e.target.value)}
@@ -174,7 +202,7 @@ function CreateEvent() {
                 name="location"
               >
                 {locations.map((location) => (
-                  <option>{location}</option>
+                  <option value={location._id}>{location.name}</option>
                 ))}
               </select>
             </label>
