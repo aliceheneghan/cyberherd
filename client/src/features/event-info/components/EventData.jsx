@@ -63,12 +63,10 @@ export default function EventData() {
       <div className="event-info-wrapper">
         <div className="event-date-price-wrapper">
           {/* <div className="event-date">{format(eventData?.event?.date, 'LLLL yy')}</div> */}
-          <div className="event-date">
+          <div>
             {dayOfWeek} {eventDateFormatted}
           </div>
-          <div className="event-price">
-            {eventData?.event?.tickets?.preSalePrice} €
-          </div>
+          <div>{eventData?.event?.tickets?.preSalePrice} €</div>
         </div>
 
         <div className="band-event-name-wrapper">
@@ -77,11 +75,8 @@ export default function EventData() {
         </div>
 
         <div className="event-location-time-wrapper">
-          <div className="event-location">{eventData?.event?.location}</div>
-          <div className="event-time">
-            {' '}
-            {eventData?.event?.time?.doorsOpen} doors Open
-          </div>
+          <div>{eventData?.event?.location}</div>
+          <div>{eventData?.event?.time?.doorsOpen} doors Open</div>
         </div>
 
         <div className="event-description">

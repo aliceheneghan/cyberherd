@@ -14,7 +14,7 @@
 
   .event-info-wrapper {
     @include flex-jc-ai-dir(space-between, flex-start, column);
-    overflow: visible;
+    overflow: visible; // allows -margin-left in band-event-name-wrapper
     width: 50%;
     height: 100%;
     padding-left: 0.24em;
@@ -23,15 +23,6 @@
       @include flex-jc-ai-dir(space-between, center, row);
       width: 45%;
       font-size: 1.5rem;
-
-      .event-date {
-        width: 10em;
-      }
-
-      .event-price {
-        @include flex-jc-ai-dir(center, center, row);
-        width: 5em;
-      }
     }
 
     .band-event-name-wrapper {
@@ -52,22 +43,10 @@
     }
 
     .event-location-time-wrapper {
-      @include flex-jc-ai-dir(flex-start, center, row);
+      @include flex-jc-ai-dir(space-between, center, row);
+      width: 60%;
       height: 2em;
-      width: fit-content;
       font-size: 1.23rem;
-
-      .event-location {
-        @include flex-jc-ai-dir(flex-start, center, row);
-        width: 11em;
-        height: 100%;
-      }
-
-      .event-time {
-        @include flex-jc-ai-dir(flex-start, center, row);
-        height: 100%;
-        margin-left: 1em;
-      }
     }
 
     .event-description {
@@ -81,7 +60,7 @@
 
     .button-wrapper {
       @include flex-jc-ai-dir(space-between, center, row);
-      width: 44%;
+      width: 46%;
 
       .save-date-btn {
         width: 9rem;
