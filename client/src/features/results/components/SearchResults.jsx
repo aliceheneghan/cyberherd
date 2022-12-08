@@ -27,14 +27,14 @@ export default function SearchResults() {
               ? event
               : event.name.bandName.toLowerCase().includes(search) ||
                   event.name.eventName.toLowerCase().includes(search) ||
-                  event.location.toLowerCase().includes(search) ||
+                  event.location.name.toLowerCase().includes(search) ||
                   event.genre.toString().toLowerCase().includes(search) ||
                   event.information.description.toLowerCase().includes(search);
           })
           .map((event) => (
             <div>
               <div>{event.name.bandName}</div>
-              <div>{event.location}</div>
+              <div>{event.location.name}</div>
               <div>{event.genre}</div>
             </div>
           ))}
