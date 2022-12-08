@@ -75,7 +75,7 @@ export default function EventData() {
           </div>
           <div className="event-description-container">
             <div className="event-location-time-container">
-              <div className="event-location">{eventData?.event?.location}</div>
+              <div className="event-location">{eventData?.event?.location.name}</div>
               <div className="event-time">
                 {' '}
                 {eventData?.event?.time?.doorsOpen} doors Open
