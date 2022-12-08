@@ -13,6 +13,7 @@
   text-shadow: $text-shadow-color;
 
   .event-info-wrapper {
+    @include flex-jc-ai-dir(space-between, flex-start, column);
     overflow: visible;
     width: 50%;
     height: 100%;
@@ -37,7 +38,7 @@
       margin-left: -0.24em;
       
       .band-name {
-        font-size: 3.5rem;
+        font-size: 3.7rem;
         color: $title-color;
         text-shadow: $title-text-shadow;
       }
@@ -78,8 +79,9 @@
       }
     }
 
-    .saveDate-buyTicket-container {
-      @include flex-jc-ai-dir(flex-start, center, row);
+    .button-wrapper {
+      @include flex-jc-ai-dir(space-between, center, row);
+      width: 44%;
 
       .save-date-btn {
         width: 9rem;
@@ -91,7 +93,6 @@
         width: 9rem;
         padding: 0.8em 0;
         cursor: pointer;
-        margin-left: 0.5em;
       }
     }
   }

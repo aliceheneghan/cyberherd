@@ -6,6 +6,9 @@ import axios from 'axios';
 // context
 import { Context } from '../../../context/Context';
 
+// components
+import { DefaultButton } from '../../../styled-components/buttons.js';
+
 export default function EventData() {
   const [eventData, setEventData] = useState({});
 
@@ -85,13 +88,13 @@ export default function EventData() {
           <p>{eventData?.event?.information?.description}</p>
         </div>
 
-        <div className="saveDate-buyTicket-wrapper">
-          <button className="save-date-btn" onClick={handleSaveDate}>
+        <div className="button-wrapper">
+          <DefaultButton className="save-date-btn" onClick={handleSaveDate}>
             {eventData?.event?.userAttending.includes(userID)
               ? 'Remove Date'
               : 'Save the Date'}
-          </button>
-          <button className="buy-ticket-btn">Buy Ticket</button>
+          </DefaultButton>
+          <DefaultButton className="buy-ticket-btn">Buy Ticket</DefaultButton>
         </div>
       </div>
 
