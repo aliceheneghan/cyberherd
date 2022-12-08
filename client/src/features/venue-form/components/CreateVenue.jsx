@@ -117,7 +117,7 @@ function CreateVenue() {
                 onChange={(e) => setNeighborhood(e.target.value)}
                 type="text"
                 value={neighborhood}
-                name="location"
+                name="neighborhood"
               >
                 {neighborhoods.map((neighborhood) => (
                   <option>{neighborhood}</option>

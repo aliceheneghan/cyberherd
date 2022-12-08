@@ -23,6 +23,8 @@ const createVenue = async (req, res) => {
     const {
       name,
       address,
+      longitude,
+      latitude,
       neighborhood,
       venueType,
       venueURL,
@@ -33,7 +35,7 @@ const createVenue = async (req, res) => {
     } = req.body;
     const createdVenue = await Venue.create({
       name,
-      location: {address, neighborhood},
+      location: {address, longitude, latitude, neighborhood},
       venueType,
       venueURL,
       photoURL: `http://localhost:4000/images/${req.file?.filename}`,
