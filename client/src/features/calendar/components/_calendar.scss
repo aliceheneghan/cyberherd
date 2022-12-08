@@ -4,7 +4,7 @@
 
 .calendar-block {
   @include flex-jc-ai-dir(center, center, column);
-  // box-shadow: 0 0 0.1em black, 0 0 0.9em yellow, 0.01em 0.01em 1.2em yellow;
+  box-shadow: 0 0 0.1em black, 0 0 0.9em yellow, 0.01em 0.01em 1.2em yellow;
   padding-bottom: 1em;
   font-size: 2.5rem;
   color: white;
@@ -36,7 +36,7 @@
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     grid-template-rows: auto;
-    gap: 1em;
+    // gap: 1em;
     align-content: center;
     text-align: center;
   }
@@ -56,7 +56,7 @@
 
     .date-cell {
       @include flex-jc-ai-dir(center, center, row);
-      height: 2.4em;
+      height: 3em;
       // transition: ease-in-out 0.125s;
       &:hover {
         transition: ease-in-out 0.125s;
@@ -83,8 +83,8 @@
   text-shadow: $text-shadow-color;
 
   .calendar-month {
-    @include flex-jc-ai-dir(center, center, row);
-    width: 15em;
+    @include flex-jc-ai-dir(space-between, center, row);
+    width: 12em;
     height: 1.4em;
 
     .arrows {
@@ -100,6 +100,10 @@
     width: inherit;
     height: 1.7em;
     padding-top: 0.2em;
+
+    &:hover {
+      font-size: 2rem;
+    }
 
     .highlight-date-clicked {
       text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
