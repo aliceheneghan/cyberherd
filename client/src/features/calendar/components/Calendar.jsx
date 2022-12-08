@@ -79,7 +79,6 @@ export default function Calendar({ displayType, sevenDayGrid }) {
             monthDay,
             'LL'
           )}-${format(monthDay, 'dd')}`;
-          console.log(formattedDate, date);
 
           // sets or empties highlightDateClicked className
           if (formattedDate === date) {
