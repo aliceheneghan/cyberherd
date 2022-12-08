@@ -1,16 +1,10 @@
 @import '../../../scss/abstract/mixins';
 @import '../../../scss/abstract/variables';
 
-
-// .navbar {
-//   margin-bottom: 100px; // Spacing between the navbar and the other components on the different pages
-// }
-
 .connect-page {
   width: 45rem;
   height: fit-content;
   text-align: center;
-
   position: relative;
   .sign-up-form {
     @include flex-jc-ai-dir(column, center, column);
