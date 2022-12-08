@@ -5,27 +5,27 @@
 .calendar-block {
   @include flex-jc-ai-dir(center, center, column);
   box-shadow: 0 0 0.1em black, 0 0 0.9em yellow, 0.01em 0.01em 1.2em yellow;
-  padding-bottom: 1em;
-  font-size: 2.5rem;
+  width: 18em;
+  height: fit-content;
+  font-size: 1.55rem;
   color: white;
   text-shadow: 0 0 0.3rem yellowgreen, 0 0 0.35rem orange, 0 0 0.6em yellow;
   background: url('../../../assets/images/IMG_01.jpg') no-repeat center
     center/cover;
-  border: 0.2em solid rgba(0, 0, 0, 0.315);
+  border: 0.2em solid $background-transparent;
   cursor: pointer;
 
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
-    margin: 0.6em 0;
+    margin: 0.2em 0;
     width: 15em;
-    font-size: 2.45rem;
     text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
       0 0 0.6rem yellow;
     // color: $text-color;
     // text-shadow: $text-shadow-color;
+    
     .arrows {
       color: white;
-      font-size: 3rem;
       filter: drop-shadow(6px 3px 5px rgba(255, 255, 0, 8));
       margin-top: 1.1rem;
       cursor: pointer;
@@ -36,17 +36,17 @@
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     grid-template-rows: auto;
-    // gap: 1em;
+    width: inherit;
     align-content: center;
     text-align: center;
   }
 
   .calendar-days {
-    width: inherit;
     height: inherit;
-    padding: 0 1.2em;
+    padding: 0 0.4em;
 
     .weekdays {
+      padding: 0.1em;
       text-shadow: 0 0 0.3rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
         0 0 0.6rem yellow;
       // color: $text-color;
@@ -55,7 +55,7 @@
 
     .date-cell {
       @include flex-jc-ai-dir(center, center, row);
-      height: 3em;
+      height: 2.2em;
       // transition: ease-in-out 0.125s;
       &:hover {
         transition: ease-in-out 0.125s;
@@ -67,8 +67,42 @@
 
   @media screen and (min-width: 992px) {
     margin-bottom: 3em;
+    width: 23em;
+    padding-bottom: 0.8em;
+    font-size: 2.5rem;
+
+      .calendar-month {
+        margin: 0.6em 0;
+        .arrows {
+          font-size: 3rem;
+        }
+      }
+
+      .seven-day-grid {
+        padding: 0 1em;
+      }
+
+      .calendar-days {
+        .date-cell{
+          height: 2.6em;
+        }
+      }
+  }
+
+
+  @media screen and (min-width: 1366px) {
     width: 27.75em;
-    height: fit-content;
+
+      .seven-day-grid {
+        padding: 0 1.5em;
+      }
+
+      .calendar-days {
+        .date-cell{
+          height: 3em;
+        }
+      }
+      
   }
 }
 
