@@ -21,7 +21,7 @@
     .event-date-price-wrapper {
       @include flex-jc-ai-dir(space-between, center, row);
       width: 45%;
-      
+      font-size: 1.5rem;
 
       .event-date {
         width: 10em;
@@ -53,8 +53,8 @@
     .event-location-time-wrapper {
       @include flex-jc-ai-dir(flex-start, center, row);
       height: 2em;
-      width: 30rem;
-      font-size: 0.8em;
+      width: fit-content;
+      font-size: 1.23rem;
 
       .event-location {
         @include flex-jc-ai-dir(flex-start, center, row);
@@ -74,7 +74,7 @@
 
       p {
         font-family: 'Roboto';
-        font-size: 0.95rem;
+        font-size: 1.1rem;
       }
     }
 
