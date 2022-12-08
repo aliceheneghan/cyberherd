@@ -1,7 +1,7 @@
 // libraries
 import React, { useEffect, useState, useContext } from 'react';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 // context
 import { Context } from '../../../context/Context';
@@ -54,53 +54,49 @@ export default function EventData() {
   // handleSaveDate(eventData?.event?.id)
   console.log(' eventData userID before return', userID);
   console.log(' only eventData ', eventData);
+
   return (
     <section className="event-data-container">
-      <div className="event-date-price-container">
-        {/* <div className="event-date">{format(eventData?.event?.date, 'LLLL yy')}</div> */}
-        <div className="event-date">
-          {dayOfWeek} {eventDateFormatted}
+      <div className="event-info-wrapper">
+        <div className="event-date-price-wrapper">
+          {/* <div className="event-date">{format(eventData?.event?.date, 'LLLL yy')}</div> */}
+          <div className="event-date">
+            {dayOfWeek} {eventDateFormatted}
+          </div>
+          <div className="event-price">
+            {eventData?.event?.tickets?.preSalePrice} €
+          </div>
         </div>
-        <div className="event-price">
-          {eventData?.event?.tickets?.preSalePrice} €
+
+        <div className="band-event-name-wrapper">
+          <div className="band-name">{eventData?.event?.name?.bandName}</div>
+          <div className="event-name">{eventData?.event?.name?.eventName}</div>
+        </div>
+
+        <div className="event-location-time-wrapper">
+          <div className="event-location">{eventData?.event?.location}</div>
+          <div className="event-time">
+            {' '}
+            {eventData?.event?.time?.doorsOpen} doors Open
+          </div>
+        </div>
+
+        <div className="event-description">
+          <p>{eventData?.event?.information?.description}</p>
+        </div>
+
+        <div className="saveDate-buyTicket-wrapper">
+          <button className="save-date-btn" onClick={handleSaveDate}>
+            {eventData?.event?.userAttending.includes(userID)
+              ? 'Remove Date'
+              : 'Save the Date'}
+          </button>
+          <button className="buy-ticket-btn">Buy Ticket</button>
         </div>
       </div>
-      <div className="event-info-img-container">
-        <div className="event-info-container">
-          <div className="band-event-name-container">
-            <div className="band-name">{eventData?.event?.name?.bandName}</div>
-            <div className="event-name">
-              {eventData?.event?.name?.eventName}
-            </div>
-          </div>
-          <div className="event-description-container">
-            <div className="event-location-time-container">
-              <div className="event-location">{eventData?.event?.location}</div>
-              <div className="event-time">
-                {' '}
-                {eventData?.event?.time?.doorsOpen} doors Open
-              </div>
-            </div>
-            <div className="event-description">
-              <p>{eventData?.event?.information?.description}</p>
-            </div>
-            <div className="saveDate-buyTicket-container">
-              <button className="save-date-btn" onClick={handleSaveDate}>
-                {eventData?.event?.userAttending.includes(userID)
-                  ? 'Remove Date'
-                  : 'Save the Date'}
-              </button>
-              <button className="buy-ticket-btn">Buy Ticket</button>
-            </div>
-          </div>
-        </div>
-        <div className="event-img-container">
-          <img
-            className="event-image"
-            src={eventData?.event?.photoURL}
-            alt=""
-          />
-        </div>
+
+      <div className="event-img-wrapper">
+        <img src={eventData?.event?.photoURL} alt="" />
       </div>
     </section>
   );

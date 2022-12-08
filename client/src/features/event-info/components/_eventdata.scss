@@ -1,107 +1,102 @@
 .event-data-container {
-  background-color: rgb(127, 175, 218);
+  @include flex-jc-ai-dir(space-between, center, row);
+  background-color: $background-transparent;
   margin: 0 auto;
-  max-width: 90%;
+  width: 80%;
   height: 30rem;
-  .event-date-price-container {
-    width: 45%;
-    // height: 5rem;
-    background-color: cadetblue;
-    @include flex-jc-ai-dir(flex-start, center, row);
-    .event-date {
-      width: 9em;
-      // height: 3em;
-      border: 3px dashed blue;
-      @include flex-jc-ai-dir(center, center, row);
+  padding: 2em;
+  border: 1px red solid;
+
+  .event-info-wrapper {
+    width: 50%;
+    height: 100%;
+    border: 1px red solid;
+
+    .event-date-price-wrapper {
+      @include flex-jc-ai-dir(space-between, center, row);
+      width: 45%;
+      border: 1px red solid;
+
+      .event-date {
+        width: 10em;
+      }
+
+      .event-price {
+        @include flex-jc-ai-dir(center, center, row);
+        width: 5em;
+      }
     }
-    .event-price {
-      width: 5em;
-      // height: 3em;
-      border: 3px dashed blue;
-      @include flex-jc-ai-dir(center, center, row);
+
+    .band-event-name-wrapper {
+      width: 100%;
+      padding: 0.5em 0;
+
+      .band-name {
+        font-size: 2rem;
+      }
+
+      .event-name {
+        font-size: 1.5rem;
+      }
+    }
+
+    .event-location-time-wrapper {
+      @include flex-jc-ai-dir(flex-start, center, row);
+      height: 2em;
+      width: 30rem;
+      font-size: 0.8em;
+
+      .event-location {
+        @include flex-jc-ai-dir(flex-start, center, row);
+        width: 11em;
+        height: 100%;
+      }
+
+      .event-time {
+        @include flex-jc-ai-dir(flex-start, center, row);
+        height: 100%;
+        margin-left: 1em;
+      }
+    }
+
+    .event-description {
+      width: 100%;
+      border: 1px red solid;
+
+      p {
+        font-family: 'Roboto';
+        font-size: 0.95rem;
+      }
+    }
+
+    .saveDate-buyTicket-container {
+      @include flex-jc-ai-dir(flex-start, center, row);
+
+      .save-date-btn {
+        width: 9rem;
+        padding: 0.8em 0;
+        cursor: pointer;
+      }
+
+      .buy-ticket-btn {
+        width: 9rem;
+        padding: 0.8em 0;
+        cursor: pointer;
+        margin-left: 0.5em;
+      }
     }
   }
-  .event-info-img-container {
+
+  .event-img-wrapper {
     @include flex-jc-ai-dir(center, center, row);
-    height: 25rem;
-    // border: 3px dotted black;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px red solid;
 
-    .event-info-container {
-      width: 45%;
-      height: 100%;
-      padding-right: 1em;
-      // background-color: chocolate;
-      .band-event-name-container {
-        width: 100%;
-        // background-color: cornflowerblue;
-        padding: 0.5em 0;
-        .band-name {
-            font-size: 2rem;
-
-        }
-        .event-name {
-            font-size: 1.5rem;
-
-        }
-      }
-      .event-description-container {
-        // border: 5px rgb(65, 87, 20) solid;
-        .event-location-time-container {
-          // background-color: cornsilk;
-          height: 2em;
-          width: 30rem;
-          font-size: .8em;
-          @include flex-jc-ai-dir(flex-start, center, row);
-          .event-location {
-            // border: 2px solid blue;
-            width: 11em;
-            @include flex-jc-ai-dir(flex-start, center, row);
-            height: 100%;
-          }
-          .event-time {
-            // border: 2px solid blue;
-            // width: 9em;
-            height: 100%;
-            margin-left: 1em;
-            @include flex-jc-ai-dir(flex-start, center, row);
-          }
-        }
-        .event-description {
-          width: 100%;
-          // background-color: cornflowerblue;
-          height: 8rem;
-          p {
-            font-family: 'Roboto';
-            font-size: 0.95rem;
-          }
-        }
-        .saveDate-buyTicket-container {
-          // background-color: magenta;
-          @include flex-jc-ai-dir(flex-start, center, row);
-          .save-date-btn {
-            width: 9rem;
-            padding: 0.8em 0;
-            cursor: pointer;
-          }
-          .buy-ticket-btn {
-            width: 9rem;
-            padding: 0.8em 0;
-            cursor: pointer;
-            margin-left: .5em;
-          }
-        }
-      }
-    }
-    .event-img-container {
-      border: black 4px solid;
-      width: 55%;
-      height: 100%;
-      background-color: rgb(97, 30, 18);
-      overflow: hidden;
-      img {
-        object-fit: contain;
-        width: 100%;
-      }
+    img {
+      object-fit: contain;
+      width: 100%;
     }
   }
 }
