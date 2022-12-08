@@ -23,19 +23,19 @@ const createVenue = async (req, res) => {
     const {
       name,
       address,
-      longitude,
       latitude,
+      longitude,
       neighborhood,
       venueType,
       venueURL,
       event,
       venueRating,
       priceRating,
-      userFollowing
+      userFollowing,
     } = req.body;
     const createdVenue = await Venue.create({
       name,
-      location: {address, longitude, latitude, neighborhood},
+      location: { address, latitude, longitude, neighborhood },
       venueType,
       venueURL,
       photoURL: `http://localhost:4000/images/${req.file?.filename}`,
@@ -43,7 +43,9 @@ const createVenue = async (req, res) => {
       rating: { venueRating, priceRating },
       userFollowing,
     });
-    return res.status(200).json({ message: 'Venue created', createdVenue, id: createdVenue._id });
+    return res
+      .status(200)
+      .json({ message: 'Venue created', createdVenue, id: createdVenue._id });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
@@ -54,26 +56,26 @@ const updateVenue = async (req, res) => {
     const {
       name,
       address,
-      longitude,
       latitude,
+      longitude,
       neighborhood,
       venueType,
       venueURL,
       event,
       venueRating,
       priceRating,
-      userFollowing
+      userFollowing,
     } = req.body;
     const updatedVenue = await Venue.findByIdAndUpdate(
       req.params.id,
       {
-      name,
-      location: {address, longitude, latitude, neighborhood},
-      venueType,
-      venueURL,
-      event,
-      rating: { venueRating, priceRating },
-      userFollowing,
+        name,
+        location: { address, latitude, longitude, neighborhood },
+        venueType,
+        venueURL,
+        event,
+        rating: { venueRating, priceRating },
+        userFollowing,
       },
       { new: true }
     );
