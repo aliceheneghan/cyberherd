@@ -10,7 +10,7 @@ import Navbar from '../../navbar/components/Navbar';
 
 // array of locations
 
-const locations = ['', {name: 'Schokoladen', _id:'637a82b77655c0717c0c04a3' }, 'Berghain', 'SO35', 'Schokoladen'];
+const locations = ['', {name: 'Schokoladen', _id:'637a82b77655c0717c0c04a3'}, 'Berghain', 'SO36', 'Schokoladen'];
 
 function CreateEvent() {
   const [bandName, setBandName] = useState('');
