@@ -47,7 +47,6 @@
     padding: 0 1.2em;
 
     .weekdays {
-      margin-bottom: -0.5em;
       text-shadow: 0 0 0.3rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
         0 0 0.6rem yellow;
       // color: $text-color;
@@ -76,9 +75,10 @@
 .calendar-bar {
   @include flex-jc-ai-dir(center, center, column);
   margin-bottom: 1em;
+  padding: 0.5em;
   width: inherit;
-  height: 4em;
-  background: rgba(0, 0, 0, 0.315);
+  height: auto;
+  background: $background-transparent;
   color: $text-color;
   text-shadow: $text-shadow-color;
 
@@ -96,21 +96,39 @@
   }
 
   .calendar-days {
-    @include flex-jc-ai-dir(space-evenly, center, row);
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: auto;
     width: inherit;
-    height: 1.7em;
+    height: auto;
     padding-top: 0.2em;
 
     .date-cell {
+      @include flex-jc-ai-dir(center, center, row);
+
       &:hover {
-        font-size: 3rem;
+        font-size: 2rem;
       }
     }
-
 
     .highlight-date-clicked {
       text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
         0 0 0.6rem yellow;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    height: 4em;
+
+    .calendar-days {
+      @include flex-jc-ai-dir(space-evenly, center, row);
+      height: 1.7em;
+
+      .date-cell {
+        &:hover {
+          font-size: 3rem;
+        }
+      }
     }
   }
 }
