@@ -38,7 +38,7 @@ const venueSchema = new Schema({
   },
   venueType: {
     type: String,
-    enum: ['bar', 'café', 'club', 'concert hall', 'cultural center'],
+    enum: ['Bar', 'Café', 'Club', 'Concert Hall', 'Cultural Center'],
   },
   venueURL: { type: String },
   photoURL: { type: String },
