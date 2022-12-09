@@ -22,7 +22,7 @@ export default function EventCard({ className, children }) {
         <div className={`title ${titleFontSize}`}>{title}</div>
         <div className="line-wrapper">
           <div className="line-space-between">
-            <div>Location:</div> <div>{children.location}</div>
+            <div>Location:</div> <div>{children.location.name}</div>
           </div>
           <div className="line-space-between">
             <div>Genre:</div>
