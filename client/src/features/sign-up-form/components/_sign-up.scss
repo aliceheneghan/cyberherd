@@ -41,9 +41,9 @@
 }
 .file-upload label {
   @include flex-jc-ai-dir(column, center, column);
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 1.5rem;
-  margin-right: 7.5rem;
+  margin-right: 10rem;
   margin-bottom: 1rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
