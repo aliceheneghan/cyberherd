@@ -90,7 +90,7 @@ function CreateEvent() {
       </DefaultNavbar>
 
       <div className="create-event">
-      {/* <h3>Create an event</h3> */}
+      <h3>Create your own event</h3>
         <form className="myForm" onSubmit={handleSubmit}>
       
           <div className="container">
@@ -265,11 +265,11 @@ function CreateEvent() {
                 name="image"
               />
             </div>
-
+            <div className='button-create-event'> 
             <CreateEventBtn className="button-create" type="submit">
               Create Event
             </CreateEventBtn>
-           
+            </div>
         </form>
       </div>
     </>

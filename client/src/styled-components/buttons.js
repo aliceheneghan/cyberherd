@@ -22,7 +22,7 @@ export const SignUpBtn = styled(DefaultButton)`
   margin-top: -1rem;
   width: 8rem;
   height: 2.5rem;
-  margin-left: 2rem;
+  margin-left: 14rem;
 `
 
 export const LoginBtn = styled(DefaultButton)`
@@ -34,6 +34,6 @@ export const LoginBtn = styled(DefaultButton)`
 export const CreateEventBtn = styled(DefaultButton)`
 width: 8rem;
 height: 2.5rem;
-margin-top: 1rem;
+margin-top: 1.8rem;
 margin-left: 20rem;
 `
