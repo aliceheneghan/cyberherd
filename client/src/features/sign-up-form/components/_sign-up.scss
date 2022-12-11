@@ -24,19 +24,23 @@
     outline: none;
     background: $background-transparent;
     border: 1.8px $border-gray solid;
-  } 
+  }
   #user-name::placeholder,
   #email-sign::placeholder,
   #password-sign::placeholder,
-  #dob::placeholder {
+  #dob::placeholder, 
+  input#user-name,
+  input#email-sign,
+  input#password-sign,
+  input#dob {
     font-size: 1rem;
     font-family: 'Sarpanch';
     text-shadow: $text-shadow-color;
     color: $text-color;
   }
-    #dob {
-      width: 22rem;
-      height: 2.8rem;
+  #dob {
+    width: 22rem;
+    height: 2.8rem;
   }
   #user-name:focus,
   #email-sign:focus,
@@ -81,15 +85,15 @@ input#image-upload::file-selector-button {
 }
 
 @media screen and (min-width: 768px) {
-  .connect-page { 
-  @include flex-jc-ai-dir(column, center, column);
-  height: 70rem;
- }
+  .connect-page {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 70rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .connect-page { 
-   @include flex-jc-ai-dir(column, center, column);
-   height: 70rem;
+  .connect-page {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 70rem;
   }
 }

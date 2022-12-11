@@ -48,7 +48,18 @@ form #band-name,
 #ticket-url::placeholder,
 #description::placeholder,
 #event-url::placeholder,
-#band-url::placeholder {
+#band-url::placeholder,
+input#band-name,
+input#event-name,
+input#door-price,
+input#pre-sale-price,
+input#ticket-url,
+input#event-url,
+input#band-url,
+input#date,
+input#doors-open,
+input#start-time,
+textarea#description {
   font-size: 1rem;
   font-family: 'Sarpanch';
   text-shadow: $text-shadow-color;
@@ -74,7 +85,6 @@ form #band-name,
   color: $text-color;
   background: $background-transparent;
 }
-
 #band-name:focus,
 #event-name:focus,
 #pre-sale-price:focus,
@@ -112,7 +122,6 @@ form #description {
   margin-right: 16.5rem;
   display: block;
 }
-
 .upload-file label {
   @include flex-jc-ai-dir(column, center, column);
   font-size: 1rem;
@@ -121,7 +130,6 @@ form #description {
   margin-top: 1.2rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
-
 }
 input#upload-image {
   margin-bottom: 0.5rem;
@@ -147,7 +155,6 @@ input#upload-image {
     border: 1px $yellow-color solid;
   }
 }
-
 .button-create-event {
   width: 33rem;
   padding-left: 40rem;
@@ -173,14 +180,6 @@ input#upload-image {
 //   height: 90rem;
 //  }
 // }
-
-// @media screen and (min-width: 768px) {
-//   .myForm {
-//   @include flex-jc-ai-dir(column, center, column);
-//   height: 70rem;
-//  }
-// }
-
 // @media screen and (min-width: 1024px) {
 //   .myForm {
 //   @include flex-jc-ai-dir(column, center, column);
