@@ -19,6 +19,8 @@ export default function FilterBar() {
   const [showPriceFilter, setShowPriceFilter] = useState(false);
   const [showVenueTypeFilter, setShowVenueTypeFilter] = useState(false);
 
+//   handlers
+
   const handleGenreFilter = (event) => {
     setShowGenreFilter((current) => !current);
   };
@@ -63,6 +65,7 @@ export default function FilterBar() {
           </div>
         </div>
       </div>
+
       <div className="filter-checkboxes">
         {showGenreFilter && <GenreFilter />}
         {showNeighborhoodFilter && <NeighborhoodFilter />}
