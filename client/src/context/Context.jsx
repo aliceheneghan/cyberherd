@@ -16,6 +16,9 @@ const ContextProvider = (props) => {
   // searchbar context api
   const [search, setSearch] = useState('');
 
+  // filter context
+  
+
   // save the user ID
   const [userID, setUserID] = useState(loginSession['userID']);
 

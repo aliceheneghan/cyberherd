@@ -59,6 +59,7 @@ export default function GenreFilter({
       <div className="checkbox-genre">
         {genres.map((genre) => (
           <label>
+            <button onClick={() => filterGenre(genre)}>{genre}</button>
             <input type="checkbox" onChange={() => filterGenre(genre)}></input>
             {genre}
           </label>
