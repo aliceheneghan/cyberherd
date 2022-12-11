@@ -15,7 +15,7 @@ import './_my-dashboard.scss';
 // http://localhost:4000/image
 export default function Dashboard() {
   const { setUserID, userID, setUserData, userData } = useContext(Context);
-  
+
   // state
   const [resultData, setResultData] = useState([]);
 
@@ -41,22 +41,22 @@ export default function Dashboard() {
 
   return (
     <section className="my-dashboard">
-    <div className="event-list-wrapper">
-    <div>
-      <div className="event-card-wrapper">
-        {resultData.map((event, i) => {
-          console.log(event);
-          return (
-            <EventCard key={i} className="event-card">
-              {event}
-            </EventCard>
-          );
-        })}
+      <div className="event-list-wrapper">
+        <div>
+          <div className="event-card-wrapper">
+            {resultData.map((event, i) => {
+              console.log(event);
+              return (
+                <EventCard key={i} className="event-card">
+                  {event}
+                </EventCard>
+              );
+            })}
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  </section>
-  
+    </section>
+
     // <section className="my-dashboard">
     //   <div className="my-dashboard-header"></div>
     //   <div className="dates-header-and-saved-events-container">
@@ -67,13 +67,6 @@ export default function Dashboard() {
     //         <div className="saved-event-name-of-event">Reggae Ignition</div>
     //         <div className="saved-event-name-of-band">Bob Marley</div>
     //       </div>
-          
-    
-    //       <div className="saved-event-eventcard">
-    //         <div className="event-thumbnail"></div>
-    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div>
-    //       </div>
 
     //       <div className="saved-event-eventcard">
     //         <div className="event-thumbnail"></div>
@@ -84,7 +77,13 @@ export default function Dashboard() {
     //       <div className="saved-event-eventcard">
     //         <div className="event-thumbnail"></div>
     //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div> 
+    //         <div className="saved-event-name-of-band">Bob Marley</div>
+    //       </div>
+
+    //       <div className="saved-event-eventcard">
+    //         <div className="event-thumbnail"></div>
+    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
+    //         <div className="saved-event-name-of-band">Bob Marley</div>
     //       </div>
     //     </div>
     //   </div>
