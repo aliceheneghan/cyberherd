@@ -7,6 +7,7 @@ import axios from 'axios';
 import './_date-results.scss';
 
 // components
+import GenreFilter from '../../filter/components/GenreFilter.jsx';
 import EventCard from './EventCard.jsx';
 
 export default function EventList() {
@@ -15,6 +16,8 @@ export default function EventList() {
 
   // state
   const [resultData, setResultData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [activeFilterGenre, setActiveFilterGenre] = useState([]);
 
   useEffect(() => {
     const getEvent = async (e) => {
@@ -22,15 +25,22 @@ export default function EventList() {
         `http://localhost:4000/api/events/date/${date}`
       );
       setResultData(data.event);
+      setFilteredData(data.event);
     };
     getEvent();
   }, [date]);
 
   return (
     <div className="event-list-wrapper">
+      <GenreFilter
+        resultData={resultData}
+        setFilteredData={setFilteredData}
+        activeFilterGenre={activeFilterGenre}
+        setActiveFilterGenre={setActiveFilterGenre}
+      />
       <div>
         <div className="event-card-wrapper">
-          {resultData.map((event, i) => {
+          {filteredData.map((event, i) => {
             console.log(event);
             return (
               <EventCard key={i} className="event-card">
