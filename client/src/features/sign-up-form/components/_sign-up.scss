@@ -24,26 +24,38 @@
     outline: none;
     background: $background-transparent;
     border: 1.8px $border-gray solid;
-  } 
+  }
   #user-name::placeholder,
   #email-sign::placeholder,
   #password-sign::placeholder,
-  #dob::placeholder {
+  #dob::placeholder, 
+  input#user-name,
+  input#email-sign,
+  input#password-sign,
+  input#dob {
     font-size: 1rem;
     font-family: 'Sarpanch';
     text-shadow: $text-shadow-color;
     color: $text-color;
   }
-    #dob {
-      width: 22rem;
-      height: 2.8rem;
+  #dob {
+    width: 22rem;
+    height: 2.8rem;
+  }
+  #user-name:focus,
+  #email-sign:focus,
+  #password-sign:focus,
+  #dob:focus {
+    color: $yellow-color;
+    border: 0.5px $yellow-color solid;
+    font-family: 'Sarpanch';
   }
 }
 .file-upload label {
   @include flex-jc-ai-dir(column, center, column);
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 1.5rem;
-  margin-right: 7.5rem;
+  margin-right: 10rem;
   margin-bottom: 1rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
@@ -73,15 +85,15 @@ input#image-upload::file-selector-button {
 }
 
 @media screen and (min-width: 768px) {
-  .connect-page { 
-  @include flex-jc-ai-dir(column, center, column);
-  height: 70rem;
- }
+  .connect-page {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 70rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .connect-page { 
-   @include flex-jc-ai-dir(column, center, column);
-   height: 70rem;
+  .connect-page {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 70rem;
   }
 }

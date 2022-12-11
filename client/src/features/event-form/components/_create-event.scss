@@ -1,13 +1,24 @@
 @import '../../../scss/abstract/mixins';
 @import '../../../scss/abstract/variables';
 
-
 .create-event {
-  width: 50rem;
-  height: 50rem;
+  max-width: 100rem;
+  height: fit-content;
 }
 .myForm {
-  @include flex-jc-ai-dir(center, center, column);
+  display: grid;
+  grid-column-gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0;
+  text-align: center;
+  padding: 0 100px;
+}
+h3 {
+  font-size: 1.5rem;
+  text-shadow: $text-shadow-color;
+  color: $text-color;
+  text-align: center;
+  margin-top: -20px;
 }
 
 form #band-name,
@@ -30,28 +41,25 @@ form #band-name,
   border: 1.8px $border-gray solid;
   color: $text-color;
 }
-form #description {
-  width: 48.5rem;
-  height: 5rem;
-  margin-top: 10px;
-  margin-left: 6px;
-  padding-top: 10px;
-  padding-left: 12px;
-  outline: none;
-  background: $background-transparent;
-  border: 1.8px $border-gray solid;
-  color: $text-color;
-  grid-area: description;
-}
 #band-name::placeholder,
 #event-name::placeholder,
 #door-price::placeholder,
 #pre-sale-price::placeholder,
 #ticket-url::placeholder,
-#genre::placeholder,
 #description::placeholder,
 #event-url::placeholder,
-#band-url::placeholder {
+#band-url::placeholder,
+input#band-name,
+input#event-name,
+input#door-price,
+input#pre-sale-price,
+input#ticket-url,
+input#event-url,
+input#band-url,
+input#date,
+input#doors-open,
+input#start-time,
+textarea#description {
   font-size: 1rem;
   font-family: 'Sarpanch';
   text-shadow: $text-shadow-color;
@@ -63,6 +71,7 @@ form #description {
   width: 24rem;
   height: 2.8rem;
 }
+#genre,
 #location {
   width: 24rem;
   height: 2.8rem;
@@ -76,25 +85,49 @@ form #description {
   color: $text-color;
   background: $background-transparent;
 }
-#location {
-  width: 24rem;
-  height: 2.8rem;
-  margin: 10px 4px;
-  padding: 8px 10px;
-  outline: none;
-  border: 1.8px $border-gray solid;
-  font-size: 1rem;
+#band-name:focus,
+#event-name:focus,
+#pre-sale-price:focus,
+#door-price:focus,
+#ticket-url:focus,
+#event-url:focus,
+#band-url:focus,
+#genre:focus,
+#date:focus,
+#location:focus,
+#start-time:focus,
+#doors-open:focus,
+#description:focus {
+  color: $yellow-color;
+  border: 0.5px $yellow-color solid;
   font-family: 'Sarpanch';
+}
+form #description {
+  width: 24rem;
+  height: 8rem;
+  margin-top: 10px;
+  margin-left: 4px;
+  padding-top: 10px;
+  padding-left: 12px;
+  outline: none;
+  background: $background-transparent;
+  border: 1.8px $border-gray solid;
+  color: $text-color;
+}
+.label-start,
+.label-doors {
+  font-size: 1rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
-  background: $background-transparent;
+  margin-right: 16.5rem;
+  display: block;
 }
 .upload-file label {
-  @include flex-jc-ai-dir(center, center, column);
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-right: 7rem;
+  @include flex-jc-ai-dir(column, center, column);
+  font-size: 1rem;
+  margin-right: 12rem;
   margin-bottom: 1rem;
+  margin-top: 1.2rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
 }
@@ -104,6 +137,7 @@ input#upload-image {
   font-size: 1rem;
   width: 22rem;
   height: 2.8rem;
+  margin-right: 2rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
 }
@@ -121,30 +155,33 @@ input#upload-image {
     border: 1px $yellow-color solid;
   }
 }
+.button-create-event {
+  width: 33rem;
+  padding-left: 40rem;
+}
 
-// @media screen and (max-width: 992px) {
-//   .myForm { 
-//   @include flex-jc-ai-dir(column, center, column);
-//   height: 70rem;
-//  }
-// }
+@media screen and (max-width: 992px) {
+  .container {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 20rem;
+  }
+  .myForm {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 90rem;
+  }
+  .button-create-event {
+    padding-right: 65rem;
+  }
+}
 
 // @media screen and (min-width: 768px) {
-//   .myForm { 
+//   .myForm {
 //   @include flex-jc-ai-dir(column, center, column);
 //   height: 90rem;
 //  }
 // }
-
-// @media screen and (min-width: 768px) {
-//   .myForm { 
-//   @include flex-jc-ai-dir(column, center, column);
-//   height: 70rem;
-//  }
-// }
-
 // @media screen and (min-width: 1024px) {
-//   .myForm { 
+//   .myForm {
 //   @include flex-jc-ai-dir(column, center, column);
 //  }
 // }

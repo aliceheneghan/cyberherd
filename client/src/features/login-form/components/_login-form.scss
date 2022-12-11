@@ -22,11 +22,19 @@
     border: 1.8px $border-gray solid;
   }
   #email-log::placeholder,
-  #password-log::placeholder {
+  #password-log::placeholder,
+  input#email-log,
+  input#password-log {
     font-size: 1rem;
     font-family: 'Sarpanch';
     text-shadow: $text-shadow-color;
     color: $text-color;
+  }
+  #email-log:focus,
+  #password-log:focus {
+    color: $yellow-color;
+    border: 0.5px $yellow-color solid;
+    font-family: 'Sarpanch';
   }
   .not-registered,
   .forgot-password {
@@ -43,15 +51,15 @@
 }
 
 @media screen and (min-width: 768px) {
-  .login-page { 
-  @include flex-jc-ai-dir(column, center, column);
-  height: 70rem;
- }
+  .login-page {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 70rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .login-page { 
-   @include flex-jc-ai-dir(column, center, column);
-   height: 70rem;
+  .login-page {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 70rem;
   }
 }

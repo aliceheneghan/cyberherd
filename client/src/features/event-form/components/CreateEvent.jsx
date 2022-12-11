@@ -29,6 +29,7 @@ function CreateEvent() {
 
   // variable arrays for mapping
   const locations = [
+    { name: 'location' },
     { name: 'Astra', _id: '639212e2dbe3d61449203b1a' },
     { name: 'Hole44', _id: '639213e77a0af7516f1781a4' },
     { name: 'KØPI', _id: '639214b0e5d487b63ccd0090' },
@@ -39,6 +40,7 @@ function CreateEvent() {
   ];
 
   const genres = [
+    'genre',
     'Acoustic',
     'Afrobeat',
     'Alternative',
@@ -86,9 +88,13 @@ function CreateEvent() {
       <DefaultNavbar noSearchBar>
         <Navbar />
       </DefaultNavbar>
+
       <div className="create-event">
+      <h3>Create your own event</h3>
         <form className="myForm" onSubmit={handleSubmit}>
-          <div className="container-one">
+      
+          <div className="container">
+            
             <label htmlFor="band-name">
               <input
                 id="band-name"
@@ -143,7 +149,11 @@ function CreateEvent() {
                 name="ticketURL"
               />
             </label>
+          </div>
 
+          {/* -------------------------------------------- */}
+
+          <div className="container">
             <label htmlFor="event-url">
               <input
                 id="event-url"
@@ -179,9 +189,7 @@ function CreateEvent() {
                 ))}
               </select>
             </label>
-          </div>
 
-          <div className="container-two">
             <label htmlFor="date">
               <input
                 id="date"
@@ -206,28 +214,34 @@ function CreateEvent() {
                 ))}
               </select>
             </label>
+          </div>
 
-            <label htmlFor="start-time">
-              <input
-                id="start-time"
-                onChange={(e) => setStartTime(e.target.value)}
-                type="time"
-                value={startTime}
-                placeholder="start time"
-                name="startTime"
-              />
-            </label>
+          {/* -------------------------------------------- */}
 
-            <label htmlFor="doors-open">
-              <input
-                id="doors-open"
-                onChange={(e) => setDoorsOpen(e.target.value)}
-                type="time"
-                value={doorsOpen}
-                placeholder="doors open"
-                name="doorsOpen"
-              />
+          <div className="container">
+            <label className="label-start" htmlFor="start-time">
+              start time
             </label>
+            <input
+              id="start-time"
+              onChange={(e) => setStartTime(e.target.value)}
+              type="time"
+              value={startTime}
+              placeholder="start time"
+              name="startTime"
+            />
+
+            <label className="label-doors" htmlFor="doors-open">
+              doors open
+            </label>
+            <input
+              id="doors-open"
+              onChange={(e) => setDoorsOpen(e.target.value)}
+              type="time"
+              value={doorsOpen}
+              placeholder="doors open"
+              name="doorsOpen"
+            />
 
             <label htmlFor="description">
               <textarea
@@ -240,21 +254,22 @@ function CreateEvent() {
                 name="description"
               />
             </label>
-          </div>
+            </div>
 
-          <div className="upload-file">
-            <label htmlFor="image"> Select image for upload </label>
-            <input
-              id="upload-image"
-              type="file"
-              accept=".jpg,.png,.jpeg"
-              name="image"
-            />
-          </div>
-
-          <CreateEventBtn className="button-create" type="submit">
-            Create Event
-          </CreateEventBtn>
+            <div className="upload-file">
+              <label htmlFor="image"> Select image for upload </label>
+              <input
+                id="upload-image"
+                type="file"
+                accept=".jpg,.png,.jpeg"
+                name="image"
+              />
+            </div>
+            <div className='button-create-event'> 
+            <CreateEventBtn className="button-create" type="submit">
+              Create Event
+            </CreateEventBtn>
+            </div>
         </form>
       </div>
     </>

@@ -20,19 +20,20 @@ export const DefaultButton = styled.button.attrs((props) => {
 
 export const SignUpBtn = styled(DefaultButton)`
   margin-top: -1rem;
-  width: 6rem;
+  width: 8rem;
   height: 2.5rem;
-`
+  margin-left: 14rem;
+`;
 
 export const LoginBtn = styled(DefaultButton)`
   margin-top: 2rem;
-  width: 5rem;
+  width: 8rem;
   height: 2.5rem;
-`
+`;
 
 export const CreateEventBtn = styled(DefaultButton)`
-width: 8rem;
-height: 2.5rem;
-margin-top: 1rem;
-margin-left: 2rem;
-`
+  width: 8rem;
+  height: 2.5rem;
+  margin-top: 2.8rem;
+  margin-left: 16.3rem;
+`;
