@@ -1,6 +1,9 @@
 // libraries
 import React, { useEffect, useState } from 'react';
 
+// style
+import './_filter-buttons.scss';
+
 // filter options
 const genres = [
   'Acoustic',
@@ -59,9 +62,14 @@ export default function GenreFilter({
       <div className="checkbox-genre">
         {genres.map((genre) => (
           <label>
-            <button onClick={() => filterGenre(genre)}>{genre}</button>
-            <input type="checkbox" onChange={() => filterGenre(genre)}></input>
-            {genre}
+            <button
+              className="filter-button"
+              onClick={() => filterGenre(genre)} 
+            >
+              {genre}
+            </button>
+            {/* <input type="checkbox" onChange={() => filterGenre(genre)}></input>
+            {genre} */}
           </label>
         ))}
       </div>

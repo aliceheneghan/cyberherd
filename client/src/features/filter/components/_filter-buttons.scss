@@ -1,0 +1,12 @@
+// mixins & variables
+@import '../../../scss/abstract/_mixins.scss';
+@import '../../../scss/abstract/variables';
+
+.filter-button {
+    background: none;
+    border: none;
+    font-family: 'Sarpanch';
+    font-size: 1.2rem;
+    color: $text-color;
+    text-shadow: $text-shadow-color;
+}
