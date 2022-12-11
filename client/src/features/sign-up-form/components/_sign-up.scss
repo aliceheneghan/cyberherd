@@ -38,6 +38,14 @@
       width: 22rem;
       height: 2.8rem;
   }
+  #user-name:focus,
+  #email-sign:focus,
+  #password-sign:focus,
+  #dob:focus {
+    color: $yellow-color;
+    border: 0.5px $yellow-color solid;
+    font-family: 'Sarpanch';
+  }
 }
 .file-upload label {
   @include flex-jc-ai-dir(column, center, column);

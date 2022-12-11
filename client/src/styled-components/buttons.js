@@ -23,17 +23,17 @@ export const SignUpBtn = styled(DefaultButton)`
   width: 8rem;
   height: 2.5rem;
   margin-left: 14rem;
-`
+`;
 
 export const LoginBtn = styled(DefaultButton)`
   margin-top: 2rem;
   width: 8rem;
   height: 2.5rem;
-`
+`;
 
 export const CreateEventBtn = styled(DefaultButton)`
-width: 8rem;
-height: 2.5rem;
-margin-top: 1.8rem;
-margin-left: 20rem;
-`
+  width: 8rem;
+  height: 2.5rem;
+  margin-top: 2rem;
+  margin-left: 16.3rem;
+`;

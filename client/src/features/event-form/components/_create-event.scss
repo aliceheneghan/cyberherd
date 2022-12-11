@@ -2,28 +2,23 @@
 @import '../../../scss/abstract/variables';
 
 .create-event {
-  width: 100rem;
+  max-width: 100rem;
   height: fit-content;
-  // border: 2px red solid;
 }
-
-// .container {
-// border: 2px purple solid;
-// }
-
 .myForm {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-column-gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0;
   text-align: center;
-  // border: 2px green solid;
+  padding: 0 100px;
 }
-
 h3 {
   font-size: 1.5rem;
   text-shadow: $text-shadow-color;
   color: $text-color;
   text-align: center;
+  margin-top: -20px;
 }
 
 form #band-name,
@@ -79,23 +74,35 @@ form #band-name,
   color: $text-color;
   background: $background-transparent;
 }
-// ---------------------------------------------
 
+#band-name:focus,
+#event-name:focus,
+#pre-sale-price:focus,
+#door-price:focus,
+#ticket-url:focus,
+#event-url:focus,
+#band-url:focus,
+#genre:focus,
+#date:focus,
+#location:focus,
+#start-time:focus,
+#doors-open:focus,
+#description:focus {
+  color: $yellow-color;
+  border: 0.5px $yellow-color solid;
+  font-family: 'Sarpanch';
+}
 form #description {
-  width: 24.2rem;
+  width: 24rem;
   height: 8rem;
   margin-top: 10px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-top: 10px;
   padding-left: 12px;
   outline: none;
   background: $background-transparent;
   border: 1.8px $border-gray solid;
   color: $text-color;
-}
-#description:focus {
-  color: $yellow-color;
-  border: 0.5px $yellow-color solid;
 }
 .label-start,
 .label-doors {
@@ -104,10 +111,7 @@ form #description {
   color: $text-color;
   margin-right: 16.5rem;
   display: block;
-  // border: 2px plum solid;
 }
-
-// ----------------------------------
 
 .upload-file label {
   @include flex-jc-ai-dir(column, center, column);
@@ -157,7 +161,7 @@ input#upload-image {
     height: 90rem;
   }
   .button-create-event {
-    padding-right: 72rem;
+    padding-right: 65rem;
   }
 }
 

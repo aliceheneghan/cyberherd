@@ -28,6 +28,12 @@
     text-shadow: $text-shadow-color;
     color: $text-color;
   }
+  #email-log:focus,
+  #password-log:focus {
+    color: $yellow-color;
+    border: 0.5px $yellow-color solid;
+    font-family: 'Sarpanch';
+  }
   .not-registered,
   .forgot-password {
     @include flex-jc-ai-dir(column, center, column);
