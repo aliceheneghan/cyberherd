@@ -8,5 +8,10 @@
     font-family: 'Sarpanch';
     font-size: 1.2rem;
     color: $text-color;
-    text-shadow: $text-shadow-color;
+    text-shadow: $text-shadow-color;   
+}
+
+.filter-button:active {
+    text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
+    0 0 0.6rem yellow;
 }
