@@ -1,0 +1,22 @@
+// mixins & variables
+@import '../../../scss/abstract/_mixins.scss';
+@import '../../../scss/abstract/variables';
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+  height: auto;
+  background: $background-transparent;
+  color: $text-color;
+  text-shadow: $text-shadow-color;
+  .filter-category {
+    display: flex;
+    align-items: center;
+    .arrow-down {
+      color: white;
+      filter: drop-shadow(6px 3px 5px rgba(255, 255, 0, 8));
+      cursor: pointer;
+    }
+  }
+}

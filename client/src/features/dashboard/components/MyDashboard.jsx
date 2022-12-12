@@ -1,7 +1,7 @@
 // libraries
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
 // context
 import { Context } from '../../../context/Context.jsx';
@@ -25,17 +25,35 @@ export default function Dashboard() {
     console.log('clg in MYDashboard useEffect', id);
     const getUser = async (e) => {
       const { data } = await axios.get(`/api/user/${id}`);
+      const { data: eventsData } = await axios.get(
+        `/api/events/byuserid/${userID}`
+      );
       console.log('this is userID:', userID);
       console.log(`dashboard testing to see:`);
       console.log(`dashboard data:`, data);
 
       console.log('users_ID', data?.user?._id);
+      console.log('eventsData', eventsData);
 
       setUserData(data);
+      setResultData(eventsData.events);
+      // return eventsData
     };
     getUser();
   }, [id]);
 
+  // navigate
+  const navigate = useNavigate();
+
+  // handlers
+  const navigateToEvent = () => navigate(`/eventpage/${id}`);
+
+  //  title length/size logic
+  const title = resultData.map((event) => event.name.bandName);
+  let titleFontSize = 'title-big';
+  if (title.length > 11) {
+    titleFontSize = 'title-small';
+  }
   console.log('Dashboard + userID', userID);
   console.log('userData: ', userData);
 
@@ -56,37 +74,5 @@ export default function Dashboard() {
         </div>
       </div>
     </section>
-
-    // <section className="my-dashboard">
-    //   <div className="my-dashboard-header"></div>
-    //   <div className="dates-header-and-saved-events-container">
-    //     <div className="my-dates-header">My Dates</div>
-    //     <div className="saved-events-container">
-    //       <div className="saved-event-eventcard">
-    //         <div className="saved-event-thumbnail"></div>
-    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div>
-    //       </div>
-
-    //       <div className="saved-event-eventcard">
-    //         <div className="event-thumbnail"></div>
-    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div>
-    //       </div>
-
-    //       <div className="saved-event-eventcard">
-    //         <div className="event-thumbnail"></div>
-    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div>
-    //       </div>
-
-    //       <div className="saved-event-eventcard">
-    //         <div className="event-thumbnail"></div>
-    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
   );
 }
