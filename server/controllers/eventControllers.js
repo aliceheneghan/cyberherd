@@ -2,7 +2,7 @@
 import Event from '../models/eventModel.js';
 
 const findAllEvents = async (req, res) => {
-  const events = await Event.find();
+  const events = await Event.find().populate('location');
   return res.status(200).json(events);
 };
 
@@ -19,9 +19,12 @@ try {
 }
 const findEventById = async (req, res) => {
   try {
+
     const event = await Event.findById(req.params.id);
 
 
+
+    const event = await Event.findById(req.params.id).populate('location');
 
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
@@ -34,7 +37,7 @@ const findEventById = async (req, res) => {
 
 const findEventByDate = async (req, res) => {
   try {
-    const event = await Event.find({ date: req.params.date });
+    const event = await Event.find({ date: req.params.date }).populate('location');
     if (!event) {
       return res.status(404).json({ message: 'No events found' });
     }

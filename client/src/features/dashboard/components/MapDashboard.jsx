@@ -19,14 +19,13 @@ export default function MapDashboard() {
   const [position, setPosition] = useState(center);
 
   const markerRef = useRef(null);
-
-  const position2 = [52.538241, 13.428635];
-
-  const position3 = [52.497249, 13.411503];
-
-  const position4 = [52.510459, 13.354771];
-
-  const position5 = [52.510459, 13.448217];
+  const astra = [52.538241, 13.428635];
+  const hole44 = [52.46436, 13.43328];
+  const kopi = [52.50798, 13.4263];
+  const schokoladen = [52.529812, 13.39712];
+  const supamolly = [52.51065, 13.47151];
+  const urbanSpree = [52.508141, 13.45182];
+  const eightMM = [52.53121, 13.41156];
 
   const getIcon = new Leaflet.Icon({
     iconUrl: musicIcon,
@@ -47,7 +46,7 @@ export default function MapDashboard() {
   }, []);
 
   // handle icon
-  const eventHandlers = useMemo( 
+  const eventHandlers = useMemo(
     () => ({
       dragend() {
         const marker = markerRef.current;
@@ -61,15 +60,20 @@ export default function MapDashboard() {
 
   return (
     <section className="map-dashboard">
-      <h1>Map</h1>
+      <h1>Map of venues</h1>
       <div id="map">
         <MapContainer
-          style={{ height: 500, width: 1000, marginLeft: '20%', marginBottom: '7%', }}
+          style={{
+            height: 500,
+            width: 1000,
+            marginLeft: '20%',
+            marginBottom: '7%',
+          }}
           center={position}
           zoom={10}
           scrollWheelZoom={true}
         >
-          <TileLayer 
+          <TileLayer
             // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"
           />
@@ -81,58 +85,95 @@ export default function MapDashboard() {
             ref={markerRef}
           >
             <Popup>
-            Mark your favorite venues <br />
+              Berlin <br />
             </Popup>
           </Marker>
 
           <Marker
             icon={getIcon}
-            position={position2}
+            position={astra}
             draggable={true}
             eventHandlers={eventHandlers}
             ref={markerRef}
           >
             <Popup>
-            Mark your favorite venues<br />
+              Astra Kulturhaus Berlin
+              <br />
             </Popup>
           </Marker>
 
           <Marker
             icon={getIcon}
-            position={position3}
+            position={hole44}
             draggable={true}
             eventHandlers={eventHandlers}
             ref={markerRef}
           >
             <Popup>
-            Mark your favorite venues <br />
+              Hole⁴⁴
+              <br />
             </Popup>
           </Marker>
 
           <Marker
             icon={getIcon}
-            position={position4}
+            position={kopi}
             draggable={true}
             eventHandlers={eventHandlers}
             ref={markerRef}
           >
             <Popup>
-            Mark your favorite venues <br />
+              Köpi <br />
             </Popup>
           </Marker>
 
           <Marker
             icon={getIcon}
-            position={position5}
+            position={schokoladen}
             draggable={true}
             eventHandlers={eventHandlers}
             ref={markerRef}
           >
             <Popup>
-            Mark your favorite venues <br />
+              Schokoladen <br />
             </Popup>
           </Marker>
 
+          <Marker
+            icon={getIcon}
+            position={supamolly}
+            draggable={true}
+            eventHandlers={eventHandlers}
+            ref={markerRef}
+          >
+            <Popup>
+              Supamolly <br />
+            </Popup>
+          </Marker>
+
+          <Marker
+            icon={getIcon}
+            position={urbanSpree}
+            draggable={true}
+            eventHandlers={eventHandlers}
+            ref={markerRef}
+          >
+            <Popup>
+              Urban Spree <br />
+            </Popup>
+          </Marker>
+
+          <Marker
+            icon={getIcon}
+            position={eightMM}
+            draggable={true}
+            eventHandlers={eventHandlers}
+            ref={markerRef}
+          >
+            <Popup>
+              8MM <br />
+            </Popup>
+          </Marker>
         </MapContainer>
       </div>
     </section>

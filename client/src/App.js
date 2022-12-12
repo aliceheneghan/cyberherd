@@ -3,8 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 
 // features
 import Banner from './features/banner/index.jsx';
-import Calendar from './features/calendar/index.jsx';
-import Navbar from './features/navbar/index.jsx';
 import CreateEvent from './features/event-form/components/CreateEvent.jsx';
 import CreateVenue from './features/venue-form/components/CreateVenue.jsx';
 
