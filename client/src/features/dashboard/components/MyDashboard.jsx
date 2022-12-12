@@ -41,53 +41,53 @@ export default function Dashboard() {
   console.log('userData: ', userData);
 
   return (
-    <section className="my-dashboard">
-      <div className="event-list-wrapper">
-        <div>
-          <div className="event-card-wrapper">
-            {resultData.map((event, i) => {
-              console.log(event);
-              return (
-                <EventCard key={i} className="event-card">
-                  {event}
-                </EventCard>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </section>
-
     // <section className="my-dashboard">
-    //   <div className="my-dashboard-header"></div>
-    //   <div className="dates-header-and-saved-events-container">
-    //     <div className="my-dates-header">My Dates</div>
-    //     <div className="saved-events-container">
-    //       <div className="saved-event-eventcard">
-    //         <div className="saved-event-thumbnail"></div>
-    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div>
-    //       </div>
-
-    //       <div className="saved-event-eventcard">
-    //         <div className="event-thumbnail"></div>
-    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div>
-    //       </div>
-
-    //       <div className="saved-event-eventcard">
-    //         <div className="event-thumbnail"></div>
-    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div>
-    //       </div>
-
-    //       <div className="saved-event-eventcard">
-    //         <div className="event-thumbnail"></div>
-    //         <div className="saved-event-name-of-event">Reggae Ignition</div>
-    //         <div className="saved-event-name-of-band">Bob Marley</div>
+    //   <div className="event-list-wrapper">
+    //     <div>
+    //       <div className="event-card-wrapper">
+    //         {resultData.map((event, i) => {
+    //           console.log(event);
+    //           return (
+    //             <EventCard key={i} className="event-card">
+    //               {event}
+    //             </EventCard>
+    //           );
+    //         })}
     //       </div>
     //     </div>
     //   </div>
     // </section>
+
+    <section className="my-dashboard">
+      <div className="my-dashboard-header"></div>
+      <div className="dates-header-and-saved-events-container">
+        <div className="my-dates-header">My Dates</div>
+        <div className="saved-events-container">
+          <div className="saved-event-eventcard">
+            <div className="saved-event-thumbnail"></div>
+            <div className="saved-event-name-of-event">Reggae Ignition</div>
+            <div className="saved-event-name-of-band">Bob Marley</div>
+          </div>
+
+          <div className="saved-event-eventcard">
+            <div className="event-thumbnail"></div>
+            <div className="saved-event-name-of-event">Reggae Ignition</div>
+            <div className="saved-event-name-of-band">Bob Marley</div>
+          </div>
+
+          <div className="saved-event-eventcard">
+            <div className="event-thumbnail"></div>
+            <div className="saved-event-name-of-event">Reggae Ignition</div>
+            <div className="saved-event-name-of-band">Bob Marley</div>
+          </div>
+
+          <div className="saved-event-eventcard">
+            <div className="event-thumbnail"></div>
+            <div className="saved-event-name-of-event">Reggae Ignition</div>
+            <div className="saved-event-name-of-band">Bob Marley</div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
