@@ -20,17 +20,18 @@ export default function Dashboard() {
   const [resultData, setResultData] = useState([]);
 
   const { id } = useParams();
-
+  
   useEffect(() => {
     console.log('clg in MYDashboard useEffect', id);
     const getUser = async (e) => {
       const { data } = await axios.get(`/api/user/${id}`);
+      const { data: eventsData } = await axios.get(`/api/events/byuserid/${userID}`);
       console.log('this is userID:', userID);
       console.log(`dashboard testing to see:`);
       console.log(`dashboard data:`, data);
 
       console.log('users_ID', data?.user?._id);
-
+      console.log('eventsData', eventsData);
       setUserData(data);
     };
     getUser();
