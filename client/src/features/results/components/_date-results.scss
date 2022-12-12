@@ -4,15 +4,17 @@
 
 .event-list-wrapper {
   @include flex-jc-ai-dir(center, center, column);
+  // border: 2px solid violet;
   .event-card-wrapper {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1.5em;
     width: 20em;
-    height: 20em;
+    height: 25em;
     overflow-y: scroll;
     scroll-behavior: smooth;
     padding: 1em;
+    // border: 2px solid red;
 
     .event-card {
       height: 14em;
@@ -62,7 +64,7 @@
     @media screen and (min-width: 768px) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       width: 33em;
-      height: 40em;
+      // height: 40em;
     }
 
     @media screen and (min-width: 1366px) {
