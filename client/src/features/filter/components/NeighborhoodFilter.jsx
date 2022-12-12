@@ -57,21 +57,16 @@ export default function NeighborhoodFilter({
   };
 
   return (
-    <div className="checkbox">
+    <div className="checkboxes">
       <div className="checkbox-genre">
         {neighborhoods.map((neighborhood) => (
           <label>
-          <button
-              className="filter-button"
-              onClick={() => filterNeighborhood(neighborhood)}
-            >
-              {neighborhood}
-            </button>
-            {/* <input
+            <input
+              className="checkbox"
               type="checkbox"
               onChange={() => filterNeighborhood(neighborhood)}
             ></input>
-            {neighborhood} */}
+            <div>{neighborhood}</div>
           </label>
         ))}
       </div>

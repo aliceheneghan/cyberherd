@@ -74,14 +74,3 @@ export default function GenreFilter({
     </div>
   );
 }
-
-// button
-
-{
-  /* <button
-              className="filter-button"
-              onClick={() => filterGenre(genre)} 
-            >
-              {genre}
-            </button> */
-}

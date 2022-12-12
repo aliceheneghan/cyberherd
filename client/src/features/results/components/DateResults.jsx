@@ -43,12 +43,12 @@ export default function EventList() {
         activeFilterGenre={activeFilterGenre}
         setActiveFilterGenre={setActiveFilterGenre}
       />
-      <NeighborhoodFilter
+      {/* <NeighborhoodFilter
         resultData={resultData}
         setFilteredData={setFilteredData}
         activeFilterNeighborhood={activeFilterNeighborhood}
         setActiveFilterNeighborhood={setActiveFilterNeighborhood}
-      />
+      /> */}
       <div>
         <div className="event-card-wrapper">
           {filteredData.map((event, i) => {
