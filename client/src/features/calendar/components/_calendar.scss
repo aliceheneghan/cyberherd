@@ -5,9 +5,10 @@
 .calendar-block {
   @include flex-jc-ai-dir(center, center, column);
   box-shadow: 0 0 0.1em black, 0 0 0.9em yellow, 0.01em 0.01em 1.2em yellow;
-  width: 18em;
-  height: fit-content;
-  font-size: 1.55rem;
+
+  padding-bottom: 1em;
+  font-size: 2.5rem;
+
   color: white;
   text-shadow: 0 0 0.3rem yellowgreen, 0 0 0.35rem orange, 0 0 0.6em yellow;
   background: url('../../../assets/images/IMG_01.jpg') no-repeat center
@@ -36,7 +37,9 @@
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     grid-template-rows: auto;
-    width: inherit;
+
+    // gap: 1em;
+
     align-content: center;
     text-align: center;
   }
@@ -55,10 +58,12 @@
 
     .date-cell {
       @include flex-jc-ai-dir(center, center, row);
-      height: 2.2em;
-      // transition: ease-in-out 0.125s;
+
+      height: 3em;
+      transition: ease-in-out 0.125s;
+
       &:hover {
-        transition: ease-in-out 0.125s;
+        // transition: ease-in-out 0.125s;
         background-color: rgba(0, 0, 0, 0.315);
         // box-shadow: 0 0 0.1em black, 0 0 0.6em yellow;
       }
@@ -136,18 +141,45 @@
     width: inherit;
     height: auto;
     padding-top: 0.2em;
+    // border: 2px red solid;
 
-    .date-cell {
-      @include flex-jc-ai-dir(center, center, row);
 
-      &:hover {
-        font-size: 2rem;
+    // &:hover {
+    //   font-size: 2rem;
+    // }
+   
+      .date-cell {
+        // color: green;
+        // border: 2px rgb(0, 204, 255) solid;
+          border-radius: 50%;
+          height: 1.85em;
+          width: 1.85em;
+        transition: ease-in-out 0.195s;
+        cursor: pointer;
+        @include flex-jc-ai-dir(center, center, row);
+
+        &:hover {
+          position: relative;
+          border-radius: 50%;
+          // font-size: 2rem;
+          background-color: rgba(255, 255, 0, 0.21);
+          &:active {
+            background-color: $background-transparent
+          }
+        }
       }
-    }
+    
 
     .highlight-date-clicked {
       text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
         0 0 0.6rem yellow;
+
+
+        &:hover {
+          background-color: transparent;
+          transition: ease-in-out 0.195s;
+        border: 2px solid rgba(255, 255, 0, 0.21);
+        }
     }
   }
 

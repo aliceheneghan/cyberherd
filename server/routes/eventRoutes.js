@@ -8,7 +8,7 @@ const logOut = (e) => {
 
   setLoggedIn(false);
   navigate('/login');
-};// libraries
+}; // libraries
 import express from 'express';
 
 //middleware
@@ -23,6 +23,7 @@ import {
   createEvent,
   updateEvent,
   deleteEvent,
+  findEventByUserId,
 } from '../controllers/eventControllers.js';
 
 // validation & sanitization
@@ -32,13 +33,19 @@ const router = express.Router();
 
 router.get('/', findAllEvents);
 
+router.get('/byuserid/:userid', findEventByUserId);
+
 router.get('/:id', findEventById);
 
 router.get('/date/:date', findEventByDate);
 
 router.post('/create', uploadEventImage.single('image'), createEvent);
 
-router.patch('/update', passport.authenticate('jwt', { session: false }),updateEvent);
+router.patch(
+  '/update',
+  passport.authenticate('jwt', { session: false }),
+  updateEvent
+);
 
 router.delete('/delete/:id', deleteEvent);
 
