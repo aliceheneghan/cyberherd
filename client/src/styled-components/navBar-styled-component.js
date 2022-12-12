@@ -14,8 +14,10 @@ export const DefaultNavbar = styled.section`
     text-shadow: 0 0 0.2em black, 0 0 1em black;
     /* border: 3px purple solid; */
     .get-yourself {
-      width: 11em;
-      text-decoration: none;
+      width: 10em;
+    }
+    .create-an-event {
+      width: 10em;
     }
     .back-to {
       /* border: 3px violet dotted; */
@@ -25,7 +27,8 @@ export const DefaultNavbar = styled.section`
     .sign-up,
     .login,
     .back-to,
-    .log-out {
+    .log-out, 
+    .create-an-event {
       text-decoration: none;
       color: white;
       /* border: blue 2px solid; */

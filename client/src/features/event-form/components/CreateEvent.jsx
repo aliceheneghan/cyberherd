@@ -90,11 +90,8 @@ function CreateEvent() {
       </DefaultNavbar>
 
       <div className="create-event">
-      <h3>Create your own event</h3>
         <form className="myForm" onSubmit={handleSubmit}>
-      
           <div className="container">
-            
             <label htmlFor="band-name">
               <input
                 id="band-name"
@@ -254,22 +251,22 @@ function CreateEvent() {
                 name="description"
               />
             </label>
-            </div>
+          </div>
 
-            <div className="upload-file">
-              <label htmlFor="image"> Select image for upload </label>
-              <input
-                id="upload-image"
-                type="file"
-                accept=".jpg,.png,.jpeg"
-                name="image"
-              />
-            </div>
-            <div className='button-create-event'> 
+          <div className="upload-file">
+            <label htmlFor="image"> Select image for upload </label>
+            <input
+              id="upload-image"
+              type="file"
+              accept=".jpg,.png,.jpeg"
+              name="image"
+            />
+          </div>
+          <div className="button-create-event">
             <CreateEventBtn className="button-create" type="submit">
               Create Event
             </CreateEventBtn>
-            </div>
+          </div>
         </form>
       </div>
     </>
