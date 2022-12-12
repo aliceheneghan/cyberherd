@@ -1,0 +1,20 @@
+// mixins & variables
+@import '../../../scss/abstract/_mixins.scss';
+@import '../../../scss/abstract/variables';
+
+.checkbox-genre {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: $text-color;
+  text-shadow: $text-shadow-color;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + div {
+  text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
+    0 0 0.6rem yellow;
+}
