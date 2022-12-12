@@ -2,13 +2,27 @@
 import Event from '../models/eventModel.js';
 
 const findAllEvents = async (req, res) => {
-  const events = await Event.find().populate('location');
+  const events = await Event.find();
   return res.status(200).json(events);
 };
 
+const findEventByUserId = async (req, res) => {
+try {
+  const events = await Event.find({ userAttending: { "$in" : [req.params.userid]} });
+    return res.status(200).json({ events });
+  } catch (error) {
+  
+    return res.status(500).json({ message: error.message });
+
+}
+
+}
 const findEventById = async (req, res) => {
   try {
-    const event = await Event.findById(req.params.id).populate('location');
+    const event = await Event.findById(req.params.id);
+
+
+
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
     }
@@ -20,7 +34,7 @@ const findEventById = async (req, res) => {
 
 const findEventByDate = async (req, res) => {
   try {
-    const event = await Event.find({ date: req.params.date }).populate('location');
+    const event = await Event.find({ date: req.params.date });
     if (!event) {
       return res.status(404).json({ message: 'No events found' });
     }
@@ -122,23 +136,34 @@ const updateEvent = async (req, res) => {
     const updatedEvent = await Event.findByIdAndUpdate(
       req.body.id,
       {
-        name: { bandName, eventName },
-        date,
-        time: { startTime, doorsOpen },
-        location,
-        tickets: {
-          preSalePrice: Number(preSalePrice),
-          doorPrice: Number(doorPrice),
-          ticketURL,
-        },
-        genre,
-        information: { description, eventURL, bandURL },
-        $addToSet: { userAttending: req.user._id },
+              $addToSet: { userAttending: req.user._id },
 
         // $push: { userAttending: req.body.userAttending },
       },
       { new: true }
     );
+    // const updatedEvent = await Event.findByIdAndUpdate(
+    //   req.body.id,
+    //   {
+    //     name: { bandName, eventName },
+    //     date,
+    //     time: { startTime, doorsOpen },
+    //     location,
+    //     tickets: {
+    //       preSalePrice: Number(preSalePrice),
+    //       doorPrice: Number(doorPrice),
+    //       ticketURL,
+    //     },
+    //     genre,
+    //     information: { description, eventURL, bandURL },
+    //     $addToSet: { userAttending: req.user._id },
+
+    //     // $push: { userAttending: req.body.userAttending },
+    //   },
+    //   { new: true }
+    // );
+
+
 
     if (!updatedEvent) {
       return res.status(404).json({ eventToReturn: null });
@@ -173,6 +198,7 @@ const deleteEvent = async (req, res) => {
 
 export {
   findAllEvents,
+  findEventByUserId,
   findEventById,
   findEventByDate,
   createEvent,
