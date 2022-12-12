@@ -18,6 +18,7 @@ export const DefaultNavbar = styled.section`
     }
     .create-an-event {
       width: 10em;
+      margin-left: -10em;
     }
     .back-to {
       /* border: 3px violet dotted; */
@@ -36,12 +37,12 @@ export const DefaultNavbar = styled.section`
     ${({ noSearchBar }) => {
       return noSearchBar
         ? css`
-            .search-bar {
+            .search-bar, .create-an-event {
               display: none;
             }
           `
         : css`
-            .search-bar {
+            .search-bar, .create-an-event {
               display: flex;
             }
           `;
