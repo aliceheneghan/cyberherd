@@ -10,6 +10,7 @@ import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_navbar.scss';
+import CreateEvent from '../../event-form/components/CreateEvent';
 
 export default function Navbar() {
   const { loggedIn, setLoggedIn, userData, userID } = useContext(Context);
@@ -38,6 +39,9 @@ export default function Navbar() {
           <Link className="back-to" to="/">
             Back to Calendar
           </Link>
+          
+          <Link className="create-an-event" to="/create-event">Create an event</Link>
+          
           <Search />
           <div className="profile-photo-and-logout-container">
             <Link className="profile-img-link" to={`/dashboard/${userID}`}>
@@ -68,6 +72,9 @@ export default function Navbar() {
           <Link className="get-yourself" to="/">
             Get yourself a date
           </Link>
+ 
+          <Link className="create-an-event" to="/create-event">Create an event</Link>
+
           <Search />
           <div className="sign-up-login-container">
             <Link className="sign-up" to="/sign-up">
