@@ -118,7 +118,8 @@ export const DefaultNavbar = styled.section`
 
 export const CalendarNavBar = styled(DefaultNavbar)``;
 export const EventPageNavBar = styled(DefaultNavbar)``;
-export const ResultPageNavBar = styled(DefaultNavbar)`
+export const ResultPageNavBar = styled(DefaultNavbar)``;
+export const CreateEvent = styled(DefaultNavbar)`
   /* border: magenta 8px solid; */
   display: flex;
   justify-content: center;
