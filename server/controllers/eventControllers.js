@@ -7,21 +7,20 @@ const findAllEvents = async (req, res) => {
 };
 
 const findEventByUserId = async (req, res) => {
-try {
-  const events = await Event.find({ userAttending: { "$in" : [req.params.userid]} });
+  try {
+    const events = await Event.find({
+      userAttending: { $in: [req.params.userid] },
+    });
+    // const pastEvents = await Event.find({ userAttending: { "$in" : ["userid"]}, startDate:{$lt:new Date()} });
+
     return res.status(200).json({ events });
   } catch (error) {
-  
     return res.status(500).json({ message: error.message });
-
-}
-
-}
+  }
+};
 const findEventById = async (req, res) => {
   try {
     const event = await Event.findById(req.params.id);
-
-
 
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
@@ -136,7 +135,7 @@ const updateEvent = async (req, res) => {
     const updatedEvent = await Event.findByIdAndUpdate(
       req.body.id,
       {
-              $addToSet: { userAttending: req.user._id },
+        $addToSet: { userAttending: req.user._id },
 
         // $push: { userAttending: req.body.userAttending },
       },
@@ -162,8 +161,6 @@ const updateEvent = async (req, res) => {
     //   },
     //   { new: true }
     // );
-
-
 
     if (!updatedEvent) {
       return res.status(404).json({ eventToReturn: null });

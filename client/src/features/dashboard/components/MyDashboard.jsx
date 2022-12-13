@@ -1,7 +1,7 @@
 // libraries
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 // context
 import { Context } from '../../../context/Context.jsx';
@@ -14,7 +14,7 @@ import './_my-dashboard.scss';
 
 // http://localhost:4000/image
 export default function Dashboard() {
-  const { setUserID, userID, setUserData, userData } = useContext(Context);
+  const { userID, setUserData, userData } = useContext(Context);
 
   // state
   const [resultData, setResultData] = useState([]);
@@ -34,7 +34,7 @@ export default function Dashboard() {
 
       console.log('users_ID', data?.user?._id);
       console.log('eventsData', eventsData);
-
+      console.log('Where is my EventsData??');
       setUserData(data);
       setResultData(eventsData.events);
       // return eventsData
@@ -42,18 +42,6 @@ export default function Dashboard() {
     getUser();
   }, [id]);
 
-  // navigate
-  const navigate = useNavigate();
-
-  // handlers
-  const navigateToEvent = () => navigate(`/eventpage/${id}`);
-
-  //  title length/size logic
-  const title = resultData.map((event) => event.name.bandName);
-  let titleFontSize = 'title-big';
-  if (title.length > 11) {
-    titleFontSize = 'title-small';
-  }
   console.log('Dashboard + userID', userID);
   console.log('userData: ', userData);
 
