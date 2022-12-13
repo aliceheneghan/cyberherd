@@ -17,20 +17,20 @@ export default function EventCard({ className, children }) {
   }
 
   return (
-    <div onClick={navigateToEvent} className={className}>
-      <div className="event-wrapper">
-        <div className={`title ${titleFontSize}`}>{title}</div>
-        <div className="line-wrapper">
-          <div className="line-space-between">
-            <div>Location:</div> <div>{children.location}</div>
+      <div onClick={navigateToEvent} className="event-card">
+        <div className="event-wrapper">
+          <div className={`title ${titleFontSize}`}>{title}</div>
+          <div className="line-wrapper">
+            <div className="line-space-between">
+              <div>Location:</div> <div>{children.location.name}</div>
+            </div>
+            <div className="line-space-between">
+              <div>Genre:</div>
+              <div>{children.genre}</div>
+            </div>
           </div>
-          <div className="line-space-between">
-            <div>Genre:</div>
-            <div>{children.genre}</div>
-          </div>
+          <div className="more">...more</div>
         </div>
-        <div className="more">...more</div>
       </div>
-    </div>
   );
 }

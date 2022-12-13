@@ -16,7 +16,7 @@ export default function DashboardPage() {
       <div className="dashboard-container">
         <MyDashboard />
         <MapDashboard />
-        <PastEventsDashboard />
+        {/* <PastEventsDashboard /> */}
       </div>
     </>
   );

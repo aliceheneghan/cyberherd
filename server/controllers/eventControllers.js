@@ -6,9 +6,22 @@ const findAllEvents = async (req, res) => {
   return res.status(200).json(events);
 };
 
+const findEventByUserId = async (req, res) => {
+  try {
+    const events = await Event.find({
+      userAttending: { $in: [req.params.userid] },
+    });
+    // const pastEvents = await Event.find({ userAttending: { "$in" : ["userid"]}, startDate:{$lt:new Date()} });
+
+    return res.status(200).json({ events });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
 const findEventById = async (req, res) => {
   try {
     const event = await Event.findById(req.params.id);
+
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
     }
@@ -122,23 +135,32 @@ const updateEvent = async (req, res) => {
     const updatedEvent = await Event.findByIdAndUpdate(
       req.body.id,
       {
-        name: { bandName, eventName },
-        date,
-        time: { startTime, doorsOpen },
-        location,
-        tickets: {
-          preSalePrice: Number(preSalePrice),
-          doorPrice: Number(doorPrice),
-          ticketURL,
-        },
-        genre,
-        information: { description, eventURL, bandURL },
         $addToSet: { userAttending: req.user._id },
 
         // $push: { userAttending: req.body.userAttending },
       },
       { new: true }
     );
+    // const updatedEvent = await Event.findByIdAndUpdate(
+    //   req.body.id,
+    //   {
+    //     name: { bandName, eventName },
+    //     date,
+    //     time: { startTime, doorsOpen },
+    //     location,
+    //     tickets: {
+    //       preSalePrice: Number(preSalePrice),
+    //       doorPrice: Number(doorPrice),
+    //       ticketURL,
+    //     },
+    //     genre,
+    //     information: { description, eventURL, bandURL },
+    //     $addToSet: { userAttending: req.user._id },
+
+    //     // $push: { userAttending: req.body.userAttending },
+    //   },
+    //   { new: true }
+    // );
 
     if (!updatedEvent) {
       return res.status(404).json({ eventToReturn: null });
@@ -173,6 +195,7 @@ const deleteEvent = async (req, res) => {
 
 export {
   findAllEvents,
+  findEventByUserId,
   findEventById,
   findEventByDate,
   createEvent,

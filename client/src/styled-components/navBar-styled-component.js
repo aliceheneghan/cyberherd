@@ -14,18 +14,36 @@ export const DefaultNavbar = styled.section`
     text-shadow: 0 0 0.2em black, 0 0 1em black;
     /* border: 3px purple solid; */
     .get-yourself {
-      width: 11em;
-      text-decoration: none;
+      width: 10em;
     }
-    .back-to {
-      /* border: 3px violet dotted; */
-      width: 11em;
+    .back-to-calendar-and-create-event {
+      /* border: 3px red solid; */
+      width: 21em;
+      display: flex;
+      justify-content: space-around;
+      .back-to {
+        /* border: 3px violet dotted; */
+        /* width: 11em; */
+        display: flex;
+        .arrow-left {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-right: .15em;
+          margin-top: .05em;
+        }
+      }
+      .create-an-event {
+        /* width: 10em; */
+        /* border: blue 2px solid; */
+      }
     }
+
     .get-yourself,
     .sign-up,
     .login,
     .back-to,
-    .log-out {
+    .log-out,
+    .create-an-event {
       text-decoration: none;
       color: white;
       /* border: blue 2px solid; */
@@ -33,12 +51,12 @@ export const DefaultNavbar = styled.section`
     ${({ noSearchBar }) => {
       return noSearchBar
         ? css`
-            .search-bar {
+            .search-bar, .create-an-event {
               display: none;
             }
           `
         : css`
-            .search-bar {
+            .search-bar, .create-an-event {
               display: flex;
             }
           `;
@@ -115,7 +133,8 @@ export const DefaultNavbar = styled.section`
 
 export const CalendarNavBar = styled(DefaultNavbar)``;
 export const EventPageNavBar = styled(DefaultNavbar)``;
-export const ResultPageNavBar = styled(DefaultNavbar)`
+export const ResultPageNavBar = styled(DefaultNavbar)``;
+export const CreateEvent = styled(DefaultNavbar)`
   /* border: magenta 8px solid; */
   display: flex;
   justify-content: center;

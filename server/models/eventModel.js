@@ -13,8 +13,7 @@ const eventSchema = new Schema({
     startTime: { type: String, required: false },
     doorsOpen: { type: String },
   },
-  // location: { type: Schema.Types.ObjectId, ref: 'venue' },
-  location: { type: String },
+  location: { type: Schema.Types.ObjectId, ref: 'venue' },
   tickets: {
     preSalePrice: { type: Number },
     doorPrice: { type: Number },

@@ -1,7 +1,10 @@
 // libraries
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+
+// context
+import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_date-results.scss';
@@ -13,8 +16,13 @@ export default function EventList() {
   // url parameter
   const { date } = useParams();
 
-  // state
-  const [resultData, setResultData] = useState([]);
+  // context
+  const {
+    resultData,
+    setResultData,
+    filteredData,
+    setFilteredData,
+  } = useContext(Context);
 
   useEffect(() => {
     const getEvent = async (e) => {
@@ -22,6 +30,7 @@ export default function EventList() {
         `http://localhost:4000/api/events/date/${date}`
       );
       setResultData(data.event);
+      setFilteredData(data.event);
     };
     getEvent();
   }, [date]);
@@ -30,7 +39,7 @@ export default function EventList() {
     <div className="event-list-wrapper">
       <div>
         <div className="event-card-wrapper">
-          {resultData.map((event, i) => {
+          {filteredData.map((event, i) => {
             console.log(event);
             return (
               <EventCard key={i} className="event-card">

@@ -6,6 +6,7 @@ import Navbar from '../features/navbar';
 import { ResultPageNavBar } from '../styled-components/navBar-styled-component';
 import DateResults from '../features/results/index';
 import Calendar from '../features/calendar';
+import FilterBar from '../features/filter';
 
 export default function ResultsPage() {
   return (
@@ -15,6 +16,7 @@ export default function ResultsPage() {
         <Navbar />
       </ResultPageNavBar>
       <Calendar displayType='calendar-bar' />
+      <FilterBar />
       <DateResults />
       {/* </> */}
     </div>

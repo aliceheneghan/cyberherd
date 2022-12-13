@@ -115,7 +115,7 @@
   background: $background-transparent;
   color: $text-color;
   text-shadow: $text-shadow-color;
-
+// border: 3px red solid;
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
     width: 12em;
@@ -138,16 +138,35 @@
     padding-top: 0.2em;
 
     .date-cell {
+      // color: green;
+      // border: 2px rgb(0, 204, 255) solid;
+        border-radius: 50%;
+        height: 1.85em;
+        width: 1.85em;
+      transition: ease-in-out 0.195s;
+      cursor: pointer;
       @include flex-jc-ai-dir(center, center, row);
 
       &:hover {
-        font-size: 2rem;
+        // position: relative;
+        border-radius: 50%;
+        // font-size: 2rem;
+        background-color: rgba(255, 255, 0, 0.21);
+        &:active {
+          // background-color: $background-transparent;
+        border: 2px solid rgba(255, 255, 0, 0.21);
+      }
       }
     }
 
     .highlight-date-clicked {
       text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
         0 0 0.6rem yellow;
+        &:hover {
+          background-color: transparent;
+          transition: ease-in-out 0.195s;
+        border: 2px solid rgba(255, 255, 0, 0.21);
+        }
     }
   }
 
@@ -160,7 +179,7 @@
 
       .date-cell {
         &:hover {
-          font-size: 3rem;
+          // font-size: 3rem;
         }
       }
     }

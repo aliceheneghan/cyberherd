@@ -2,6 +2,8 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
+
+
 // features
 import Search from '../../search/components/Search';
 
@@ -10,7 +12,11 @@ import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_navbar.scss';
+import CreateEvent from '../../event-form/components/CreateEvent';
 
+
+// icons
+import { HiOutlineArrowLongLeft } from "react-icons/hi2";
 export default function Navbar() {
   const { loggedIn, setLoggedIn, userData, userID } = useContext(Context);
 
@@ -35,9 +41,13 @@ export default function Navbar() {
     <div className="navbar">
       {loggedIn ? (
         <>
+        <div className="back-to-calendar-and-create-event">
           <Link className="back-to" to="/">
             Back to Calendar
           </Link>
+          
+          <Link className="create-an-event" to="/create-event">Create an Event</Link>
+          </div>
           <Search />
           <div className="profile-photo-and-logout-container">
             <Link className="profile-img-link" to={`/dashboard/${userID}`}>
@@ -68,6 +78,9 @@ export default function Navbar() {
           <Link className="get-yourself" to="/">
             Get yourself a date
           </Link>
+ 
+          {/* <Link className="create-an-event" to="/create-event">Create an event</Link> */}
+
           <Search />
           <div className="sign-up-login-container">
             <Link className="sign-up" to="/sign-up">
