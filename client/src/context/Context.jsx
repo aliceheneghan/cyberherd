@@ -52,7 +52,7 @@ const ContextProvider = (props) => {
         activeFilterGenre,
         setActiveFilterGenre,
         activeFilterNeighborhood,
-        setActiveFilterNeighborhood,
+        setActiveFilterNeighborhood
       }}
     >
       {props.children}

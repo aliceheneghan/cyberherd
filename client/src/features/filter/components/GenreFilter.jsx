@@ -40,8 +40,6 @@ export default function GenreFilter() {
     setFilteredData,
     activeFilterGenre,
     setActiveFilterGenre,
-    activeFilterNeighborhood,
-    setActiveFilterNeighborhood,
   } = useContext(Context);
 
   useEffect(() => {

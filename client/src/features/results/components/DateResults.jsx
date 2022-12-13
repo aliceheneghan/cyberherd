@@ -34,7 +34,7 @@ export default function EventList() {
     activeFilterGenre,
     setActiveFilterGenre,
     activeFilterNeighborhood,
-    setActiveFilterNeighborhood,
+    setActiveFilterNeighborhood
   } = useContext(Context);
 
   useEffect(() => {
