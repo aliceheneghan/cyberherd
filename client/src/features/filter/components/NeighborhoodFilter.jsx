@@ -1,6 +1,10 @@
 // libraries
 import React, { useEffect, useState } from 'react';
 
+// style
+import './_filter-buttons.scss';
+import './_neighborhood-filter.scss';
+
 // filter option
 const neighborhoods = [
   'Charlottenburg',
