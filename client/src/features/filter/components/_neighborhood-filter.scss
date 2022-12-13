@@ -2,8 +2,18 @@
 @import '../../../scss/abstract/_mixins.scss';
 @import '../../../scss/abstract/variables';
 
+
 .checkbox-genre {
   @include flex-jc-ai-dir(space-evenly, center, row);
   background: $background-transparent;
-  padding: 15px;
+  padding: 1rem;
+  // width: fit-content;
+  .neighborhood {
+    // border: 1px plum solid;
+    padding: 1rem;
+    // display: inline-block;
+    // flex-wrap: wrap;
+    // gap: 10%;
+    cursor: pointer;
+  }
 }

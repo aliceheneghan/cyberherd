@@ -76,7 +76,7 @@ export default function GenreFilter() {
               type="checkbox"
               onChange={() => filterGenre(genre)}
             ></input>
-            <div>{genre}</div>
+            <div className='genre'>{genre}</div>
           </label>
         ))}
       </div>

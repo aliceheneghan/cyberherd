@@ -5,5 +5,4 @@
 .checkbox-genre {
   @include flex-jc-ai-dir(space-evenly, center, row);
   background: $background-transparent;
-  padding: 15px;
 }

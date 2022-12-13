@@ -20,7 +20,7 @@ const neighborhoods = [
   'Mitte',
   'Neukölln',
   'Pankow',
-  'Prenzlauer Berg',
+  'PrenzlauerBerg',
   'Reinickendorf',
   'Schöneberg',
   'Schöneweide',
@@ -80,7 +80,7 @@ export default function NeighborhoodFilter() {
               type="checkbox"
               onChange={() => filterNeighborhood(neighborhood)}
             ></input>
-            <div>{neighborhood}</div>
+            <div className='neighborhood'>{neighborhood}</div>
           </label>
         ))}
       </div>
