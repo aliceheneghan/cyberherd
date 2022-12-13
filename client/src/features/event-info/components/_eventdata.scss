@@ -5,8 +5,7 @@
 .event-data-container {
   @include flex-jc-ai-dir(space-between, center, row);
   margin: 0 auto;
-  width: 80%;
-  height: 30rem;
+  height: 22em;
   background-color: $background-transparent;
   padding: 2em;
   color: $text-color;
@@ -29,7 +28,8 @@
       margin-left: -0.24em;
       
       .band-name {
-        font-size: 3.7rem;
+        margin-top: -0.2em;
+        font-size: 4.5rem;
         color: $title-color;
         text-shadow: $title-text-shadow;
       }
@@ -54,7 +54,7 @@
 
       p {
         font-family: 'Roboto';
-        font-size: 1.1rem;
+        font-size: 1.3rem;
       }
     }
 
