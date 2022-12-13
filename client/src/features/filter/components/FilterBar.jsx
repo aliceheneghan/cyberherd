@@ -19,7 +19,7 @@ export default function FilterBar() {
   const [showPriceFilter, setShowPriceFilter] = useState(false);
   const [showVenueTypeFilter, setShowVenueTypeFilter] = useState(false);
 
-//   handlers
+  //   handlers
 
   const handleGenreFilter = (event) => {
     setShowGenreFilter((current) => !current);

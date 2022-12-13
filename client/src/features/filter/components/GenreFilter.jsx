@@ -1,5 +1,8 @@
 // libraries
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+
+// context
+import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_filter-buttons.scss';
@@ -29,12 +32,18 @@ const genres = [
   'Trap',
 ];
 
-export default function GenreFilter({
-  setActiveFilterGenre,
-  activeFilterGenre,
-  setFilteredData,
-  resultData,
-}) {
+export default function GenreFilter() {
+  const {
+    resultData,
+    setResultData,
+    filteredData,
+    setFilteredData,
+    activeFilterGenre,
+    setActiveFilterGenre,
+    activeFilterNeighborhood,
+    setActiveFilterNeighborhood,
+  } = useContext(Context);
+
   useEffect(() => {
     if (activeFilterGenre.length < 1) {
       setFilteredData(resultData);

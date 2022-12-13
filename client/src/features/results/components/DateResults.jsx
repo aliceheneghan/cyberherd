@@ -19,10 +19,23 @@ export default function EventList() {
   const { date } = useParams();
 
   // state
-  const [resultData, setResultData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
-  const [activeFilterGenre, setActiveFilterGenre] = useState([]);
-  const [activeFilterNeighborhood, setActiveFilterNeighborhood] = useState([]);
+  // const [resultData, setResultData] = useState([]);
+  // const [filteredData, setFilteredData] = useState([]);
+  // const [activeFilterGenre, setActiveFilterGenre] = useState([]);
+  // const [activeFilterNeighborhood, setActiveFilterNeighborhood] = useState([]);
+
+  // context
+
+  const {
+    resultData,
+    setResultData,
+    filteredData,
+    setFilteredData,
+    activeFilterGenre,
+    setActiveFilterGenre,
+    activeFilterNeighborhood,
+    setActiveFilterNeighborhood,
+  } = useContext(Context);
 
   useEffect(() => {
     const getEvent = async (e) => {
@@ -37,12 +50,8 @@ export default function EventList() {
 
   return (
     <div className="event-list-wrapper">
-      <GenreFilter
-        resultData={resultData}
-        setFilteredData={setFilteredData}
-        activeFilterGenre={activeFilterGenre}
-        setActiveFilterGenre={setActiveFilterGenre}
-      />
+      {/* <GenreFilter
+      /> */}
       {/* <NeighborhoodFilter
         resultData={resultData}
         setFilteredData={setFilteredData}
