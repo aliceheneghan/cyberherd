@@ -17,11 +17,11 @@ const ContextProvider = (props) => {
   const [search, setSearch] = useState('');
 
   // filter context
-
   const [resultData, setResultData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [activeFilterGenre, setActiveFilterGenre] = useState([]);
   const [activeFilterNeighborhood, setActiveFilterNeighborhood] = useState([]);
+  const [activeFilterVenueType, setActiveFilterVenueType] = useState([]);
 
   // save the user ID
   const [userID, setUserID] = useState(loginSession['userID']);
@@ -52,7 +52,9 @@ const ContextProvider = (props) => {
         activeFilterGenre,
         setActiveFilterGenre,
         activeFilterNeighborhood,
-        setActiveFilterNeighborhood
+        setActiveFilterNeighborhood,
+        activeFilterVenueType,
+        setActiveFilterVenueType,
       }}
     >
       {props.children}
