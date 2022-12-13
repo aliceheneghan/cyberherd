@@ -23,6 +23,11 @@
       background: $background-transparent;
       text-shadow: $text-shadow-color;
       color: $text-color;
+      cursor: pointer;
+      &:hover {
+      background: rgba(0, 0, 0, 0.34);;
+
+      }
 
       .event-wrapper {
         @include flex-jc-ai-dir(space-between, flex-start, column);

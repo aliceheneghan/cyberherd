@@ -2,7 +2,6 @@
 
 .search-bar {
   @include flex-jc-ai-dir(space-around, center, row);
-  margin-left: -9em;
   form {
     background: rgba(0, 0, 0, 0.315);
 

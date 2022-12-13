@@ -16,19 +16,33 @@ export const DefaultNavbar = styled.section`
     .get-yourself {
       width: 10em;
     }
-    .create-an-event {
-      width: 10em;
-      margin-left: -10em;
+    .back-to-calendar-and-create-event {
+      /* border: 3px red solid; */
+      width: 21em;
+      display: flex;
+      justify-content: space-around;
+      .back-to {
+        /* border: 3px violet dotted; */
+        /* width: 11em; */
+        display: flex;
+        .arrow-left {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-right: .15em;
+          margin-top: .05em;
+        }
+      }
+      .create-an-event {
+        /* width: 10em; */
+        /* border: blue 2px solid; */
+      }
     }
-    .back-to {
-      /* border: 3px violet dotted; */
-      width: 11em;
-    }
+
     .get-yourself,
     .sign-up,
     .login,
     .back-to,
-    .log-out, 
+    .log-out,
     .create-an-event {
       text-decoration: none;
       color: white;
