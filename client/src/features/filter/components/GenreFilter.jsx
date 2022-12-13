@@ -1,5 +1,5 @@
 // libraries
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 
 // context
 import { Context } from '../../../context/Context.jsx';
@@ -34,6 +34,7 @@ const genres = [
 ];
 
 export default function GenreFilter() {
+  // context
   const {
     resultData,
     setResultData,

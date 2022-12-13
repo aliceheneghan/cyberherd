@@ -18,14 +18,7 @@ export default function EventList() {
   // url parameter
   const { date } = useParams();
 
-  // state
-  // const [resultData, setResultData] = useState([]);
-  // const [filteredData, setFilteredData] = useState([]);
-  // const [activeFilterGenre, setActiveFilterGenre] = useState([]);
-  // const [activeFilterNeighborhood, setActiveFilterNeighborhood] = useState([]);
-
   // context
-
   const {
     resultData,
     setResultData,
@@ -34,7 +27,7 @@ export default function EventList() {
     activeFilterGenre,
     setActiveFilterGenre,
     activeFilterNeighborhood,
-    setActiveFilterNeighborhood
+    setActiveFilterNeighborhood,
   } = useContext(Context);
 
   useEffect(() => {
@@ -50,14 +43,6 @@ export default function EventList() {
 
   return (
     <div className="event-list-wrapper">
-      {/* <GenreFilter
-      /> */}
-      {/* <NeighborhoodFilter
-        resultData={resultData}
-        setFilteredData={setFilteredData}
-        activeFilterNeighborhood={activeFilterNeighborhood}
-        setActiveFilterNeighborhood={setActiveFilterNeighborhood}
-      /> */}
       <div>
         <div className="event-card-wrapper">
           {filteredData.map((event, i) => {
