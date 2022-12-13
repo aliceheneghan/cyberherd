@@ -1,5 +1,5 @@
 // libraries
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
@@ -10,8 +10,6 @@ import { Context } from '../../../context/Context.jsx';
 import './_date-results.scss';
 
 // components
-import GenreFilter from '../../filter/components/GenreFilter.jsx';
-import NeighborhoodFilter from '../../filter/components/NeighborhoodFilter';
 import EventCard from './EventCard.jsx';
 
 export default function EventList() {
@@ -24,10 +22,6 @@ export default function EventList() {
     setResultData,
     filteredData,
     setFilteredData,
-    activeFilterGenre,
-    setActiveFilterGenre,
-    activeFilterNeighborhood,
-    setActiveFilterNeighborhood,
   } = useContext(Context);
 
   useEffect(() => {
