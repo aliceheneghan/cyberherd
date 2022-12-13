@@ -22,17 +22,14 @@
       box-shadow: 0.01em 0.01em 0.65em black;
       background: $background-transparent;
       color: $text-color;
-<<<<<<< HEAD
       text-shadow: $text-shadow-color;
       
-=======
       cursor: pointer;
       &:hover {
       background: rgba(0, 0, 0, 0.34);;
 
       }
 
->>>>>>> 8e60835587a430257e6bca6676767aa26b4e30dc
       .event-wrapper {
         @include flex-jc-ai-dir(space-between, flex-start, column);
         width: 100%;
