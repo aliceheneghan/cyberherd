@@ -1,7 +1,23 @@
 // variables colors
+
+// GLOBAL
+
+// text
+$basic-yellow: yellow;
 $text-color: whitesmoke;
 $text-shadow-color: 0 0 0.2em black, 0 0 1em black;
 $yellow-color: rgba(255, 255, 0, 0.789);
+$title-color: black;
+$title-text-shadow: 0.03em 0 0 yellow;
+$title-padding: 0.24em;
+
+// background
 $background-transparent: rgba(0, 0, 0, 0.315);
-$banner-text-color: rgba(0, 0, 0, 0.578);
+
+// border
 $border-gray: gray;
+
+// FEATURES
+
+// banner
+$banner-text-color: rgba(0, 0, 0, 0.578);

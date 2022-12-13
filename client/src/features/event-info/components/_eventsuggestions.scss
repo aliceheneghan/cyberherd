@@ -1,35 +1,29 @@
 .event-suggestion-container {
-border: black 3px solid;
-    margin: 2em auto;
-  max-width: 90%;
   @include flex-jc-ai-dir(space-between, flex-start, column);
   height: 30rem;
+  margin: 2em auto;
+  background-color: $background-transparent;
+  padding: 2em;
+  
   .you-might-text {
-    background-color: cadetblue;
-    height: 5rem;
-    font-size: 4rem;
+    font-size: 2.5rem;
+    color: $text-color;
   }
   .event-suggestion-cards-container {
+    @include flex-jc-ai-dir(space-between, flex-start, row);
     height: 23rem;
     width: 100%;
-    border: 3px dashed blue;
-    @include flex-jc-ai-dir(space-between, flex-start, row);
+
     .event-suggestion-img-and-info-container {
       width: 23rem;
       height: 20rem;
-      border: 3px dashed rgb(119, 50, 10);
+
       .event-suggestion-img-container {
         width: 100%;
         height: 15rem;
-        background-color: grey;
       }
       .event-suggestion-bandname {
-          font-size: 0.9rem;
-          background: aliceblue;
-      }
-      .event-suggestion-eventname {
-        background: rgb(188, 195, 125);
-        
+        font-size: 0.9rem;
       }
     }
   }
