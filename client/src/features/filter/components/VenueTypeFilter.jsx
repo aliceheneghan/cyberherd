@@ -28,7 +28,9 @@ export default function VenueTypeFilter() {
       return;
     }
     const filtered = resultData.filter((event) =>
-      event.location.venueType.some((value) => activeFilterVenueType.includes(value))
+      event.location.venueType.some((value) =>
+        activeFilterVenueType.includes(value)
+      )
     );
     setFilteredData(filtered);
   }, [activeFilterVenueType]);

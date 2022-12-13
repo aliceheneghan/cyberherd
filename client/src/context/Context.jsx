@@ -22,6 +22,7 @@ const ContextProvider = (props) => {
   const [activeFilterGenre, setActiveFilterGenre] = useState([]);
   const [activeFilterNeighborhood, setActiveFilterNeighborhood] = useState([]);
   const [activeFilterVenueType, setActiveFilterVenueType] = useState([]);
+  const [activeFilterPrice, setActiveFilterPrice] = useState([]);
 
   // save the user ID
   const [userID, setUserID] = useState(loginSession['userID']);
@@ -55,6 +56,8 @@ const ContextProvider = (props) => {
         setActiveFilterNeighborhood,
         activeFilterVenueType,
         setActiveFilterVenueType,
+        activeFilterPrice,
+        setActiveFilterPrice,
       }}
     >
       {props.children}
