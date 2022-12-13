@@ -10,18 +10,17 @@
     #search-input {
       width: 16em;
       border: none;
-      // background: rgba(0, 0, 0, 0.335);
       background: none;
       font-family: 'Sarpanch';
       font-size: 1.5rem;
       color: white;
-      padding: 0.2em 0.2em 0.2em 0.4em;
+      padding: 0.2em 0.4em 0.2em 0.4em;
     }
     #search-input:focus {
       outline: none;
     }
     #search-input::placeholder {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       text-shadow: 0 0 0.2em black, 0 0 1em black;
       color: white;
     }
@@ -32,7 +31,6 @@
       border: none;
       background: none;
       color: white;
-      // border: 2px blue solid;
       .search-icon {
         margin: 0.1em 0 -0.1em 0;
         font-size: 1.5rem;

@@ -20,7 +20,7 @@ export const DefaultNavbar = styled.section`
       /* border: 3px red solid; */
       width: 21em;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       .back-to {
         /* border: 3px violet dotted; */
         /* width: 11em; */
@@ -51,12 +51,12 @@ export const DefaultNavbar = styled.section`
     ${({ noSearchBar }) => {
       return noSearchBar
         ? css`
-            .search-bar {
+            .search-bar, .create-an-event {
               display: none;
             }
           `
         : css`
-            .search-bar {
+            .search-bar, .create-an-event {
               display: flex;
             }
           `;
@@ -133,7 +133,8 @@ export const DefaultNavbar = styled.section`
 
 export const CalendarNavBar = styled(DefaultNavbar)``;
 export const EventPageNavBar = styled(DefaultNavbar)``;
-export const ResultPageNavBar = styled(DefaultNavbar)`
+export const ResultPageNavBar = styled(DefaultNavbar)``;
+export const CreateEvent = styled(DefaultNavbar)`
   /* border: magenta 8px solid; */
   display: flex;
   justify-content: center;
