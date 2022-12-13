@@ -21,8 +21,9 @@
       padding: 1.2em;
       box-shadow: 0.01em 0.01em 0.65em black;
       background: $background-transparent;
-      text-shadow: $text-shadow-color;
       color: $text-color;
+      text-shadow: $text-shadow-color;
+      
       cursor: pointer;
       &:hover {
       background: rgba(0, 0, 0, 0.34);;
@@ -36,8 +37,8 @@
 
         .title {
           line-height: 1.1em;
-          color: black;
-          text-shadow: 0.03em 0 0 yellow;
+          color: $title-color;
+          text-shadow: $title-text-shadow;
         }
 
         .title-small {
@@ -53,7 +54,7 @@
 
           .line-space-between {
             @include flex-jc-ai-dir(space-between, center, row);
-            padding-left: 0.24em;
+            padding-left: $title-padding;
             line-height: 2.5rem;
           }
         }
