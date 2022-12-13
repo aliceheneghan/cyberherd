@@ -1,5 +1,8 @@
 // libraries
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
+
+// context
+import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_filter-buttons.scss';
@@ -29,20 +32,27 @@ const neighborhoods = [
   'Zehlendorf',
 ];
 
-export default function NeighborhoodFilter({
-  setActiveFilterNeighborhood,
-  activeFilterNeighborhood,
-  setFilteredData,
-  resultData,
-}) {
+export default function NeighborhoodFilter() {
+  // context
+  const {
+    resultData,
+    setResultData,
+    filteredData,
+    setFilteredData,
+    activeFilterNeighborhood,
+    setActiveFilterNeighborhood,
+  } = useContext(Context);
+
   useEffect(() => {
     if (activeFilterNeighborhood.length < 1) {
       setFilteredData(resultData);
       return;
     }
     const filtered = resultData.filter((event) =>
-      event.location.location.neighborhood.some((value) => activeFilterNeighborhood.includes(value))
-      );
+      event.location.location.neighborhood.some((value) =>
+        activeFilterNeighborhood.includes(value)
+      )
+    );
     setFilteredData(filtered);
   }, [activeFilterNeighborhood]);
 
