@@ -20,7 +20,7 @@ const neighborhoods = [
   'Mitte',
   'Neukölln',
   'Pankow',
-  'Prenzlauer Berg',
+  'PrenzlauerBerg',
   'Reinickendorf',
   'Schöneberg',
   'Schöneweide',
@@ -72,7 +72,7 @@ export default function NeighborhoodFilter() {
 
   return (
     <div className="checkboxes">
-      <div className="checkbox-genre">
+      <div className="checkbox-filters">
         {neighborhoods.map((neighborhood) => (
           <label>
             <input
@@ -80,7 +80,7 @@ export default function NeighborhoodFilter() {
               type="checkbox"
               onChange={() => filterNeighborhood(neighborhood)}
             ></input>
-            <div>{neighborhood}</div>
+            <div className='neighborhood'>{neighborhood}</div>
           </label>
         ))}
       </div>

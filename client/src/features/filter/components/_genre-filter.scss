@@ -2,8 +2,11 @@
 @import '../../../scss/abstract/_mixins.scss';
 @import '../../../scss/abstract/variables';
 
-.checkbox-genre {
+.checkbox-filters {
   @include flex-jc-ai-dir(space-evenly, center, row);
   background: $background-transparent;
-  padding: 15px;
+  .genre {
+    cursor: pointer;
+    padding: 0.5rem;
+  }
 }
