@@ -5,7 +5,7 @@
   form {
     background: rgba(0, 0, 0, 0.315);
 
-    @include flex-jc-ai-dir(space-around, center, row);
+    
 
     #search-input {
       width: 16em;

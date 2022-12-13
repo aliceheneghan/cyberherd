@@ -6,6 +6,7 @@ import { Context } from '../../../context/Context.jsx';
 
 // style
 import './_filter-buttons.scss';
+import './_genre-filter.scss';
 
 // filter options
 const genres = [
