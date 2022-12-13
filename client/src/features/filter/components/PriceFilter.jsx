@@ -14,7 +14,7 @@ const priceCategories = ['< 10', '10 - 20', '20 - 30', '30 >'];
 export default function PriceFilter() {
   return (
     <div className="checkboxes">
-      <div className="checkbox-genre">
+      <div className="checkbox-filters">
         {priceCategories.map((price) => (
           <label>
             <input
@@ -22,7 +22,7 @@ export default function PriceFilter() {
               type="checkbox"
             //   onChange={() => filterVenueType(venue)}
             ></input>
-            <div>{price}</div>
+            <div className='price'>{price}</div>
           </label>
         ))}
       </div>

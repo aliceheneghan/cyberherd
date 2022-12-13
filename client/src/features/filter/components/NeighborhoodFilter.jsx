@@ -72,7 +72,7 @@ export default function NeighborhoodFilter() {
 
   return (
     <div className="checkboxes">
-      <div className="checkbox-genre">
+      <div className="checkbox-filters">
         {neighborhoods.map((neighborhood) => (
           <label>
             <input

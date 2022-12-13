@@ -46,7 +46,7 @@ export default function VenueTypeFilter() {
 
   return (
     <div className="checkboxes">
-      <div className="checkbox-genre">
+      <div className="checkbox-filters">
         {venueTypes.map((venue) => (
           <label>
             <input
@@ -54,7 +54,7 @@ export default function VenueTypeFilter() {
               type="checkbox"
               onChange={() => filterVenueType(venue)}
             ></input>
-            <div>{venue}</div>
+            <div className='venue'>{venue}</div>
           </label>
         ))}
       </div>

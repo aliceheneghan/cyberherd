@@ -68,7 +68,7 @@ export default function GenreFilter() {
 
   return (
     <div className="checkboxes">
-      <div className="checkbox-genre">
+      <div className="checkbox-filters">
         {genres.map((genre) => (
           <label>
             <input
