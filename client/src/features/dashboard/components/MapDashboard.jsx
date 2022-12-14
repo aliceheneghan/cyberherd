@@ -60,7 +60,7 @@ export default function MapDashboard() {
 
   return (
     <section className="map-dashboard">
-      <h1>Map of venues</h1>
+      <h1>Venues</h1>
       <div id="map">
         <MapContainer
           style={{
