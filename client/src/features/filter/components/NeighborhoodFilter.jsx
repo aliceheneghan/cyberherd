@@ -49,9 +49,7 @@ export default function NeighborhoodFilter() {
       return;
     }
     const filtered = resultData.filter((event) =>
-      event.location.location.neighborhood.some((value) =>
-        activeFilterNeighborhood.includes(value)
-      )
+      activeFilterNeighborhood.includes(event.location.location.neighborhood)
     );
     setFilteredData(filtered);
   }, [activeFilterNeighborhood]);
@@ -80,7 +78,7 @@ export default function NeighborhoodFilter() {
               type="checkbox"
               onChange={() => filterNeighborhood(neighborhood)}
             ></input>
-            <div className='neighborhood'>{neighborhood}</div>
+            <div className="neighborhood">{neighborhood}</div>
           </label>
         ))}
       </div>

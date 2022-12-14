@@ -28,7 +28,7 @@ export default function VenueTypeFilter() {
       return;
     }
     const filtered = resultData.filter((event) =>
-      event.location.venueType.some((value) => activeFilterVenueType.includes(value))
+      activeFilterVenueType.includes(event.location.venueType)
     );
     setFilteredData(filtered);
   }, [activeFilterVenueType]);
@@ -54,7 +54,7 @@ export default function VenueTypeFilter() {
               type="checkbox"
               onChange={() => filterVenueType(venue)}
             ></input>
-            <div className='venue'>{venue}</div>
+            <div className="venue">{venue}</div>
           </label>
         ))}
       </div>

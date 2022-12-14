@@ -26,7 +26,7 @@ export default function SearchResults() {
       ? event
       : event.name.bandName.toLowerCase().includes(search) ||
           event.name.eventName.toLowerCase().includes(search) ||
-          event.location.toLowerCase().includes(search) ||
+          event.location.name.toLowerCase().includes(search) ||
           event.genre.toString().toLowerCase().includes(search) ||
           event.information.description.toLowerCase().includes(search);
   });

@@ -1,4 +1,10 @@
+@import '../../../scss/abstract/variables';
 .map-dashboard {
   margin: 5rem auto;
   max-width: 90%;
+  h1 {
+    text-align: center;
+    color: $text-color;
+    text-shadow: $text-shadow-color;
+  }
 }

@@ -33,6 +33,7 @@ function CreateEvent() {
     { name: 'Astra', _id: '639212e2dbe3d61449203b1a' },
     { name: 'Hole44', _id: '639213e77a0af7516f1781a4' },
     { name: 'KØPI', _id: '639214b0e5d487b63ccd0090' },
+    { name: 'Panke Culture', _id: '63998e617678e8ba26337bbe' },
     { name: 'Schokoladen', _id: '639215d19adf831e2fa8f7b2' },
     { name: 'Supamolly', _id: '6392167b9adf831e2fa8f7b4' },
     { name: 'Urban Spree', _id: '639217189adf831e2fa8f7b6' },

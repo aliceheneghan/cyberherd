@@ -29,16 +29,23 @@
         @include flex-jc-ai-dir(space-between, flex-start, column);
         width: 100%;
         height: 100%;
+
+.event-card-event-date {
+  // color: green;
+  margin-bottom: -1rem;
+  // font-size: 1rem;
+}
+
         .title {
           line-height: 1.1em;
           color: $title-color;
           text-shadow: $title-text-shadow;
         }
         .title-small {
-          font-size: 3.4rem;
+          font-size: 3.1rem;
         }
         .title-big {
-          font-size: 5rem;
+          font-size: 4rem;
         }
         .line-wrapper {
           width: inherit;
@@ -48,10 +55,11 @@
             line-height: 2.5rem;
           }
         }
-        .more {
+        .event-card-more {
           text-align: right;
           width: inherit;
           color: yellow;
+          // border: 3px red dotted;
         }
       }
     }
