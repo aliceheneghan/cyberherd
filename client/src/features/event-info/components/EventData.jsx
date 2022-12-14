@@ -75,7 +75,7 @@ export default function EventData() {
         </div>
 
         <div className="event-location-time-wrapper">
-          <div>{eventData?.event?.location}</div>
+          <div>{eventData?.event?.location.name}</div>
           <div>{eventData?.event?.time?.doorsOpen} doors Open</div>
         </div>
 
