@@ -28,7 +28,7 @@ export default function PriceFilter() {
       return;
     }
     const filtered = resultData.filter((event) =>
-      event.tickets.price.some((value) =>
+      event.tickets.doorPrice.some((value) =>
         activeFilterPrice.includes(value)
       )
     );
