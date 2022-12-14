@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Banner from './features/banner/index.jsx';
 import CreateEvent from './features/event-form/components/CreateEvent.jsx';
 import CreateVenue from './features/venue-form/components/CreateVenue.jsx';
+import Footer from './features/footer/index.jsx';
 
 // pages
 import LoginPage from './pages/LoginPage.jsx';
@@ -23,7 +24,6 @@ export default function App() {
   return (
     <div className="App">
       <Banner />
-      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
@@ -36,6 +36,7 @@ export default function App() {
         <Route path="/create-event" element={<CreateEvent />} />
         <Route path="/create-venue" element={<CreateVenue />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

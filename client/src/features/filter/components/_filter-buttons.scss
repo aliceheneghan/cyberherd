@@ -13,6 +13,6 @@
   display: none;
 }
 .checkbox:checked + div {
-  text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
-    0 0 0.6rem yellow;
+  text-shadow: 0 0 0.2rem $title-color, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
+    0 0 0.6rem $basic-yellow;
 }
