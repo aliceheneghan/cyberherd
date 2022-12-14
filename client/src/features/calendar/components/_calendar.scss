@@ -13,7 +13,7 @@
   background: url('../../../assets/images/IMG_01.jpg') no-repeat center
     center/cover;
   border: 0.2em solid $background-transparent;
-  cursor: pointer;
+  // cursor: pointer;
 
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
@@ -56,6 +56,7 @@
     .date-cell {
       @include flex-jc-ai-dir(center, center, row);
       height: 2.2em;
+      cursor: pointer;
       // transition: ease-in-out 0.125s;
       &:hover {
         transition: ease-in-out 0.125s;
