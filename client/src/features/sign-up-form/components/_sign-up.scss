@@ -83,14 +83,18 @@ input#image-upload::file-selector-button {
     border: 1px $yellow-color solid;
   }
 }
-
+@media screen and (max-width: 992px) {
+  .connect-page {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 70rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .connect-page {
     @include flex-jc-ai-dir(column, center, column);
     height: 70rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .connect-page {
     @include flex-jc-ai-dir(column, center, column);

@@ -1,19 +1,17 @@
 @import '../../../scss/abstract/_mixins.scss';
+@import  '../../../scss/abstract/_variables.scss';
 
 .search-bar {
   @include flex-jc-ai-dir(space-around, center, row);
   form {
     background: rgba(0, 0, 0, 0.315);
-
-    
-
     #search-input {
       width: 16em;
       border: none;
       background: none;
       font-family: 'Sarpanch';
       font-size: 1.5rem;
-      color: white;
+      color: $text-color;
       padding: 0.2em 0.4em 0.2em 0.4em;
     }
     #search-input:focus {
@@ -22,15 +20,13 @@
     #search-input::placeholder {
       font-size: 1.4rem;
       text-shadow: 0 0 0.2em black, 0 0 1em black;
-      color: white;
+      color: $text-color;
     }
     .button-search {
-      // width: 3em;
-      // height: 2.1em;
       margin: 0 0.5em 0 0;
       border: none;
       background: none;
-      color: white;
+      color: $text-color;
       .search-icon {
         margin: 0.1em 0 -0.1em 0;
         font-size: 1.5rem;

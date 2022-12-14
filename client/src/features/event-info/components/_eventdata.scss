@@ -10,64 +10,53 @@
   padding: 2em;
   color: $text-color;
   text-shadow: $text-shadow-color;
-
   .event-info-wrapper {
     @include flex-jc-ai-dir(space-between, flex-start, column);
     overflow: visible; // allows -margin-left in band-event-name-wrapper
     width: 50%;
     height: 100%;
     padding-left: 0.24em;
-
     .event-date-price-wrapper {
       @include flex-jc-ai-dir(space-between, center, row);
       width: 45%;
       font-size: 1.5rem;
     }
-
     .band-event-name-wrapper {
       margin-left: -0.24em;
-      
       .band-name {
         margin-top: -0.2em;
         font-size: 4.5rem;
         color: $title-color;
         text-shadow: $title-text-shadow;
       }
-
       .event-name {
         padding-left: $title-padding;
         font-size: 1.5rem;
         color: $basic-yellow;
-        text-shadow: none;        
+        text-shadow: none;
       }
     }
-
     .event-location-time-wrapper {
       @include flex-jc-ai-dir(space-between, center, row);
       width: 60%;
       height: 2em;
       font-size: 1.23rem;
     }
-
     .event-description {
       width: 100%;
-
       p {
         font-family: 'Roboto';
         font-size: 1.3rem;
       }
     }
-
     .button-wrapper {
       @include flex-jc-ai-dir(space-between, center, row);
       width: 46%;
-
       .save-date-btn {
         width: 9rem;
         padding: 0.8em 0;
         cursor: pointer;
       }
-
       .buy-ticket-btn {
         width: 9rem;
         padding: 0.8em 0;
@@ -75,14 +64,11 @@
       }
     }
   }
-
   .event-img-wrapper {
     @include flex-jc-ai-dir(center, center, row);
     width: 40%;
     height: 100%;
     overflow: hidden;
-    border: 1px red solid;
-
     img {
       object-fit: contain;
       width: 100%;

@@ -9,9 +9,6 @@ import Navbar from '../features/navbar';
 import { EventPageNavBar } from '../styled-components/navBar-styled-component';
 
 export default function EventPage() {
-  // try link below
-  //http://localhost:3000/eventpage/637cb59282b0c6610a755792
-
   return (
     <>
       <EventPageNavBar>

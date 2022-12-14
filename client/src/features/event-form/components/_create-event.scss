@@ -13,7 +13,6 @@
   text-align: center;
   padding: 0 100px;
 }
-
 form #band-name,
 #event-name,
 #date,
@@ -156,25 +155,48 @@ input#upload-image {
 @media screen and (max-width: 992px) {
   .container {
     @include flex-jc-ai-dir(column, center, column);
-    height: 20rem;
+    width:fit-content;
+  }
+  .create-event {
+    height: 100%;
   }
   .myForm {
     @include flex-jc-ai-dir(column, center, column);
-    height: 90rem;
+    height: auto;
   }
   .button-create-event {
     padding-right: 65rem;
   }
 }
-
-// @media screen and (min-width: 768px) {
-//   .myForm {
-//   @include flex-jc-ai-dir(column, center, column);
-//   height: 90rem;
-//  }
-// }
-// @media screen and (min-width: 1024px) {
-//   .myForm {
-//   @include flex-jc-ai-dir(column, center, column);
-//  }
-// }
+@media screen and (min-width: 768px) {
+  .container {
+    @include flex-jc-ai-dir(column, center, column);
+    width:fit-content;
+  }
+  .create-event {
+    height: 100rem;
+  }
+  .myForm {
+    @include flex-jc-ai-dir(column, center, column);
+    height: auto;
+  }
+  .button-create-event {
+    padding-right: 65rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    @include flex-jc-ai-dir(column, center, column);
+    width:fit-content;
+  }
+  .create-event {
+    height: 100%;
+  }
+  .myForm {
+    @include flex-jc-ai-dir(column, center, column);
+    height: auto;
+  }
+  .button-create-event {
+    padding-right: 65rem;
+  }
+}

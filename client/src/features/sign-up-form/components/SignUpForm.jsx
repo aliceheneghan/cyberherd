@@ -37,8 +37,6 @@ export default function SignUpForm() {
 
   return (
     <div className="connect-page">
-      {/* <img src="http://localhost:4000/images/32ab7a21e3b9bbbe00fc333276a68951"/> */}
-
       <form onSubmit={handleSubmit} className="sign-up-form">
         <label>
           <input
@@ -96,9 +94,7 @@ export default function SignUpForm() {
 
         <br />
         <SignUpBtn type="submit">
-          {/* <button className="button-sign" type="submit"> */}
           Sign Up
-          {/* </button> */}
         </SignUpBtn>
       </form>
       <div>{error ? <p>{error}</p> : null}</div>

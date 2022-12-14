@@ -17,7 +17,7 @@ body {
   min-height: 100%;
   font-size: 1.5rem;
   font-family: 'Sarpanch', 'Fjalla One', 'Kodchasan', sans-serif;
-  background: url(./assets/images/IMG_04.JPG) no-repeat center center/cover;
+  background: url(./assets/images/IMG_02.JPG) no-repeat center center/cover;
 }
 .App {
   @include flex-jc-ai-dir(flex-start, center, column);

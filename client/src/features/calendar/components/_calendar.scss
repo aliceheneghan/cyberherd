@@ -13,17 +13,12 @@
   background: url('../../../assets/images/IMG_01.jpg') no-repeat center
     center/cover;
   border: 0.2em solid $background-transparent;
-  // cursor: pointer;
-
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
     margin: 0.2em 0;
     width: 15em;
     text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
       0 0 0.6rem yellow;
-    // color: $text-color;
-    // text-shadow: $text-shadow-color;
-    
     .arrows {
       color: white;
       filter: drop-shadow(6px 3px 5px rgba(255, 255, 0, 8));
@@ -31,7 +26,6 @@
       cursor: pointer;
     }
   }
-
   .seven-day-grid {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -40,73 +34,56 @@
     align-content: center;
     text-align: center;
   }
-
   .calendar-days {
     height: inherit;
     padding: 0 0.4em;
-
     .weekdays {
       padding: 0.1em;
       text-shadow: 0 0 0.3rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
         0 0 0.6rem yellow;
-      // color: $text-color;
-      // text-shadow: $text-shadow-color;
     }
-
     .date-cell {
       @include flex-jc-ai-dir(center, center, row);
       height: 2.2em;
       cursor: pointer;
-      // transition: ease-in-out 0.125s;
       &:hover {
         transition: ease-in-out 0.125s;
         background-color: rgba(0, 0, 0, 0.315);
-        // box-shadow: 0 0 0.1em black, 0 0 0.6em yellow;
       }
     }
   }
-
   @media screen and (min-width: 992px) {
     margin-bottom: 3em;
     width: 23em;
     padding-bottom: 0.8em;
     font-size: 2.5rem;
-
-      .calendar-month {
-        margin: 0.6em 0;
-        .arrows {
-          font-size: 3rem;
-        }
+    .calendar-month {
+      margin: 0.6em 0;
+      .arrows {
+        font-size: 3rem;
       }
-
-      .seven-day-grid {
-        padding: 0 1em;
+    }
+    .seven-day-grid {
+      padding: 0 1em;
+    }
+    .calendar-days {
+      .date-cell {
+        height: 2.6em;
       }
-
-      .calendar-days {
-        .date-cell{
-          height: 2.6em;
-        }
-      }
+    }
   }
-
-
   @media screen and (min-width: 1366px) {
     width: 27.75em;
-
-      .seven-day-grid {
-        padding: 0 1.5em;
+    .seven-day-grid {
+      padding: 0 1.5em;
+    }
+    .calendar-days {
+      .date-cell {
+        height: 3em;
       }
-
-      .calendar-days {
-        .date-cell{
-          height: 3em;
-        }
-      }
-      
+    }
   }
 }
-
 .calendar-bar {
   @include flex-jc-ai-dir(center, center, column);
   margin-bottom: 1em;
@@ -116,12 +93,10 @@
   background: $background-transparent;
   color: $text-color;
   text-shadow: $text-shadow-color;
-// border: 3px red solid;
   .calendar-month {
     @include flex-jc-ai-dir(space-between, center, row);
     width: 12em;
     height: 1.4em;
-
     .arrows {
       font-size: 1.7rem;
       filter: drop-shadow(6px 3px 5px rgba(255, 255, 0, 8));
@@ -129,7 +104,6 @@
       cursor: pointer;
     }
   }
-
   .calendar-days {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -137,50 +111,38 @@
     width: inherit;
     height: auto;
     padding-top: 0.2em;
-
     .date-cell {
-      // color: green;
-      // border: 2px rgb(0, 204, 255) solid;
-        border-radius: 50%;
-        height: 1.85em;
-        width: 1.85em;
+      border-radius: 50%;
+      height: 1.85em;
+      width: 1.85em;
       transition: ease-in-out 0.195s;
       cursor: pointer;
       @include flex-jc-ai-dir(center, center, row);
-
       &:hover {
-        // position: relative;
         border-radius: 50%;
-        // font-size: 2rem;
         background-color: rgba(255, 255, 0, 0.21);
         &:active {
-          // background-color: $background-transparent;
-        border: 2px solid rgba(255, 255, 0, 0.21);
-      }
+          border: 2px solid rgba(255, 255, 0, 0.21);
+        }
       }
     }
-
     .highlight-date-clicked {
       text-shadow: 0 0 0.2rem black, 0 0 0.35rem yellowgreen, 0 0 0.3rem orange,
         0 0 0.6rem yellow;
-        &:hover {
-          background-color: transparent;
-          transition: ease-in-out 0.195s;
+      &:hover {
+        background-color: transparent;
+        transition: ease-in-out 0.195s;
         border: 2px solid rgba(255, 255, 0, 0.21);
-        }
+      }
     }
   }
-
   @media screen and (min-width: 1366px) {
     height: 4em;
-
     .calendar-days {
       @include flex-jc-ai-dir(space-evenly, center, row);
       height: 1.7em;
-
       .date-cell {
         &:hover {
-          // font-size: 3rem;
         }
       }
     }

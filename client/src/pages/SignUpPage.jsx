@@ -1,8 +1,8 @@
 // libraries
 import React from 'react';
-import Navbar from '../features/navbar';
 
 // features
+import Navbar from '../features/navbar';
 import SignUpForm from '../features/sign-up-form';
 
 // styled-components

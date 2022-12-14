@@ -1,8 +1,8 @@
 // libraries
 import React from 'react';
-import Navbar from '../features/navbar';
 
 // features
+import Navbar from '../features/navbar';
 import { DefaultNavbar } from '../styled-components/navBar-styled-component';
 import SearchResults from '../features/results/components/SearchResults';
 
