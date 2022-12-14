@@ -44,14 +44,13 @@ export default function NeighborhoodFilter() {
   } = useContext(Context);
 
   useEffect(() => {
-    console.log(activeFilterNeighborhood)
     if (activeFilterNeighborhood.length < 1) {
       setFilteredData(resultData);
       return;
     }
-    console.log(activeFilterNeighborhood)
-    const filtered = resultData.filter((event) => activeFilterNeighborhood.includes(event.location.location.neighborhood))
-      ;
+    const filtered = resultData.filter((event) =>
+      activeFilterNeighborhood.includes(event.location.location.neighborhood)
+    );
     setFilteredData(filtered);
   }, [activeFilterNeighborhood]);
 
@@ -79,7 +78,7 @@ export default function NeighborhoodFilter() {
               type="checkbox"
               onChange={() => filterNeighborhood(neighborhood)}
             ></input>
-            <div className='neighborhood'>{neighborhood}</div>
+            <div className="neighborhood">{neighborhood}</div>
           </label>
         ))}
       </div>
