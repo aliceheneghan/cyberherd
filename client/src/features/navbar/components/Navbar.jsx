@@ -66,20 +66,20 @@ export default function Navbar() {
             </Link>
 
             <Link className="log-out" to="/login" onClick={logOut}>
-              Log out
+              Log Out
             </Link>
           </div>
         </>
       ) : (
         <>
           <Link className="get-yourself" to="/">
-            Get yourself a date
+            Get Yourself a Date
           </Link>
 
           <Search />
           <div className="sign-up-login-container">
             <Link className="sign-up" to="/sign-up">
-              Sign up
+              Sign Up
             </Link>
             <Link className="login" to="/login">
               Login
