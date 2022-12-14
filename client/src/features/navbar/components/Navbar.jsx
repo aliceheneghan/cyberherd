@@ -78,9 +78,7 @@ export default function Navbar() {
           <Link className="get-yourself" to="/">
             Get yourself a date
           </Link>
- 
           {/* <Link className="create-an-event" to="/create-event">Create an event</Link> */}
-
           <Search />
           <div className="sign-up-login-container">
             <Link className="sign-up" to="/sign-up">

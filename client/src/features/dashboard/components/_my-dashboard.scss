@@ -2,8 +2,7 @@
 
 .my-dashboard {
   margin: 0 auto;
-  max-width: 90%;
-  //   height: 30rem;
+  max-width: 100%;
+  height: fit-content;
   @include flex-jc-ai-dir(center, center, column);
-  // border: 9px blue solid;
 }
