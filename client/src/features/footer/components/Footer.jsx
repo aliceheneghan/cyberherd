@@ -14,12 +14,10 @@ export default function Footer() {
       <div className="container-footer">
         <span>&copy; 2022</span>
         <span><GiBurningDot /></span>
-        <span>Alice <GiBurningDot /></span>
-        <span>Daan <GiBurningDot /></span>
-        <span>John <GiBurningDot /></span>
-        <span>
-          Lucia
-        </span>
+        <span>Alice</span>
+        <span>Daan</span>
+        <span>John</span>
+        <span>Lucia</span>
       </div>
     </>
   );
