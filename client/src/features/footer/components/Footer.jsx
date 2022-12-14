@@ -1,5 +1,6 @@
 // libraries
 import React from 'react';
+// import Link from 'react-router-dom';
 
 // icons
 import { GiBurningDot } from 'react-icons/gi';
@@ -14,11 +15,11 @@ export default function Footer() {
       <div className="container-footer">
         <span>&copy; 2022</span>
         <span><GiBurningDot /></span>
-        <span>Alice</span>
-        <span>Daan</span>
-        <span>John</span>
-        <span>Lucia</span>
-      </div>
+        <a href='https://github.com/aliceheneghan' target='blank'>Alice</a>
+        <a href='https://github.com/daanvanderputte' target='blank'>Daan</a>
+        <a href='https://github.com/johnxadams' target='blank'>John</a>
+        <a href='https://github.com/luciapannunzio' target='blank'>Lucia</a>
+       </div>
     </>
   );
 }

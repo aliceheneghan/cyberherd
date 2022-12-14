@@ -6,6 +6,7 @@
   padding: 2em;
   .you-might-text {
     font-size: 2.5rem;
+    text-shadow: $text-shadow-color;
     color: $text-color;
     text-shadow: $text-shadow-color;
   }
@@ -22,6 +23,12 @@
       }
       .event-suggestion-bandname {
         font-size: 0.9rem;
+        text-shadow: $text-shadow-color;
+        color: $text-color;
+      }
+      .event-suggestion-eventname {
+        text-shadow: $text-shadow-color;
+        color: $text-color;
       }
     }
   }
