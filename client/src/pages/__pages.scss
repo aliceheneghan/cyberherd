@@ -1,11 +1,9 @@
 @import '../features/_features-dir.scss';
 
-
-.dashboard-container, .results-page-container {
+.dashboard-container,
+.results-page-container {
   width: 100%;
-  // border: 12px blue dotted;
 }
-
 .event-page-container {
   width: 80%;
 }

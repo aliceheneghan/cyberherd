@@ -1,10 +1,9 @@
 // libraries
 import React from 'react';
 
-import Navbar from '../features/navbar/index.jsx';
-
 // features
 import LoginForm from '../features/login-form';
+import Navbar from '../features/navbar/index.jsx';
 
 // styled-components
 import { DefaultNavbar } from '../styled-components/navBar-styled-component';

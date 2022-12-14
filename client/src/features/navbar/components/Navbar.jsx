@@ -2,8 +2,6 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-
-
 // features
 import Search from '../../search/components/Search';
 
@@ -13,7 +11,6 @@ import { Context } from '../../../context/Context.jsx';
 // style
 import './_navbar.scss';
 import CreateEvent from '../../event-form/components/CreateEvent';
-
 
 // icons
 import { HiOutlineArrowLongLeft } from "react-icons/hi2";
@@ -78,7 +75,7 @@ export default function Navbar() {
           <Link className="get-yourself" to="/">
             Get yourself a date
           </Link>
-          {/* <Link className="create-an-event" to="/create-event">Create an event</Link> */}
+
           <Search />
           <div className="sign-up-login-container">
             <Link className="sign-up" to="/sign-up">

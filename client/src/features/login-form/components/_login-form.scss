@@ -49,14 +49,18 @@
     text-decoration: none;
   }
 }
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 992px) {
   .login-page {
     @include flex-jc-ai-dir(column, center, column);
     height: 70rem;
   }
 }
-
+@media screen and (min-width: 768px) {
+  .login-page {
+    @include flex-jc-ai-dir(column, center, column);
+    height: 100rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   .login-page {
     @include flex-jc-ai-dir(column, center, column);

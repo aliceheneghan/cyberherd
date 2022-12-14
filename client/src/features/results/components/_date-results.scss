@@ -30,12 +30,9 @@
         width: 100%;
         height: 100%;
 
-.event-card-event-date {
-  // color: green;
-  margin-bottom: -1rem;
-  // font-size: 1rem;
-}
-
+        .event-card-event-date {
+          margin-bottom: -1rem;
+        }
         .title {
           line-height: 1.1em;
           color: $title-color;
@@ -58,15 +55,13 @@
         .event-card-more {
           text-align: right;
           width: inherit;
-          color: yellow;
-          // border: 3px red dotted;
+          color: $basic-yellow;
         }
       }
     }
     @media screen and (min-width: 768px) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       width: 33em;
-      // height: 40em;
     }
     @media screen and (min-width: 1366px) {
       grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -15,9 +15,7 @@ export default function Search() {
   const { setSearch } = useContext(Context);
 
   // navigate
-
   const navigate = useNavigate();
-
   const navigateToSearchResults = () => navigate(`/search-results`);
 
   return (

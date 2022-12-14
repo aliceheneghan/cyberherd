@@ -1,5 +1,5 @@
 // libraries
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
@@ -21,9 +21,9 @@ export default function VenuePage() {
   }, [id]);
 
   return (
-    <div>VenuePage
+    <div>
+      VenuePage
       <img src={venueData?.venue?.photoURL} alt="" />
-
     </div>
-  )
+  );
 }

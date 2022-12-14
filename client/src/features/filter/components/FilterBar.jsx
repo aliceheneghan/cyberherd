@@ -20,7 +20,6 @@ export default function FilterBar() {
   const [showVenueTypeFilter, setShowVenueTypeFilter] = useState(false);
 
   //   handlers
-
   const handleGenreFilter = (event) => {
     setShowGenreFilter((current) => !current);
   };
