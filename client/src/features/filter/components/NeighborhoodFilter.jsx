@@ -44,15 +44,14 @@ export default function NeighborhoodFilter() {
   } = useContext(Context);
 
   useEffect(() => {
+    console.log(activeFilterNeighborhood)
     if (activeFilterNeighborhood.length < 1) {
       setFilteredData(resultData);
       return;
     }
-    const filtered = resultData.filter((event) =>
-      event.location.location.neighborhood.some((value) =>
-        activeFilterNeighborhood.includes(value)
-      )
-    );
+    console.log(activeFilterNeighborhood)
+    const filtered = resultData.filter((event) => activeFilterNeighborhood.includes(event.location.location.neighborhood))
+      ;
     setFilteredData(filtered);
   }, [activeFilterNeighborhood]);
 
