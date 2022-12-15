@@ -75,7 +75,7 @@ const createEvent = async (req, res) => {
       },
       genre,
       information: { description, eventURL, bandURL },
-      photoURL: `http:///images/${req.file?.filename}`,
+      photoURL: `/images/${req.file?.filename}`,
     });
     return res
       .status(200)

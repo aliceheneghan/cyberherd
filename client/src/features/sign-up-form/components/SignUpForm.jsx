@@ -24,7 +24,7 @@ export default function SignUpForm() {
     const formData = new FormData(e.target);
 
     try {
-      await axios.post(`http:///api/user/create`, formData, {
+      await axios.post(`/api/user/create`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setError('');

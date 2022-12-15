@@ -16,7 +16,7 @@ export default function SearchResults() {
   const { search } = useContext(Context);
 
   useEffect(() => {
-    axios.get(`http:///api/events`).then((response) => {
+    axios.get(`/api/events`).then((response) => {
       setResultData(response.data);
     });
   });

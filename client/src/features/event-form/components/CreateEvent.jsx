@@ -71,7 +71,7 @@ function CreateEvent() {
     const formData = new FormData(e.target);
 
     try {
-      const response = await axios.post(`http:///api/events/create`, formData, {
+      const response = await axios.post(`/api/events/create`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setError('');

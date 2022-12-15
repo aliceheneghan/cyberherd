@@ -58,7 +58,7 @@ const registerUser = async (req, res) => {
       userName,
       dateOfBirth,
       password: hashedPassword,
-      photoURL: `http:///images/${req.file?.filename}`,
+      photoURL: `/images/${req.file?.filename}`,
       events,
       venues,
       connections,

@@ -12,7 +12,7 @@ import EventCard from '../../results/components/EventCard.jsx';
 // style
 import './_my-dashboard.scss';
 
-// http:///image
+// /image
 export default function Dashboard() {
   const { userID, setUserData, userData } = useContext(Context);
 
