@@ -43,7 +43,7 @@ export default function Navbar() {
             Back to Calendar
           </Link>
           
-          <Link className="create-an-event" to="/create-event">Create an Event</Link>
+          <Link className="create-an-event" to="/create-event">Add Event</Link>
           </div>
           <Search />
           <div className="profile-photo-and-logout-container">
