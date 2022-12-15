@@ -1,9 +1,9 @@
 // libraries
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
-
 import Leaflet from 'leaflet';
 
+// icon
 import musicIcon from './../assets/musicIcon.svg';
 
 // style

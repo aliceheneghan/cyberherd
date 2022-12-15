@@ -149,8 +149,6 @@ function CreateEvent() {
             </label>
           </div>
 
-          {/* -------------------------------------------- */}
-
           <div className="container">
             <label htmlFor="event-url">
               <input
@@ -213,8 +211,6 @@ function CreateEvent() {
               </select>
             </label>
           </div>
-
-          {/* -------------------------------------------- */}
 
           <div className="container">
             <label className="label-start" htmlFor="start-time">
