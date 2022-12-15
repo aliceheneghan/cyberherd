@@ -4,5 +4,5 @@
   margin: 0 auto;
   max-width: 100%;
   height: fit-content;
-  @include flex-jc-ai-dir(center, center, column)
+  @include flex-jc-ai-dir(center, center, column);
 }
