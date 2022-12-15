@@ -15,10 +15,12 @@
       padding: 0.2em 0.4em 0.2em 0.4em;
     }
     #search-input:focus {
-      outline: none;
+      color: $yellow-color;
+      text-shadow: $text-shadow-color;
+      outline: none; 
     }
     #search-input::placeholder {
-      font-size: 1.4rem;
+      font-size: 1em;
       text-shadow: 0 0 0.2em black, 0 0 1em black;
       color: $text-color;
     }
