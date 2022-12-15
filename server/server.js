@@ -12,6 +12,14 @@ import eventRoutes from './routes/eventRoutes.js';
 import venueRoutes from './routes/venueRoutes.js';
 import configureJwtStrategy from './config/passport-config.js';
 
+// config deployment
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 dotenv.config();
 
 const app = express();
@@ -46,6 +54,11 @@ app.use('/api/venues', venueRoutes);
 app.use('/images', express.static('./uploads/user/images'));
 app.use('/images', express.static('./uploads/event/images'));
 app.use('/images', express.static('./uploads/venue/images'));
+
+app.use(express.static(path.join(__dirname, "../client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname , "../client/build/index.html"));
+});
 
 const PORT = process.env.PORT;
 

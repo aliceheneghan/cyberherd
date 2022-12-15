@@ -33,7 +33,9 @@ const findEventById = async (req, res) => {
 
 const findEventByDate = async (req, res) => {
   try {
-    const event = await Event.find({ date: req.params.date }).populate('location');
+    const event = await Event.find({ date: req.params.date }).populate(
+      'location'
+    );
     if (!event) {
       return res.status(404).json({ message: 'No events found' });
     }
@@ -73,7 +75,7 @@ const createEvent = async (req, res) => {
       },
       genre,
       information: { description, eventURL, bandURL },
-      photoURL: `http://localhost:4000/images/${req.file?.filename}`,
+      photoURL: `http:///images/${req.file?.filename}`,
     });
     return res
       .status(200)

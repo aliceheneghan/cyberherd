@@ -14,7 +14,7 @@ const findAllUsers = async (req, res) => {
 
 const findUser = async (req, res) => {
   try {
-    console.log("req_id", req.user._id)
+    console.log('req_id', req.user._id);
     const user = await User.findById(req.params.id);
 
     if (!user) {
@@ -58,7 +58,7 @@ const registerUser = async (req, res) => {
       userName,
       dateOfBirth,
       password: hashedPassword,
-      photoURL: `http://localhost:4000/images/${req.file?.filename}`,
+      photoURL: `http:///images/${req.file?.filename}`,
       events,
       venues,
       connections,
@@ -89,15 +89,16 @@ const loginUser = async (req, res) => {
   try {
     // error message if no password entered
     if (!password) {
-      return res
-        .send({ success: false, message: 'Please enter valid password.' });
+      return res.send({
+        success: false,
+        message: 'Please enter valid password.',
+      });
     }
 
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res
-        .send({ success: false, message: 'Please enter your email.' });
+      return res.send({ success: false, message: 'Please enter your email.' });
     }
 
     const checkPassword = await bcrypt.compare(password, user.password);
@@ -123,7 +124,7 @@ const loginUser = async (req, res) => {
       return res.status(400).json({ message: 'No access granted!' });
     }
   } catch (error) {
-    console.log("login error catch:", error.message)
+    console.log('login error catch:', error.message);
     if (error instanceof mongoose.Error.ValidationError) {
       return res.status(400).json({ message: error.message });
     } else if (error instanceof mongoose.Error.CastError) {

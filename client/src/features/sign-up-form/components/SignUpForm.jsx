@@ -24,7 +24,7 @@ export default function SignUpForm() {
     const formData = new FormData(e.target);
 
     try {
-      await axios.post(`http://localhost:4000/api/user/create`, formData, {
+      await axios.post(`http:///api/user/create`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setError('');
@@ -93,9 +93,7 @@ export default function SignUpForm() {
         </div>
 
         <br />
-        <SignUpBtn type="submit">
-          Sign Up
-        </SignUpBtn>
+        <SignUpBtn type="submit">Sign Up</SignUpBtn>
       </form>
       <div>{error ? <p>{error}</p> : null}</div>
     </div>

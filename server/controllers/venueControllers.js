@@ -38,7 +38,7 @@ const createVenue = async (req, res) => {
       location: { address, latitude, longitude, neighborhood },
       venueType,
       venueURL,
-      photoURL: `http://localhost:4000/images/${req.file?.filename}`,
+      photoURL: `http:///images/${req.file?.filename}`,
       event,
       rating: { venueRating, priceRating },
       userFollowing,

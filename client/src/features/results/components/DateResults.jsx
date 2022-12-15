@@ -27,7 +27,7 @@ export default function EventList() {
   useEffect(() => {
     const getEvent = async (e) => {
       const { data } = await axios.get(
-        `http://localhost:4000/api/events/date/${date}`
+        `/api/events/date/${date}`
       );
       setResultData(data.event);
       setFilteredData(data.event);

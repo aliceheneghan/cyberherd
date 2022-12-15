@@ -50,11 +50,9 @@ function CreateVenue() {
 
     const formData = new FormData(e.target);
     try {
-      const response = await axios.post(
-        `http://localhost:4000/api/venues/create`,
-        formData,
-        { headers: { 'Content-Type': 'multipart/form-data' } }
-      );
+      const response = await axios.post(`http:///api/venues/create`, formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
 
       setError('');
       navigate(`/venuepage/${response.data.id}`);

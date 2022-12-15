@@ -10,9 +10,7 @@ export default function VenuePage() {
 
   useEffect(() => {
     const getUser = async (e) => {
-      const { data } = await axios.get(
-        `http://localhost:4000/api/venues/${id}`
-      );
+      const { data } = await axios.get(`http:///api/venues/${id}`);
       console.log(`dashboard testing to see:`);
       console.log(`VenuePage data:`, data);
       setVenueData(data);
