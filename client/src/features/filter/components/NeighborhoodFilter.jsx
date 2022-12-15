@@ -20,7 +20,7 @@ const neighborhoods = [
   'Mitte',
   'Neukölln',
   'Pankow',
-  'PrenzlauerBerg',
+  'Prenzlauer Berg',
   'Reinickendorf',
   'Schöneberg',
   'Schöneweide',
