@@ -18,12 +18,14 @@ export const DefaultNavbar = styled.section`
     }
     .back-to-calendar-and-create-event {
       /* border: 3px red solid; */
-      width: 21em;
+      width: 18em;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      margin-left: 1.8em;
       .back-to {
         /* border: 3px violet dotted; */
         /* width: 11em; */
+        /* margin-right: 1.8em; */
         display: flex;
         .arrow-left {
           font-size: 2rem;
@@ -70,6 +72,7 @@ export const DefaultNavbar = styled.section`
       /* border: 5px red dotted; */
       width: 11em;
       padding-left: 1em;
+      margin-right: 1.8em;
       /* height: 5rem; */
       .display-none {
         display: none;
