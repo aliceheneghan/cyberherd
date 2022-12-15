@@ -8,9 +8,4 @@ node_modules
 .DS_Store
 
 # uploaded imgs
-
-# uploads/user
-# uploads/event
-# uploads/venue
-
 uploads
